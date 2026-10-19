@@ -5,6 +5,7 @@ Comandos:
   /morreu boss [falta]  o mesmo para qualquer boss de campo
   /timers               mostra os respawns registrados
   /limpar boss          apaga o registro de um boss
+  /velsta               mostra a arte da Velsta
 
 Avisa no canal configurado alguns minutos antes de cada respawn e serve os horários
 para o app dos amigos (ver bot/web.py).
@@ -28,6 +29,7 @@ from aiohttp import web  # noqa: E402
 from discord import app_commands  # noqa: E402
 from discord.ext import tasks  # noqa: E402
 
+from bot.arte import VELSTA  # noqa: E402
 from bot.state import BoardError, KillBoard, parse_remaining  # noqa: E402
 from bot.web import make_app  # noqa: E402
 from daeva.schedule import FIELD_BOSSES, FIELD_BY_ID  # noqa: E402
@@ -196,6 +198,10 @@ def register_commands(bot: DaevaBot) -> None:
             else:
                 lines.append(f"**{b.name}**: nasce {ts(due, 'R')} às {ts(due)} · por {rec.get('by', '?')}")
         await inter.response.send_message("\n".join(lines), allowed_mentions=discord.AllowedMentions.none())
+
+    @tree.command(name="velsta", description="Invoca a Velsta")
+    async def velsta(inter: discord.Interaction):
+        await inter.response.send_message(f"```\n{VELSTA}\n```")
 
     @tree.command(name="limpar", description="Apaga o registro de morte de um boss de campo")
     @app_commands.choices(boss=BOSS_CHOICES)

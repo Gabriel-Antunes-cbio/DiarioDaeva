@@ -17,6 +17,7 @@ O bot **não sabe sozinho** que o boss morreu: alguém do grupo precisa marcar. 
 | `/morreu boss:<boss> [falta]` | O mesmo para Immortal Gartua, Lagta, Dartan, Kashapa e Danar |
 | `/timers` | Mostra todos os respawns registrados |
 | `/limpar boss:<boss>` | Apaga um registro errado |
+| `/velsta` | Mostra a arte da Velsta no canal |
 
 O tempo aceita `3h20`, `3h 20m`, `3:20`, `2h`, `45m` ou só os minutos (`90`). Informar quanto falta é o jeito mais preciso, porque usa a contagem do próprio jogo.
 
