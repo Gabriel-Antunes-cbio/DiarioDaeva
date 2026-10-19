@@ -38,7 +38,8 @@ Os horários aparecem no fuso de cada pessoa, porque o bot usa as marcações de
 4. Pegue os IDs no Discord. Primeiro ative **Configurações de usuário → Avançado → Modo desenvolvedor**. Depois:
    - Botão direito no **servidor** → **Copiar ID do servidor** → `GUILD_ID`
    - Botão direito no **canal** dos avisos → **Copiar ID do canal** → `CHANNEL_ID`
-   - Opcional: em **Configurações do servidor → Cargos**, crie um cargo `Bosses`, ative **Permitir que qualquer um @mencione este cargo** e copie o ID → `ROLE_ID`. Quem quiser ser avisado pega o cargo.
+   - **Quem é avisado:** escolha uma opção no `.env`. Com `ALERT_MENTION=everyone` (todos) ou `ALERT_MENTION=here` (só quem está online), dê ao cargo do bot a permissão **Mencionar @everyone, @here e todos os cargos** no canal dos avisos. Se nem isso nem o `ROLE_ID` estiver preenchido, o aviso aparece no canal sem notificar ninguém.
+   - Ou, para marcar só quem quiser: em **Configurações do servidor → Cargos**, crie um cargo `Bosses`, ative **Permitir que qualquer um @mencione este cargo** e copie o ID → `ROLE_ID`. Quem quiser ser avisado pega o cargo.
 
 ## Parte 2: VM na Oracle (20 min)
 

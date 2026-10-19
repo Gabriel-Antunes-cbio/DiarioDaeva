@@ -55,6 +55,7 @@ TOKEN = os.environ.get("DISCORD_TOKEN", "")
 CHANNEL_ID = int(os.environ.get("CHANNEL_ID", "0") or 0)
 GUILD_ID = int(os.environ.get("GUILD_ID", "0") or 0)
 ROLE_ID = int(os.environ.get("ROLE_ID", "0") or 0)
+ALERT_MENTION = os.environ.get("ALERT_MENTION", "").strip().lower().lstrip("@")  # "everyone", "here" ou vazio
 GROUP_KEY = os.environ.get("GROUP_KEY", "")
 PORT = int(os.environ.get("PORT", "8080") or 8080)
 TZ_NAME = os.environ.get("TZ_NAME", "America/Sao_Paulo")
@@ -62,6 +63,15 @@ ALERT_MINUTES = int(os.environ.get("ALERT_MINUTES", "5") or 5)
 DATA_FILE = Path(os.environ.get("DATA_FILE", str(Path(__file__).resolve().parent / "dados" / "mortes.json")))
 
 BOSS_CHOICES = [app_commands.Choice(name=b.name, value=b.id) for b in FIELD_BOSSES]
+
+
+def alert_mention() -> tuple[str, discord.AllowedMentions]:
+    """Quem é marcado nos avisos: @everyone/@here (ALERT_MENTION) ou o cargo (ROLE_ID)."""
+    if ALERT_MENTION in ("everyone", "here"):
+        return f"@{ALERT_MENTION} ", discord.AllowedMentions(everyone=True, roles=False, users=False)
+    if ROLE_ID:
+        return f"<@&{ROLE_ID}> ", discord.AllowedMentions(roles=True, everyone=False, users=False)
+    return "", discord.AllowedMentions.none()
 
 
 def ts(dt: datetime, style: str = "t") -> str:
@@ -139,12 +149,12 @@ class DaevaBot(discord.Client):
         ch = await self.channel()
         if ch is None:
             return
-        mention = f"<@&{ROLE_ID}> " if ROLE_ID else ""
+        mention, allowed = alert_mention()
         for bid in due:
             b = FIELD_BY_ID[bid]
             when = self.board.respawn_at(bid)
             await ch.send(f"{mention}🔔 **{b.name}** nasce {ts(when, 'R')} ({ts(when)}).",
-                          allowed_mentions=discord.AllowedMentions(roles=True, users=False, everyone=False))
+                          allowed_mentions=allowed)
 
     @alert_loop.before_loop
     async def _wait_ready(self):
@@ -217,6 +227,8 @@ def main() -> None:
         sys.exit("Falta DISCORD_TOKEN no bot/.env. Veja docs/BOT.md.")
     if not CHANNEL_ID:
         log.warning("CHANNEL_ID vazio: os avisos no canal ficam desligados.")
+    if not ALERT_MENTION and not ROLE_ID:
+        log.warning("Nem ALERT_MENTION nem ROLE_ID preenchidos: os avisos saem no canal sem marcar ninguém.")
     DaevaBot().run(TOKEN, log_handler=None)
 
 
