@@ -62,11 +62,19 @@ def parse_iso(s: str | None) -> datetime | None:
 class Store:
     def __init__(self, path: Path | None = None):
         self.path = path or data_dir() / "dados.json"
-        self.data = {"version": 1, "characters": [], "field_kills": {}, "settings": default_settings()}
+        self.data = {"version": 1, "characters": [], "field_kills": {}, "settings": default_settings(),
+                     "titles": {"owned": {}, "target": {}, "focus": "pve"}}
+        self.cache_path = self.path.with_name("titulos_cache.json")
+        self.title_cache: dict[str, dict] = {}
         self.load()
 
     # ------------------------------------------------------------ persistence
     def load(self) -> None:
+        try:
+            cache = json.loads(self.cache_path.read_text(encoding="utf-8")) if self.cache_path.exists() else {}
+            self.title_cache = cache if isinstance(cache, dict) else {}
+        except (OSError, ValueError):
+            self.title_cache = {}
         if not self.path.exists():
             return
         try:
@@ -83,6 +91,12 @@ class Store:
         self.data["characters"] = [c for c in raw.get("characters", []) if isinstance(c, dict) and c.get("url")]
         self.data["field_kills"] = {k: v for k, v in (raw.get("field_kills") or {}).items() if isinstance(v, str)}
         self.data["field_meta"] = {k: v for k, v in (raw.get("field_meta") or {}).items() if isinstance(v, dict)}
+        t = raw.get("titles") or {}
+        self.data["titles"] = {
+            "owned": {k: list(v) for k, v in (t.get("owned") or {}).items() if isinstance(v, list)},
+            "target": {k: v for k, v in (t.get("target") or {}).items() if isinstance(v, dict)},
+            "focus": t.get("focus") if t.get("focus") in ("pve", "pvp", "def", "any") else "pve",
+        }
         s = default_settings()
         saved = raw.get("settings") or {}
         alerts = dict(s["alerts"])
@@ -145,6 +159,8 @@ class Store:
             c["cls"] = prof.cls
         if prof.level:
             c["level"] = prof.level
+        if getattr(prof, "faction", ""):
+            c["faction"] = prof.faction
         hist = c.setdefault("history", [])
         changed = not hist or hist[-1]["cp"] != prof.cp or hist[-1]["gear"] != prof.gear
         if changed:
@@ -152,6 +168,17 @@ class Store:
             del hist[:-HISTORY_MAX]
         self.save()
         return changed
+
+    def record_details(self, char_id: str, details: dict, when: datetime) -> None:
+        c = self.find(char_id)
+        if c is None:
+            return
+        old = c.get("details") or {}
+        new = {k: details.get(k) if details.get(k) is not None else old.get(k) for k in ("gear", "skills", "titles")}
+        new["updated"] = iso(when)
+        new["errors"] = list(details.get("errors") or [])
+        c["details"] = new
+        self.save()
 
     def record_error(self, char_id: str, message: str) -> None:
         c = self.find(char_id)
@@ -193,3 +220,45 @@ class Store:
     @property
     def group_on(self) -> bool:
         return bool(self.settings.get("group_url") and self.settings.get("group_key"))
+
+    # ------------------------------------------------------------ títulos
+    @property
+    def titles(self) -> dict:
+        return self.data["titles"]
+
+    def owned(self, char_id: str) -> set[str]:
+        return set(self.titles["owned"].get(char_id, []))
+
+    def set_owned(self, char_id: str, slug: str, on: bool) -> None:
+        cur = self.owned(char_id)
+        (cur.add if on else cur.discard)(slug)
+        self.titles["owned"][char_id] = sorted(cur)
+        self.save()
+
+    def target(self, char_id: str) -> dict | None:
+        return self.titles["target"].get(char_id)
+
+    def set_target(self, char_id: str, ach_id: str | None) -> None:
+        if ach_id is None:
+            self.titles["target"].pop(char_id, None)
+        else:
+            self.titles["target"][char_id] = {"id": ach_id, "progress": 0}
+        self.save()
+
+    def set_progress(self, char_id: str, n: int) -> None:
+        t = self.target(char_id)
+        if t is not None:
+            t["progress"] = max(0, int(n))
+            self.save()
+
+    def set_focus(self, focus: str) -> None:
+        self.titles["focus"] = focus
+        self.save()
+
+    def cache_title(self, slug: str, info: dict, when: datetime) -> None:
+        self.title_cache[slug] = dict(info, t=iso(when))
+
+    def save_title_cache(self) -> None:
+        tmp = self.cache_path.with_suffix(".tmp")
+        tmp.write_text(json.dumps(self.title_cache, ensure_ascii=False), encoding="utf-8")
+        tmp.replace(self.cache_path)

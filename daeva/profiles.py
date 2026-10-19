@@ -51,6 +51,7 @@ class ProfileData:
     gear: int
     cls: str = ""
     level: int | None = None
+    faction: str = ""
 
 
 def _cap(s: str) -> str:
@@ -130,6 +131,11 @@ def _class_level(text: str) -> tuple[str, int | None]:
     return cls, level
 
 
+def _faction(text: str) -> str:
+    m = re.search(r"\b(Elyos|Asmodian)s?\b", text)
+    return m.group(1) if m else ""
+
+
 def parse_shugo(page: str) -> ProfileData:
     text = _visible_text(page)
     # Resumo do perfil: "... Gear score 1,723 · ... · Combat power 106,302"
@@ -148,8 +154,9 @@ def parse_shugo(page: str) -> ProfileData:
     if not m_cp or gs is None:
         raise ProfileError("A página do Shugo.GG não trouxe Combat Power e Gear score. "
                            "O personagem pode não existir ou o site mudou de formato.")
-    cls, level = _class_level((_meta(page, "og:title") + " " + desc + " " + text[:4000]))
-    return ProfileData(_int(m_cp.group(1)), gs, cls, level)
+    head = _meta(page, "og:title") + " " + desc + " " + text[:4000]
+    cls, level = _class_level(head)
+    return ProfileData(_int(m_cp.group(1)), gs, cls, level, _faction(head))
 
 
 def parse_aion2index(page: str) -> ProfileData:
@@ -160,11 +167,12 @@ def parse_aion2index(page: str) -> ProfileData:
         raise ProfileError("A página do AION2 Index não trouxe Combat power e Item level. "
                            "O personagem pode não existir ou o site mudou de formato.")
     cls, level = _class_level(text[:6000])
+    faction = _faction(text[:6000])
     if not cls:
         m = re.search(r"class_icon_([a-z]+)\.", page)
         if m and m.group(1) in CLASSES_PT:
             cls = CLASSES_PT[m.group(1)]
-    return ProfileData(_int(m_cp.group(1)), _int(m_il.group(1)), cls, level)
+    return ProfileData(_int(m_cp.group(1)), _int(m_il.group(1)), cls, level, faction)
 
 
 def fetch_profile(link: ProfileLink, timeout: float = 20) -> ProfileData:
@@ -185,3 +193,95 @@ def fetch_profile(link: ProfileLink, timeout: float = 20) -> ProfileData:
         raise ProfileError(f"Sem conexão com {link.site_name}. Confira a internet e tente de novo.") from e
     parser = parse_aion2index if link.source == "aion2index" else parse_shugo
     return parser(page)
+
+
+# ================================================================ detalhes do personagem
+# Equipamento: tabela "Equipment" do Shugo.GG (Slot | Item +N | Grau).
+# Skills e contagem de títulos: páginas /skills e /titles do AION2 Index.
+# As duas URLs saem da mesma região/servidor/nome, seja qual for o link que a pessoa colou.
+
+def detail_urls(link: ProfileLink) -> dict[str, str]:
+    srv, name = quote(link.server.lower().replace(" ", "-")), quote(link.name)
+    a2i = f"https://aion2index.com/c/{link.region}/{srv}/{name}"
+    return {"gear": f"https://shugo.gg/character/global/{link.region}-{srv}/{name}",
+            "skills": a2i + "/skills", "titles": a2i + "/titles"}
+
+
+_ROW = re.compile(r"<tr\b[^>]*>(.*?)</tr>", re.S | re.I)
+_CELL = re.compile(r"<t([dh])\b[^>]*>(.*?)</t[dh]>", re.S | re.I)
+
+
+def _cell_text(html_: str) -> str:
+    return re.sub(r"\s+", " ", htmllib.unescape(_TAG.sub(" ", html_))).strip()
+
+
+def parse_shugo_gear(page: str) -> list[dict]:
+    """Linhas da tabela de equipamento: {slot, item, enchant, grade}."""
+    gear = []
+    for row in _ROW.findall(page):
+        cells = _CELL.findall(row)
+        if len(cells) < 3 or any(kind.lower() == "h" for kind, _ in cells):
+            continue
+        slot, item, grade = (_cell_text(c) for _, c in cells[:3])
+        m = re.fullmatch(r"(.*?)\s*\+(\d{1,2})\s*(◆*\d*)", item)
+        name, enchant = (m.group(1), int(m.group(2))) if m else (item, 0)
+        if slot and name and len(slot) <= 20 and grade and len(grade) <= 15:
+            gear.append({"slot": slot, "item": name.strip(), "enchant": enchant, "grade": grade})
+    return gear
+
+
+_SKILL = re.compile(r"(?<![\w+])(\d{1,2})\s+([A-Z][A-Za-z'’:,\- ]{1,40}?)\s+Learned at Lv\.?\s*\d+")
+
+
+def parse_a2i_skills(page: str) -> dict[str, list[list]]:
+    """{'active': [[nome, nível]], 'passive': [...], 'stigma': [...]} a partir do texto da página /skills."""
+    text = _visible_text(page)
+    marks = [(m.start(), key) for key, pat in (("active", r"Active skills"), ("passive", r"Passive skills"),
+                                                ("stigma", r"Stigma skills"))
+             for m in [re.search(pat, text, re.I)] if m]
+    marks.sort()
+    out: dict[str, list[list]] = {"active": [], "passive": [], "stigma": []}
+    for i, (start, key) in enumerate(marks):
+        end = marks[i + 1][0] if i + 1 < len(marks) else len(text)
+        for lvl, name in _SKILL.findall(text[start:end]):
+            out[key].append([name.strip(), int(lvl)])
+    return out
+
+
+def parse_a2i_title_counts(page: str) -> dict[str, list[int]]:
+    """{'Utility': [66, 99], 'Attack': [68, 103], 'Defense': [66, 95], 'total': [200, 297]}"""
+    text = _visible_text(page)
+    out = {}
+    for cat in ("Utility", "Attack", "Defense"):
+        m = re.search(cat + r"\D{0,30}?(\d{1,4})\s*/\s*(\d{1,4})", text)
+        if m:
+            out[cat] = [int(m.group(1)), int(m.group(2))]
+    if out:
+        out["total"] = [sum(v[0] for v in out.values()), sum(v[1] for v in out.values())]
+    else:
+        m = re.search(r"(\d{1,4})\s*/\s*(\d{2,4})", text)
+        if m:
+            out["total"] = [int(m.group(1)), int(m.group(2))]
+    return out
+
+
+def _get(url: str, timeout: float = 20) -> str:
+    req = urllib.request.Request(url, headers={"User-Agent": USER_AGENT, "Accept": "text/html", "Accept-Language": "en"})
+    with urllib.request.urlopen(req, timeout=timeout) as resp:
+        return resp.read(3_000_000).decode(resp.headers.get_content_charset() or "utf-8", "replace")
+
+
+def fetch_details(link: ProfileLink) -> dict:
+    """Busca equipamento, skills e títulos. Cada parte falha sozinha, sem derrubar as outras."""
+    urls = detail_urls(link)
+    out: dict = {"gear": None, "skills": None, "titles": None, "errors": [], "sources": urls}
+    for key, parser in (("gear", parse_shugo_gear), ("skills", parse_a2i_skills), ("titles", parse_a2i_title_counts)):
+        try:
+            data = parser(_get(urls[key]))
+            empty = not data or (key == "skills" and not any(data.values()))
+            if empty:
+                raise ValueError("vazio")
+            out[key] = data
+        except Exception:
+            out["errors"].append(key)
+    return out

@@ -1,7 +1,7 @@
 """Bot do Discord do Diário de Daeva.
 
 Comandos:
-  /gartua [hora]        registra a morte do Immortal Gartua (vazio = agora; ou 14:32)
+  /gartua [hora]        registra a morte do Eternal Gartua (Elyos) (vazio = agora; ou 14:32)
   /morreu boss [hora]   registra a morte de qualquer boss de campo
   /timers               mostra os respawns registrados
   /limpar boss          apaga o registro de um boss
@@ -165,7 +165,7 @@ def register_commands(bot: DaevaBot) -> None:
         await inter.response.send_message(bot.kill_text(boss_id, rec),
                                           allowed_mentions=discord.AllowedMentions.none())
 
-    @tree.command(name="gartua", description="Registra a morte do Immortal Gartua")
+    @tree.command(name="gartua", description="Registra a morte do Eternal Gartua (Elyos)")
     @app_commands.describe(hora="Horário da morte no horário de Brasília (ex.: 14:32). Vazio = agora")
     async def gartua(inter: discord.Interaction, hora: str | None = None):
         await record(inter, "gartua", hora)

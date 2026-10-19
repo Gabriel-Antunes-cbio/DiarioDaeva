@@ -1,6 +1,6 @@
 # Bot do Discord: timer do Gartua para o grupo
 
-O bot guarda a hora da morte do **Immortal Gartua** (e dos outros bosses de campo) e divide essa informação com todo mundo:
+O bot guarda a hora da morte do **Eternal Gartua** (e dos outros bosses de campo) e divide essa informação com todo mundo:
 
 - No Discord, alguém usa `/gartua` quando o boss cai.
 - O bot avisa no canal **5 minutos antes do respawn**, e pode marcar um cargo como `@Bosses`.
@@ -12,9 +12,9 @@ O bot **não sabe sozinho** que o boss morreu: alguém do grupo precisa marcar. 
 
 | Comando | O que faz |
 |---|---|
-| `/gartua` | Registra que o Gartua morreu agora |
+| `/gartua` | Registra que o Eternal Gartua (lado Elyos) morreu agora |
 | `/gartua hora:14:32` | Registra a morte num horário (de Brasília), se você viu depois |
-| `/morreu boss:<boss> [hora]` | O mesmo para Lagta, Dartan, Kashapa e Danar |
+| `/morreu boss:<boss> [hora]` | O mesmo para Immortal Gartua, Lagta, Dartan, Kashapa e Danar |
 | `/timers` | Mostra todos os respawns registrados |
 | `/limpar boss:<boss>` | Apaga um registro errado |
 

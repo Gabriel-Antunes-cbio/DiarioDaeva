@@ -15,10 +15,12 @@ Feito para a galera que joga junto em **Siel (América Latina)**, mas funciona e
 | Aba | Recurso |
 |---|---|
 | **Bosses** | Contagem regressiva dos bosses do Abismo (Nahma, Executores, Vigia Kaira), do Cerco de Artefato e da Fenda. |
-| | Timer de respawn dos bosses de campo (Immortal Gartua, Lagta, Dartan, Kashapa, Danar): marque quando o boss morreu. |
-| | **Alerta com som e notificação do Windows 5 minutos antes** (ajustável). Ligado por padrão para Nahma, Executores, Vigia Kaira e Immortal Gartua. |
+| | Timer de respawn dos bosses de campo (Eternal Gartua, Immortal Gartua, Lagta, Dartan, Kashapa, Danar): marque quando o boss morreu. |
+| | **Alerta com som e notificação do Windows 5 minutos antes** (ajustável). Ligado por padrão para Nahma, Executores, Vigia Kaira e os dois Gartua. |
 | **Personagens** | Cole o link do perfil no Shugo.GG ou no AION2 Index. O app lê Combat Power, Gear score / Item level, classe e nível. |
 | | Gráfico de evolução de CP e de equipamento, com o ganho desde a primeira leitura. Atualiza sozinho a cada 6 horas (ajustável). |
+| **Personagens** | Resumo do equipamento (com refino) e das skills ativas, passivas e stigmas. |
+| **Títulos** | As 192 conquistas que dão título, com os bônus de cada um, filtradas pela sua facção. Sugere os melhores títulos que faltam conforme a prioridade (Ataque PvE, Ataque PvP ou Defesa) e acompanha o progresso do título que você escolher como alvo. |
 | **Ajustes** | Antecedência do alerta, som, notificação, sempre no topo, fechar para a bandeja e relógio da região. |
 | **Grupo** | Com o bot do Discord, a morte do Gartua marcada por qualquer amigo (no app ou com `/gartua`) aparece para todos, e o bot avisa no canal. Veja [docs/BOT.md](docs/BOT.md). |
 
@@ -71,10 +73,20 @@ Mudanças só no bot (`bot/`) ou na documentação não geram `.exe` novo.
 | `daeva/profiles.py` | Leitura dos perfis no Shugo.GG e no AION2 Index |
 | `daeva/store.py` | Dados salvos e ajustes padrão |
 | `daeva/main_window.py` | Interface, alertas e bandeja |
+| `daeva/titles.py`, `daeva/titles_tab.py` | Conquistas com título, leitura dos bônus e a aba Títulos |
+| `daeva/data/conquistas_titulos.json` | Lista das 192 conquistas (gerada por `tools/gerar_conquistas.py`) |
 | `daeva/group.py` | Conversa do app com o bot do grupo |
 | `bot/` | Bot do Discord e a API que o app usa (instalação em [docs/BOT.md](docs/BOT.md)) |
 | `tools/gerar_assets.py` | Gera o som de alerta e o ícone |
 
 Se um dos sites mudar o formato da página, o leitor em `profiles.py` é o lugar a ajustar; os testes em `tests/test_core.py` têm exemplos das páginas.
 
-*Projeto de fã, sem ligação com a NCSOFT, o Shugo.GG ou o AION2 Index.*
+### Dados de terceiros
+
+- Combat Power, gear score e equipamento: páginas públicas do [Shugo.GG](https://shugo.gg).
+- Item level, skills e contagem de títulos: páginas públicas do [AION2 Index](https://aion2index.com).
+- Conquistas e títulos: [MetaBot.GG](https://metabot.gg/en/aion-2/achievements), que permite o reaproveitamento com crédito e link para a fonte ([metabot.gg/en/ai](https://metabot.gg/en/ai)). O app mostra esse link em cada título e lê os bônus devagar (1 página por segundo), uma vez a cada 14 dias.
+
+O jogo não informa a ninguém de fora quais títulos você tem nem o progresso das conquistas. Por isso essa parte é marcada à mão, olhando o diário de conquistas do jogo.
+
+*Projeto de fã, sem ligação com a NCSOFT, o Shugo.GG, o AION2 Index ou a MetaBot.GG.*

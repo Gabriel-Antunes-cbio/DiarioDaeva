@@ -13,10 +13,11 @@ from PySide6.QtWidgets import (
     QScrollArea, QSpinBox, QSystemTrayIcon, QTabWidget, QTimeEdit, QVBoxLayout, QWidget,
 )
 
-from . import GITHUB_REPO, __version__
+from . import GITHUB_REPO, __version__, theme
 from .chart import GrowthChart, fmt_int
 from .group import GroupError, get_kills, normalize_url, ping, post_kill
-from .profiles import ProfileError, fetch_profile, parse_link
+from .profiles import ProfileError, fetch_details, fetch_profile, parse_link
+from .titles_tab import TitlesTab
 from .schedule import (
     EVENTS, FIELD_BOSSES, REGIONS, AlertTracker, field_respawn, fmt_left, next_occurrence, now_utc,
 )
@@ -48,6 +49,7 @@ def restyle(w: QWidget) -> None:
 # ======================================================================= workers
 class _Signals(QObject):
     done = Signal(str, object, str)  # char_id, ProfileData | None, error
+    details = Signal(str, object)    # char_id, dict
 
 
 class FetchJob(QRunnable):
@@ -58,12 +60,19 @@ class FetchJob(QRunnable):
 
     def run(self):
         try:
-            data = fetch_profile(parse_link(self.url))
+            link = parse_link(self.url)
+            data = fetch_profile(link)
             self.signals.done.emit(self.char_id, data, "")
         except ProfileError as e:
             self.signals.done.emit(self.char_id, None, str(e))
+            return
         except Exception as e:  # nunca derrubar o app por causa de um site
             self.signals.done.emit(self.char_id, None, f"Erro inesperado ao ler o perfil: {e}")
+            return
+        try:
+            self.signals.details.emit(self.char_id, fetch_details(link))
+        except Exception:
+            pass
 
 
 class _UpdSignals(QObject):
@@ -234,6 +243,8 @@ class MainWindow(QMainWindow):
         self.tabs = QTabWidget()
         self.tabs.addTab(self._build_bosses_tab(), "Bosses")
         self.tabs.addTab(self._build_chars_tab(), "Personagens")
+        self.titles_tab = TitlesTab(self.store, self.current_char)
+        self.tabs.addTab(self.titles_tab, "Títulos")
         self.tabs.addTab(self._build_settings_tab(), "Ajustes")
         v.addWidget(self.tabs, 1)
 
@@ -377,7 +388,7 @@ class MainWindow(QMainWindow):
         v.setSpacing(10)
         top = QHBoxLayout()
         self.char_combo = QComboBox()
-        self.char_combo.currentIndexChanged.connect(lambda _: self.render_character())
+        self.char_combo.currentIndexChanged.connect(lambda _: (self.render_character(), self._titles_refresh()))
         top.addWidget(self.char_combo, 1)
         add = QPushButton("Adicionar")
         add.setObjectName("primary")
@@ -422,6 +433,15 @@ class MainWindow(QMainWindow):
         c.addWidget(self.chart)
         self.c_status = label("", "muted", wrap=True)
         c.addWidget(self.c_status)
+        self.d_gear_h = label("EQUIPAMENTO", "section")
+        self.d_gear = label("", wrap=True)
+        self.d_gear.setTextFormat(Qt.RichText)
+        self.d_skills_h = label("SKILLS", "section")
+        self.d_skills = label("", wrap=True)
+        self.d_skills.setTextFormat(Qt.RichText)
+        self.d_note = label("", "muted", wrap=True)
+        for w in (self.d_gear_h, self.d_gear, self.d_skills_h, self.d_skills, self.d_note):
+            c.addWidget(w)
         foot = QHBoxLayout()
         self.refresh_btn = QPushButton("Atualizar agora")
         self.refresh_btn.clicked.connect(self.manual_refresh)
@@ -467,6 +487,10 @@ class MainWindow(QMainWindow):
     def current_char(self) -> dict | None:
         cid = self.current_id()
         return self.store.find(cid) if cid else None
+
+    def _titles_refresh(self):
+        if hasattr(self, "titles_tab") and self.titles_tab.isVisible():
+            self.titles_tab.refresh()
 
     def set_metric(self, m: str):
         self.chart_metric = m
@@ -520,6 +544,39 @@ class MainWindow(QMainWindow):
         self.refresh_btn.setEnabled(not busy)
         self.refresh_btn.setText("Atualizando…" if busy else "Atualizar agora")
         self.open_btn.setText(f"Abrir no {site}")
+        self.render_details(c)
+
+    def render_details(self, c: dict):
+        d = c.get("details") or {}
+        gear, skills = d.get("gear"), d.get("skills")
+        esc = lambda t: (str(t).replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;"))
+        if gear:
+            rows = "".join(
+                f"<tr><td style='color:{theme.MUTED};padding:2px 10px 2px 0'>{esc(g['slot'])}</td>"
+                f"<td style='padding:2px 10px 2px 0'>{esc(g['item'])}"
+                f"{' <b>+' + str(g['enchant']) + '</b>' if g.get('enchant') else ''}</td>"
+                f"<td style='color:{theme.MUTED}'>{esc(g['grade'])}</td></tr>" for g in gear)
+            self.d_gear.setText(f"<table>{rows}</table>")
+        else:
+            self.d_gear.setText("<span style='color:%s'>Ainda sem dados de equipamento.</span>" % theme.MUTED)
+        if skills and any(skills.values()):
+            parts = []
+            for key, title in (("active", "Ativas"), ("passive", "Passivas"), ("stigma", "Stigmas")):
+                lst = skills.get(key) or []
+                if lst:
+                    items = ", ".join(f"{esc(n)} <b>{lv}</b>" for n, lv in lst)
+                    parts.append(f"<span style='color:{theme.MUTED}'>{title}:</span> {items}")
+            self.d_skills.setText("<br>".join(parts))
+        else:
+            self.d_skills.setText("<span style='color:%s'>Ainda sem dados de skills.</span>" % theme.MUTED)
+        notes = []
+        if d.get("updated"):
+            notes.append(f"Equipamento pelo Shugo.GG e skills pelo AION2 Index, lidos em "
+                         f"{parse_iso(d['updated']).astimezone():%d/%m às %H:%M}.")
+        miss = {"gear": "equipamento", "skills": "skills", "titles": "títulos"}
+        if d.get("errors"):
+            notes.append("Não consegui ler agora: " + ", ".join(miss[e] for e in d["errors"] if e in miss) + ".")
+        self.d_note.setText(" ".join(notes))
 
     def add_character(self):
         text, ok = QInputDialog.getText(self, "Adicionar personagem",
@@ -562,8 +619,14 @@ class MainWindow(QMainWindow):
         self.fetching.add(c["id"])
         job = FetchJob(c["id"], c["url"])
         job.signals.done.connect(self.on_fetched)
+        job.signals.details.connect(self.on_details)
         self.pool.start(job)
         self.render_character()
+
+    def on_details(self, char_id: str, details: dict):
+        self.store.record_details(char_id, details, now_utc())
+        self.render_character()
+        self._titles_refresh()
 
     def on_fetched(self, char_id: str, data, error: str):
         self.fetching.discard(char_id)
@@ -622,7 +685,7 @@ class MainWindow(QMainWindow):
         v.addLayout(r2)
         v.addWidget(self._check("Mostrar notificação do Windows", "tray_notify"))
         v.addWidget(label("Os alertas ligados ficam na aba Bosses (caixa “Alerta” em cada linha). "
-                          "Por padrão: Nahma, Executores, Vigia Kaira e Immortal Gartua.", "muted", wrap=True))
+                          "Por padrão: Nahma, Executores, Vigia Kaira e os dois Gartua.", "muted", wrap=True))
 
         v.addSpacing(6)
         v.addWidget(label("SERVIDOR", "section"))
@@ -823,6 +886,11 @@ class MainWindow(QMainWindow):
 
     def quit_app(self):
         self._really_quit = True
+        self.titles_tab.stop_loading()
+        try:
+            self.store.save_title_cache()
+        except OSError:
+            pass
         self.tray.hide()
         QApplication.quit()
 

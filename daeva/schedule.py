@@ -64,10 +64,12 @@ class FieldBoss:
     respawn_h: int
     where: str = ""
     big: bool = False
+    faction: str = ""  # "Elyos" | "Asmodian" | "" (os dois lados)
 
 
 FIELD_BOSSES: tuple[FieldBoss, ...] = (
-    FieldBoss("gartua", "Immortal Gartua", 12, big=True),
+    FieldBoss("gartua", "Eternal Gartua", 12, "Eternal Isle · lado Elyos", big=True, faction="Elyos"),
+    FieldBoss("gartua_imortal", "Immortal Gartua", 12, "Immortal Isle · lado Asmodiano", big=True, faction="Asmodian"),
     FieldBoss("lagta", "High Commander Lagta", 12,
               "Plantação Drana (Verteron) · Fortaleza Lagta (Altgard)"),
     FieldBoss("dartan", "Silent Dartan", 6,

@@ -56,6 +56,7 @@ jobs:
           --name DiarioDeDaeva
           --icon assets/icon.ico
           --add-data "assets;assets"
+          --add-data "daeva/data;daeva/data"
           app.py
 
       - name: Publicar na Release

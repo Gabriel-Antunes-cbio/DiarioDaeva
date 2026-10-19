@@ -1,0 +1,1847 @@
+{
+ "source": "MetaBot.GG",
+ "source_url": "https://metabot.gg/en/aion-2/achievements",
+ "collected": "2026-10-19",
+ "groups": [
+  {
+   "id": "bosses",
+   "name": "Bosses de campo",
+   "url": "https://metabot.gg/en/aion-2/achievements/bosses"
+  },
+  {
+   "id": "exploration",
+   "name": "Exploração",
+   "url": "https://metabot.gg/en/aion-2/achievements/exploration"
+  },
+  {
+   "id": "shugo-festival",
+   "name": "Festival Shugo",
+   "url": "https://metabot.gg/en/aion-2/achievements/shugo-festival"
+  },
+  {
+   "id": "hunting",
+   "name": "Caça",
+   "url": "https://metabot.gg/en/aion-2/achievements/hunting"
+  },
+  {
+   "id": "combat",
+   "name": "Combate",
+   "url": "https://metabot.gg/en/aion-2/achievements/combat"
+  },
+  {
+   "id": "social",
+   "name": "Legião, amigos e pets",
+   "url": "https://metabot.gg/en/aion-2/achievements/social"
+  },
+  {
+   "id": "quests",
+   "name": "Missões",
+   "url": "https://metabot.gg/en/aion-2/achievements/quests"
+  },
+  {
+   "id": "enhancement",
+   "name": "Aprimoramento",
+   "url": "https://metabot.gg/en/aion-2/achievements/enhancement"
+  },
+  {
+   "id": "crafting",
+   "name": "Criação",
+   "url": "https://metabot.gg/en/aion-2/achievements/crafting"
+  },
+  {
+   "id": "gear-collection",
+   "name": "Coleção de equipamentos",
+   "url": "https://metabot.gg/en/aion-2/achievements/gear-collection"
+  },
+  {
+   "id": "kibelisks",
+   "name": "Kibelisks",
+   "url": "https://metabot.gg/en/aion-2/achievements/kibelisks"
+  },
+  {
+   "id": "sealed-dungeons",
+   "name": "Dungeons seladas",
+   "url": "https://metabot.gg/en/aion-2/achievements/sealed-dungeons"
+  },
+  {
+   "id": "strongholds",
+   "name": "Fortalezas",
+   "url": "https://metabot.gg/en/aion-2/achievements/strongholds"
+  },
+  {
+   "id": "milestones",
+   "name": "Marcos de nível",
+   "url": "https://metabot.gg/en/aion-2/achievements/milestones"
+  },
+  {
+   "id": "gathering",
+   "name": "Coleta",
+   "url": "https://metabot.gg/en/aion-2/achievements/gathering"
+  },
+  {
+   "id": "consumables",
+   "name": "Consumíveis e armazém",
+   "url": "https://metabot.gg/en/aion-2/achievements/consumables"
+  },
+  {
+   "id": "fire-temple",
+   "name": "Templo do Fogo",
+   "url": "https://metabot.gg/en/aion-2/achievements/fire-temple"
+  },
+  {
+   "id": "draupnir-cave",
+   "name": "Caverna de Draupnir",
+   "url": "https://metabot.gg/en/aion-2/achievements/draupnir-cave"
+  },
+  {
+   "id": "krao-cave",
+   "name": "Caverna de Krao",
+   "url": "https://metabot.gg/en/aion-2/achievements/krao-cave"
+  },
+  {
+   "id": "urugugu",
+   "name": "Cânion Urugugu",
+   "url": "https://metabot.gg/en/aion-2/achievements/urugugu"
+  },
+  {
+   "id": "vakron",
+   "name": "Ilha Celeste de Vakron",
+   "url": "https://metabot.gg/en/aion-2/achievements/vakron"
+  },
+  {
+   "id": "horn-den",
+   "name": "Covil do Chifre Feroz",
+   "url": "https://metabot.gg/en/aion-2/achievements/horn-den"
+  }
+ ],
+ "items": [
+  {
+   "id": "bosses/executioner-of-kernon-of-the-west/0",
+   "group": "bosses",
+   "achievement": "Kernon of the West",
+   "goal": "Defeat Unique Field Monster Kernon of the West",
+   "title": "Executioner of Kernon of the West",
+   "slug": "executioner-of-kernon-of-the-west",
+   "tiers": false
+  },
+  {
+   "id": "bosses/executioner-of-neikel-of-the-east/1",
+   "group": "bosses",
+   "achievement": "Neikel of the East",
+   "goal": "Defeat Unique Field Monster Neikel of the East",
+   "title": "Executioner of Neikel of the East",
+   "slug": "executioner-of-neikel-of-the-east",
+   "tiers": false
+  },
+  {
+   "id": "bosses/executioner-of-rotten-kutar/2",
+   "group": "bosses",
+   "achievement": "Rotten Kutar",
+   "goal": "Defeat Unique Field Monster Rotten Kutar",
+   "title": "Executioner of Rotten Kutar",
+   "slug": "executioner-of-rotten-kutar",
+   "tiers": false
+  },
+  {
+   "id": "bosses/executioner-of-blooming-korin/3",
+   "group": "bosses",
+   "achievement": "Blooming Korin",
+   "goal": "Defeat Unique Field Monster Blooming Korin",
+   "title": "Executioner of Blooming Korin",
+   "slug": "executioner-of-blooming-korin",
+   "tiers": false
+  },
+  {
+   "id": "bosses/executioner-of-bodyguard-teegant/4",
+   "group": "bosses",
+   "achievement": "Bodyguard Teegant",
+   "goal": "Defeat Unique Field Monster Bodyguard Teegant",
+   "title": "Executioner of Bodyguard Teegant",
+   "slug": "executioner-of-bodyguard-teegant",
+   "tiers": false
+  },
+  {
+   "id": "bosses/executioner-of-kusan-the-mad-gladiator/5",
+   "group": "bosses",
+   "achievement": "Kusan the Mad Gladiator",
+   "goal": "Defeat Unique Field Monster Kusan the Mad Gladiator",
+   "title": "Executioner of Kusan the Mad Gladiator",
+   "slug": "executioner-of-kusan-the-mad-gladiator",
+   "tiers": false
+  },
+  {
+   "id": "bosses/executioner-of-ritualist-garshim/6",
+   "group": "bosses",
+   "achievement": "Ritualist Garshim",
+   "goal": "Defeat Unique Field Monster Ritualist Garshim",
+   "title": "Executioner of Ritualist Garshim",
+   "slug": "executioner-of-ritualist-garshim",
+   "tiers": false
+  },
+  {
+   "id": "bosses/executioner-of-bloodfang-pnyn/7",
+   "group": "bosses",
+   "achievement": "Bloodfang Pnyn",
+   "goal": "Defeat Unique Field Monster Bloodfang Pnyn",
+   "title": "Executioner of Bloodfang Pnyn",
+   "slug": "executioner-of-bloodfang-pnyn",
+   "tiers": false
+  },
+  {
+   "id": "bosses/executioner-of-furious-saursus/8",
+   "group": "bosses",
+   "achievement": "Furious Saursus",
+   "goal": "Defeat Unique Field Monster Furious Saursus",
+   "title": "Executioner of Furious Saursus",
+   "slug": "executioner-of-furious-saursus",
+   "tiers": false
+  },
+  {
+   "id": "bosses/executioner-of-scholar-aulla/9",
+   "group": "bosses",
+   "achievement": "Scholar Aulla",
+   "goal": "Defeat Unique Field Monster Scholar Aulla",
+   "title": "Executioner of Scholar Aulla",
+   "slug": "executioner-of-scholar-aulla",
+   "tiers": false
+  },
+  {
+   "id": "bosses/executioner-of-chaser-taulo/10",
+   "group": "bosses",
+   "achievement": "Chaser Taulo",
+   "goal": "Defeat Unique Field Monster Chaser Taulo",
+   "title": "Executioner of Chaser Taulo",
+   "slug": "executioner-of-chaser-taulo",
+   "tiers": false
+  },
+  {
+   "id": "bosses/executioner-of-forest-warrior-aullamu/11",
+   "group": "bosses",
+   "achievement": "Forest Warrior Aullamu",
+   "goal": "Defeat Unique Field Monster Forest Warrior Aullamu",
+   "title": "Executioner of Forest Warrior Aullamu",
+   "slug": "executioner-of-forest-warrior-aullamu",
+   "tiers": false
+  },
+  {
+   "id": "bosses/executioner-of-heretic-layla/12",
+   "group": "bosses",
+   "achievement": "Heretic Layla",
+   "goal": "Defeat Unique Field Monster Heretic Layla",
+   "title": "Executioner of Heretic Layla",
+   "slug": "executioner-of-heretic-layla",
+   "tiers": false
+  },
+  {
+   "id": "bosses/executioner-of-black-tentacle-lawa/13",
+   "group": "bosses",
+   "achievement": "Black Tentacle Lawa",
+   "goal": "Defeat Unique Field Monster Black Tentacle Lawa",
+   "title": "Executioner of Black Tentacle Lawa",
+   "slug": "executioner-of-black-tentacle-lawa",
+   "tiers": false
+  },
+  {
+   "id": "bosses/executioner-of-centurion-demiros/14",
+   "group": "bosses",
+   "achievement": "Centurion Demiros",
+   "goal": "Defeat Unique Field Monster Centurion Demiros",
+   "title": "Executioner of Centurion Demiros",
+   "slug": "executioner-of-centurion-demiros",
+   "tiers": false
+  },
+  {
+   "id": "bosses/executioner-of-divine-ansas/15",
+   "group": "bosses",
+   "achievement": "Divine Ansas",
+   "goal": "Defeat Unique Field Monster Divine Ansas",
+   "title": "Executioner of Divine Ansas",
+   "slug": "executioner-of-divine-ansas",
+   "tiers": false
+  },
+  {
+   "id": "bosses/executioner-of-harvest-manager-moshav/16",
+   "group": "bosses",
+   "achievement": "Harvest Manager Moshav",
+   "goal": "Defeat Unique Field Monster Harvest Manager Moshav",
+   "title": "Executioner of Harvest Manager Moshav",
+   "slug": "executioner-of-harvest-manager-moshav",
+   "tiers": false
+  },
+  {
+   "id": "bosses/executioner-of-sentinel-knash/17",
+   "group": "bosses",
+   "achievement": "Sentinel K'nash",
+   "goal": "Defeat Unique Field Monster Sentinel K'nash",
+   "title": "Executioner of Sentinel K'nash",
+   "slug": "executioner-of-sentinel-knash",
+   "tiers": false
+  },
+  {
+   "id": "bosses/executioner-of-researcher-setram/18",
+   "group": "bosses",
+   "achievement": "Researcher Setram",
+   "goal": "Defeat Unique Field Monster Researcher Setram",
+   "title": "Executioner of Researcher Setram",
+   "slug": "executioner-of-researcher-setram",
+   "tiers": false
+  },
+  {
+   "id": "bosses/executioner-of-phantasm-kasia/19",
+   "group": "bosses",
+   "achievement": "Phantasm Kasia",
+   "goal": "Defeat Unique Field Monster Phantasm Kasia",
+   "title": "Executioner of Phantasm Kasia",
+   "slug": "executioner-of-phantasm-kasia",
+   "tiers": false
+  },
+  {
+   "id": "bosses/executioner-of-silent-dartan/20",
+   "group": "bosses",
+   "achievement": "Silent Dartan",
+   "goal": "Defeat Field Boss Silent Dartan",
+   "title": "Executioner of Silent Dartan",
+   "slug": "executioner-of-silent-dartan",
+   "tiers": false
+  },
+  {
+   "id": "bosses/executioner-of-soul-ruler-kashapa/21",
+   "group": "bosses",
+   "achievement": "Soul Ruler Kashapa",
+   "goal": "Defeat Field Boss Soul Ruler Kashapa",
+   "title": "Executioner of Soul Ruler Kashapa",
+   "slug": "executioner-of-soul-ruler-kashapa",
+   "tiers": false
+  },
+  {
+   "id": "bosses/executioner-of-high-commander-lagta/22",
+   "group": "bosses",
+   "achievement": "High Commander Lagta",
+   "goal": "Defeat Field Boss High Commander Lagta",
+   "title": "Executioner of High Commander Lagta",
+   "slug": "executioner-of-high-commander-lagta",
+   "tiers": false
+  },
+  {
+   "id": "bosses/executioner-of-eternal-gartua/23",
+   "group": "bosses",
+   "achievement": "[Eternal Isle] Eternal Gartua",
+   "goal": "Defeat Field Boss Eternal Gartua",
+   "title": "Executioner of Eternal Gartua",
+   "slug": "executioner-of-eternal-gartua",
+   "tiers": false
+  },
+  {
+   "id": "bosses/executioner-of-melted-danar/24",
+   "group": "bosses",
+   "achievement": "Melted Danar",
+   "goal": "Defeat Unique Field Monster Melted Danar",
+   "title": "Executioner of Melted Danar",
+   "slug": "executioner-of-melted-danar",
+   "tiers": false
+  },
+  {
+   "id": "bosses/executioner-of-black-warrior-aed/25",
+   "group": "bosses",
+   "achievement": "Black Warrior Aed",
+   "goal": "Defeat Unique Field Monster Black Warrior Aed",
+   "title": "Executioner of Black Warrior Aed",
+   "slug": "executioner-of-black-warrior-aed",
+   "tiers": false
+  },
+  {
+   "id": "bosses/executioner-of-faithful-rajit/26",
+   "group": "bosses",
+   "achievement": "Faithful Rajit",
+   "goal": "Defeat Unique Field Monster Faithful Rajit",
+   "title": "Executioner of Faithful Rajit",
+   "slug": "executioner-of-faithful-rajit",
+   "tiers": false
+  },
+  {
+   "id": "bosses/executioner-of-berserker-vargor/27",
+   "group": "bosses",
+   "achievement": "Berserker Vargor",
+   "goal": "Defeat Unique Field Monster Berserker Vargor",
+   "title": "Executioner of Berserker Vargor",
+   "slug": "executioner-of-berserker-vargor",
+   "tiers": false
+  },
+  {
+   "id": "bosses/executioner-of-blood-warrior-lannar/28",
+   "group": "bosses",
+   "achievement": "Blood Warrior Lannar",
+   "goal": "Defeat Unique Field Monster Blood Warrior Lannar",
+   "title": "Executioner of Blood Warrior Lannar",
+   "slug": "executioner-of-blood-warrior-lannar",
+   "tiers": false
+  },
+  {
+   "id": "bosses/executioner-of-predator-garsan/29",
+   "group": "bosses",
+   "achievement": "Predator Garsan",
+   "goal": "Defeat Unique Field Monster Predator Garsan",
+   "title": "Executioner of Predator Garsan",
+   "slug": "executioner-of-predator-garsan",
+   "tiers": false
+  },
+  {
+   "id": "bosses/executioner-of-deceiver-trid/30",
+   "group": "bosses",
+   "achievement": "Deceiver Trid",
+   "goal": "Defeat Unique Field Monster Deceiver Trid",
+   "title": "Executioner of Deceiver Trid",
+   "slug": "executioner-of-deceiver-trid",
+   "tiers": false
+  },
+  {
+   "id": "bosses/executioner-of-blue-wave-kelpina/31",
+   "group": "bosses",
+   "achievement": "Blue Wave Kelpina",
+   "goal": "Defeat Unique Field Monster Blue Wave Kelpina",
+   "title": "Executioner of Blue Wave Kelpina",
+   "slug": "executioner-of-blue-wave-kelpina",
+   "tiers": false
+  },
+  {
+   "id": "bosses/executioner-of-advisor-resana/32",
+   "group": "bosses",
+   "achievement": "Advisor Resana",
+   "goal": "Defeat Unique Field Monster Advisor Resana",
+   "title": "Executioner of Advisor Resana",
+   "slug": "executioner-of-advisor-resana",
+   "tiers": false
+  },
+  {
+   "id": "bosses/executioner-of-high-overseer-nutah/33",
+   "group": "bosses",
+   "achievement": "High Overseer Nutah",
+   "goal": "Defeat Unique Field Monster High Overseer Nutah",
+   "title": "Executioner of High Overseer Nutah",
+   "slug": "executioner-of-high-overseer-nutah",
+   "tiers": false
+  },
+  {
+   "id": "bosses/executioner-of-special-operations-leader-linx/34",
+   "group": "bosses",
+   "achievement": "Special Operations Leader Linx",
+   "goal": "Defeat Unique Field Monster Special Operations Leader Linx",
+   "title": "Executioner of Special Operations Leader Linx",
+   "slug": "executioner-of-special-operations-leader-linx",
+   "tiers": false
+  },
+  {
+   "id": "bosses/executioner-of-desecrator-newbold/35",
+   "group": "bosses",
+   "achievement": "Desecrator Newbold",
+   "goal": "Defeat Unique Field Monster Desecrator Newbold",
+   "title": "Executioner of Desecrator Newbold",
+   "slug": "executioner-of-desecrator-newbold",
+   "tiers": false
+  },
+  {
+   "id": "bosses/executioner-of-specter-archon-axios/36",
+   "group": "bosses",
+   "achievement": "Specter Archon Axios",
+   "goal": "Defeat Unique Field Monster Specter Archon Axios",
+   "title": "Executioner of Specter Archon Axios",
+   "slug": "executioner-of-specter-archon-axios",
+   "tiers": false
+  },
+  {
+   "id": "bosses/executioner-of-addicted-hardirun/37",
+   "group": "bosses",
+   "achievement": "Addicted Hardirun",
+   "goal": "Defeat Unique Field Monster Addicted Hardirun",
+   "title": "Executioner of Addicted Hardirun",
+   "slug": "executioner-of-addicted-hardirun",
+   "tiers": false
+  },
+  {
+   "id": "bosses/executioner-of-executioner-barthien/38",
+   "group": "bosses",
+   "achievement": "Executioner Barthien",
+   "goal": "Defeat Unique Field Monster Executioner Barthien",
+   "title": "Executioner of Executioner Barthien",
+   "slug": "executioner-of-executioner-barthien",
+   "tiers": false
+  },
+  {
+   "id": "bosses/executioner-of-drakan-battalion-weapon-guruta/39",
+   "group": "bosses",
+   "achievement": "Drakan Battalion Weapon Guruta",
+   "goal": "Defeat Unique Field Monster Drakan Battalion Weapon Guruta",
+   "title": "Executioner of Drakan Battalion Weapon Guruta",
+   "slug": "executioner-of-drakan-battalion-weapon-guruta",
+   "tiers": false
+  },
+  {
+   "id": "bosses/executioner-of-veteran-shujakan/40",
+   "group": "bosses",
+   "achievement": "Veteran Shujakan",
+   "goal": "Defeat Unique Field Monster Veteran Shujakan",
+   "title": "Executioner of Veteran Shujakan",
+   "slug": "executioner-of-veteran-shujakan",
+   "tiers": false
+  },
+  {
+   "id": "bosses/executioner-of-visionary-karuka/41",
+   "group": "bosses",
+   "achievement": "Visionary Karuka",
+   "goal": "Defeat Unique Field Monster Visionary Karuka",
+   "title": "Executioner of Visionary Karuka",
+   "slug": "executioner-of-visionary-karuka",
+   "tiers": false
+  },
+  {
+   "id": "bosses/executioner-of-dark-shadow-vishwada/42",
+   "group": "bosses",
+   "achievement": "Dark Shadow Vishwada",
+   "goal": "Defeat Unique Field Monster Dark Shadow Vishwada",
+   "title": "Executioner of Dark Shadow Vishwada",
+   "slug": "executioner-of-dark-shadow-vishwada",
+   "tiers": false
+  },
+  {
+   "id": "bosses/executioner-of-sharp-shylak/43",
+   "group": "bosses",
+   "achievement": "Sharp Shylak",
+   "goal": "Defeat Unique Field Monster Sharp Shylak",
+   "title": "Executioner of Sharp Shylak",
+   "slug": "executioner-of-sharp-shylak",
+   "tiers": false
+  },
+  {
+   "id": "bosses/executioner-of-immortal-gartua/44",
+   "group": "bosses",
+   "achievement": "[Immortal Isle] Immortal Gartua",
+   "goal": "Defeat Field Boss Immortal Gartua",
+   "title": "Executioner of Immortal Gartua",
+   "slug": "executioner-of-immortal-gartua",
+   "tiers": false
+  },
+  {
+   "id": "exploration/verteron-cartographer/45",
+   "group": "exploration",
+   "achievement": "Bonds of the White Wings",
+   "goal": "Visit all villages in Verteron",
+   "title": "Verteron Cartographer",
+   "slug": "verteron-cartographer",
+   "tiers": false
+  },
+  {
+   "id": "exploration/altgard-cartographer/46",
+   "group": "exploration",
+   "achievement": "Bonds of the Black Wings",
+   "goal": "Visit all villages in Altgard",
+   "title": "Altgard Cartographer",
+   "slug": "altgard-cartographer",
+   "tiers": false
+  },
+  {
+   "id": "exploration/bleep-bloop-bleep-bloop/47",
+   "group": "exploration",
+   "achievement": "Who Brought the Chest?",
+   "goal": "Open 3 Hidden Cubes",
+   "title": "BLEEP BLOOP BLEEP BLOOP",
+   "slug": "bleep-bloop-bleep-bloop",
+   "tiers": true
+  },
+  {
+   "id": "exploration/its-okay-to-be-imperfect/48",
+   "group": "exploration",
+   "achievement": "Who Brought the Chest?",
+   "goal": "Open 3 Hidden Cubes",
+   "title": "It's Okay to Be Imperfect",
+   "slug": "its-okay-to-be-imperfect",
+   "tiers": true
+  },
+  {
+   "id": "exploration/shattered-into-teeny-tiny-pieces/49",
+   "group": "exploration",
+   "achievement": "Soaring the Skies",
+   "goal": "Use Updraft 5 times",
+   "title": "Shattered into Teeny, Tiny Pieces",
+   "slug": "shattered-into-teeny-tiny-pieces",
+   "tiers": false
+  },
+  {
+   "id": "exploration/gone-with-the-wind/50",
+   "group": "exploration",
+   "achievement": "Riding the Winds",
+   "goal": "Use Windstream 5 times",
+   "title": "Gone with the Wind",
+   "slug": "gone-with-the-wind",
+   "tiers": false
+  },
+  {
+   "id": "exploration/hello-there/51",
+   "group": "exploration",
+   "achievement": "Uncertain Path",
+   "goal": "Use Verteron's Spacetime Rift 3 times",
+   "title": "Hello There",
+   "slug": "hello-there",
+   "tiers": true
+  },
+  {
+   "id": "exploration/nice-to-meet-you/52",
+   "group": "exploration",
+   "achievement": "Uncertain Path",
+   "goal": "Use Verteron's Spacetime Rift 3 times",
+   "title": "Nice to Meet You",
+   "slug": "nice-to-meet-you",
+   "tiers": true
+  },
+  {
+   "id": "exploration/welcome/53",
+   "group": "exploration",
+   "achievement": "Dimension Defender",
+   "goal": "Participate in Dimensional Invasion 3 times",
+   "title": "Welcome",
+   "slug": "welcome",
+   "tiers": true
+  },
+  {
+   "id": "exploration/alien/54",
+   "group": "exploration",
+   "achievement": "Dimension Defender",
+   "goal": "Participate in Dimensional Invasion 3 times",
+   "title": "Alien",
+   "slug": "alien",
+   "tiers": true
+  },
+  {
+   "id": "shugo-festival/shugo-festival-rookie/55",
+   "group": "shugo-festival",
+   "achievement": "Shugo Festival Regular",
+   "goal": "Participate in Shugo Festival 3 times",
+   "title": "Shugo Festival Rookie",
+   "slug": "shugo-festival-rookie",
+   "tiers": true
+  },
+  {
+   "id": "shugo-festival/shugo-festival-expert/56",
+   "group": "shugo-festival",
+   "achievement": "Shugo Festival Regular",
+   "goal": "Participate in Shugo Festival 3 times",
+   "title": "Shugo Festival Expert",
+   "slug": "shugo-festival-expert",
+   "tiers": true
+  },
+  {
+   "id": "shugo-festival/odyle-drops-keep-fallin-on-my-head/57",
+   "group": "shugo-festival",
+   "achievement": "Odyle Flight Frenzy",
+   "goal": "Participate in [Odyle Flight Frenzy] 1 time",
+   "title": "Odyle Drops Keep Fallin' on My Head",
+   "slug": "odyle-drops-keep-fallin-on-my-head",
+   "tiers": false
+  },
+  {
+   "id": "shugo-festival/up-up-and-up-again/58",
+   "group": "shugo-festival",
+   "achievement": "Up! Up! Up!",
+   "goal": "Participate in [Up! Up! Up!] 1 time",
+   "title": "Up, Up, and Up Again!",
+   "slug": "up-up-and-up-again",
+   "tiers": false
+  },
+  {
+   "id": "shugo-festival/mysterious-racer/59",
+   "group": "shugo-festival",
+   "achievement": "Mysterious Track",
+   "goal": "Participate in [Mysterious Track] 1 time",
+   "title": "Mysterious Racer",
+   "slug": "mysterious-racer",
+   "tiers": false
+  },
+  {
+   "id": "shugo-festival/standing-on-my-own-two-feet/60",
+   "group": "shugo-festival",
+   "achievement": "Defend Shugo Merchants",
+   "goal": "Participate in [Defend Shugo Merchants] 1 time",
+   "title": "Standing on My Own Two Feet",
+   "slug": "standing-on-my-own-two-feet",
+   "tiers": false
+  },
+  {
+   "id": "shugo-festival/ruuuuun/61",
+   "group": "shugo-festival",
+   "achievement": "Jump Jump",
+   "goal": "Participate in [Jump Jump] 1 time",
+   "title": "Ruuuuun!!",
+   "slug": "ruuuuun",
+   "tiers": false
+  },
+  {
+   "id": "shugo-festival/catch-me-if-you-can/62",
+   "group": "shugo-festival",
+   "achievement": "Hidden Lugi",
+   "goal": "Participate in [Hidden Lugi] 1 time",
+   "title": "Catch Me If You Can",
+   "slug": "catch-me-if-you-can",
+   "tiers": false
+  },
+  {
+   "id": "shugo-festival/tile-discerner/63",
+   "group": "shugo-festival",
+   "achievement": "Not This Tile?",
+   "goal": "Participate in [Not This Tile?] 1 time",
+   "title": "Tile Discerner",
+   "slug": "tile-discerner",
+   "tiers": false
+  },
+  {
+   "id": "shugo-festival/lady-of-the-lake/64",
+   "group": "shugo-festival",
+   "achievement": "Wraith Evasion",
+   "goal": "Participate in [Wraith Evasion] 1 time",
+   "title": "Lady of the Lake",
+   "slug": "lady-of-the-lake",
+   "tiers": false
+  },
+  {
+   "id": "shugo-festival/arr-wheres-me-treasure/65",
+   "group": "shugo-festival",
+   "achievement": "Goldrin's Treasure",
+   "goal": "Participate in [Goldrin's Treasure] 1 time",
+   "title": "Arr! Where's Me Treasure?",
+   "slug": "arr-wheres-me-treasure",
+   "tiers": false
+  },
+  {
+   "id": "hunting/ecosystem-eradicator/66",
+   "group": "hunting",
+   "achievement": "They Just Keep Coming!",
+   "goal": "Defeat 100 monsters",
+   "title": "Ecosystem Eradicator",
+   "slug": "ecosystem-eradicator",
+   "tiers": false
+  },
+  {
+   "id": "hunting/cogni-executioner/67",
+   "group": "hunting",
+   "achievement": "Cogni Killer",
+   "goal": "Defeat 100 Cogni Monsters",
+   "title": "Cogni Executioner",
+   "slug": "cogni-executioner",
+   "tiers": false
+  },
+  {
+   "id": "hunting/fera-executioner/68",
+   "group": "hunting",
+   "achievement": "Driving Beasts Out",
+   "goal": "Defeat 100 Fera Monsters",
+   "title": "Fera Executioner",
+   "slug": "fera-executioner",
+   "tiers": false
+  },
+  {
+   "id": "hunting/natura-executioner/69",
+   "group": "hunting",
+   "achievement": "Insect Eradication",
+   "goal": "Defeat 100 Natura Monsters",
+   "title": "Natura Executioner",
+   "slug": "natura-executioner",
+   "tiers": false
+  },
+  {
+   "id": "hunting/varian-executioner/70",
+   "group": "hunting",
+   "achievement": "Destroy All Varian",
+   "goal": "Defeat 100 Varian Monsters",
+   "title": "Varian Executioner",
+   "slug": "varian-executioner",
+   "tiers": false
+  },
+  {
+   "id": "hunting/special-executioner/71",
+   "group": "hunting",
+   "achievement": "War on Crime",
+   "goal": "Defeat 100 Special Monsters",
+   "title": "Special Executioner",
+   "slug": "special-executioner",
+   "tiers": false
+  },
+  {
+   "id": "hunting/holding-on-by-a-thread/72",
+   "group": "hunting",
+   "achievement": "Doing You a Favor",
+   "goal": "Defeat 50 monsters in Altgard",
+   "title": "Holding on by a Thread",
+   "slug": "holding-on-by-a-thread",
+   "tiers": false
+  },
+  {
+   "id": "hunting/eternal-isle-wanderer/73",
+   "group": "hunting",
+   "achievement": "Windstream to Eternity",
+   "goal": "Defeat 100 monsters on Eternal Isle",
+   "title": "Eternal Isle Wanderer",
+   "slug": "eternal-isle-wanderer",
+   "tiers": false
+  },
+  {
+   "id": "hunting/immortal-isle-wanderer/74",
+   "group": "hunting",
+   "achievement": "Windstream to Immortality",
+   "goal": "Defeat 100 monsters on Immortal Isle",
+   "title": "Immortal Isle Wanderer",
+   "slug": "immortal-isle-wanderer",
+   "tiers": false
+  },
+  {
+   "id": "combat/reckless-challenge/75",
+   "group": "combat",
+   "achievement": "A Dance with Death",
+   "goal": "Get killed by a Boss Monster 5 times",
+   "title": "Reckless Challenge",
+   "slug": "reckless-challenge",
+   "tiers": false
+  },
+  {
+   "id": "combat/novice-asmodian-hunter/76",
+   "group": "combat",
+   "achievement": "Nothing Personal, Kid",
+   "goal": "Kill 5 players",
+   "title": "Novice Asmodian Hunter",
+   "slug": "novice-asmodian-hunter",
+   "tiers": true
+  },
+  {
+   "id": "combat/intermediate-asmodian-hunter/77",
+   "group": "combat",
+   "achievement": "Nothing Personal, Kid",
+   "goal": "Kill 5 players",
+   "title": "Intermediate Asmodian Hunter",
+   "slug": "intermediate-asmodian-hunter",
+   "tiers": true
+  },
+  {
+   "id": "combat/veteran-asmodian-hunter/78",
+   "group": "combat",
+   "achievement": "Nothing Personal, Kid",
+   "goal": "Kill 5 players",
+   "title": "Veteran Asmodian Hunter",
+   "slug": "veteran-asmodian-hunter",
+   "tiers": true
+  },
+  {
+   "id": "combat/deathbringer/79",
+   "group": "combat",
+   "achievement": "Nothing Personal, Kid",
+   "goal": "Kill 5 players",
+   "title": "Deathbringer",
+   "slug": "deathbringer",
+   "tiers": true
+  },
+  {
+   "id": "combat/overtaking-black-wings/80",
+   "group": "combat",
+   "achievement": "Nothing Personal, Kid",
+   "goal": "Kill 5 players",
+   "title": "Overtaking Black Wings",
+   "slug": "overtaking-black-wings",
+   "tiers": true
+  },
+  {
+   "id": "combat/treading-on-black-wings/81",
+   "group": "combat",
+   "achievement": "Nothing Personal, Kid",
+   "goal": "Kill 5 players",
+   "title": "Treading on Black Wings",
+   "slug": "treading-on-black-wings",
+   "tiers": true
+  },
+  {
+   "id": "combat/just-getting-started/82",
+   "group": "combat",
+   "achievement": "You'll Regret This",
+   "goal": "Be killed by a player 5 times",
+   "title": "Just Getting Started",
+   "slug": "just-getting-started",
+   "tiers": true
+  },
+  {
+   "id": "combat/evading-the-grim-reaper/83",
+   "group": "combat",
+   "achievement": "You'll Regret This",
+   "goal": "Be killed by a player 5 times",
+   "title": "Evading the Grim Reaper",
+   "slug": "evading-the-grim-reaper",
+   "tiers": true
+  },
+  {
+   "id": "social/theres-no-i-in-team/84",
+   "group": "social",
+   "achievement": "The More the Merrier",
+   "goal": "Join a Legion",
+   "title": "There's No \"I\" in Team",
+   "slug": "theres-no-i-in-team",
+   "tiers": false
+  },
+  {
+   "id": "social/co-op-society/85",
+   "group": "social",
+   "achievement": "Back to Innocence",
+   "goal": "Make a friend",
+   "title": "Co-op Society",
+   "slug": "co-op-society",
+   "tiers": false
+  },
+  {
+   "id": "social/tamed/86",
+   "group": "social",
+   "achievement": "My Reliable Friends",
+   "goal": "Collect 3 pets",
+   "title": "Tamed",
+   "slug": "tamed",
+   "tiers": true
+  },
+  {
+   "id": "social/ride-all-creation/87",
+   "group": "social",
+   "achievement": "My Reliable Friends",
+   "goal": "Collect 3 pets",
+   "title": "Ride All Creation",
+   "slug": "ride-all-creation",
+   "tiers": true
+  },
+  {
+   "id": "social/bond-with-all-creation/88",
+   "group": "social",
+   "achievement": "My Reliable Friends",
+   "goal": "Collect 3 pets",
+   "title": "Bond with All Creation",
+   "slug": "bond-with-all-creation",
+   "tiers": true
+  },
+  {
+   "id": "social/rule-all-creation/89",
+   "group": "social",
+   "achievement": "My Reliable Friends",
+   "goal": "Collect 3 pets",
+   "title": "Rule All Creation",
+   "slug": "rule-all-creation",
+   "tiers": true
+  },
+  {
+   "id": "social/cogni-to-the-bone/90",
+   "group": "social",
+   "achievement": "A Clever Pet",
+   "goal": "Reach Cogni Insight Level 3",
+   "title": "Cogni to the Bone",
+   "slug": "cogni-to-the-bone",
+   "tiers": false
+  },
+  {
+   "id": "social/fera-to-the-bone/91",
+   "group": "social",
+   "achievement": "An Imposing Pet",
+   "goal": "Reach Fera Insight Level 3",
+   "title": "Fera to the Bone",
+   "slug": "fera-to-the-bone",
+   "tiers": false
+  },
+  {
+   "id": "social/natura-to-the-bone/92",
+   "group": "social",
+   "achievement": "A Fresh Pet",
+   "goal": "Reach Natura Insight Level 3",
+   "title": "Natura to the Bone",
+   "slug": "natura-to-the-bone",
+   "tiers": false
+  },
+  {
+   "id": "social/varian-to-the-bone/93",
+   "group": "social",
+   "achievement": "A Strange Pet",
+   "goal": "Reach Varian Insight Level 3",
+   "title": "Varian to the Bone",
+   "slug": "varian-to-the-bone",
+   "tiers": false
+  },
+  {
+   "id": "social/special-to-the-bone/94",
+   "group": "social",
+   "achievement": "A Special Pet",
+   "goal": "Reach Special Insight Level 3",
+   "title": "Special to the Bone",
+   "slug": "special-to-the-bone",
+   "tiers": false
+  },
+  {
+   "id": "social/unbound-by-genus/95",
+   "group": "social",
+   "achievement": "Genus Genius",
+   "goal": "Reach All Genus Insights Level 10",
+   "title": "Unbound by Genus",
+   "slug": "unbound-by-genus",
+   "tiers": false
+  },
+  {
+   "id": "social/has-exceptional-skill/96",
+   "group": "social",
+   "achievement": "I Have Exceptional Skill",
+   "goal": "Receive 1 Exceptional Skill Commendation",
+   "title": "Has Exceptional Skill",
+   "slug": "has-exceptional-skill",
+   "tiers": true
+  },
+  {
+   "id": "social/divine-skill/97",
+   "group": "social",
+   "achievement": "I Have Exceptional Skill",
+   "goal": "Receive 1 Exceptional Skill Commendation",
+   "title": "Divine Skill",
+   "slug": "divine-skill",
+   "tiers": true
+  },
+  {
+   "id": "social/reliable-guardian/98",
+   "group": "social",
+   "achievement": "I'm a Reliable Guardian",
+   "goal": "Receive 1 Reliable Guardian Commendation",
+   "title": "Reliable Guardian",
+   "slug": "reliable-guardian",
+   "tiers": true
+  },
+  {
+   "id": "social/unyielding-bulwark/99",
+   "group": "social",
+   "achievement": "I'm a Reliable Guardian",
+   "goal": "Receive 1 Reliable Guardian Commendation",
+   "title": "Unyielding Bulwark",
+   "slug": "unyielding-bulwark",
+   "tiers": true
+  },
+  {
+   "id": "social/dedicated-supporter/100",
+   "group": "social",
+   "achievement": "I Provide Dedicated Support",
+   "goal": "Receive 1 Dedicated Support Commendation",
+   "title": "Dedicated Supporter",
+   "slug": "dedicated-supporter",
+   "tiers": true
+  },
+  {
+   "id": "social/whisper-of-unity/101",
+   "group": "social",
+   "achievement": "I Provide Dedicated Support",
+   "goal": "Receive 1 Dedicated Support Commendation",
+   "title": "Whisper of Unity",
+   "slug": "whisper-of-unity",
+   "tiers": true
+  },
+  {
+   "id": "social/great-leader/102",
+   "group": "social",
+   "achievement": "I Have Great Leadership",
+   "goal": "Receive 1 Great Leadership Commendation",
+   "title": "Great Leader",
+   "slug": "great-leader",
+   "tiers": true
+  },
+  {
+   "id": "social/banner-of-the-vanguard/103",
+   "group": "social",
+   "achievement": "I Have Great Leadership",
+   "goal": "Receive 1 Great Leadership Commendation",
+   "title": "Banner of the Vanguard",
+   "slug": "banner-of-the-vanguard",
+   "tiers": true
+  },
+  {
+   "id": "social/helpful-mentor/104",
+   "group": "social",
+   "achievement": "I'm a Helpful Mentor",
+   "goal": "Receive 1 Helpful Mentor Commendation",
+   "title": "Helpful Mentor",
+   "slug": "helpful-mentor",
+   "tiers": true
+  },
+  {
+   "id": "social/guiding-light/105",
+   "group": "social",
+   "achievement": "I'm a Helpful Mentor",
+   "goal": "Receive 1 Helpful Mentor Commendation",
+   "title": "Guiding Light",
+   "slug": "guiding-light",
+   "tiers": true
+  },
+  {
+   "id": "quests/island-of-death-poeta/106",
+   "group": "quests",
+   "achievement": "Island of Death, Poeta",
+   "goal": "Complete Episode Quest 1",
+   "title": "Island of Death, Poeta",
+   "slug": "island-of-death-poeta",
+   "tiers": true
+  },
+  {
+   "id": "quests/dreaming-of-paradise/107",
+   "group": "quests",
+   "achievement": "Island of Death, Poeta",
+   "goal": "Complete Episode Quest 1",
+   "title": "Dreaming of Paradise",
+   "slug": "dreaming-of-paradise",
+   "tiers": true
+  },
+  {
+   "id": "quests/searching-for-high-priestess-reda/108",
+   "group": "quests",
+   "achievement": "Island of Death, Poeta",
+   "goal": "Complete Episode Quest 1",
+   "title": "Searching for High Priestess Reda",
+   "slug": "searching-for-high-priestess-reda",
+   "tiers": true
+  },
+  {
+   "id": "quests/the-past-behind-the-sealed-barrier/109",
+   "group": "quests",
+   "achievement": "Island of Death, Poeta",
+   "goal": "Complete Episode Quest 1",
+   "title": "The Past Behind the Sealed Barrier",
+   "slug": "the-past-behind-the-sealed-barrier",
+   "tiers": true
+  },
+  {
+   "id": "quests/two-faced/110",
+   "group": "quests",
+   "achievement": "Island of Death, Poeta",
+   "goal": "Complete Episode Quest 1",
+   "title": "Two-Faced",
+   "slug": "two-faced",
+   "tiers": true
+  },
+  {
+   "id": "quests/encountering-kaisinels-core/111",
+   "group": "quests",
+   "achievement": "Island of Death, Poeta",
+   "goal": "Complete Episode Quest 1",
+   "title": "Encountering Kaisinel's Core",
+   "slug": "encountering-kaisinels-core",
+   "tiers": true
+  },
+  {
+   "id": "quests/verteron-expert/112",
+   "group": "quests",
+   "achievement": "Stories of the People",
+   "goal": "Complete 1 Regional Quest in Verteron",
+   "title": "Verteron Expert",
+   "slug": "verteron-expert",
+   "tiers": true
+  },
+  {
+   "id": "quests/verteron-troubleshooter/113",
+   "group": "quests",
+   "achievement": "Stories of the People",
+   "goal": "Complete 1 Regional Quest in Verteron",
+   "title": "Verteron Troubleshooter",
+   "slug": "verteron-troubleshooter",
+   "tiers": true
+  },
+  {
+   "id": "quests/protector-of-atreia/114",
+   "group": "quests",
+   "achievement": "Five Veiled Fates",
+   "goal": "Complete Duty Quest: Mission 3 times",
+   "title": "Protector of Atreia",
+   "slug": "protector-of-atreia",
+   "tiers": false
+  },
+  {
+   "id": "quests/messenger-of-atreia/115",
+   "group": "quests",
+   "achievement": "Herald of Hope",
+   "goal": "Complete Duty Quest: Command 3 times",
+   "title": "Messenger of Atreia",
+   "slug": "messenger-of-atreia",
+   "tiers": false
+  },
+  {
+   "id": "quests/betrayer-and-survivor/116",
+   "group": "quests",
+   "achievement": "Betrayer and Survivor",
+   "goal": "Complete Episode Quest 1",
+   "title": "Betrayer and Survivor",
+   "slug": "betrayer-and-survivor",
+   "tiers": true
+  },
+  {
+   "id": "quests/stranger-in-a-strange-land/117",
+   "group": "quests",
+   "achievement": "Betrayer and Survivor",
+   "goal": "Complete Episode Quest 1",
+   "title": "Stranger in a Strange Land",
+   "slug": "stranger-in-a-strange-land",
+   "tiers": true
+  },
+  {
+   "id": "quests/youre-in-the-palm-of-our-hands/118",
+   "group": "quests",
+   "achievement": "Betrayer and Survivor",
+   "goal": "Complete Episode Quest 1",
+   "title": "You're in the Palm of Our Hands",
+   "slug": "youre-in-the-palm-of-our-hands",
+   "tiers": true
+  },
+  {
+   "id": "quests/ill-fated-encounter/119",
+   "group": "quests",
+   "achievement": "Betrayer and Survivor",
+   "goal": "Complete Episode Quest 1",
+   "title": "Ill-Fated Encounter",
+   "slug": "ill-fated-encounter",
+   "tiers": true
+  },
+  {
+   "id": "quests/i-only-wanted-you/120",
+   "group": "quests",
+   "achievement": "Betrayer and Survivor",
+   "goal": "Complete Episode Quest 1",
+   "title": "I Only Wanted You",
+   "slug": "i-only-wanted-you",
+   "tiers": true
+  },
+  {
+   "id": "quests/encountering-zikels-core/121",
+   "group": "quests",
+   "achievement": "Betrayer and Survivor",
+   "goal": "Complete Episode Quest 1",
+   "title": "Encountering Zikel's Core",
+   "slug": "encountering-zikels-core",
+   "tiers": true
+  },
+  {
+   "id": "enhancement/splendent-glow/122",
+   "group": "enhancement",
+   "achievement": "Common and Beyond",
+   "goal": "Enhance Common Gear to +5",
+   "title": "Splendent Glow",
+   "slug": "splendent-glow",
+   "tiers": false
+  },
+  {
+   "id": "enhancement/green-glow/123",
+   "group": "enhancement",
+   "achievement": "Rare and Beyond I",
+   "goal": "Enhance Rare Gear to +5",
+   "title": "Green Glow",
+   "slug": "green-glow",
+   "tiers": false
+  },
+  {
+   "id": "enhancement/azure-glow/124",
+   "group": "enhancement",
+   "achievement": "Legendary Gambler's Challenge",
+   "goal": "Enhance Epic Gear to +5",
+   "title": "Azure Glow",
+   "slug": "azure-glow",
+   "tiers": false
+  },
+  {
+   "id": "enhancement/golden-glow/125",
+   "group": "enhancement",
+   "achievement": "Tailor-Made",
+   "goal": "Enhance Unique Gear to +5",
+   "title": "Golden Glow",
+   "slug": "golden-glow",
+   "tiers": false
+  },
+  {
+   "id": "enhancement/pouring-water-into-a-sieve/126",
+   "group": "enhancement",
+   "achievement": "Power of Steady Enhancement",
+   "goal": "Enhance gear 10 times",
+   "title": "Pouring Water into a Sieve",
+   "slug": "pouring-water-into-a-sieve",
+   "tiers": false
+  },
+  {
+   "id": "enhancement/perfectionist/127",
+   "group": "enhancement",
+   "achievement": "Fulfilled Soul",
+   "goal": "Achieve 100% Soul Binding on 1 piece of gear",
+   "title": "Perfectionist",
+   "slug": "perfectionist",
+   "tiers": false
+  },
+  {
+   "id": "enhancement/extractor/128",
+   "group": "enhancement",
+   "achievement": "Shaky Extraction",
+   "goal": "Extract +10 or higher gear 5 times",
+   "title": "Extractor",
+   "slug": "extractor",
+   "tiers": false
+  },
+  {
+   "id": "crafting/artisan-blacksmith/129",
+   "group": "crafting",
+   "achievement": "Blacksmithing Specialist",
+   "goal": "Reach Crafting: Novice Blacksmithing Proficiency Level 50",
+   "title": "Artisan Blacksmith",
+   "slug": "artisan-blacksmith",
+   "tiers": true
+  },
+  {
+   "id": "crafting/blacksmithing-is-life/130",
+   "group": "crafting",
+   "achievement": "Blacksmithing Specialist",
+   "goal": "Reach Crafting: Novice Blacksmithing Proficiency Level 50",
+   "title": "Blacksmithing Is Life",
+   "slug": "blacksmithing-is-life",
+   "tiers": true
+  },
+  {
+   "id": "crafting/iron-arm/131",
+   "group": "crafting",
+   "achievement": "Endless Hammering",
+   "goal": "Succeed in Crafting: Blacksmithing 5 times",
+   "title": "Iron Arm",
+   "slug": "iron-arm",
+   "tiers": false
+  },
+  {
+   "id": "crafting/artisan-armorsmith/132",
+   "group": "crafting",
+   "achievement": "Armorsmithing Specialist",
+   "goal": "Reach Crafting: Novice Armorsmithing Proficiency Level 50",
+   "title": "Artisan Armorsmith",
+   "slug": "artisan-armorsmith",
+   "tiers": true
+  },
+  {
+   "id": "crafting/warriors-idol/133",
+   "group": "crafting",
+   "achievement": "Armorsmithing Specialist",
+   "goal": "Reach Crafting: Novice Armorsmithing Proficiency Level 50",
+   "title": "Warriors' Idol",
+   "slug": "warriors-idol",
+   "tiers": true
+  },
+  {
+   "id": "crafting/reliable-ally/134",
+   "group": "crafting",
+   "achievement": "Resilient Armor",
+   "goal": "Succeed in Crafting: Armorsmithing 5 times",
+   "title": "Reliable Ally",
+   "slug": "reliable-ally",
+   "tiers": false
+  },
+  {
+   "id": "crafting/artisan-handicrafter/135",
+   "group": "crafting",
+   "achievement": "Handicrafting Specialist",
+   "goal": "Reach Crafting: Novice Handicrafting Proficiency Level 50",
+   "title": "Artisan Handicrafter",
+   "slug": "artisan-handicrafter",
+   "tiers": true
+  },
+  {
+   "id": "crafting/youre-my-gem/136",
+   "group": "crafting",
+   "achievement": "Handicrafting Specialist",
+   "goal": "Reach Crafting: Novice Handicrafting Proficiency Level 50",
+   "title": "You're My Gem",
+   "slug": "youre-my-gem",
+   "tiers": true
+  },
+  {
+   "id": "crafting/extreme-detailing/137",
+   "group": "crafting",
+   "achievement": "Detail Oriented",
+   "goal": "Succeed in Crafting: Handicrafting 5 times",
+   "title": "Extreme Detailing",
+   "slug": "extreme-detailing",
+   "tiers": false
+  },
+  {
+   "id": "crafting/artisan-alchemist/138",
+   "group": "crafting",
+   "achievement": "Alchemy Specialist",
+   "goal": "Reach Crafting: Novice Alchemy Proficiency Level 50",
+   "title": "Artisan Alchemist",
+   "slug": "artisan-alchemist",
+   "tiers": true
+  },
+  {
+   "id": "crafting/something-from-nothing/139",
+   "group": "crafting",
+   "achievement": "Alchemy Specialist",
+   "goal": "Reach Crafting: Novice Alchemy Proficiency Level 50",
+   "title": "Something from Nothing",
+   "slug": "something-from-nothing",
+   "tiers": true
+  },
+  {
+   "id": "crafting/seeker-of-truths/140",
+   "group": "crafting",
+   "achievement": "Astonishing Alchemy",
+   "goal": "Succeed in Crafting: Alchemy 5 times",
+   "title": "Seeker of Truths",
+   "slug": "seeker-of-truths",
+   "tiers": false
+  },
+  {
+   "id": "crafting/artisan-chef/141",
+   "group": "crafting",
+   "achievement": "Cooking Specialist",
+   "goal": "Reach Crafting: Novice Cooking Proficiency Level 50",
+   "title": "Artisan Chef",
+   "slug": "artisan-chef",
+   "tiers": true
+  },
+  {
+   "id": "crafting/chef/142",
+   "group": "crafting",
+   "achievement": "Cooking Specialist",
+   "goal": "Reach Crafting: Novice Cooking Proficiency Level 50",
+   "title": "★★★ Chef",
+   "slug": "chef",
+   "tiers": true
+  },
+  {
+   "id": "crafting/flavors-and-flair/143",
+   "group": "crafting",
+   "achievement": "3 Minute Cook",
+   "goal": "Succeed in Crafting: Cooking 5 times",
+   "title": "Flavors and Flair",
+   "slug": "flavors-and-flair",
+   "tiers": false
+  },
+  {
+   "id": "crafting/artisan-crafter/144",
+   "group": "crafting",
+   "achievement": "Soaked in Crafting",
+   "goal": "Craft Artisan Gear 5 times",
+   "title": "Artisan Crafter",
+   "slug": "artisan-crafter",
+   "tiers": false
+  },
+  {
+   "id": "gear-collection/fashionista/145",
+   "group": "gear-collection",
+   "achievement": "Fashionista",
+   "goal": "Collect 10 Skins",
+   "title": "Fashionista",
+   "slug": "fashionista",
+   "tiers": true
+  },
+  {
+   "id": "gear-collection/fashion-forward/146",
+   "group": "gear-collection",
+   "achievement": "Fashionista",
+   "goal": "Collect 10 Skins",
+   "title": "Fashion Forward",
+   "slug": "fashion-forward",
+   "tiers": true
+  },
+  {
+   "id": "gear-collection/empty-closet/147",
+   "group": "gear-collection",
+   "achievement": "Fashionista",
+   "goal": "Collect 10 Skins",
+   "title": "Empty Closet",
+   "slug": "empty-closet",
+   "tiers": true
+  },
+  {
+   "id": "gear-collection/shaking-off-the-worlds-shackles/148",
+   "group": "gear-collection",
+   "achievement": "Veteran Wing Collector",
+   "goal": "Collect 3 Wings",
+   "title": "Shaking Off the World's Shackles",
+   "slug": "shaking-off-the-worlds-shackles",
+   "tiers": true
+  },
+  {
+   "id": "gear-collection/dominator-of-dimensions/149",
+   "group": "gear-collection",
+   "achievement": "Veteran Wing Collector",
+   "goal": "Collect 3 Wings",
+   "title": "Dominator of Dimensions",
+   "slug": "dominator-of-dimensions",
+   "tiers": true
+  },
+  {
+   "id": "gear-collection/going-around-in-circles/150",
+   "group": "gear-collection",
+   "achievement": "Transformation Whizz",
+   "goal": "Collect 5 Titles",
+   "title": "Going Around in Circles",
+   "slug": "going-around-in-circles",
+   "tiers": true
+  },
+  {
+   "id": "gear-collection/transformation-whizz/151",
+   "group": "gear-collection",
+   "achievement": "Transformation Whizz",
+   "goal": "Collect 5 Titles",
+   "title": "Transformation Whizz",
+   "slug": "transformation-whizz",
+   "tiers": true
+  },
+  {
+   "id": "gear-collection/scenery-collector/152",
+   "group": "gear-collection",
+   "achievement": "Shugo Collection",
+   "goal": "Collect 1 Unique Shugo Festival Artwork",
+   "title": "Scenery Collector",
+   "slug": "scenery-collector",
+   "tiers": true
+  },
+  {
+   "id": "gear-collection/click/153",
+   "group": "gear-collection",
+   "achievement": "Shugo Collection",
+   "goal": "Collect 1 Unique Shugo Festival Artwork",
+   "title": "Click",
+   "slug": "click",
+   "tiers": true
+  },
+  {
+   "id": "gear-collection/at-your-own-pace/154",
+   "group": "gear-collection",
+   "achievement": "Conquering Boots Artwork",
+   "goal": "Collect 1 Unique Expedition Artwork",
+   "title": "At Your Own Pace",
+   "slug": "at-your-own-pace",
+   "tiers": true
+  },
+  {
+   "id": "gear-collection/steps-on-the-journey/155",
+   "group": "gear-collection",
+   "achievement": "Conquering Boots Artwork",
+   "goal": "Collect 1 Unique Expedition Artwork",
+   "title": "Steps on the Journey",
+   "slug": "steps-on-the-journey",
+   "tiers": true
+  },
+  {
+   "id": "gear-collection/ferocious-statue/156",
+   "group": "gear-collection",
+   "achievement": "Nightmare Statue",
+   "goal": "Collect 1 Unique Nightmare Statue",
+   "title": "Ferocious Statue",
+   "slug": "ferocious-statue",
+   "tiers": true
+  },
+  {
+   "id": "gear-collection/twinkling-eyes/157",
+   "group": "gear-collection",
+   "achievement": "Nightmare Statue",
+   "goal": "Collect 1 Unique Nightmare Statue",
+   "title": "Twinkling Eyes",
+   "slug": "twinkling-eyes",
+   "tiers": true
+  },
+  {
+   "id": "gear-collection/keen-eye/158",
+   "group": "gear-collection",
+   "achievement": "Boss Loot",
+   "goal": "Collect 1 Unique Field Monster, Boss Artwork",
+   "title": "Keen Eye",
+   "slug": "keen-eye",
+   "tiers": true
+  },
+  {
+   "id": "gear-collection/genuine-masterpiece/159",
+   "group": "gear-collection",
+   "achievement": "Boss Loot",
+   "goal": "Collect 1 Unique Field Monster, Boss Artwork",
+   "title": "Genuine Masterpiece",
+   "slug": "genuine-masterpiece",
+   "tiers": true
+  },
+  {
+   "id": "kibelisks/teleportation-specialist/160",
+   "group": "kibelisks",
+   "achievement": "Verteron Binding Master",
+   "goal": "Activate all Kibelisks in Verteron",
+   "title": "Teleportation Specialist",
+   "slug": "teleportation-specialist",
+   "tiers": false
+  },
+  {
+   "id": "kibelisks/teleportation-specialist/161",
+   "group": "kibelisks",
+   "achievement": "Altgard Binding Veteran",
+   "goal": "Activate all Kibelisks in Altgard",
+   "title": "Teleportation Specialist",
+   "slug": "teleportation-specialist",
+   "tiers": false
+  },
+  {
+   "id": "sealed-dungeons/verteron-seal-breaker/162",
+   "group": "sealed-dungeons",
+   "achievement": "The Broken Seal of Verteron",
+   "goal": "Clear 3 Sealed Dungeons in Verteron",
+   "title": "Verteron Seal Breaker",
+   "slug": "verteron-seal-breaker",
+   "tiers": false
+  },
+  {
+   "id": "sealed-dungeons/altgard-seal-breaker/163",
+   "group": "sealed-dungeons",
+   "achievement": "The Broken Seal of Altgard",
+   "goal": "Clear 3 Sealed Dungeons in Altgard",
+   "title": "Altgard Seal Breaker",
+   "slug": "altgard-seal-breaker",
+   "tiers": false
+  },
+  {
+   "id": "strongholds/knock-knock-whos-there/164",
+   "group": "strongholds",
+   "achievement": "Verteron Stronghold Sweep",
+   "goal": "Clear 1 Stronghold in Verteron",
+   "title": "Knock Knock Who's There",
+   "slug": "knock-knock-whos-there",
+   "tiers": false
+  },
+  {
+   "id": "strongholds/housekeeping-open-up/165",
+   "group": "strongholds",
+   "achievement": "Altgard Stronghold Sweep",
+   "goal": "Clear 1 Stronghold in Altgard",
+   "title": "Housekeeping Open Up",
+   "slug": "housekeeping-open-up",
+   "tiers": false
+  },
+  {
+   "id": "milestones/one-step-at-a-time/166",
+   "group": "milestones",
+   "achievement": "Only as Good as One's Gear",
+   "goal": "Reach Character Item Level 50",
+   "title": "One Step at a Time",
+   "slug": "one-step-at-a-time",
+   "tiers": true
+  },
+  {
+   "id": "milestones/designer-drip/167",
+   "group": "milestones",
+   "achievement": "Only as Good as One's Gear",
+   "goal": "Reach Character Item Level 50",
+   "title": "Designer Drip",
+   "slug": "designer-drip",
+   "tiers": true
+  },
+  {
+   "id": "gathering/professional-extractor/168",
+   "group": "gathering",
+   "achievement": "Essence Extraction Specialist",
+   "goal": "Reach Novice Essence Extraction Proficiency Level 50",
+   "title": "Professional Extractor",
+   "slug": "professional-extractor",
+   "tiers": true
+  },
+  {
+   "id": "gathering/the-world-is-my-resource/169",
+   "group": "gathering",
+   "achievement": "Essence Extraction Specialist",
+   "goal": "Reach Novice Essence Extraction Proficiency Level 50",
+   "title": "The World Is My Resource",
+   "slug": "the-world-is-my-resource",
+   "tiers": true
+  },
+  {
+   "id": "gathering/extracting-in-my-sleep/170",
+   "group": "gathering",
+   "achievement": "Skybound Treasure",
+   "goal": "Successfully gather 5 Odyle",
+   "title": "Extracting in My Sleep",
+   "slug": "extracting-in-my-sleep",
+   "tiers": false
+  },
+  {
+   "id": "consumables/high-roller/171",
+   "group": "consumables",
+   "achievement": "The Joy of Spending",
+   "goal": "Spend 100,000 Kina at Merchants",
+   "title": "High Roller",
+   "slug": "high-roller",
+   "tiers": false
+  },
+  {
+   "id": "consumables/big-spender/172",
+   "group": "consumables",
+   "achievement": "Black Cloud Merchants Regular",
+   "goal": "Purchase 5 items at Black Cloud Merchants",
+   "title": "Big Spender",
+   "slug": "big-spender",
+   "tiers": false
+  },
+  {
+   "id": "consumables/no-heavy-lifting/173",
+   "group": "consumables",
+   "achievement": "Storage Keeper",
+   "goal": "Store items in the Storage 5 times",
+   "title": "No Heavy Lifting!",
+   "slug": "no-heavy-lifting",
+   "tiers": false
+  },
+  {
+   "id": "fire-temple/fire-temple-sightseer/174",
+   "group": "fire-temple",
+   "achievement": "Fire Temple Exploration Clear",
+   "goal": "Clear Fire Temple Exploration 1 time",
+   "title": "Fire Temple Sightseer",
+   "slug": "fire-temple-sightseer",
+   "tiers": false
+  },
+  {
+   "id": "fire-temple/fire-temple-tour-guide/175",
+   "group": "fire-temple",
+   "achievement": "Fire Temple Conquest Clear",
+   "goal": "Clear Fire Temple Conquest on Normal 1 time",
+   "title": "Fire Temple Tour Guide",
+   "slug": "fire-temple-tour-guide",
+   "tiers": false
+  },
+  {
+   "id": "fire-temple/kromede-will-remember-that/176",
+   "group": "fire-temple",
+   "achievement": "Sauna",
+   "goal": "Lie down in the Fire Temple Conquest Boss Room",
+   "title": "Kromede Will Remember That",
+   "slug": "kromede-will-remember-that",
+   "tiers": false
+  },
+  {
+   "id": "draupnir-cave/draupnir-sightseer/177",
+   "group": "draupnir-cave",
+   "achievement": "Draupnir Exploration Clear",
+   "goal": "Clear Draupnir Exploration 1 time",
+   "title": "Draupnir Sightseer",
+   "slug": "draupnir-sightseer",
+   "tiers": false
+  },
+  {
+   "id": "draupnir-cave/draupnir-tour-guide/178",
+   "group": "draupnir-cave",
+   "achievement": "Draupnir Conquest Clear",
+   "goal": "Clear Draupnir Conquest on Normal 1 time",
+   "title": "Draupnir Tour Guide",
+   "slug": "draupnir-tour-guide",
+   "tiers": false
+  },
+  {
+   "id": "draupnir-cave/pathfinder/179",
+   "group": "draupnir-cave",
+   "achievement": "Enemy-Supplied Shortcut",
+   "goal": "Operate the Windstream Control Device in Draupnir 10 times",
+   "title": "Pathfinder",
+   "slug": "pathfinder",
+   "tiers": false
+  },
+  {
+   "id": "krao-cave/krao-cave-sightseer/180",
+   "group": "krao-cave",
+   "achievement": "Krao Cave Exploration Clear",
+   "goal": "Clear Krao Cave Exploration 1 time",
+   "title": "Krao Cave Sightseer",
+   "slug": "krao-cave-sightseer",
+   "tiers": false
+  },
+  {
+   "id": "krao-cave/krao-cave-tour-guide/181",
+   "group": "krao-cave",
+   "achievement": "Krao Cave Conquest Clear",
+   "goal": "Clear Krao Cave Conquest on Normal 1 time",
+   "title": "Krao Cave Tour Guide",
+   "slug": "krao-cave-tour-guide",
+   "tiers": false
+  },
+  {
+   "id": "krao-cave/one-step-ahead/182",
+   "group": "krao-cave",
+   "achievement": "Snipers First",
+   "goal": "Defeat 20 Sniping Crokas in Krao Cave",
+   "title": "One Step Ahead",
+   "slug": "one-step-ahead",
+   "tiers": false
+  },
+  {
+   "id": "urugugu/urugugu-canyon-sightseer/183",
+   "group": "urugugu",
+   "achievement": "Urugugu Canyon Exploration Clear",
+   "goal": "Clear Urugugu Canyon Exploration 1 time",
+   "title": "Urugugu Canyon Sightseer",
+   "slug": "urugugu-canyon-sightseer",
+   "tiers": false
+  },
+  {
+   "id": "urugugu/urugugu-canyon-tour-guide/184",
+   "group": "urugugu",
+   "achievement": "Urugugu Canyon Conquest Clear",
+   "goal": "Clear Urugugu Canyon Conquest on Normal 1 time",
+   "title": "Urugugu Canyon Tour Guide",
+   "slug": "urugugu-canyon-tour-guide",
+   "tiers": false
+  },
+  {
+   "id": "urugugu/totem-destroyer/185",
+   "group": "urugugu",
+   "achievement": "Totem Destroyer",
+   "goal": "Destroy 20 Healing/Blazing Totems in Urugugu Canyon",
+   "title": "Totem Destroyer",
+   "slug": "totem-destroyer",
+   "tiers": false
+  },
+  {
+   "id": "vakron/vakron-sky-island-sightseer/186",
+   "group": "vakron",
+   "achievement": "Vakron Sky Island Exploration Clear",
+   "goal": "Clear Vakron Sky Island Exploration 1 time",
+   "title": "Vakron Sky Island Sightseer",
+   "slug": "vakron-sky-island-sightseer",
+   "tiers": false
+  },
+  {
+   "id": "vakron/vakron-sky-island-tour-guide/187",
+   "group": "vakron",
+   "achievement": "Vakron Sky Island Conquest Clear",
+   "goal": "Clear Vakron Sky Island Conquest on Normal 1 time",
+   "title": "Vakron Sky Island Tour Guide",
+   "slug": "vakron-sky-island-tour-guide",
+   "tiers": false
+  },
+  {
+   "id": "vakron/good-for-nothing/188",
+   "group": "vakron",
+   "achievement": "Trampled Dream",
+   "goal": "Defeat 20 Island Guardian Archers in Vakron Sky Island",
+   "title": "Good-for-Nothing",
+   "slug": "good-for-nothing",
+   "tiers": false
+  },
+  {
+   "id": "horn-den/ferocious-horn-den-sightseer/189",
+   "group": "horn-den",
+   "achievement": "Ferocious Horn Den Exploration Clear",
+   "goal": "Clear Ferocious Horn Den Exploration 1 time",
+   "title": "Ferocious Horn Den Sightseer",
+   "slug": "ferocious-horn-den-sightseer",
+   "tiers": false
+  },
+  {
+   "id": "horn-den/ferocious-horn-den-tour-guide/190",
+   "group": "horn-den",
+   "achievement": "Ferocious Horn Den Conquest Clear",
+   "goal": "Clear Ferocious Horn Den Conquest on Normal 1 time",
+   "title": "Ferocious Horn Den Tour Guide",
+   "slug": "ferocious-horn-den-tour-guide",
+   "tiers": false
+  },
+  {
+   "id": "horn-den/hey-im-walkin-here/191",
+   "group": "horn-den",
+   "achievement": "Faith in the Totem",
+   "goal": "Destroy 20 Mau/Fafnite Totems in Ferocious Horn Den",
+   "title": "Hey! I'm Walkin' Here!",
+   "slug": "hey-im-walkin-here",
+   "tiers": false
+  }
+ ]
+}
