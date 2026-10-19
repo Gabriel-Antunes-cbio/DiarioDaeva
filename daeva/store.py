@@ -9,10 +9,10 @@ import json
 import os
 import sys
 import uuid
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
-from .schedule import EVENTS, FIELD_BOSSES
+from .schedule import EVENTS, FIELD_BOSSES, FIELD_BY_ID
 
 HISTORY_MAX = 365
 
@@ -62,7 +62,7 @@ def parse_iso(s: str | None) -> datetime | None:
 class Store:
     def __init__(self, path: Path | None = None):
         self.path = path or data_dir() / "dados.json"
-        self.data = {"version": 1, "characters": [], "field_kills": {}, "settings": default_settings(),
+        self.data = {"version": 1, "characters": [], "field_due": {}, "settings": default_settings(),
                      "titles": {"owned": {}, "target": {}, "focus": "pve"}}
         self.cache_path = self.path.with_name("titulos_cache.json")
         self.title_cache: dict[str, dict] = {}
@@ -89,7 +89,12 @@ class Store:
         if not isinstance(raw, dict):
             return
         self.data["characters"] = [c for c in raw.get("characters", []) if isinstance(c, dict) and c.get("url")]
-        self.data["field_kills"] = {k: v for k, v in (raw.get("field_kills") or {}).items() if isinstance(v, str)}
+        self.data["field_due"] = {k: v for k, v in (raw.get("field_due") or {}).items() if isinstance(v, str)}
+        # versões até 1.2 guardavam a hora da morte: converte para a hora do respawn
+        for k, v in (raw.get("field_kills") or {}).items():
+            kt = parse_iso(v) if isinstance(v, str) else None
+            if kt and k in FIELD_BY_ID and k not in self.data["field_due"]:
+                self.data["field_due"][k] = iso(kt + timedelta(hours=FIELD_BY_ID[k].respawn_h))
         self.data["field_meta"] = {k: v for k, v in (raw.get("field_meta") or {}).items() if isinstance(v, dict)}
         t = raw.get("titles") or {}
         self.data["titles"] = {
@@ -187,32 +192,38 @@ class Store:
             self.save()
 
     # ------------------------------------------------------------ field bosses
-    def kill_time(self, boss_id: str) -> datetime | None:
-        return parse_iso(self.data["field_kills"].get(boss_id))
+    def respawn_time(self, boss_id: str) -> datetime | None:
+        return parse_iso(self.data["field_due"].get(boss_id))
 
     def kill_meta(self, boss_id: str) -> dict:
         return (self.data.get("field_meta") or {}).get(boss_id) or {}
 
-    def set_kill(self, boss_id: str, when: datetime | None, by: str = "", via: str = "local") -> None:
-        if when is None:
-            self.data["field_kills"].pop(boss_id, None)
+    def set_respawn(self, boss_id: str, due: datetime | None, by: str = "", via: str = "local",
+                    killed: bool = False) -> None:
+        """Guarda quando o boss nasce. killed=True quando veio de “Morreu agora”."""
+        if due is None:
+            self.data["field_due"].pop(boss_id, None)
         else:
-            self.data["field_kills"][boss_id] = iso(when)
-        self.data.setdefault("field_meta", {})[boss_id] = {"by": by, "via": via}
+            self.data["field_due"][boss_id] = iso(due)
+        self.data.setdefault("field_meta", {})[boss_id] = {"by": by, "via": via, "killed": killed}
         self.save()
 
     def apply_group(self, bosses: dict) -> bool:
         """Substitui os horários locais pelos do bot do grupo. Devolve True se algo mudou."""
-        kills, meta = {}, {}
+        dues, meta = {}, {}
         for bid, rec in (bosses or {}).items():
-            if not isinstance(rec, dict):
+            if not isinstance(rec, dict) or bid not in FIELD_BY_ID:
                 continue
-            if rec.get("killed_at"):
-                kills[bid] = rec["killed_at"]
-            meta[bid] = {"by": str(rec.get("by") or ""), "via": str(rec.get("via") or "")}
-        changed = kills != self.data["field_kills"] or meta != self.data.get("field_meta")
+            due = parse_iso(rec.get("respawn_at"))
+            if due is None and parse_iso(rec.get("killed_at")):
+                due = parse_iso(rec["killed_at"]) + timedelta(hours=FIELD_BY_ID[bid].respawn_h)
+            if due:
+                dues[bid] = iso(due)
+            meta[bid] = {"by": str(rec.get("by") or ""), "via": str(rec.get("via") or ""),
+                         "killed": bool(rec.get("killed_at"))}
+        changed = dues != self.data["field_due"] or meta != self.data.get("field_meta")
         if changed:
-            self.data["field_kills"] = kills
+            self.data["field_due"] = dues
             self.data["field_meta"] = meta
             self.save()
         return changed

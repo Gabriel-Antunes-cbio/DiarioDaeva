@@ -1,8 +1,8 @@
 """Bot do Discord do Diário de Daeva.
 
 Comandos:
-  /gartua [hora]        registra a morte do Eternal Gartua (Elyos) (vazio = agora; ou 14:32)
-  /morreu boss [hora]   registra a morte de qualquer boss de campo
+  /gartua [falta]       Eternal Gartua (Elyos): vazio = morreu agora; ou quanto falta para nascer (3h20)
+  /morreu boss [falta]  o mesmo para qualquer boss de campo
   /timers               mostra os respawns registrados
   /limpar boss          apaga o registro de um boss
 
@@ -28,7 +28,7 @@ from aiohttp import web  # noqa: E402
 from discord import app_commands  # noqa: E402
 from discord.ext import tasks  # noqa: E402
 
-from bot.state import BoardError, KillBoard, parse_clock  # noqa: E402
+from bot.state import BoardError, KillBoard, parse_remaining  # noqa: E402
 from bot.web import make_app  # noqa: E402
 from daeva.schedule import FIELD_BOSSES, FIELD_BY_ID  # noqa: E402
 
@@ -114,12 +114,15 @@ class DaevaBot(discord.Client):
     def kill_text(self, boss_id: str, rec: dict) -> str:
         b = FIELD_BY_ID[boss_id]
         killed = self.board.killed_at(boss_id)
-        if killed is None:
-            return f"🧹 Registro do **{b.name}** apagado por {rec['by']}."
         due = self.board.respawn_at(boss_id)
+        if due is None:
+            return f"🧹 Registro do **{b.name}** apagado por {rec['by']}."
         origem = " pelo app" if rec.get("via") == "app" else ""
-        return (f"⚔️ **{b.name}** morreu às {ts(killed)} (marcado por {rec['by']}{origem}).\n"
-                f"Respawn em {ts(due, 'R')}, às {ts(due)}. Aviso {ALERT_MINUTES} min antes.")
+        if killed is not None:
+            head = f"⚔️ **{b.name}** morreu às {ts(killed)} (marcado por {rec['by']}{origem})."
+        else:
+            head = f"⏳ **{b.name}**: respawn informado por {rec['by']}{origem}."
+        return f"{head}\nNasce {ts(due, 'R')}, às {ts(due)}. Aviso {ALERT_MINUTES} min antes."
 
     async def on_app_change(self, boss_id: str, rec: dict):
         ch = await self.channel()
@@ -154,11 +157,14 @@ class DaevaBot(discord.Client):
 def register_commands(bot: DaevaBot) -> None:
     tree = bot.tree
 
-    async def record(inter: discord.Interaction, boss_id: str, hora: str | None):
+    async def record(inter: discord.Interaction, boss_id: str, falta: str | None):
         now = now_utc()
         try:
-            killed = parse_clock(hora, TZ_NAME, now) if hora else now
-            rec = bot.board.set(boss_id, killed, inter.user.display_name, "discord", now)
+            if falta:
+                rec = bot.board.set(boss_id, None, inter.user.display_name, "discord", now,
+                                    respawn_at=now + parse_remaining(falta))
+            else:
+                rec = bot.board.set(boss_id, now, inter.user.display_name, "discord", now)
         except BoardError as e:
             await inter.response.send_message(f"❌ {e}", ephemeral=True)
             return
@@ -166,15 +172,15 @@ def register_commands(bot: DaevaBot) -> None:
                                           allowed_mentions=discord.AllowedMentions.none())
 
     @tree.command(name="gartua", description="Registra a morte do Eternal Gartua (Elyos)")
-    @app_commands.describe(hora="Horário da morte no horário de Brasília (ex.: 14:32). Vazio = agora")
-    async def gartua(inter: discord.Interaction, hora: str | None = None):
-        await record(inter, "gartua", hora)
+    @app_commands.describe(falta="Quanto falta para nascer, como no mapa do jogo (ex.: 3h20). Vazio = morreu agora")
+    async def gartua(inter: discord.Interaction, falta: str | None = None):
+        await record(inter, "gartua", falta)
 
     @tree.command(name="morreu", description="Registra a morte de um boss de campo")
-    @app_commands.describe(boss="Qual boss morreu", hora="Horário da morte no horário de Brasília (ex.: 14:32). Vazio = agora")
+    @app_commands.describe(boss="Qual boss", falta="Quanto falta para nascer, como no mapa do jogo (ex.: 3h20). Vazio = morreu agora")
     @app_commands.choices(boss=BOSS_CHOICES)
-    async def morreu(inter: discord.Interaction, boss: app_commands.Choice[str], hora: str | None = None):
-        await record(inter, boss.value, hora)
+    async def morreu(inter: discord.Interaction, boss: app_commands.Choice[str], falta: str | None = None):
+        await record(inter, boss.value, falta)
 
     @tree.command(name="timers", description="Mostra os respawns registrados dos bosses de campo")
     async def timers(inter: discord.Interaction):

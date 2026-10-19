@@ -5,12 +5,12 @@ import json
 import urllib.request
 from datetime import datetime, timedelta
 
-from PySide6.QtCore import QObject, QRunnable, Qt, QThreadPool, QTime, QTimer, QUrl, Signal
+from PySide6.QtCore import QObject, QRunnable, Qt, QThreadPool, QTimer, QUrl, Signal
 from PySide6.QtGui import QAction, QDesktopServices, QIcon
 from PySide6.QtWidgets import (
     QApplication, QCheckBox, QComboBox, QDialog, QDialogButtonBox, QFrame, QGridLayout,
     QHBoxLayout, QInputDialog, QLabel, QLineEdit, QMainWindow, QMenu, QMessageBox, QPushButton,
-    QScrollArea, QSpinBox, QSystemTrayIcon, QTabWidget, QTimeEdit, QVBoxLayout, QWidget,
+    QScrollArea, QSpinBox, QSystemTrayIcon, QTabWidget, QVBoxLayout, QWidget,
 )
 
 from . import GITHUB_REPO, __version__, theme
@@ -19,7 +19,7 @@ from .group import GroupError, get_kills, normalize_url, ping, post_kill
 from .profiles import ProfileError, fetch_details, fetch_profile, parse_link
 from .titles_tab import TitlesTab
 from .schedule import (
-    EVENTS, FIELD_BOSSES, REGIONS, AlertTracker, field_respawn, fmt_left, next_occurrence, now_utc,
+    EVENTS, FIELD_BOSSES, REGIONS, AlertTracker, fmt_left, next_occurrence, now_utc,
 )
 from .sound import play_alert, resource
 from .store import Store, data_dir, parse_iso
@@ -118,7 +118,7 @@ class GroupJob(QRunnable):
                 res = None
             elif self.kind == "post":
                 p = self.payload
-                res = post_kill(self.url, self.key, p["boss"], p["killed_at"], p["by"])
+                res = post_kill(self.url, self.key, p["boss"], p["respawn_at"], p["by"], p.get("killed_at"))
             else:
                 res = get_kills(self.url, self.key)
             self.signals.done.emit(self.kind, res, "")
@@ -178,16 +178,24 @@ class EventRow(QFrame):
             restyle(self)
 
 
-class KillTimeDialog(QDialog):
-    def __init__(self, boss_name: str, parent=None):
+class RemainingDialog(QDialog):
+    """Pergunta quanto falta para o boss nascer, do jeito que o mapa do jogo mostra."""
+
+    def __init__(self, boss_name: str, respawn_h: int, parent=None):
         super().__init__(parent)
         self.setWindowTitle(boss_name)
         v = QVBoxLayout(self)
-        v.addWidget(label(f"Que horas o {boss_name} morreu? (seu horário)", wrap=True))
-        self.time = QTimeEdit(QTime.currentTime())
-        self.time.setDisplayFormat("HH:mm")
-        v.addWidget(self.time)
-        v.addWidget(label("Se o horário for depois de agora, conto como ontem.", "muted", wrap=True))
+        v.addWidget(label(f"Quanto falta para o <b>{boss_name}</b> nascer?", wrap=True))
+        row = QHBoxLayout()
+        self.hours = QSpinBox(minimum=0, maximum=48, suffix=" h")
+        self.minutes = QSpinBox(minimum=0, maximum=59, suffix=" min")
+        self.hours.setValue(min(respawn_h, 48) // 2)
+        row.addWidget(self.hours)
+        row.addWidget(self.minutes)
+        row.addStretch(1)
+        v.addLayout(row)
+        v.addWidget(label("Copie do mapa do jogo: Exploração → Field Boss mostra a contagem de cada boss.",
+                          "muted", wrap=True))
         bb = QDialogButtonBox(QDialogButtonBox.Ok | QDialogButtonBox.Cancel)
         bb.button(QDialogButtonBox.Ok).setText("Salvar")
         bb.button(QDialogButtonBox.Cancel).setText("Cancelar")
@@ -195,13 +203,8 @@ class KillTimeDialog(QDialog):
         bb.rejected.connect(self.reject)
         v.addWidget(bb)
 
-    def chosen(self) -> datetime:
-        now = datetime.now().astimezone()
-        t = self.time.time()
-        dt = now.replace(hour=t.hour(), minute=t.minute(), second=0, microsecond=0)
-        if dt > now:
-            dt -= timedelta(days=1)
-        return dt
+    def remaining(self) -> timedelta:
+        return timedelta(hours=self.hours.value(), minutes=self.minutes.value())
 
 
 # ======================================================================= window
@@ -292,8 +295,8 @@ class MainWindow(QMainWindow):
 
         v.addSpacing(8)
         v.addWidget(label("BOSSES DE CAMPO · RENASCEM APÓS A MORTE", "section"))
-        v.addWidget(label("Marque quando o boss cair. O mapa do jogo (Exploração → Field Boss) mostra o "
-                          "estado real do seu canal.", "muted", wrap=True))
+        v.addWidget(label("Use “Quanto falta…” com a contagem do mapa do jogo (Exploração → Field Boss), "
+                          "ou “Morreu agora” quando o boss cair na sua frente.", "muted", wrap=True))
         self.group_line = label("", "muted", wrap=True)
         v.addWidget(self.group_line)
         for b in FIELD_BOSSES:
@@ -302,11 +305,12 @@ class MainWindow(QMainWindow):
                            lambda on, k=b.id: self.store.set_alert(k, on))
             kill = QPushButton("Morreu agora")
             kill.setObjectName("primary")
-            kill.clicked.connect(lambda _=False, k=b.id: self.set_kill(k, now_utc()))
-            at = QPushButton("Horário…")
-            at.clicked.connect(lambda _=False, bb=b: self.ask_kill_time(bb))
+            kill.clicked.connect(lambda _=False, bb=b: self.mark_killed(bb))
+            at = QPushButton("Quanto falta…")
+            at.setToolTip("Informe a contagem que aparece no mapa do jogo (Exploração → Field Boss)")
+            at.clicked.connect(lambda _=False, bb=b: self.ask_remaining(bb))
             clear = QPushButton("Limpar")
-            clear.clicked.connect(lambda _=False, k=b.id: self.set_kill(k, None))
+            clear.clicked.connect(lambda _=False, k=b.id: self.set_respawn(k, None))
             for w in (kill, at, clear):
                 row.extra.addWidget(w)
             row.extra.addStretch(1)
@@ -316,13 +320,18 @@ class MainWindow(QMainWindow):
         v.addStretch(1)
         return self._scroll(inner)
 
-    def set_kill(self, boss_id: str, when: datetime | None):
+    def mark_killed(self, boss):
+        now = now_utc()
+        self.set_respawn(boss.id, now + timedelta(hours=boss.respawn_h), killed_at=now)
+
+    def set_respawn(self, boss_id: str, due: datetime | None, killed_at: datetime | None = None):
         nick = (self.store.settings.get("nickname") or "").strip() or "alguém"
-        self.store.set_kill(boss_id, when, nick, "app" if self.store.group_on else "local")
+        self.store.set_respawn(boss_id, due, nick, "app" if self.store.group_on else "local", killed_at is not None)
         if self.store.group_on:
             s = self.store.settings
             job = GroupJob("post", s["group_url"], s["group_key"],
-                           {"boss": boss_id, "killed_at": when.isoformat() if when else None, "by": nick})
+                           {"boss": boss_id, "respawn_at": due.isoformat() if due else None,
+                            "killed_at": killed_at.isoformat() if killed_at else None, "by": nick})
             job.signals.done.connect(self.on_group_done)
             self.pool.start(job)
         self.on_tick()
@@ -375,10 +384,14 @@ class MainWindow(QMainWindow):
             self.group_line.setObjectName("muted")
         restyle(self.group_line)
 
-    def ask_kill_time(self, boss):
-        dlg = KillTimeDialog(boss.name, self)
+    def ask_remaining(self, boss):
+        dlg = RemainingDialog(boss.name, boss.respawn_h, self)
         if dlg.exec() == QDialog.Accepted:
-            self.set_kill(boss.id, dlg.chosen())
+            left = dlg.remaining()
+            if left <= timedelta(0):
+                self.set_respawn(boss.id, now_utc())
+            else:
+                self.set_respawn(boss.id, now_utc() + left)
 
     # ------------------------------------------------------------- chars tab
     def _build_chars_tab(self) -> QWidget:
@@ -819,13 +832,13 @@ class MainWindow(QMainWindow):
 
         for b in FIELD_BOSSES:
             row = self.field_rows[b.id]
-            kill = self.store.kill_time(b.id)
-            due = field_respawn(b, kill)
-            row.clear_btn.setVisible(kill is not None)
+            due = self.store.respawn_time(b.id)
+            row.clear_btn.setVisible(due is not None)
             meta = self.store.kill_meta(b.id)
-            if kill is not None and meta.get("by"):
+            if due is not None and meta.get("by"):
                 origem = {"discord": " pelo Discord", "app": " pelo app"}.get(meta.get("via"), "")
-                row.note.setText(f"Morte às {kill.astimezone():%H:%M}, marcada por {meta['by']}{origem}")
+                what = "Morte marcada" if meta.get("killed") else "Tempo informado"
+                row.note.setText(f"{what} por {meta['by']}{origem}")
                 row.note.show()
             else:
                 row.note.hide()
@@ -844,8 +857,8 @@ class MainWindow(QMainWindow):
                 row.set_state("soon" if left <= timedelta(minutes=lead) else "")
                 if alerts.get(b.id):
                     upcoming.append((due, b.name))
-                    if self.tracker.due(f"{b.id}:{kill.isoformat()}", due, now, lead):
-                        self.fire_alert(f"{b.name} em {lead} min", "Respawn calculado pela última morte marcada.")
+                    if self.tracker.due(f"{b.id}:{due.isoformat()}", due, now, lead):
+                        self.fire_alert(f"{b.name} em {lead} min", "Respawn pelo último registro do grupo.")
 
         if upcoming:
             t, name = min(upcoming)

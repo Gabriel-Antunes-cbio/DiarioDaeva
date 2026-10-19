@@ -55,5 +55,7 @@ def get_kills(base: str, key: str) -> dict:
     return _request(base, key, "/api/kills").get("bosses") or {}
 
 
-def post_kill(base: str, key: str, boss: str, killed_at_iso: str | None, by: str) -> dict:
-    return _request(base, key, "/api/kills", {"boss": boss, "killed_at": killed_at_iso, "by": by}).get("bosses") or {}
+def post_kill(base: str, key: str, boss: str, respawn_at_iso: str | None, by: str,
+              killed_at_iso: str | None = None) -> dict:
+    body = {"boss": boss, "respawn_at": respawn_at_iso, "killed_at": killed_at_iso, "by": by}
+    return _request(base, key, "/api/kills", body).get("bosses") or {}

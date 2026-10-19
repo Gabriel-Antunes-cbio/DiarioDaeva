@@ -2,7 +2,8 @@
 
 GET  /api/ping   -> {"ok": true}
 GET  /api/kills  -> {"bosses": {...}}
-POST /api/kills  {"boss": "gartua", "killed_at": "2026-10-19T17:30:00+00:00" | null, "by": "Kumaglad"}
+POST /api/kills  {"boss": "gartua", "respawn_at": "<ISO>" | null, "killed_at": "<ISO>" | null, "by": "Kumaglad"}
+                 (respawn_at = quando nasce; killed_at = quando morreu; os dois null = limpar)
 
 Todas as rotas exigem o cabeçalho X-Daeva-Key com a chave do grupo.
 """
@@ -41,12 +42,13 @@ def make_app(board: KillBoard, group_key: str, on_change: OnChange | None = None
         if not isinstance(body, dict):
             return web.json_response({"error": "Corpo inválido."}, status=400)
         boss = str(body.get("boss", ""))
-        raw = body.get("killed_at")
-        killed = parse_iso(raw) if raw else None
-        if raw and killed is None:
+        raw_k, raw_r = body.get("killed_at"), body.get("respawn_at")
+        killed = parse_iso(raw_k) if raw_k else None
+        respawn = parse_iso(raw_r) if raw_r else None
+        if (raw_k and killed is None) or (raw_r and respawn is None):
             return web.json_response({"error": "Horário inválido."}, status=400)
         try:
-            rec = board.set(boss, killed, str(body.get("by") or ""), "app", datetime.now(timezone.utc))
+            rec = board.set(boss, killed, str(body.get("by") or ""), "app", datetime.now(timezone.utc), respawn)
         except BoardError as e:
             return web.json_response({"error": str(e)}, status=400)
         if on_change:

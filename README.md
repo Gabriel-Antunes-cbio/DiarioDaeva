@@ -15,7 +15,7 @@ Feito para a galera que joga junto em **Siel (América Latina)**, mas funciona e
 | Aba | Recurso |
 |---|---|
 | **Bosses** | Contagem regressiva dos bosses do Abismo (Nahma, Executores, Vigia Kaira), do Cerco de Artefato e da Fenda. |
-| | Timer de respawn dos bosses de campo (Eternal Gartua, Immortal Gartua, Lagta, Dartan, Kashapa, Danar): marque quando o boss morreu. |
+| | Timer de respawn dos bosses de campo (Eternal Gartua, Immortal Gartua, Lagta, Dartan, Kashapa, Danar): use **Quanto falta…** com a contagem do mapa do jogo (Exploração → Field Boss), ou **Morreu agora**. |
 | | **Alerta com som e notificação do Windows 5 minutos antes** (ajustável). Ligado por padrão para Nahma, Executores, Vigia Kaira e os dois Gartua. |
 | **Personagens** | Cole o link do perfil no Shugo.GG ou no AION2 Index. O app lê Combat Power, Gear score / Item level, classe e nível. |
 | | Gráfico de evolução de CP e de equipamento, com o ganho desde a primeira leitura. Atualiza sozinho a cada 6 horas (ajustável). |
@@ -37,7 +37,7 @@ O Shugo.GG mostra **Gear score** e o AION2 Index mostra **Item level**. São mé
 
 ### Horários
 
-Os eventos do Abismo seguem o relógio do servidor. Na América Latina, isso é o horário de Brasília. Nahma e Vigia Kaira estão marcados como **não confirmados**, porque os guias da comunidade divergem; se o aviso do jogo disser outro horário, vale o jogo. Bosses de campo não têm horário fixo: eles renascem um tempo depois de morrer, por isso o timer depende de alguém marcar a morte.
+Os eventos do Abismo seguem o relógio do servidor. Na América Latina, isso é o horário de Brasília. Nahma e Vigia Kaira estão marcados como **não confirmados**, porque os guias da comunidade divergem; se o aviso do jogo disser outro horário, vale o jogo. Bosses de campo não têm horário fixo: eles renascem um tempo depois de morrer. O jeito mais preciso é copiar a contagem que o mapa do jogo mostra em Exploração → Field Boss.
 
 ## É seguro para a conta?
 

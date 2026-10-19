@@ -15,6 +15,7 @@ from daeva.schedule import FIELD_BY_ID, FIELD_BOSSES
 
 MAX_PAST = timedelta(hours=48)
 MAX_FUTURE = timedelta(minutes=5)
+MAX_REMAINING = timedelta(hours=48)
 
 
 class BoardError(ValueError):
@@ -33,6 +34,25 @@ def parse_iso(s) -> datetime | None:
     except ValueError:
         return None
     return dt if dt.tzinfo else dt.replace(tzinfo=timezone.utc)
+
+
+def parse_remaining(text: str) -> timedelta:
+    """Quanto falta para o respawn: '3h20', '3h 20m', '3:20', '45m', '45' (minutos) ou '2h'."""
+    t = (text or "").strip().lower().replace(" ", "")
+    m = (re.fullmatch(r"(\d{1,2})h(?:(\d{1,2})m?)?", t) or re.fullmatch(r"(\d{1,2}):(\d{2})", t))
+    if m:
+        h, mi = int(m.group(1)), int(m.group(2) or 0)
+    else:
+        m = re.fullmatch(r"(\d{1,4})m?(?:in)?", t)
+        if not m:
+            raise BoardError("Não entendi o tempo. Use, por exemplo, 3h20, 3:20 ou 45m, como no mapa do jogo.")
+        h, mi = 0, int(m.group(1))
+    if mi > 59 and h:
+        raise BoardError("Minutos inválidos. Use, por exemplo, 3h20.")
+    left = timedelta(hours=h, minutes=mi)
+    if left > MAX_REMAINING:
+        raise BoardError("Tempo grande demais. O máximo é 48 horas.")
+    return left
 
 
 def parse_clock(text: str, tz_name: str, now: datetime) -> datetime:
@@ -76,16 +96,27 @@ class KillBoard:
         tmp.replace(self.path)
 
     def snapshot(self) -> dict:
-        return {"bosses": {bid: dict(rec) for bid, rec in self.bosses.items()}}
+        out = {}
+        for bid, rec in self.bosses.items():
+            r = dict(rec)
+            r["respawn_at"] = iso(self.respawn_at(bid))  # sempre presente, mesmo em registros antigos
+            out[bid] = r
+        return {"bosses": out}
 
     def killed_at(self, boss_id: str) -> datetime | None:
         return parse_iso((self.bosses.get(boss_id) or {}).get("killed_at"))
 
     def respawn_at(self, boss_id: str) -> datetime | None:
+        rec = self.bosses.get(boss_id) or {}
+        due = parse_iso(rec.get("respawn_at"))
+        if due:
+            return due
         k = self.killed_at(boss_id)
         return k + timedelta(hours=FIELD_BY_ID[boss_id].respawn_h) if k else None
 
-    def set(self, boss_id: str, killed_at: datetime | None, by: str, via: str, now: datetime) -> dict:
+    def set(self, boss_id: str, killed_at: datetime | None, by: str, via: str, now: datetime,
+            respawn_at: datetime | None = None) -> dict:
+        """Registra uma morte (killed_at) ou quanto falta para nascer (respawn_at). Os dois vazios = limpar."""
         if boss_id not in FIELD_BY_ID:
             raise BoardError("Boss desconhecido.")
         if killed_at is not None:
@@ -93,8 +124,16 @@ class KillBoard:
                 raise BoardError("Esse horário está no futuro.")
             if killed_at < now - MAX_PAST:
                 raise BoardError("Esse horário tem mais de 48 horas.")
+            if respawn_at is None:
+                respawn_at = killed_at + timedelta(hours=FIELD_BY_ID[boss_id].respawn_h)
+        elif respawn_at is not None:
+            if respawn_at < now - timedelta(minutes=1):
+                raise BoardError("Esse respawn já passou.")
+            if respawn_at > now + MAX_REMAINING:
+                raise BoardError("Tempo grande demais. O máximo é 48 horas.")
         rec = {
             "killed_at": iso(killed_at),
+            "respawn_at": iso(respawn_at),
             "by": (by or "alguém").strip()[:40] or "alguém",
             "via": via if via in ("discord", "app") else "app",
             "updated_at": iso(now),

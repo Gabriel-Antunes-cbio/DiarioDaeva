@@ -5,7 +5,7 @@ from datetime import datetime, timedelta, timezone
 
 import pytest
 
-from bot.state import BoardError, KillBoard, parse_clock
+from bot.state import BoardError, KillBoard, parse_clock, parse_remaining
 from daeva.store import Store
 
 UTC = timezone.utc
@@ -56,8 +56,8 @@ def test_app_store_applies_group_state(tmp_path):
     state = {"gartua": {"killed_at": "2026-10-19T20:00:00+00:00", "by": "Ana", "via": "discord"},
              "lagta": {"killed_at": None, "by": "Bia", "via": "app"}}
     assert s.apply_group(state)
-    assert s.kill_time("gartua") == utc(2026, 10, 19, 20, 0)
-    assert s.kill_time("lagta") is None
+    assert s.respawn_time("gartua") == utc(2026, 10, 20, 8, 0)  # morte 20:00 + 12 h
+    assert s.respawn_time("lagta") is None
     assert s.kill_meta("gartua")["by"] == "Ana"
     assert not s.apply_group(state)  # nada mudou
 
@@ -99,12 +99,47 @@ def test_api_roundtrip(tmp_path):
         with pytest.raises(group.GroupError, match="Chave"):
             group.ping(base, "errada")
         killed = datetime.now(UTC) - timedelta(minutes=3)
-        state = group.post_kill(base, "segredo", "gartua", killed.isoformat(), "Kumaglad")
+        state = group.post_kill(base, "segredo", "gartua", None, "Kumaglad", killed_at_iso=killed.isoformat())
         assert state["gartua"]["by"] == "Kumaglad" and state["gartua"]["via"] == "app"
         assert group.get_kills(base, "segredo")["gartua"]["killed_at"]
+        due = datetime.now(UTC) + timedelta(hours=3, minutes=20)
+        state = group.post_kill(base, "segredo", "lagta", due.isoformat(), "Ana")
+        assert state["lagta"]["killed_at"] is None and state["lagta"]["respawn_at"]
         with pytest.raises(group.GroupError, match="futuro"):
-            group.post_kill(base, "segredo", "gartua", (datetime.now(UTC) + timedelta(hours=2)).isoformat(), "x")
-        assert changes == [("gartua", "Kumaglad")]
+            group.post_kill(base, "segredo", "gartua", None, "x",
+                            killed_at_iso=(datetime.now(UTC) + timedelta(hours=2)).isoformat())
+        assert changes == [("gartua", "Kumaglad"), ("lagta", "Ana")]
     finally:
         asyncio.run_coroutine_threadsafe(holder["runner"].cleanup(), loop).result(5)
         loop.call_soon_threadsafe(loop.stop)
+
+
+def test_parse_remaining():
+    assert parse_remaining("3h20") == timedelta(hours=3, minutes=20)
+    assert parse_remaining("3h 20m") == timedelta(hours=3, minutes=20)
+    assert parse_remaining("3:05") == timedelta(hours=3, minutes=5)
+    assert parse_remaining("2h") == timedelta(hours=2)
+    assert parse_remaining("45m") == timedelta(minutes=45)
+    assert parse_remaining("90") == timedelta(minutes=90)
+    for bad in ("amanhã", "3h75", "60h"):
+        with pytest.raises(BoardError):
+            parse_remaining(bad)
+
+
+def test_board_remaining_time(tmp_path):
+    b = KillBoard(tmp_path / "m.json")
+    now = utc(2026, 10, 19, 20, 0)
+    b.set("gartua", None, "Ana", "discord", now, respawn_at=now + timedelta(hours=3, minutes=20))
+    assert b.respawn_at("gartua") == utc(2026, 10, 19, 23, 20)
+    assert b.killed_at("gartua") is None
+    assert b.snapshot()["bosses"]["gartua"]["respawn_at"] == "2026-10-19T23:20:00+00:00"
+    assert b.due_alerts(utc(2026, 10, 19, 23, 16), 5) == ["gartua"]
+    with pytest.raises(BoardError):
+        b.set("gartua", None, "x", "app", now, respawn_at=now - timedelta(hours=1))
+
+
+def test_app_store_migrates_old_kill_times(tmp_path):
+    import json
+    path = tmp_path / "d.json"
+    path.write_text(json.dumps({"characters": [], "field_kills": {"gartua": "2026-10-19T20:00:00+00:00"}}))
+    assert Store(path).respawn_time("gartua") == utc(2026, 10, 20, 8, 0)

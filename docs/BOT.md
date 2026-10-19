@@ -1,10 +1,10 @@
 # Bot do Discord: timer do Gartua para o grupo
 
-O bot guarda a hora da morte do **Eternal Gartua** (e dos outros bosses de campo) e divide essa informação com todo mundo:
+O bot guarda quando o **Eternal Gartua** (e os outros bosses de campo) vai nascer e divide essa informação com todo mundo:
 
-- No Discord, alguém usa `/gartua` quando o boss cai.
+- No Discord, alguém usa `/gartua` quando o boss cai, ou `/gartua falta:3h20` com a contagem do mapa do jogo.
 - O bot avisa no canal **5 minutos antes do respawn**, e pode marcar um cargo como `@Bosses`.
-- O app de cada amigo busca os horários do bot a cada 30 segundos. O **Morreu agora** do app também vai para o bot e aparece no canal.
+- O app de cada amigo busca os horários do bot a cada 30 segundos. O **Morreu agora** e o **Quanto falta…** do app também vão para o bot e aparece no canal.
 
 O bot **não sabe sozinho** que o boss morreu: alguém do grupo precisa marcar. Ele não lê nada do jogo.
 
@@ -12,11 +12,13 @@ O bot **não sabe sozinho** que o boss morreu: alguém do grupo precisa marcar. 
 
 | Comando | O que faz |
 |---|---|
-| `/gartua` | Registra que o Eternal Gartua (lado Elyos) morreu agora |
-| `/gartua hora:14:32` | Registra a morte num horário (de Brasília), se você viu depois |
-| `/morreu boss:<boss> [hora]` | O mesmo para Immortal Gartua, Lagta, Dartan, Kashapa e Danar |
+| `/gartua` | Registra que o Eternal Gartua (lado Elyos) morreu agora: nasce em 12 h |
+| `/gartua falta:3h20` | Registra quanto falta para ele nascer, copiando a contagem do mapa do jogo (Exploração → Field Boss) |
+| `/morreu boss:<boss> [falta]` | O mesmo para Immortal Gartua, Lagta, Dartan, Kashapa e Danar |
 | `/timers` | Mostra todos os respawns registrados |
 | `/limpar boss:<boss>` | Apaga um registro errado |
+
+O tempo aceita `3h20`, `3h 20m`, `3:20`, `2h`, `45m` ou só os minutos (`90`). Informar quanto falta é o jeito mais preciso, porque usa a contagem do próprio jogo.
 
 Os horários aparecem no fuso de cada pessoa, porque o bot usa as marcações de tempo do próprio Discord.
 
