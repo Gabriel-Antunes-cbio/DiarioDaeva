@@ -6,3 +6,7 @@ build/
 dist/
 *.spec
 .pytest_cache/
+
+# bot: segredos e dados ficam só na VM
+bot/.env
+bot/dados/

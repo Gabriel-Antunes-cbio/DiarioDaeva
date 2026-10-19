@@ -39,6 +39,9 @@ def default_settings() -> dict:
         "always_on_top": False,
         "close_to_tray": True,
         "refresh_hours": 6,
+        "group_url": "",
+        "group_key": "",
+        "nickname": "",
     }
 
 
@@ -79,6 +82,7 @@ class Store:
             return
         self.data["characters"] = [c for c in raw.get("characters", []) if isinstance(c, dict) and c.get("url")]
         self.data["field_kills"] = {k: v for k, v in (raw.get("field_kills") or {}).items() if isinstance(v, str)}
+        self.data["field_meta"] = {k: v for k, v in (raw.get("field_meta") or {}).items() if isinstance(v, dict)}
         s = default_settings()
         saved = raw.get("settings") or {}
         alerts = dict(s["alerts"])
@@ -159,9 +163,33 @@ class Store:
     def kill_time(self, boss_id: str) -> datetime | None:
         return parse_iso(self.data["field_kills"].get(boss_id))
 
-    def set_kill(self, boss_id: str, when: datetime | None) -> None:
+    def kill_meta(self, boss_id: str) -> dict:
+        return (self.data.get("field_meta") or {}).get(boss_id) or {}
+
+    def set_kill(self, boss_id: str, when: datetime | None, by: str = "", via: str = "local") -> None:
         if when is None:
             self.data["field_kills"].pop(boss_id, None)
         else:
             self.data["field_kills"][boss_id] = iso(when)
+        self.data.setdefault("field_meta", {})[boss_id] = {"by": by, "via": via}
         self.save()
+
+    def apply_group(self, bosses: dict) -> bool:
+        """Substitui os horários locais pelos do bot do grupo. Devolve True se algo mudou."""
+        kills, meta = {}, {}
+        for bid, rec in (bosses or {}).items():
+            if not isinstance(rec, dict):
+                continue
+            if rec.get("killed_at"):
+                kills[bid] = rec["killed_at"]
+            meta[bid] = {"by": str(rec.get("by") or ""), "via": str(rec.get("via") or "")}
+        changed = kills != self.data["field_kills"] or meta != self.data.get("field_meta")
+        if changed:
+            self.data["field_kills"] = kills
+            self.data["field_meta"] = meta
+            self.save()
+        return changed
+
+    @property
+    def group_on(self) -> bool:
+        return bool(self.settings.get("group_url") and self.settings.get("group_key"))

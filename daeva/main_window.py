@@ -9,12 +9,13 @@ from PySide6.QtCore import QObject, QRunnable, Qt, QThreadPool, QTime, QTimer, Q
 from PySide6.QtGui import QAction, QDesktopServices, QIcon
 from PySide6.QtWidgets import (
     QApplication, QCheckBox, QComboBox, QDialog, QDialogButtonBox, QFrame, QGridLayout,
-    QHBoxLayout, QInputDialog, QLabel, QMainWindow, QMenu, QMessageBox, QPushButton,
+    QHBoxLayout, QInputDialog, QLabel, QLineEdit, QMainWindow, QMenu, QMessageBox, QPushButton,
     QScrollArea, QSpinBox, QSystemTrayIcon, QTabWidget, QTimeEdit, QVBoxLayout, QWidget,
 )
 
 from . import GITHUB_REPO, __version__
 from .chart import GrowthChart, fmt_int
+from .group import GroupError, get_kills, normalize_url, ping, post_kill
 from .profiles import ProfileError, fetch_profile, parse_link
 from .schedule import (
     EVENTS, FIELD_BOSSES, REGIONS, AlertTracker, field_respawn, fmt_left, next_occurrence, now_utc,
@@ -89,6 +90,35 @@ class UpdateCheck(QRunnable):
             pass
 
 
+class _GroupSignals(QObject):
+    done = Signal(str, object, str)  # tipo, resultado, erro
+
+
+class GroupJob(QRunnable):
+    """Conversa com o bot do grupo fora da interface. kind: 'get' | 'post' | 'ping'."""
+
+    def __init__(self, kind: str, url: str, key: str, payload: dict | None = None):
+        super().__init__()
+        self.kind, self.url, self.key, self.payload = kind, url, key, payload or {}
+        self.signals = _GroupSignals()
+
+    def run(self):
+        try:
+            if self.kind == "ping":
+                ping(self.url, self.key)
+                res = None
+            elif self.kind == "post":
+                p = self.payload
+                res = post_kill(self.url, self.key, p["boss"], p["killed_at"], p["by"])
+            else:
+                res = get_kills(self.url, self.key)
+            self.signals.done.emit(self.kind, res, "")
+        except GroupError as e:
+            self.signals.done.emit(self.kind, None, str(e))
+        except Exception as e:
+            self.signals.done.emit(self.kind, None, f"Erro inesperado ao falar com o bot: {e}")
+
+
 def _ver(s: str) -> tuple:
     return tuple(int(x) if x.isdigit() else 0 for x in s.split("."))
 
@@ -113,6 +143,9 @@ class EventRow(QFrame):
         left.addLayout(tag_row)
         if subtitle:
             left.addWidget(label(subtitle, "muted", wrap=True))
+        self.note = label("", "muted", wrap=True)
+        self.note.hide()
+        left.addWidget(self.note)
         g.addLayout(left, 0, 0, 2, 1)
         self.countdown = label("—", "countdown")
         self.countdown.setAlignment(Qt.AlignRight)
@@ -213,6 +246,13 @@ class MainWindow(QMainWindow):
         self.refresh_timer.start()
         QTimer.singleShot(1500, self.auto_refresh)
         QTimer.singleShot(4000, self.check_update)
+        self.group_last_ok: datetime | None = None
+        self.group_error = ""
+        self.group_busy = False
+        self.group_timer = QTimer(self, interval=30 * 1000, timeout=self.group_sync)
+        self.group_timer.start()
+        QTimer.singleShot(2000, self.group_sync)
+        self.update_group_line()
         self.on_tick()
         self.render_character()
 
@@ -243,6 +283,8 @@ class MainWindow(QMainWindow):
         v.addWidget(label("BOSSES DE CAMPO · RENASCEM APÓS A MORTE", "section"))
         v.addWidget(label("Marque quando o boss cair. O mapa do jogo (Exploração → Field Boss) mostra o "
                           "estado real do seu canal.", "muted", wrap=True))
+        self.group_line = label("", "muted", wrap=True)
+        v.addWidget(self.group_line)
         for b in FIELD_BOSSES:
             row = EventRow(b.name, b.where, [(f"respawn {b.respawn_h}h", "tag")],
                            self.store.settings["alerts"].get(b.id, False),
@@ -264,8 +306,63 @@ class MainWindow(QMainWindow):
         return self._scroll(inner)
 
     def set_kill(self, boss_id: str, when: datetime | None):
-        self.store.set_kill(boss_id, when)
+        nick = (self.store.settings.get("nickname") or "").strip() or "alguém"
+        self.store.set_kill(boss_id, when, nick, "app" if self.store.group_on else "local")
+        if self.store.group_on:
+            s = self.store.settings
+            job = GroupJob("post", s["group_url"], s["group_key"],
+                           {"boss": boss_id, "killed_at": when.isoformat() if when else None, "by": nick})
+            job.signals.done.connect(self.on_group_done)
+            self.pool.start(job)
         self.on_tick()
+
+    # ------------------------------------------------------------- group bot
+    def group_sync(self):
+        if not self.store.group_on or self.group_busy:
+            self.update_group_line()
+            return
+        self.group_busy = True
+        s = self.store.settings
+        job = GroupJob("get", s["group_url"], s["group_key"])
+        job.signals.done.connect(self.on_group_done)
+        self.pool.start(job)
+
+    def on_group_done(self, kind: str, result, error: str):
+        if kind == "get":
+            self.group_busy = False
+        if kind == "ping":
+            self.group_status.setText("Conectado ao bot do grupo." if not error else error)
+            self.group_status.setObjectName("up" if not error else "err")
+            restyle(self.group_status)
+            if not error:
+                self.group_sync()
+            return
+        if error:
+            self.group_error = ("Não consegui enviar a marcação ao bot: " + error) if kind == "post" else error
+        else:
+            self.group_error = ""
+            self.group_last_ok = now_utc()
+            if self.store.apply_group(result):
+                self.on_tick()
+        self.update_group_line()
+
+    def update_group_line(self):
+        if not hasattr(self, "group_line"):
+            return
+        if not self.store.group_on:
+            self.group_line.setText("Sem bot do grupo: os horários ficam só neste PC. Configure em Ajustes → Grupo.")
+            self.group_line.setObjectName("muted")
+        elif self.group_error:
+            self.group_line.setText(self.group_error)
+            self.group_line.setObjectName("err")
+        elif self.group_last_ok:
+            self.group_line.setText(f"Sincronizado com o bot do grupo às {self.group_last_ok.astimezone():%H:%M:%S}. "
+                                    "Mortes marcadas aqui ou com /gartua no Discord valem para todos.")
+            self.group_line.setObjectName("up")
+        else:
+            self.group_line.setText("Conectando ao bot do grupo…")
+            self.group_line.setObjectName("muted")
+        restyle(self.group_line)
 
     def ask_kill_time(self, boss):
         dlg = KillTimeDialog(boss.name, self)
@@ -559,6 +656,29 @@ class MainWindow(QMainWindow):
         v.addLayout(r4)
 
         v.addSpacing(6)
+        v.addWidget(label("GRUPO (BOT DO DISCORD)", "section"))
+        v.addWidget(label("Com o bot, a morte do Gartua e dos outros bosses de campo marcada por qualquer amigo "
+                          "(aqui ou com /gartua no Discord) aparece para todos. Peça o endereço e a chave a quem "
+                          "administra o bot.", "muted", wrap=True))
+        self.in_url = QLineEdit(s.get("group_url", ""))
+        self.in_url.setPlaceholderText("Endereço do bot, ex.: http://123.45.67.89:8080")
+        self.in_key = QLineEdit(s.get("group_key", ""))
+        self.in_key.setPlaceholderText("Chave do grupo")
+        self.in_key.setEchoMode(QLineEdit.Password)
+        self.in_nick = QLineEdit(s.get("nickname", ""))
+        self.in_nick.setPlaceholderText("Seu nome no grupo (aparece nas marcações)")
+        for w in (self.in_url, self.in_key, self.in_nick):
+            v.addWidget(w)
+            w.editingFinished.connect(self.save_group_fields)
+        r6 = QHBoxLayout()
+        test_btn = QPushButton("Testar conexão")
+        test_btn.clicked.connect(self.test_group)
+        r6.addWidget(test_btn)
+        self.group_status = label("", "muted", wrap=True)
+        r6.addWidget(self.group_status, 1)
+        v.addLayout(r6)
+
+        v.addSpacing(6)
         v.addWidget(label("SOBRE", "section"))
         v.addWidget(label(f"Diário de Daeva {__version__}. Lê só páginas públicas do Shugo.GG e do AION2 Index; "
                           "não acessa o jogo nem a sua conta.", "muted", wrap=True))
@@ -576,6 +696,26 @@ class MainWindow(QMainWindow):
         cb.setChecked(bool(self.store.settings.get(key)))
         cb.toggled.connect(lambda on: self.store.set_setting(key, on))
         return cb
+
+    def save_group_fields(self):
+        s = self.store.settings
+        new = (normalize_url(self.in_url.text()), self.in_key.text().strip(), self.in_nick.text().strip())
+        if new != (s.get("group_url"), s.get("group_key"), s.get("nickname")):
+            s["group_url"], s["group_key"], s["nickname"] = new
+            self.store.save()
+            self.in_url.setText(new[0])
+            self.group_error = ""
+            self.group_sync()
+
+    def test_group(self):
+        self.save_group_fields()
+        s = self.store.settings
+        self.group_status.setText("Testando…")
+        self.group_status.setObjectName("muted")
+        restyle(self.group_status)
+        job = GroupJob("ping", s.get("group_url", ""), s.get("group_key", ""))
+        job.signals.done.connect(self.on_group_done)
+        self.pool.start(job)
 
     def _apply_on_top(self):
         on = bool(self.store.settings.get("always_on_top"))
@@ -619,6 +759,13 @@ class MainWindow(QMainWindow):
             kill = self.store.kill_time(b.id)
             due = field_respawn(b, kill)
             row.clear_btn.setVisible(kill is not None)
+            meta = self.store.kill_meta(b.id)
+            if kill is not None and meta.get("by"):
+                origem = {"discord": " pelo Discord", "app": " pelo app"}.get(meta.get("via"), "")
+                row.note.setText(f"Morte às {kill.astimezone():%H:%M}, marcada por {meta['by']}{origem}")
+                row.note.show()
+            else:
+                row.note.hide()
             if due is None:
                 row.countdown.setText("—")
                 row.when.setText("sem registro")

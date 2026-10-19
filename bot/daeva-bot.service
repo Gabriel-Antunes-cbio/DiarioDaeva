@@ -1,0 +1,18 @@
+# Serviço do systemd: mantém o bot rodando e o reinicia se cair ou se a VM reiniciar.
+# Instalação (ver docs/BOT.md):
+#   sudo cp bot/daeva-bot.service /etc/systemd/system/
+#   sudo systemctl daemon-reload && sudo systemctl enable --now daeva-bot
+[Unit]
+Description=Bot do Discord do Diario de Daeva
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+User=ubuntu
+WorkingDirectory=/home/ubuntu/DiarioDaeva
+ExecStart=/home/ubuntu/DiarioDaeva/.venv/bin/python -m bot.daeva_bot
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target

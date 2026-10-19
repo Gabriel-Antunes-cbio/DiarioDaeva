@@ -20,6 +20,7 @@ Feito para a galera que joga junto em **Siel (América Latina)**, mas funciona e
 | **Personagens** | Cole o link do perfil no Shugo.GG ou no AION2 Index. O app lê Combat Power, Gear score / Item level, classe e nível. |
 | | Gráfico de evolução de CP e de equipamento, com o ganho desde a primeira leitura. Atualiza sozinho a cada 6 horas (ajustável). |
 | **Ajustes** | Antecedência do alerta, som, notificação, sempre no topo, fechar para a bandeja e relógio da região. |
+| **Grupo** | Com o bot do Discord, a morte do Gartua marcada por qualquer amigo (no app ou com `/gartua`) aparece para todos, e o bot avisa no canal. Veja [docs/BOT.md](docs/BOT.md). |
 
 Ao fechar a janela, o app fica no **ícone da bandeja** (perto do relógio) e os alertas continuam funcionando. Para sair de vez: clique com o botão direito no ícone → **Sair**.
 
@@ -56,15 +57,11 @@ python app.py
 
 ### Publicar uma versão nova
 
-1. Atualize `__version__` em `daeva/__init__.py` (ex.: `1.1.0`).
-2. Na primeira vez, preencha `GITHUB_REPO` no mesmo arquivo com `seu-usuario/diario-de-daeva`, para o app avisar os amigos quando sair versão nova.
-3. Commit e tag:
-   ```bash
-   git commit -am "Versão 1.1.0"
-   git tag v1.1.0
-   git push && git push origin v1.1.0
-   ```
-4. O GitHub Actions roda os testes, gera o `DiarioDeDaeva.exe` e publica na Release. Leva uns 5 minutos.
+1. Troque `__version__` em `daeva/__init__.py` (ex.: `1.2.0`).
+2. Envie para a `main`. O GitHub Actions roda os testes, gera o `DiarioDeDaeva.exe` e cria a Release `v1.2.0` sozinho, em uns 3 minutos.
+3. O app de quem já tem uma versão anterior mostra o botão "Versão 1.2.0 disponível".
+
+Mudanças só no bot (`bot/`) ou na documentação não geram `.exe` novo.
 
 ### Onde mexer
 
@@ -74,6 +71,8 @@ python app.py
 | `daeva/profiles.py` | Leitura dos perfis no Shugo.GG e no AION2 Index |
 | `daeva/store.py` | Dados salvos e ajustes padrão |
 | `daeva/main_window.py` | Interface, alertas e bandeja |
+| `daeva/group.py` | Conversa do app com o bot do grupo |
+| `bot/` | Bot do Discord e a API que o app usa (instalação em [docs/BOT.md](docs/BOT.md)) |
 | `tools/gerar_assets.py` | Gera o som de alerta e o ícone |
 
 Se um dos sites mudar o formato da página, o leitor em `profiles.py` é o lugar a ajustar; os testes em `tests/test_core.py` têm exemplos das páginas.

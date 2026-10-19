@@ -1,12 +1,14 @@
 # Gera o DiarioDeDaeva.exe e publica numa Release do GitHub.
-# Para lançar uma versão: atualize __version__ em daeva/__init__.py, faça commit e crie a tag:
-#   git tag v1.0.0
-#   git push origin v1.0.0
+#
+# Para lançar uma versão: troque __version__ em daeva/__init__.py (ex.: 1.1.0) e envie para a main.
+# Se ainda não existir a Release v<versão>, ela é criada com o .exe. Mudanças só no bot ou na
+# documentação não geram build. Também dá para rodar à mão em Actions → Release → Run workflow.
 name: Release
 
 on:
   push:
-    tags: ["v*"]
+    branches: [main]
+    paths-ignore: ["bot/**", "docs/**", "**.md"]
   workflow_dispatch:
 
 permissions:
@@ -15,6 +17,9 @@ permissions:
 jobs:
   build-windows:
     runs-on: windows-latest
+    defaults:
+      run:
+        shell: bash
     steps:
       - uses: actions/checkout@v4
 
@@ -30,7 +35,22 @@ jobs:
       - name: Testes
         run: python -m pytest -q
 
+      - name: Ver se esta versão já foi lançada
+        id: ver
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          VER=$(python -c "import daeva; print(daeva.__version__)")
+          echo "tag=v$VER" >> "$GITHUB_OUTPUT"
+          if gh release view "v$VER" >/dev/null 2>&1; then
+            echo "nova=false" >> "$GITHUB_OUTPUT"
+            echo "A Release v$VER já existe; nada a publicar."
+          else
+            echo "nova=true" >> "$GITHUB_OUTPUT"
+          fi
+
       - name: Gerar o .exe
+        if: steps.ver.outputs.nova == 'true'
         run: >
           pyinstaller --noconfirm --onefile --windowed
           --name DiarioDeDaeva
@@ -38,15 +58,12 @@ jobs:
           --add-data "assets;assets"
           app.py
 
-      - name: Guardar o .exe como artefato do build
-        uses: actions/upload-artifact@v4
-        with:
-          name: DiarioDeDaeva
-          path: dist/DiarioDeDaeva.exe
-
       - name: Publicar na Release
-        if: startsWith(github.ref, 'refs/tags/v')
+        if: steps.ver.outputs.nova == 'true'
         uses: softprops/action-gh-release@v2
         with:
+          tag_name: ${{ steps.ver.outputs.tag }}
+          name: Diário de Daeva ${{ steps.ver.outputs.tag }}
+          target_commitish: ${{ github.sha }}
           files: dist/DiarioDeDaeva.exe
           generate_release_notes: true
