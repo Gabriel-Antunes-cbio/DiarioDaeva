@@ -1,0 +1,4542 @@
+{
+ "sources": {
+  "build": {
+   "name": "Atreia Lens",
+   "url": "https://atreialens.hartmannlab.xyz/{slug}",
+   "note": "Builds da comunidade, PvE. Nível final das skills e stigmas recomendados."
+  },
+  "stats": {
+   "name": "GameWith Build Stats",
+   "url": "https://gamewith.ai/aion2/en/build-stats/la/{gw_slug}",
+   "note": "Itens mais usados pelos 360 personagens nível 45 de maior CP da América Latina."
+  }
+ },
+ "collected": {
+  "build": "2026-10-20",
+  "stats": "2026-10-07"
+ },
+ "classes": {
+  "gladiator": {
+   "build": "Build de Gladiator",
+   "slug": "gladiator",
+   "gw_slug": "gladiator",
+   "skills": [
+    {
+     "name": "Keen Strike",
+     "pt": "Golpe Afiado",
+     "level": "12",
+     "min": 12,
+     "max": 12,
+     "specs": "2/4",
+     "points": 7,
+     "skip": false
+    },
+    {
+     "name": "Rending Blow",
+     "pt": "Golpe Feroz Dilacerante",
+     "level": "20",
+     "min": 20,
+     "max": 20,
+     "specs": "3/4/5",
+     "points": 10,
+     "skip": false
+    },
+    {
+     "name": "Leaping Slam",
+     "pt": "Salto Esmagador",
+     "level": "12",
+     "min": 12,
+     "max": 12,
+     "specs": "1/3",
+     "points": 7,
+     "skip": false
+    },
+    {
+     "name": "Mocking Blade",
+     "pt": "Espada do Massacre",
+     "level": "16",
+     "min": 16,
+     "max": 16,
+     "specs": "1/5",
+     "points": 10,
+     "skip": false
+    },
+    {
+     "name": "Overhead Slam",
+     "pt": "Esmagada Descendente",
+     "level": "20",
+     "min": 20,
+     "max": 20,
+     "specs": "3/4/5",
+     "points": 10,
+     "skip": false
+    },
+    {
+     "name": "Sword Aura Rampage",
+     "pt": "Desenfreio da Aura da Espada",
+     "level": null,
+     "min": null,
+     "max": null,
+     "specs": null,
+     "points": null,
+     "skip": true
+    },
+    {
+     "name": "Ankle Slice",
+     "pt": "Corte no Tornozelo",
+     "level": "12",
+     "min": 12,
+     "max": 12,
+     "specs": "3/4",
+     "points": 8,
+     "skip": false
+    },
+    {
+     "name": "Crushing Wave",
+     "pt": "Onda Esmagadora",
+     "level": "12",
+     "min": 12,
+     "max": 12,
+     "specs": "1/4",
+     "points": 10,
+     "skip": false
+    },
+    {
+     "name": "Rush Strike",
+     "pt": "Golpe de Investida",
+     "level": "12",
+     "min": 12,
+     "max": 12,
+     "specs": "2/4",
+     "points": 8,
+     "skip": false
+    },
+    {
+     "name": "Aerial Snare",
+     "pt": "Aprisionamento Aéreo",
+     "level": "12",
+     "min": 12,
+     "max": 12,
+     "specs": "1/3",
+     "points": 8,
+     "skip": false
+    },
+    {
+     "name": "Ruinous Blow",
+     "pt": "Golpe Feroz da Perdição",
+     "level": "20",
+     "min": 20,
+     "max": 20,
+     "specs": "1/4/5",
+     "points": 10,
+     "skip": false
+    },
+    {
+     "name": "Defiance",
+     "pt": "Remoção de Impacto",
+     "level": "16",
+     "min": 16,
+     "max": 16,
+     "specs": "3/5",
+     "points": 10,
+     "skip": false
+    }
+   ],
+   "passives": [
+    {
+     "name": "Impact Hit",
+     "pt": "Acerto de Impacto"
+    },
+    {
+     "name": "Attack Preparation",
+     "pt": "Preparar Ataque"
+    },
+    {
+     "name": "Experienced Counterstrike",
+     "pt": "Contra-ataque Hábil"
+    },
+    {
+     "name": "Murderous Burst",
+     "pt": "Ruptura da Intenção Assassina"
+    },
+    {
+     "name": "Identify Weakness",
+     "pt": "Detecção de Fraqueza"
+    }
+   ],
+   "stigmas": [
+    {
+     "name": "Lunge Stance",
+     "pt": "Postura de Assalto",
+     "rank": 20
+    },
+    {
+     "name": "Zikel's Blessing",
+     "pt": "Bênção de Zikel",
+     "rank": 20
+    },
+    {
+     "name": "Rage Burst",
+     "pt": "Explosão de Ira",
+     "rank": 20
+    },
+    {
+     "name": "Focused Block",
+     "pt": "Bloqueio Concentrado",
+     "rank": 20
+    }
+   ],
+   "stigmas_alt": [
+    {
+     "name": "Lifestealing Blade",
+     "pt": "Espada Vampírica"
+    },
+    {
+     "name": "Wave Armor",
+     "pt": "Armadura da Onda"
+    }
+   ],
+   "arcana": [
+    {
+     "arcana": "Cálice",
+     "type": "Vigor",
+     "gods": "Tempo"
+    },
+    {
+     "arcana": "Papiro",
+     "type": "Vigor",
+     "gods": "Vida / Destino"
+    },
+    {
+     "arcana": "Bússola",
+     "type": "Magia",
+     "gods": "Morte / Liberdade"
+    },
+    {
+     "arcana": "Sino",
+     "type": "Magia",
+     "gods": "Destruição"
+    },
+    {
+     "arcana": "Espelho",
+     "type": "Magia",
+     "gods": "Ilusão / Sabedoria"
+    }
+   ],
+   "arcana_note": null,
+   "enhancing": [
+    "Bônus de Golpe Potente",
+    "Amplificação de Dano de Arma",
+    "Amplificação de Dano",
+    "Ataque",
+    "Precisão Adicional",
+    "Acerto Crítico"
+   ],
+   "manastones": [
+    "Amplificação de Dano de Ataque Frontal",
+    "Amplificação de Dano de Arma",
+    "Amplificação de Dano Crítico",
+    "Amplificação de Dano",
+    "Ataque"
+   ],
+   "titles": {
+    "offensive": [
+     "Livre das Amarras da Raça",
+     "Resplendor Dourado",
+     "Guardião de Verteron"
+    ],
+    "defensive": [
+     "Dominação do Espaço",
+     "Governar Todas as Coisas",
+     "Santidade de Verteron"
+    ],
+    "utility": [
+     "Pegadas da Jornada",
+     "Ai, Não Tenho Nada para Vestir",
+     "Do Inferno e de Volta"
+    ]
+   },
+   "wings": [
+    "Asas da Kromede",
+    "Asas do Pesadelo",
+    "Asas de Véu da Escuridão",
+    "Asas de Daeva Supremas"
+   ],
+   "gear": [
+    {
+     "slot": "Main hand",
+     "item": "Spiritforged Greatsword",
+     "share_pct": 92,
+     "grade": "Unique",
+     "typical_enhance": "+10"
+    },
+    {
+     "slot": "Off hand",
+     "item": "Spiritforged Guard",
+     "share_pct": 85,
+     "grade": "Unique",
+     "typical_enhance": "+8"
+    },
+    {
+     "slot": "Helm",
+     "item": "Liberator Helm",
+     "share_pct": 26,
+     "grade": "Epic",
+     "typical_enhance": "+0"
+    },
+    {
+     "slot": "Pauldrons",
+     "item": "Liberator Pauldrons",
+     "share_pct": 23,
+     "grade": "Epic",
+     "typical_enhance": "+0"
+    },
+    {
+     "slot": "Chest",
+     "item": "Bakarma Breastplate",
+     "share_pct": 40,
+     "grade": "Unique",
+     "typical_enhance": "+7"
+    },
+    {
+     "slot": "Gloves",
+     "item": "Vakron Gloves",
+     "share_pct": 19,
+     "grade": "Unique",
+     "typical_enhance": "+10"
+    },
+    {
+     "slot": "Greaves",
+     "item": "Vakron Greaves",
+     "share_pct": 24,
+     "grade": "Unique",
+     "typical_enhance": "+10"
+    },
+    {
+     "slot": "Boots",
+     "item": "Vakron Boots",
+     "share_pct": 19,
+     "grade": "Unique",
+     "typical_enhance": "+10"
+    },
+    {
+     "slot": "Cloak",
+     "item": "Liberator Cloak",
+     "share_pct": 22,
+     "grade": "Epic",
+     "typical_enhance": "+0"
+    },
+    {
+     "slot": "Belt",
+     "item": "Noble Belt",
+     "share_pct": 71,
+     "grade": "Unique",
+     "typical_enhance": "+0"
+    },
+    {
+     "slot": "Necklace",
+     "item": "Pilgrim Necklace",
+     "share_pct": 36,
+     "grade": "Epic",
+     "typical_enhance": "+4"
+    },
+    {
+     "slot": "Earrings",
+     "item": "Pilgrim Earrings",
+     "share_pct": 38,
+     "grade": "Epic",
+     "typical_enhance": "+5"
+    },
+    {
+     "slot": "Rings",
+     "item": "Pilgrim Ring",
+     "share_pct": 36,
+     "grade": "Epic",
+     "typical_enhance": "+5"
+    },
+    {
+     "slot": "Bracelets",
+     "item": "Ascension Bracelet",
+     "share_pct": 48,
+     "grade": "Unique",
+     "typical_enhance": "+10"
+    },
+    {
+     "slot": "Amulet",
+     "item": "Revelation Amulet",
+     "share_pct": 81,
+     "grade": "Unique",
+     "typical_enhance": "+0"
+    },
+    {
+     "slot": "Runes",
+     "item": "Clash Rune",
+     "share_pct": 100,
+     "grade": "Special",
+     "typical_enhance": "+2"
+    }
+   ],
+   "skill_stats": [
+    {
+     "name": "Rending Blow",
+     "avg": 13.3,
+     "max": 17
+    },
+    {
+     "name": "Overhead Slam",
+     "avg": 13.2,
+     "max": 18
+    },
+    {
+     "name": "Ruinous Blow",
+     "avg": 13.0,
+     "max": 17
+    },
+    {
+     "name": "Attack Preparation",
+     "avg": 12.8,
+     "max": 18
+    },
+    {
+     "name": "Keen Strike",
+     "avg": 12.5,
+     "max": 16
+    },
+    {
+     "name": "Identify Weakness",
+     "avg": 12.2,
+     "max": 19
+    },
+    {
+     "name": "Murderous Burst",
+     "avg": 12.2,
+     "max": 17
+    },
+    {
+     "name": "Experienced Counterstrike",
+     "avg": 12.0,
+     "max": 20
+    },
+    {
+     "name": "Blood Absorption",
+     "avg": 11.8,
+     "max": 18
+    },
+    {
+     "name": "Survival Stance",
+     "avg": 11.4,
+     "max": 18
+    },
+    {
+     "name": "Leaping Slam",
+     "avg": 11.1,
+     "max": 17
+    },
+    {
+     "name": "Rush Strike",
+     "avg": 11.0,
+     "max": 17
+    },
+    {
+     "name": "Impact Hit",
+     "avg": 10.8,
+     "max": 18
+    },
+    {
+     "name": "Destructive Impulse",
+     "avg": 10.3,
+     "max": 18
+    },
+    {
+     "name": "Sword Aura Rampage",
+     "avg": 9.6,
+     "max": 16
+    },
+    {
+     "name": "Survival Willpower",
+     "avg": 9.5,
+     "max": 18
+    },
+    {
+     "name": "Crushing Wave",
+     "avg": 9.2,
+     "max": 17
+    },
+    {
+     "name": "Ankle Slice",
+     "avg": 8.7,
+     "max": 15
+    },
+    {
+     "name": "Mocking Blade",
+     "avg": 8.6,
+     "max": 16
+    },
+    {
+     "name": "Protection Armor",
+     "avg": 8.6,
+     "max": 17
+    },
+    {
+     "name": "Defiance",
+     "avg": 7.5,
+     "max": 16
+    },
+    {
+     "name": "Zikel's Blessing",
+     "avg": 7.3,
+     "max": 20
+    },
+    {
+     "name": "Aerial Snare",
+     "avg": 7.3,
+     "max": 15
+    },
+    {
+     "name": "Lunge Stance",
+     "avg": 6.9,
+     "max": 20
+    },
+    {
+     "name": "Rage Burst",
+     "avg": 6.1,
+     "max": 18
+    },
+    {
+     "name": "Lifestealing Blade",
+     "avg": 4.7,
+     "max": 15
+    },
+    {
+     "name": "Focused Block",
+     "avg": 2.9,
+     "max": 10
+    },
+    {
+     "name": "Wave Armor",
+     "avg": 2.3,
+     "max": 13
+    },
+    {
+     "name": "Armor of Balance",
+     "avg": 1.9,
+     "max": 10
+    },
+    {
+     "name": "Blade Toss",
+     "avg": 1.8,
+     "max": 10
+    },
+    {
+     "name": "Tenaciousness",
+     "avg": 1.7,
+     "max": 11
+    },
+    {
+     "name": "Assault Strike",
+     "avg": 1.6,
+     "max": 10
+    },
+    {
+     "name": "Forced Restraint",
+     "avg": 1.5,
+     "max": 11
+    },
+    {
+     "name": "Wrath Wave",
+     "avg": 1.3,
+     "max": 15
+    },
+    {
+     "name": "Fracturing Rush",
+     "avg": 1.0,
+     "max": 8
+    }
+   ],
+   "arcana_stats": [
+    {
+     "name": "Chalice of Vigor",
+     "share_pct": 13,
+     "refine": "+1"
+    },
+    {
+     "name": "Parchment of Vigor",
+     "share_pct": 8,
+     "refine": "+1"
+    },
+    {
+     "name": "Mirror of Magic",
+     "share_pct": 6,
+     "refine": "+0"
+    },
+    {
+     "name": "Bell of Vigor",
+     "share_pct": 5,
+     "refine": "+0"
+    },
+    {
+     "name": "Mirror of Vigor",
+     "share_pct": 5,
+     "refine": "+0"
+    },
+    {
+     "name": "Compass of Vigor",
+     "share_pct": 5,
+     "refine": "+1"
+    },
+    {
+     "name": "Parchment of Magic",
+     "share_pct": 5,
+     "refine": "+0"
+    },
+    {
+     "name": "Compass of Magic",
+     "share_pct": 5,
+     "refine": "+0"
+    }
+   ]
+  },
+  "templar": {
+   "build": "Build de Templar · PVE · sword",
+   "slug": "templar",
+   "gw_slug": "templar",
+   "skills": [
+    {
+     "name": "Vicious Strike",
+     "pt": "Golpe Furioso",
+     "level": "20",
+     "min": 20,
+     "max": 20,
+     "specs": "3/4/5",
+     "points": 8,
+     "skip": false
+    },
+    {
+     "name": "Pummel",
+     "pt": "Agressão Contínua",
+     "level": "20",
+     "min": 20,
+     "max": 20,
+     "specs": "3/4/5",
+     "points": 10,
+     "skip": false
+    },
+    {
+     "name": "Poach",
+     "pt": "Captura",
+     "level": "12",
+     "min": 12,
+     "max": 12,
+     "specs": "1/4",
+     "points": 10,
+     "skip": false
+    },
+    {
+     "name": "Shield Smite",
+     "pt": "Golpe Potente de Escudo",
+     "level": "12",
+     "min": 12,
+     "max": 12,
+     "specs": "3/4",
+     "points": 8,
+     "skip": false
+    },
+    {
+     "name": "Judgment",
+     "pt": "Julgamento",
+     "level": "20",
+     "min": 20,
+     "max": 20,
+     "specs": "3/4/5",
+     "points": 6,
+     "skip": false
+    },
+    {
+     "name": "Flash Rampage",
+     "pt": "Desenfreio do Clarão",
+     "level": null,
+     "min": null,
+     "max": null,
+     "specs": null,
+     "points": null,
+     "skip": true
+    },
+    {
+     "name": "Debilitating Smash",
+     "pt": "Golpe Feroz do Enfraquecimento",
+     "level": "12",
+     "min": 12,
+     "max": 12,
+     "specs": "2/4",
+     "points": 10,
+     "skip": false
+    },
+    {
+     "name": "Warding Strike",
+     "pt": "Golpe do Amparo",
+     "level": "16",
+     "min": 16,
+     "max": 16,
+     "specs": "1/5",
+     "points": 8,
+     "skip": false
+    },
+    {
+     "name": "Shield Rush",
+     "pt": "Assalto de Escudo",
+     "level": "12",
+     "min": 12,
+     "max": 12,
+     "specs": "2/4",
+     "points": 9,
+     "skip": false
+    },
+    {
+     "name": "Annihilate",
+     "pt": "Erradicação",
+     "level": "12",
+     "min": 12,
+     "max": 12,
+     "specs": "3/4",
+     "points": 6,
+     "skip": false
+    },
+    {
+     "name": "Punishment",
+     "pt": "Punição",
+     "level": "20",
+     "min": 20,
+     "max": 20,
+     "specs": "3/4/5",
+     "points": 10,
+     "skip": false
+    },
+    {
+     "name": "Defiance",
+     "pt": "Remoção de Impacto",
+     "level": "16",
+     "min": 16,
+     "max": 16,
+     "specs": "3/5",
+     "points": 10,
+     "skip": false
+    }
+   ],
+   "passives": [
+    {
+     "name": "Fury",
+     "pt": "Exaltação"
+    },
+    {
+     "name": "Impact Hit",
+     "pt": "Acerto de Impacto"
+    },
+    {
+     "name": "Insulting Roar",
+     "pt": "Rugido do Insulto"
+    }
+   ],
+   "stigmas": [
+    {
+     "name": "Taunt",
+     "pt": "Provocação",
+     "rank": 20
+    },
+    {
+     "name": "Noble Armor",
+     "pt": "Armadura Nobre",
+     "rank": 20
+    },
+    {
+     "name": "Shield of Protection",
+     "pt": "Escudo da Proteção",
+     "rank": 20
+    },
+    {
+     "name": "Doom Shield",
+     "pt": "Escudo da Perdição",
+     "rank": 20
+    }
+   ],
+   "stigmas_alt": [
+    {
+     "name": "Battlefield Banner",
+     "pt": "Bandeira do Campo de Batalha"
+    },
+    {
+     "name": "Executing Blade",
+     "pt": "Espada da Execução"
+    }
+   ],
+   "arcana": [
+    {
+     "arcana": "Cálice",
+     "type": "Vigor",
+     "gods": "Tempo"
+    },
+    {
+     "arcana": "Papiro",
+     "type": "Vigor",
+     "gods": "Vida / Destino"
+    },
+    {
+     "arcana": "Bússola",
+     "type": "Magia",
+     "gods": "Morte / Liberdade"
+    },
+    {
+     "arcana": "Sino",
+     "type": "Magia",
+     "gods": "Destruição"
+    },
+    {
+     "arcana": "Espelho",
+     "type": "Magia",
+     "gods": "Ilusão / Sabedoria"
+    }
+   ],
+   "arcana_note": null,
+   "enhancing": [
+    "Bônus de Golpe Potente",
+    "Amplificação de Dano de Arma",
+    "Amplificação de Dano",
+    "Ataque",
+    "Precisão Adicional",
+    "Acerto Crítico"
+   ],
+   "manastones": [
+    "Amplificação de Dano de Ataque Frontal",
+    "Amplificação de Dano de Arma",
+    "Amplificação de Dano Crítico",
+    "Amplificação de Dano",
+    "Ataque"
+   ],
+   "titles": {
+    "offensive": [
+     "Resplendor Dourado",
+     "Livre das Amarras da Raça",
+     "Guardião de Verteron"
+    ],
+    "defensive": [
+     "Santidade de Verteron",
+     "Santo de Eltnen",
+     "Dominação do Espaço"
+    ],
+    "utility": [
+     "Ai, Não Tenho Nada para Vestir",
+     "Do Inferno e de Volta"
+    ]
+   },
+   "wings": [
+    "Asas de Daeva Supremas",
+    "Asas de Véu da Escuridão",
+    "Asas de Daeva Superiores",
+    "Asas de Talisra do Vazio"
+   ],
+   "gear": [
+    {
+     "slot": "Main hand",
+     "item": "Spiritforged Longsword",
+     "share_pct": 89,
+     "grade": "Unique",
+     "typical_enhance": "+10"
+    },
+    {
+     "slot": "Off hand",
+     "item": "Spiritforged Guard",
+     "share_pct": 86,
+     "grade": "Unique",
+     "typical_enhance": "+10"
+    },
+    {
+     "slot": "Helm",
+     "item": "Pilgrim Helm",
+     "share_pct": 24,
+     "grade": "Epic",
+     "typical_enhance": "+3"
+    },
+    {
+     "slot": "Pauldrons",
+     "item": "Liberator Pauldrons",
+     "share_pct": 27,
+     "grade": "Epic",
+     "typical_enhance": "+3"
+    },
+    {
+     "slot": "Chest",
+     "item": "Bakarma Breastplate",
+     "share_pct": 36,
+     "grade": "Unique",
+     "typical_enhance": "+7"
+    },
+    {
+     "slot": "Gloves",
+     "item": "Vakron Gloves",
+     "share_pct": 20,
+     "grade": "Unique",
+     "typical_enhance": "+10"
+    },
+    {
+     "slot": "Greaves",
+     "item": "Vakron Greaves",
+     "share_pct": 21,
+     "grade": "Unique",
+     "typical_enhance": "+10"
+    },
+    {
+     "slot": "Boots",
+     "item": "Vakron Boots",
+     "share_pct": 18,
+     "grade": "Unique",
+     "typical_enhance": "+10"
+    },
+    {
+     "slot": "Cloak",
+     "item": "Liberator Cloak",
+     "share_pct": 25,
+     "grade": "Epic",
+     "typical_enhance": "+3"
+    },
+    {
+     "slot": "Belt",
+     "item": "Noble Belt",
+     "share_pct": 72,
+     "grade": "Unique",
+     "typical_enhance": "+0"
+    },
+    {
+     "slot": "Necklace",
+     "item": "Pilgrim Necklace",
+     "share_pct": 34,
+     "grade": "Epic",
+     "typical_enhance": "+4"
+    },
+    {
+     "slot": "Earrings",
+     "item": "Liberator Earrings",
+     "share_pct": 36,
+     "grade": "Epic",
+     "typical_enhance": "+3"
+    },
+    {
+     "slot": "Rings",
+     "item": "Pilgrim Ring",
+     "share_pct": 33,
+     "grade": "Epic",
+     "typical_enhance": "+4"
+    },
+    {
+     "slot": "Bracelets",
+     "item": "Ascension Bracelet",
+     "share_pct": 48,
+     "grade": "Unique",
+     "typical_enhance": "+10"
+    },
+    {
+     "slot": "Amulet",
+     "item": "Revelation Amulet",
+     "share_pct": 78,
+     "grade": "Unique",
+     "typical_enhance": "+0"
+    },
+    {
+     "slot": "Runes",
+     "item": "Clash Rune",
+     "share_pct": 100,
+     "grade": "Special",
+     "typical_enhance": "+2"
+    }
+   ],
+   "skill_stats": [
+    {
+     "name": "Judgment",
+     "avg": 13.3,
+     "max": 17
+    },
+    {
+     "name": "Punishment",
+     "avg": 13.1,
+     "max": 16
+    },
+    {
+     "name": "Vicious Strike",
+     "avg": 13.0,
+     "max": 17
+    },
+    {
+     "name": "Warding Strike",
+     "avg": 12.8,
+     "max": 16
+    },
+    {
+     "name": "Pummel",
+     "avg": 12.8,
+     "max": 17
+    },
+    {
+     "name": "Enhance Health",
+     "avg": 12.8,
+     "max": 18
+    },
+    {
+     "name": "Fury",
+     "avg": 12.6,
+     "max": 19
+    },
+    {
+     "name": "Insulting Roar",
+     "avg": 12.5,
+     "max": 18
+    },
+    {
+     "name": "Annihilate",
+     "avg": 12.3,
+     "max": 17
+    },
+    {
+     "name": "Punishing Benediction",
+     "avg": 12.1,
+     "max": 19
+    },
+    {
+     "name": "Shield Smite",
+     "avg": 12.0,
+     "max": 16
+    },
+    {
+     "name": "Ironclad Defense",
+     "avg": 11.9,
+     "max": 20
+    },
+    {
+     "name": "Impact Hit",
+     "avg": 11.4,
+     "max": 19
+    },
+    {
+     "name": "Debilitating Smash",
+     "avg": 11.3,
+     "max": 16
+    },
+    {
+     "name": "Shield Rush",
+     "avg": 10.6,
+     "max": 16
+    },
+    {
+     "name": "Poach",
+     "avg": 9.9,
+     "max": 15
+    },
+    {
+     "name": "Block Pain",
+     "avg": 8.9,
+     "max": 18
+    },
+    {
+     "name": "Warding Shield",
+     "avg": 8.1,
+     "max": 16
+    },
+    {
+     "name": "Flash Rampage",
+     "avg": 7.3,
+     "max": 15
+    },
+    {
+     "name": "Guarding Seal",
+     "avg": 7.1,
+     "max": 18
+    },
+    {
+     "name": "Survival Willpower",
+     "avg": 7.1,
+     "max": 18
+    },
+    {
+     "name": "Battlefield Banner",
+     "avg": 6.8,
+     "max": 16
+    },
+    {
+     "name": "Noble Armor",
+     "avg": 6.0,
+     "max": 15
+    },
+    {
+     "name": "Defiance",
+     "avg": 5.7,
+     "max": 16
+    },
+    {
+     "name": "Doom Shield",
+     "avg": 4.9,
+     "max": 15
+    },
+    {
+     "name": "Empyrean Lord's Punishment",
+     "avg": 4.9,
+     "max": 15
+    },
+    {
+     "name": "Taunt",
+     "avg": 3.9,
+     "max": 15
+    },
+    {
+     "name": "Executing Blade",
+     "avg": 3.7,
+     "max": 13
+    },
+    {
+     "name": "Shield of Protection",
+     "avg": 2.5,
+     "max": 10
+    },
+    {
+     "name": "Nezekan's Shield",
+     "avg": 2.5,
+     "max": 15
+    },
+    {
+     "name": "Second Skin",
+     "avg": 2.1,
+     "max": 10
+    },
+    {
+     "name": "Grapple",
+     "avg": 1.4,
+     "max": 15
+    },
+    {
+     "name": "Comrade in Arms",
+     "avg": 1.1,
+     "max": 10
+    },
+    {
+     "name": "Assault Fury",
+     "avg": 1.0,
+     "max": 6
+    },
+    {
+     "name": "Armor of Balance",
+     "avg": 0.1,
+     "max": 1
+    }
+   ],
+   "arcana_stats": [
+    {
+     "name": "Chalice of Vigor",
+     "share_pct": 8,
+     "refine": "+0"
+    },
+    {
+     "name": "Chalice of Magic",
+     "share_pct": 8,
+     "refine": "+0"
+    },
+    {
+     "name": "Parchment of Vigor",
+     "share_pct": 7,
+     "refine": "+0"
+    },
+    {
+     "name": "Mirror of Vigor",
+     "share_pct": 5,
+     "refine": "+0"
+    },
+    {
+     "name": "Bell of Vigor",
+     "share_pct": 5,
+     "refine": "+1"
+    },
+    {
+     "name": "Mirror of Magic",
+     "share_pct": 5,
+     "refine": "+0"
+    }
+   ]
+  },
+  "assassin": {
+   "build": "Build de Assassin (PVE, dagger)",
+   "slug": "assassin",
+   "gw_slug": "assassin",
+   "skills": [
+    {
+     "name": "Quick Slice",
+     "pt": "Corte Rápido",
+     "level": "20",
+     "min": 20,
+     "max": 20,
+     "specs": "3/4/5",
+     "points": 10,
+     "skip": false
+    },
+    {
+     "name": "Heart Gore",
+     "pt": "Estocada no Coração",
+     "level": "20",
+     "min": 20,
+     "max": 20,
+     "specs": "4/5",
+     "points": 10,
+     "skip": false
+    },
+    {
+     "name": "Insignia Explosion",
+     "pt": "Explosão de Insígnia",
+     "level": "20 ou 16",
+     "min": 16,
+     "max": 20,
+     "specs": "2/5",
+     "points": 10,
+     "skip": false
+    },
+    {
+     "name": "Savage Roar",
+     "pt": "Rugido da Besta",
+     "level": "20 ou 12",
+     "min": 12,
+     "max": 20,
+     "specs": "2/3/4",
+     "points": 10,
+     "skip": false
+    },
+    {
+     "name": "Storm Rampage",
+     "pt": "Desenfreio da Tempestade",
+     "level": "16",
+     "min": 16,
+     "max": 16,
+     "specs": "1/4",
+     "points": 8,
+     "skip": false
+    },
+    {
+     "name": "Shadow Fall",
+     "pt": "Queda da Sombra",
+     "level": "12+",
+     "min": 12,
+     "max": null,
+     "specs": "1/3",
+     "points": 10,
+     "skip": false
+    },
+    {
+     "name": "Whirlwind Slice",
+     "pt": "Corte do Tornado",
+     "level": "12 ou 16",
+     "min": 12,
+     "max": 16,
+     "specs": "1, 2 ou 3 conforme o conteúdo",
+     "points": 10,
+     "skip": false
+    },
+    {
+     "name": "Flash Slice",
+     "pt": "Corte do Clarão",
+     "level": "8+",
+     "min": 8,
+     "max": null,
+     "specs": "2/4",
+     "points": 10,
+     "skip": false
+    },
+    {
+     "name": "Infiltrate",
+     "pt": "Infiltração",
+     "level": "8+",
+     "min": 8,
+     "max": null,
+     "specs": "1/2",
+     "points": 10,
+     "skip": false
+    },
+    {
+     "name": "Defiance",
+     "pt": "Remoção de Impacto",
+     "level": "12 ou 16",
+     "min": 12,
+     "max": 16,
+     "specs": "2/3",
+     "points": 9,
+     "skip": false
+    },
+    {
+     "name": "Ambush",
+     "pt": "Emboscada",
+     "level": "16",
+     "min": 16,
+     "max": 16,
+     "specs": null,
+     "points": 10,
+     "skip": false
+    }
+   ],
+   "passives": [
+    {
+     "name": "Rear Smite",
+     "pt": "Golpe Potente pela Retaguarda"
+    },
+    {
+     "name": "Assault Stance",
+     "pt": "Postura de Ataque Súbito"
+    },
+    {
+     "name": "Exploit Weakness",
+     "pt": "Exploração de Fraqueza"
+    },
+    {
+     "name": "Impact Hit",
+     "pt": "Acerto de Impacto"
+    },
+    {
+     "name": "Heightened Sixth Sense",
+     "pt": "Sexto Sentido Aguçado"
+    }
+   ],
+   "stigmas": [
+    {
+     "name": "Illusive Clone",
+     "pt": "Clone Ilusório",
+     "rank": 20
+    },
+    {
+     "name": "Swift Contract",
+     "pt": "Pacto da Celeridade",
+     "rank": 20
+    },
+    {
+     "name": "Triniel's Dagger",
+     "pt": "Punhal de Triniel",
+     "rank": 20
+    },
+    {
+     "name": "Savage Fang",
+     "pt": "Presa da Besta",
+     "rank": 20
+    }
+   ],
+   "stigmas_alt": [],
+   "arcana": [],
+   "arcana_note": "Ordem: Papiro → Bússola → Cálice. Papiro: Corte Rápido, Estocada no Coração, Explosão de Insígnia. Bússola: Rugido da Besta, Desenfreio da Tempestade, Remoção de Impacto. Cálice: passivas Golpe Potente pela Retaguarda, Postura de Ataque Súbito, Exploração de Fraqueza.",
+   "enhancing": [
+    "Acerto Crítico",
+    "Precisão",
+    "Ataque contra Chefe",
+    "Ataque Adicional",
+    "Ataque Máx.",
+    "Golpe Potente",
+    "Amplificação de Dano da Retaguarda",
+    "Tolerância a Dano PvE"
+   ],
+   "manastones": [
+    "Amplificação de Dano da Retaguarda",
+    "Amplificação de Dano de Arma",
+    "Amplificação de Dano Crítico",
+    "Ataque",
+    "Amplificação de Dano"
+   ],
+   "titles": {
+    "offensive": [
+     "Livre das Amarras da Raça",
+     "Guardião de Verteron / Altgard"
+    ],
+    "defensive": [
+     "Governar Todas as Coisas",
+     "Santidade de Verteron / Altgard"
+    ],
+    "utility": [
+     "Ai, Não Tenho Nada para Vestir",
+     "Herança do Dragão Sábio",
+     "Do Inferno e de Volta"
+    ]
+   },
+   "wings": [
+    "Asas de Talisra do Vazio",
+    "Asas do Espírito da Floresta"
+   ],
+   "gear": [
+    {
+     "slot": "Main hand",
+     "item": "Spiritforged Dagger",
+     "share_pct": 89,
+     "grade": "Unique",
+     "typical_enhance": "+10"
+    },
+    {
+     "slot": "Off hand",
+     "item": "Spiritforged Guard",
+     "share_pct": 87,
+     "grade": "Unique",
+     "typical_enhance": "+9"
+    },
+    {
+     "slot": "Helm",
+     "item": "Pilgrim Helm",
+     "share_pct": 26,
+     "grade": "Epic",
+     "typical_enhance": "+0"
+    },
+    {
+     "slot": "Pauldrons",
+     "item": "Pilgrim Pauldrons",
+     "share_pct": 28,
+     "grade": "Epic",
+     "typical_enhance": "+0"
+    },
+    {
+     "slot": "Chest",
+     "item": "Bakarma Breastplate",
+     "share_pct": 45,
+     "grade": "Unique",
+     "typical_enhance": "+7"
+    },
+    {
+     "slot": "Gloves",
+     "item": "Vakron Gloves",
+     "share_pct": 22,
+     "grade": "Unique",
+     "typical_enhance": "+10"
+    },
+    {
+     "slot": "Greaves",
+     "item": "Vakron Greaves",
+     "share_pct": 22,
+     "grade": "Unique",
+     "typical_enhance": "+10"
+    },
+    {
+     "slot": "Boots",
+     "item": "Vakron Boots",
+     "share_pct": 19,
+     "grade": "Unique",
+     "typical_enhance": "+10"
+    },
+    {
+     "slot": "Cloak",
+     "item": "Vakron Cloak",
+     "share_pct": 21,
+     "grade": "Unique",
+     "typical_enhance": "+10"
+    },
+    {
+     "slot": "Belt",
+     "item": "Noble Belt",
+     "share_pct": 64,
+     "grade": "Unique",
+     "typical_enhance": "+0"
+    },
+    {
+     "slot": "Necklace",
+     "item": "Pilgrim Necklace",
+     "share_pct": 38,
+     "grade": "Epic",
+     "typical_enhance": "+3"
+    },
+    {
+     "slot": "Earrings",
+     "item": "Pilgrim Earrings",
+     "share_pct": 37,
+     "grade": "Epic",
+     "typical_enhance": "+3"
+    },
+    {
+     "slot": "Rings",
+     "item": "Pilgrim Ring",
+     "share_pct": 35,
+     "grade": "Epic",
+     "typical_enhance": "+3"
+    },
+    {
+     "slot": "Bracelets",
+     "item": "Ascension Bracelet",
+     "share_pct": 48,
+     "grade": "Unique",
+     "typical_enhance": "+10"
+    },
+    {
+     "slot": "Amulet",
+     "item": "Revelation Amulet",
+     "share_pct": 77,
+     "grade": "Unique",
+     "typical_enhance": "+0"
+    },
+    {
+     "slot": "Runes",
+     "item": "Clash Rune",
+     "share_pct": 100,
+     "grade": "Special",
+     "typical_enhance": "+2"
+    }
+   ],
+   "skill_stats": [
+    {
+     "name": "Quick Slice",
+     "avg": 13.5,
+     "max": 16
+    },
+    {
+     "name": "Heart Gore",
+     "avg": 13.5,
+     "max": 17
+    },
+    {
+     "name": "Insignia Explosion",
+     "avg": 13.1,
+     "max": 17
+    },
+    {
+     "name": "Exploit Weakness",
+     "avg": 13.1,
+     "max": 18
+    },
+    {
+     "name": "Rear Smite",
+     "avg": 13.0,
+     "max": 18
+    },
+    {
+     "name": "Assault Stance",
+     "avg": 13.0,
+     "max": 17
+    },
+    {
+     "name": "Savage Roar",
+     "avg": 12.9,
+     "max": 16
+    },
+    {
+     "name": "Shadowstrike",
+     "avg": 11.4,
+     "max": 17
+    },
+    {
+     "name": "Determination",
+     "avg": 11.4,
+     "max": 20
+    },
+    {
+     "name": "Impact Hit",
+     "avg": 11.3,
+     "max": 18
+    },
+    {
+     "name": "Heightened Sixth Sense",
+     "avg": 11.1,
+     "max": 17
+    },
+    {
+     "name": "Ambush Stance",
+     "avg": 11.0,
+     "max": 18
+    },
+    {
+     "name": "Flash Slice",
+     "avg": 10.9,
+     "max": 18
+    },
+    {
+     "name": "Storm Rampage",
+     "avg": 10.7,
+     "max": 17
+    },
+    {
+     "name": "Ambush",
+     "avg": 10.5,
+     "max": 15
+    },
+    {
+     "name": "Infiltrate",
+     "avg": 10.1,
+     "max": 16
+    },
+    {
+     "name": "Defense Break",
+     "avg": 9.7,
+     "max": 16
+    },
+    {
+     "name": "Illusive Clone",
+     "avg": 9.2,
+     "max": 20
+    },
+    {
+     "name": "Apply Poison",
+     "avg": 7.9,
+     "max": 16
+    },
+    {
+     "name": "Revitalization Contract",
+     "avg": 7.9,
+     "max": 18
+    },
+    {
+     "name": "Whirlwind Slice",
+     "avg": 7.7,
+     "max": 15
+    },
+    {
+     "name": "Defiance",
+     "avg": 7.2,
+     "max": 14
+    },
+    {
+     "name": "Shadow Fall",
+     "avg": 6.7,
+     "max": 15
+    },
+    {
+     "name": "Triniel's Dagger",
+     "avg": 6.4,
+     "max": 13
+    },
+    {
+     "name": "Swift Contract",
+     "avg": 5.3,
+     "max": 16
+    },
+    {
+     "name": "Savage Fang",
+     "avg": 3.4,
+     "max": 20
+    },
+    {
+     "name": "Throw Shadowblade",
+     "avg": 3.0,
+     "max": 11
+    },
+    {
+     "name": "Spiral Slice",
+     "avg": 2.2,
+     "max": 10
+    },
+    {
+     "name": "Evasion Stance",
+     "avg": 2.1,
+     "max": 10
+    },
+    {
+     "name": "Shadow Walk",
+     "avg": 1.3,
+     "max": 13
+    },
+    {
+     "name": "Assault Ambush",
+     "avg": 1.2,
+     "max": 5
+    },
+    {
+     "name": "Smoke Bomb",
+     "avg": 1.2,
+     "max": 11
+    },
+    {
+     "name": "Shadowstep",
+     "avg": 1.1,
+     "max": 10
+    },
+    {
+     "name": "Aerial Bind",
+     "avg": 0.8,
+     "max": 10
+    },
+    {
+     "name": "Evasion Contract",
+     "avg": 0.4,
+     "max": 5
+    }
+   ],
+   "arcana_stats": [
+    {
+     "name": "Chalice of Vigor",
+     "share_pct": 10,
+     "refine": "+1"
+    },
+    {
+     "name": "Compass of Vigor",
+     "share_pct": 7,
+     "refine": "+0"
+    },
+    {
+     "name": "Chalice of Magic",
+     "share_pct": 7,
+     "refine": "+0"
+    },
+    {
+     "name": "Bell of Magic",
+     "share_pct": 7,
+     "refine": "+0"
+    },
+    {
+     "name": "Mirror of Vigor",
+     "share_pct": 6,
+     "refine": "+0"
+    },
+    {
+     "name": "Parchment of Vigor",
+     "share_pct": 6,
+     "refine": "+0"
+    },
+    {
+     "name": "Parchment of Magic",
+     "share_pct": 5,
+     "refine": "+1"
+    },
+    {
+     "name": "Bell of Vigor",
+     "share_pct": 5,
+     "refine": "+0"
+    }
+   ]
+  },
+  "ranger": {
+   "build": "Build de Ranger · PVE · bow",
+   "slug": "ranger",
+   "gw_slug": "ranger",
+   "skills": [
+    {
+     "name": "Snipe",
+     "pt": "Tiro de Precisão",
+     "level": "20",
+     "min": 20,
+     "max": 20,
+     "specs": "3/4",
+     "points": 9,
+     "skip": false
+    },
+    {
+     "name": "Tempest Shot",
+     "pt": "Disparo Rápido",
+     "level": "20",
+     "min": 20,
+     "max": 20,
+     "specs": "2/3/5",
+     "points": 10,
+     "skip": false
+    },
+    {
+     "name": "Snare Shot",
+     "pt": "Flecha Laçadora",
+     "level": "12",
+     "min": 12,
+     "max": 12,
+     "specs": "2/3",
+     "points": 8,
+     "skip": false
+    },
+    {
+     "name": "Marking Shot",
+     "pt": "Flecha de Marcação",
+     "level": "16",
+     "min": 16,
+     "max": 16,
+     "specs": "1/3",
+     "points": 10,
+     "skip": false
+    },
+    {
+     "name": "Drill Dart",
+     "pt": "Flecha Pontiaguda",
+     "level": "20",
+     "min": 20,
+     "max": 20,
+     "specs": "3/4/5",
+     "points": 10,
+     "skip": false
+    },
+    {
+     "name": "Arrow Scattershot",
+     "pt": "Rajada de Flechas",
+     "level": null,
+     "min": null,
+     "max": null,
+     "specs": null,
+     "points": null,
+     "skip": true
+    },
+    {
+     "name": "Gale Arrow",
+     "pt": "Flecha de Vento Tempestuoso",
+     "level": "20",
+     "min": 20,
+     "max": 20,
+     "specs": "3/4/5",
+     "points": 10,
+     "skip": false
+    },
+    {
+     "name": "Explosion Trap",
+     "pt": "Armadilha de Explosão",
+     "level": "12",
+     "min": 12,
+     "max": 12,
+     "specs": "1/3",
+     "points": 10,
+     "skip": false
+    },
+    {
+     "name": "Burst Arrow",
+     "pt": "Flecha de Ruptura",
+     "level": "16+",
+     "min": 16,
+     "max": null,
+     "specs": "2/3",
+     "points": 10,
+     "skip": false
+    },
+    {
+     "name": "Suppressing Arrow",
+     "pt": "Flecha de Supressão",
+     "level": "12",
+     "min": 12,
+     "max": 12,
+     "specs": "1/3",
+     "points": 8,
+     "skip": false
+    },
+    {
+     "name": "Deadshot",
+     "pt": "Flecha Certeira",
+     "level": "20",
+     "min": 20,
+     "max": 20,
+     "specs": "2/4/5",
+     "points": 10,
+     "skip": false
+    },
+    {
+     "name": "Defiance",
+     "pt": "Remoção de Impacto",
+     "level": "16",
+     "min": 16,
+     "max": 16,
+     "specs": "3/5",
+     "points": 10,
+     "skip": false
+    }
+   ],
+   "passives": [
+    {
+     "name": "Focused Eye",
+     "pt": "Olho da Concentração"
+    },
+    {
+     "name": "Hunter's Resolve",
+     "pt": "Determinação do Caçador"
+    },
+    {
+     "name": "Hunter's Soul",
+     "pt": "Alma do Caçador"
+    },
+    {
+     "name": "Concentrated Fire",
+     "pt": "Tiro Concentrado"
+    },
+    {
+     "name": "Vigilant Eye",
+     "pt": "Olho de Sentinela"
+    },
+    {
+     "name": "Rooting Eye",
+     "pt": "Olho da Contenção"
+    }
+   ],
+   "stigmas": [
+    {
+     "name": "Vaizel's Authority",
+     "pt": "Soberania de Vaizel",
+     "rank": 20
+    },
+    {
+     "name": "Bow of Blessing",
+     "pt": "Arco da Bênção",
+     "rank": 20
+    },
+    {
+     "name": "Supporting Fire",
+     "pt": "Fogo de Supressão",
+     "rank": 20
+    },
+    {
+     "name": "Griffon Arrow",
+     "pt": "Flecha de Grifo",
+     "rank": 20
+    }
+   ],
+   "stigmas_alt": [
+    {
+     "name": "Mother Nature's Breath",
+     "pt": "Sopro da Mãe Natureza"
+    },
+    {
+     "name": "Explosive Arrow",
+     "pt": "Flecha Explosiva"
+    }
+   ],
+   "arcana": [
+    {
+     "arcana": "Cálice",
+     "type": "Vigor",
+     "gods": "Tempo"
+    },
+    {
+     "arcana": "Papiro",
+     "type": "Vigor",
+     "gods": "Vida / Destino"
+    },
+    {
+     "arcana": "Bússola",
+     "type": "Magia",
+     "gods": "Morte / Liberdade"
+    },
+    {
+     "arcana": "Sino",
+     "type": "Magia",
+     "gods": "Destruição"
+    },
+    {
+     "arcana": "Espelho",
+     "type": "Magia",
+     "gods": "Ilusão / Sabedoria"
+    }
+   ],
+   "arcana_note": null,
+   "enhancing": [
+    "Bônus de Golpe Potente",
+    "Amplificação de Dano de Arma",
+    "Amplificação de Dano",
+    "Ataque",
+    "Precisão Adicional",
+    "Acerto Crítico"
+   ],
+   "manastones": [
+    "Amplificação de Dano de Ataque Frontal",
+    "Amplificação de Dano de Arma",
+    "Amplificação de Dano Crítico",
+    "Amplificação de Dano",
+    "Ataque"
+   ],
+   "titles": {
+    "offensive": [
+     "Livre das Amarras da Raça",
+     "Guardião de Verteron",
+     "Resplendor Dourado"
+    ],
+    "defensive": [
+     "Santidade de Verteron",
+     "Dominação do Espaço"
+    ],
+    "utility": [
+     "Do Inferno e de Volta",
+     "Ai, Não Tenho Nada para Vestir",
+     "Pegadas da Jornada"
+    ]
+   },
+   "wings": [
+    "Asas do Espírito da Floresta",
+    "Asas de Talisra do Vazio",
+    "Asas da Kromede"
+   ],
+   "gear": [
+    {
+     "slot": "Main hand",
+     "item": "Spiritforged Bow",
+     "share_pct": 87,
+     "grade": "Unique",
+     "typical_enhance": "+10"
+    },
+    {
+     "slot": "Off hand",
+     "item": "Spiritforged Guard",
+     "share_pct": 86,
+     "grade": "Unique",
+     "typical_enhance": "+10"
+    },
+    {
+     "slot": "Helm",
+     "item": "Liberator Helm",
+     "share_pct": 27,
+     "grade": "Epic",
+     "typical_enhance": "+3"
+    },
+    {
+     "slot": "Pauldrons",
+     "item": "Liberator Pauldrons",
+     "share_pct": 27,
+     "grade": "Epic",
+     "typical_enhance": "+3"
+    },
+    {
+     "slot": "Chest",
+     "item": "Bakarma Breastplate",
+     "share_pct": 37,
+     "grade": "Unique",
+     "typical_enhance": "+5"
+    },
+    {
+     "slot": "Gloves",
+     "item": "Vakron Gloves",
+     "share_pct": 20,
+     "grade": "Unique",
+     "typical_enhance": "+10"
+    },
+    {
+     "slot": "Greaves",
+     "item": "Vakron Greaves",
+     "share_pct": 23,
+     "grade": "Unique",
+     "typical_enhance": "+10"
+    },
+    {
+     "slot": "Boots",
+     "item": "Vakron Boots",
+     "share_pct": 21,
+     "grade": "Unique",
+     "typical_enhance": "+10"
+    },
+    {
+     "slot": "Cloak",
+     "item": "Liberator Cloak",
+     "share_pct": 23,
+     "grade": "Epic",
+     "typical_enhance": "+3"
+    },
+    {
+     "slot": "Belt",
+     "item": "Noble Belt",
+     "share_pct": 72,
+     "grade": "Unique",
+     "typical_enhance": "+0"
+    },
+    {
+     "slot": "Necklace",
+     "item": "Pilgrim Necklace",
+     "share_pct": 36,
+     "grade": "Epic",
+     "typical_enhance": "+4"
+    },
+    {
+     "slot": "Earrings",
+     "item": "Pilgrim Earrings",
+     "share_pct": 35,
+     "grade": "Epic",
+     "typical_enhance": "+5"
+    },
+    {
+     "slot": "Rings",
+     "item": "Pilgrim Ring",
+     "share_pct": 33,
+     "grade": "Epic",
+     "typical_enhance": "+5"
+    },
+    {
+     "slot": "Bracelets",
+     "item": "Ascension Bracelet",
+     "share_pct": 49,
+     "grade": "Unique",
+     "typical_enhance": "+10"
+    },
+    {
+     "slot": "Amulet",
+     "item": "Revelation Amulet",
+     "share_pct": 79,
+     "grade": "Unique",
+     "typical_enhance": "+0"
+    },
+    {
+     "slot": "Runes",
+     "item": "Clash Rune",
+     "share_pct": 100,
+     "grade": "Special",
+     "typical_enhance": "+2"
+    }
+   ],
+   "skill_stats": [
+    {
+     "name": "Snipe",
+     "avg": 13.3,
+     "max": 17
+    },
+    {
+     "name": "Tempest Shot",
+     "avg": 13.3,
+     "max": 17
+    },
+    {
+     "name": "Drill Dart",
+     "avg": 13.3,
+     "max": 18
+    },
+    {
+     "name": "Gale Arrow",
+     "avg": 13.1,
+     "max": 17
+    },
+    {
+     "name": "Hunter's Resolve",
+     "avg": 13.1,
+     "max": 19
+    },
+    {
+     "name": "Burst Arrow",
+     "avg": 13.0,
+     "max": 16
+    },
+    {
+     "name": "Hunter's Soul",
+     "avg": 13.0,
+     "max": 18
+    },
+    {
+     "name": "Focused Eye",
+     "avg": 12.9,
+     "max": 18
+    },
+    {
+     "name": "Deadshot",
+     "avg": 12.6,
+     "max": 16
+    },
+    {
+     "name": "Marking Shot",
+     "avg": 11.8,
+     "max": 16
+    },
+    {
+     "name": "Snare Shot",
+     "avg": 11.8,
+     "max": 18
+    },
+    {
+     "name": "Concentrated Fire",
+     "avg": 11.3,
+     "max": 18
+    },
+    {
+     "name": "Rooting Eye",
+     "avg": 11.0,
+     "max": 17
+    },
+    {
+     "name": "Melee Fire",
+     "avg": 10.2,
+     "max": 20
+    },
+    {
+     "name": "Vaizel's Authority",
+     "avg": 9.3,
+     "max": 20
+    },
+    {
+     "name": "Explosion Trap",
+     "avg": 9.2,
+     "max": 15
+    },
+    {
+     "name": "Suppressing Arrow",
+     "avg": 8.9,
+     "max": 16
+    },
+    {
+     "name": "Vigilant Eye",
+     "avg": 8.8,
+     "max": 17
+    },
+    {
+     "name": "Wind Vigor",
+     "avg": 8.5,
+     "max": 17
+    },
+    {
+     "name": "Arrow Scattershot",
+     "avg": 7.5,
+     "max": 17
+    },
+    {
+     "name": "Revitalization Contract",
+     "avg": 7.4,
+     "max": 16
+    },
+    {
+     "name": "Unyielding Resolve",
+     "avg": 6.5,
+     "max": 18
+    },
+    {
+     "name": "Defiance",
+     "avg": 6.4,
+     "max": 15
+    },
+    {
+     "name": "Bow of Blessing",
+     "avg": 6.0,
+     "max": 16
+    },
+    {
+     "name": "Supporting Fire",
+     "avg": 5.8,
+     "max": 20
+    },
+    {
+     "name": "Griffon Arrow",
+     "avg": 4.7,
+     "max": 15
+    },
+    {
+     "name": "Explosive Arrow",
+     "avg": 4.1,
+     "max": 11
+    },
+    {
+     "name": "Sealing Arrow",
+     "avg": 2.0,
+     "max": 10
+    },
+    {
+     "name": "Illusory Arrow",
+     "avg": 1.4,
+     "max": 10
+    },
+    {
+     "name": "Arrow Storm",
+     "avg": 1.2,
+     "max": 13
+    },
+    {
+     "name": "Ensnaring Trap",
+     "avg": 1.1,
+     "max": 10
+    },
+    {
+     "name": "Mother Nature's Breath",
+     "avg": 0.7,
+     "max": 10
+    },
+    {
+     "name": "Ambush Kick",
+     "avg": 0.5,
+     "max": 5
+    },
+    {
+     "name": "Stealth",
+     "avg": 0.2,
+     "max": 2
+    },
+    {
+     "name": "Assault Smite",
+     "avg": 0.1,
+     "max": 1
+    }
+   ],
+   "arcana_stats": [
+    {
+     "name": "Chalice of Vigor",
+     "share_pct": 9,
+     "refine": "+0"
+    },
+    {
+     "name": "Chalice of Magic",
+     "share_pct": 9,
+     "refine": "+0"
+    },
+    {
+     "name": "Parchment of Vigor",
+     "share_pct": 7,
+     "refine": "+0"
+    },
+    {
+     "name": "Mirror of Vigor",
+     "share_pct": 7,
+     "refine": "+0"
+    },
+    {
+     "name": "Parchment of Magic",
+     "share_pct": 6,
+     "refine": "+0"
+    },
+    {
+     "name": "Bell of Magic",
+     "share_pct": 6,
+     "refine": "+0"
+    },
+    {
+     "name": "Compass of Vigor",
+     "share_pct": 6,
+     "refine": "+0"
+    },
+    {
+     "name": "Bell of Vigor",
+     "share_pct": 5,
+     "refine": "+0"
+    }
+   ]
+  },
+  "sorcerer": {
+   "build": "Build do Sorcerer",
+   "slug": "sorcerer",
+   "gw_slug": "sorcerer",
+   "skills": [
+    {
+     "name": "Flame Arrow",
+     "pt": "Flecha Flamejante",
+     "level": "20",
+     "min": 20,
+     "max": 20,
+     "specs": "3/4/5",
+     "points": 10,
+     "skip": false
+    },
+    {
+     "name": "Ice Chain",
+     "pt": "Corrente de Gelo",
+     "level": "12",
+     "min": 12,
+     "max": 12,
+     "specs": "2/3",
+     "points": 10,
+     "skip": false
+    },
+    {
+     "name": "Firestorm",
+     "pt": "Saraivada Flamejante",
+     "level": "20",
+     "min": 20,
+     "max": 20,
+     "specs": "2/4/5",
+     "points": 10,
+     "skip": false
+    },
+    {
+     "name": "Bittercold Wind",
+     "pt": "Vento do Frio Intenso",
+     "level": "20",
+     "min": 20,
+     "max": 20,
+     "specs": "1/2/4",
+     "points": 10,
+     "skip": false
+    },
+    {
+     "name": "Blaze",
+     "pt": "Explosão de Chamas",
+     "level": "20",
+     "min": 20,
+     "max": 20,
+     "specs": "1/3/5",
+     "points": 10,
+     "skip": false
+    },
+    {
+     "name": "Flame Scattershot",
+     "pt": "Rajada de Chamas",
+     "level": null,
+     "min": null,
+     "max": null,
+     "specs": null,
+     "points": null,
+     "skip": true
+    },
+    {
+     "name": "Frost",
+     "pt": "Congelamento",
+     "level": "12",
+     "min": 12,
+     "max": 12,
+     "specs": "1/2",
+     "points": 10,
+     "skip": false
+    },
+    {
+     "name": "Winter's Shackles",
+     "pt": "Contenção do Inverno",
+     "level": "16",
+     "min": 16,
+     "max": 16,
+     "specs": "3/5",
+     "points": 9,
+     "skip": false
+    },
+    {
+     "name": "Frost Burst",
+     "pt": "Explosão Congelante",
+     "level": "12",
+     "min": 12,
+     "max": 12,
+     "specs": "1/4",
+     "points": 10,
+     "skip": false
+    },
+    {
+     "name": "Wish of Concentration",
+     "pt": "Súplica de Concentração",
+     "level": "20",
+     "min": 20,
+     "max": 20,
+     "specs": "2/4/5",
+     "points": 6,
+     "skip": false
+    },
+    {
+     "name": "Hellfire",
+     "pt": "Chamas Infernais",
+     "level": "20",
+     "min": 20,
+     "max": 20,
+     "specs": "1/3/5",
+     "points": 8,
+     "skip": false
+    },
+    {
+     "name": "Defiance",
+     "pt": "Remoção de Impacto",
+     "level": "16",
+     "min": 16,
+     "max": 16,
+     "specs": "2/3",
+     "points": 10,
+     "skip": false
+    }
+   ],
+   "passives": [
+    {
+     "name": "Robe of Flame",
+     "pt": "Manto de Chamas"
+    },
+    {
+     "name": "Fire Mark",
+     "pt": "Marca de Fogo"
+    }
+   ],
+   "stigmas": [
+    {
+     "name": "Element Enhancement",
+     "pt": "Aprimoramento Elemental",
+     "rank": 20
+    },
+    {
+     "name": "Fire Wall",
+     "pt": "Barreira de Fogo",
+     "rank": 20
+    },
+    {
+     "name": "Delayed Explosion",
+     "pt": "Explosão Tardia",
+     "rank": 20
+    },
+    {
+     "name": "Cold Storm",
+     "pt": "Tempestade Gélida",
+     "rank": 20
+    }
+   ],
+   "stigmas_alt": [
+    {
+     "name": "Steel Barrier",
+     "pt": "Escudo Protetivo de Aço"
+    },
+    {
+     "name": "Glacial Smite",
+     "pt": "Golpe Potente Glacial"
+    }
+   ],
+   "arcana": [
+    {
+     "arcana": "Cálice",
+     "type": "Vigor",
+     "gods": "Tempo"
+    },
+    {
+     "arcana": "Papiro",
+     "type": "Vigor",
+     "gods": "Vida / Destino"
+    },
+    {
+     "arcana": "Bússola",
+     "type": "Magia",
+     "gods": "Morte / Liberdade"
+    },
+    {
+     "arcana": "Sino",
+     "type": "Magia",
+     "gods": "Destruição"
+    },
+    {
+     "arcana": "Espelho",
+     "type": "Magia",
+     "gods": "Ilusão / Sabedoria"
+    }
+   ],
+   "arcana_note": null,
+   "enhancing": [
+    "Bônus de Golpe Potente",
+    "Amplificação de Dano de Arma",
+    "Amplificação de Dano",
+    "Ataque",
+    "Precisão Adicional e Acerto Crítico"
+   ],
+   "manastones": [
+    "Amplificação de Dano de Arma",
+    "Amplificação de Dano Crítico",
+    "Amplificação de Dano",
+    "Ataque"
+   ],
+   "titles": {
+    "offensive": [
+     "Livre das Amarras da Raça",
+     "Especialista em Teleporte",
+     "Guardião de Verteron"
+    ],
+    "defensive": [
+     "Santidade de Verteron",
+     "Dominação do Espaço"
+    ],
+    "utility": [
+     "Ai, Não Tenho Nada para Vestir",
+     "Do Inferno e de Volta"
+    ]
+   },
+   "wings": [
+    "Asas de Véu da Escuridão",
+    "Asas de Daeva Supremas",
+    "Asas de Talisra do Vazio",
+    "Asas de Daeva Superiores"
+   ],
+   "gear": [
+    {
+     "slot": "Main hand",
+     "item": "Spiritforged Spellbook",
+     "share_pct": 88,
+     "grade": "Unique",
+     "typical_enhance": "+10"
+    },
+    {
+     "slot": "Off hand",
+     "item": "Spiritforged Guard",
+     "share_pct": 85,
+     "grade": "Unique",
+     "typical_enhance": "+10"
+    },
+    {
+     "slot": "Helm",
+     "item": "Liberator Helm",
+     "share_pct": 26,
+     "grade": "Epic",
+     "typical_enhance": "+2"
+    },
+    {
+     "slot": "Pauldrons",
+     "item": "Liberator Pauldrons",
+     "share_pct": 25,
+     "grade": "Epic",
+     "typical_enhance": "+0"
+    },
+    {
+     "slot": "Chest",
+     "item": "Bakarma Breastplate",
+     "share_pct": 39,
+     "grade": "Unique",
+     "typical_enhance": "+6"
+    },
+    {
+     "slot": "Gloves",
+     "item": "Vakron Gloves",
+     "share_pct": 17,
+     "grade": "Unique",
+     "typical_enhance": "+10"
+    },
+    {
+     "slot": "Greaves",
+     "item": "Vakron Greaves",
+     "share_pct": 20,
+     "grade": "Unique",
+     "typical_enhance": "+10"
+    },
+    {
+     "slot": "Boots",
+     "item": "Vakron Boots",
+     "share_pct": 17,
+     "grade": "Unique",
+     "typical_enhance": "+10"
+    },
+    {
+     "slot": "Cloak",
+     "item": "Liberator Cloak",
+     "share_pct": 21,
+     "grade": "Epic",
+     "typical_enhance": "+0"
+    },
+    {
+     "slot": "Belt",
+     "item": "Noble Belt",
+     "share_pct": 62,
+     "grade": "Unique",
+     "typical_enhance": "+0"
+    },
+    {
+     "slot": "Necklace",
+     "item": "Pilgrim Necklace",
+     "share_pct": 33,
+     "grade": "Epic",
+     "typical_enhance": "+3"
+    },
+    {
+     "slot": "Earrings",
+     "item": "Liberator Earrings",
+     "share_pct": 36,
+     "grade": "Epic",
+     "typical_enhance": "+4"
+    },
+    {
+     "slot": "Rings",
+     "item": "Pilgrim Ring",
+     "share_pct": 31,
+     "grade": "Epic",
+     "typical_enhance": "+3"
+    },
+    {
+     "slot": "Bracelets",
+     "item": "Ascension Bracelet",
+     "share_pct": 47,
+     "grade": "Unique",
+     "typical_enhance": "+10"
+    },
+    {
+     "slot": "Amulet",
+     "item": "Revelation Amulet",
+     "share_pct": 74,
+     "grade": "Unique",
+     "typical_enhance": "+0"
+    },
+    {
+     "slot": "Runes",
+     "item": "Clash Rune",
+     "share_pct": 100,
+     "grade": "Special",
+     "typical_enhance": "+2"
+    }
+   ],
+   "skill_stats": [
+    {
+     "name": "Flame Arrow",
+     "avg": 13.3,
+     "max": 17
+    },
+    {
+     "name": "Firestorm",
+     "avg": 13.3,
+     "max": 16
+    },
+    {
+     "name": "Hellfire",
+     "avg": 13.3,
+     "max": 16
+    },
+    {
+     "name": "Blaze",
+     "avg": 13.3,
+     "max": 17
+    },
+    {
+     "name": "Fire Mark",
+     "avg": 13.1,
+     "max": 18
+    },
+    {
+     "name": "Wish of Concentration",
+     "avg": 12.9,
+     "max": 17
+    },
+    {
+     "name": "Robe of Flame",
+     "avg": 12.9,
+     "max": 20
+    },
+    {
+     "name": "Bittercold Wind",
+     "avg": 12.6,
+     "max": 16
+    },
+    {
+     "name": "Winter's Shackles",
+     "avg": 12.5,
+     "max": 16
+    },
+    {
+     "name": "Robe of Earth",
+     "avg": 11.8,
+     "max": 18
+    },
+    {
+     "name": "Vitality Evaporation",
+     "avg": 11.4,
+     "max": 17
+    },
+    {
+     "name": "Grace of Enhancement",
+     "avg": 11.3,
+     "max": 18
+    },
+    {
+     "name": "Flame Scattershot",
+     "avg": 10.4,
+     "max": 16
+    },
+    {
+     "name": "Frost Burst",
+     "avg": 10.2,
+     "max": 16
+    },
+    {
+     "name": "Frost",
+     "avg": 10.1,
+     "max": 16
+    },
+    {
+     "name": "Robe of Cold",
+     "avg": 9.6,
+     "max": 18
+    },
+    {
+     "name": "Element Enhancement",
+     "avg": 9.3,
+     "max": 20
+    },
+    {
+     "name": "Ice Chain",
+     "avg": 8.4,
+     "max": 17
+    },
+    {
+     "name": "Cold Snap",
+     "avg": 8.1,
+     "max": 18
+    },
+    {
+     "name": "Revitalization Contract",
+     "avg": 7.8,
+     "max": 16
+    },
+    {
+     "name": "Absorb Essence",
+     "avg": 7.7,
+     "max": 19
+    },
+    {
+     "name": "Defiance",
+     "avg": 7.3,
+     "max": 15
+    },
+    {
+     "name": "Grace of Resistance",
+     "avg": 6.0,
+     "max": 17
+    },
+    {
+     "name": "Delayed Explosion",
+     "avg": 5.0,
+     "max": 15
+    },
+    {
+     "name": "Fire Wall",
+     "avg": 4.8,
+     "max": 15
+    },
+    {
+     "name": "Cold Storm",
+     "avg": 3.9,
+     "max": 13
+    },
+    {
+     "name": "Glacial Smite",
+     "avg": 3.3,
+     "max": 13
+    },
+    {
+     "name": "Steel Barrier",
+     "avg": 2.8,
+     "max": 15
+    },
+    {
+     "name": "Divine Burst",
+     "avg": 2.2,
+     "max": 14
+    },
+    {
+     "name": "Soul Freeze",
+     "avg": 2.1,
+     "max": 10
+    },
+    {
+     "name": "Hibernation",
+     "avg": 1.6,
+     "max": 10
+    },
+    {
+     "name": "Arctic Armor",
+     "avg": 1.6,
+     "max": 13
+    },
+    {
+     "name": "Curse: Tree",
+     "avg": 1.4,
+     "max": 10
+    },
+    {
+     "name": "Lumiel's Space",
+     "avg": 0.9,
+     "max": 6
+    },
+    {
+     "name": "Assault Bombardment",
+     "avg": 0.3,
+     "max": 1
+    }
+   ],
+   "arcana_stats": [
+    {
+     "name": "Chalice of Vigor",
+     "share_pct": 9,
+     "refine": "+1"
+    },
+    {
+     "name": "Parchment of Vigor",
+     "share_pct": 7,
+     "refine": "+0"
+    },
+    {
+     "name": "Chalice of Magic",
+     "share_pct": 6,
+     "refine": "+0"
+    },
+    {
+     "name": "Compass of Vigor",
+     "share_pct": 6,
+     "refine": "+0"
+    },
+    {
+     "name": "Mirror of Vigor",
+     "share_pct": 5,
+     "refine": "+0"
+    },
+    {
+     "name": "Bell of Vigor",
+     "share_pct": 5,
+     "refine": "+0"
+    },
+    {
+     "name": "Parchment of Magic",
+     "share_pct": 5,
+     "refine": "+2"
+    }
+   ]
+  },
+  "spirit-master": {
+   "build": "Build de Spirit Master",
+   "slug": "spirit-master",
+   "gw_slug": "elementalist",
+   "skills": [
+    {
+     "name": "Cold Shock",
+     "pt": "Impacto Gélido",
+     "level": "16+",
+     "min": 16,
+     "max": null,
+     "specs": "3/4",
+     "points": 10,
+     "skip": false
+    },
+    {
+     "name": "Combustion",
+     "pt": "Combustão",
+     "level": "20",
+     "min": 20,
+     "max": 20,
+     "specs": "2/4/5",
+     "points": 7,
+     "skip": false
+    },
+    {
+     "name": "Summon: Fire Spirit",
+     "pt": "Invocação: Espírito do Fogo",
+     "level": "16-20",
+     "min": 16,
+     "max": 20,
+     "specs": "2/3/5",
+     "points": 10,
+     "skip": false
+    },
+    {
+     "name": "Summon: Water Spirit",
+     "pt": "Invocação: Espírito da Água",
+     "level": "16-20",
+     "min": 16,
+     "max": 20,
+     "specs": "2/3/5",
+     "points": 10,
+     "skip": false
+    },
+    {
+     "name": "Jointstrike: Curse",
+     "pt": "Ataque Conjunto: Maldição",
+     "level": "16-20",
+     "min": 16,
+     "max": 20,
+     "specs": "1/2/3",
+     "points": 7,
+     "skip": false
+    },
+    {
+     "name": "Rapid Scattershot",
+     "pt": "Rajada Contínua",
+     "level": null,
+     "min": null,
+     "max": null,
+     "specs": null,
+     "points": null,
+     "skip": true
+    },
+    {
+     "name": "Summon: Earth Spirit",
+     "pt": "Invocação: Espírito da Terra",
+     "level": "12-16",
+     "min": 12,
+     "max": 16,
+     "specs": "2/3",
+     "points": 8,
+     "skip": false
+    },
+    {
+     "name": "Dimensional Control",
+     "pt": "Domínio do Espaço",
+     "level": "16",
+     "min": 16,
+     "max": 16,
+     "specs": "2/3",
+     "points": 10,
+     "skip": false
+    },
+    {
+     "name": "Summon: Wind Spirit",
+     "pt": "Invocação: Espírito do Vento",
+     "level": null,
+     "min": null,
+     "max": null,
+     "specs": null,
+     "points": null,
+     "skip": true
+    },
+    {
+     "name": "Soul's Cry",
+     "pt": "Clamor da Alma",
+     "level": null,
+     "min": null,
+     "max": null,
+     "specs": null,
+     "points": null,
+     "skip": true
+    },
+    {
+     "name": "Elemental Fusion",
+     "pt": "Fusão Elemental",
+     "level": "20",
+     "min": 20,
+     "max": 20,
+     "specs": "2/3/5",
+     "points": 6,
+     "skip": false
+    },
+    {
+     "name": "Defiance",
+     "pt": "Remoção de Impacto",
+     "level": "16",
+     "min": 16,
+     "max": 16,
+     "specs": "3/5",
+     "points": 10,
+     "skip": false
+    }
+   ],
+   "passives": [
+    {
+     "name": "Spirit Strike",
+     "pt": "Golpe Espiritual"
+    },
+    {
+     "name": "Mental Focus",
+     "pt": "Concentração Mental"
+    },
+    {
+     "name": "Element Unification",
+     "pt": "Unificação Elemental"
+    },
+    {
+     "name": "Spirit Revitalization",
+     "pt": "Revitalização Espiritual"
+    }
+   ],
+   "stigmas": [
+    {
+     "name": "Summon: Ancient Spirit",
+     "pt": "Invocação: Espírito Ancestral",
+     "rank": 20
+    },
+    {
+     "name": "Enhance: Spirit's Benediction",
+     "pt": "Aprimoramento: Bendição do Espírito",
+     "rank": 20
+    },
+    {
+     "name": "Jointstrike: Corrode",
+     "pt": "Ataque Conjunto: Corrosão",
+     "rank": 20
+    },
+    {
+     "name": "Flame Blessing",
+     "pt": "Bênção do Fogo Ardente",
+     "rank": 20
+    }
+   ],
+   "stigmas_alt": [
+    {
+     "name": "Jointstrike: Destructive Attack",
+     "pt": "Ataque Conjunto: Ofensiva da Perdição"
+    },
+    {
+     "name": "Siphon",
+     "pt": "Sucção"
+    }
+   ],
+   "arcana": [
+    {
+     "arcana": "Cálice",
+     "type": "Vigor",
+     "gods": "Tempo"
+    },
+    {
+     "arcana": "Papiro",
+     "type": "Vigor",
+     "gods": "Vida / Destino"
+    },
+    {
+     "arcana": "Bússola",
+     "type": "Magia",
+     "gods": "Morte / Liberdade"
+    },
+    {
+     "arcana": "Sino",
+     "type": "Magia",
+     "gods": "Destruição"
+    },
+    {
+     "arcana": "Espelho",
+     "type": "Magia",
+     "gods": "Ilusão / Sabedoria"
+    }
+   ],
+   "arcana_note": null,
+   "enhancing": [
+    "Bônus de Golpe Potente",
+    "Amplificação de Dano de Arma",
+    "Amplificação de Dano",
+    "Ataque",
+    "Precisão Adicional",
+    "Acerto Crítico"
+   ],
+   "manastones": [
+    "Amplificação de Dano de Arma",
+    "Amplificação de Dano Crítico",
+    "Amplificação de Dano",
+    "Ataque"
+   ],
+   "titles": {
+    "offensive": [
+     "Livre das Amarras da Raça",
+     "Especialista em Teleporte",
+     "Guardião de Verteron"
+    ],
+    "defensive": [
+     "Santo de Eltnen",
+     "Em Busca da Luz"
+    ],
+    "utility": [
+     "Do Inferno e de Volta",
+     "Ai, Não Tenho Nada para Vestir"
+    ]
+   },
+   "wings": [
+    "Asas do Espírito da Floresta",
+    "Asas de Fragmento Negro",
+    "Asas da Kromede",
+    "Asas de Daeva Supremas"
+   ],
+   "gear": [
+    {
+     "slot": "Main hand",
+     "item": "Spiritforged Orb",
+     "share_pct": 89,
+     "grade": "Unique",
+     "typical_enhance": "+10"
+    },
+    {
+     "slot": "Off hand",
+     "item": "Spiritforged Guard",
+     "share_pct": 84,
+     "grade": "Unique",
+     "typical_enhance": "+7"
+    },
+    {
+     "slot": "Helm",
+     "item": "Liberator Helm",
+     "share_pct": 26,
+     "grade": "Epic",
+     "typical_enhance": "+0"
+    },
+    {
+     "slot": "Pauldrons",
+     "item": "Liberator Pauldrons",
+     "share_pct": 28,
+     "grade": "Epic",
+     "typical_enhance": "+0"
+    },
+    {
+     "slot": "Chest",
+     "item": "Bakarma Breastplate",
+     "share_pct": 41,
+     "grade": "Unique",
+     "typical_enhance": "+6"
+    },
+    {
+     "slot": "Gloves",
+     "item": "Anguish Gloves",
+     "share_pct": 19,
+     "grade": "Epic",
+     "typical_enhance": "+0"
+    },
+    {
+     "slot": "Greaves",
+     "item": "Vakron Greaves",
+     "share_pct": 19,
+     "grade": "Unique",
+     "typical_enhance": "+10"
+    },
+    {
+     "slot": "Boots",
+     "item": "Anguish Boots",
+     "share_pct": 18,
+     "grade": "Epic",
+     "typical_enhance": "+0"
+    },
+    {
+     "slot": "Cloak",
+     "item": "Liberator Cloak",
+     "share_pct": 23,
+     "grade": "Epic",
+     "typical_enhance": "+0"
+    },
+    {
+     "slot": "Belt",
+     "item": "Noble Belt",
+     "share_pct": 61,
+     "grade": "Unique",
+     "typical_enhance": "+0"
+    },
+    {
+     "slot": "Necklace",
+     "item": "Pilgrim Necklace",
+     "share_pct": 36,
+     "grade": "Epic",
+     "typical_enhance": "+3"
+    },
+    {
+     "slot": "Earrings",
+     "item": "Pilgrim Earrings",
+     "share_pct": 36,
+     "grade": "Epic",
+     "typical_enhance": "+3"
+    },
+    {
+     "slot": "Rings",
+     "item": "Pilgrim Ring",
+     "share_pct": 32,
+     "grade": "Epic",
+     "typical_enhance": "+3"
+    },
+    {
+     "slot": "Bracelets",
+     "item": "Ascension Bracelet",
+     "share_pct": 45,
+     "grade": "Unique",
+     "typical_enhance": "+10"
+    },
+    {
+     "slot": "Amulet",
+     "item": "Revelation Amulet",
+     "share_pct": 70,
+     "grade": "Unique",
+     "typical_enhance": "+0"
+    },
+    {
+     "slot": "Runes",
+     "item": "Clash Rune",
+     "share_pct": 100,
+     "grade": "Special",
+     "typical_enhance": "+2"
+    }
+   ],
+   "skill_stats": [
+    {
+     "name": "Spirit Strike",
+     "avg": 13.2,
+     "max": 17
+    },
+    {
+     "name": "Combustion",
+     "avg": 13.1,
+     "max": 17
+    },
+    {
+     "name": "Summon: Fire Spirit",
+     "avg": 13.1,
+     "max": 17
+    },
+    {
+     "name": "Jointstrike: Curse",
+     "avg": 13.0,
+     "max": 17
+    },
+    {
+     "name": "Elemental Fusion",
+     "avg": 13.0,
+     "max": 17
+    },
+    {
+     "name": "Cold Shock",
+     "avg": 12.9,
+     "max": 16
+    },
+    {
+     "name": "Dimensional Control",
+     "avg": 12.6,
+     "max": 17
+    },
+    {
+     "name": "Element Unification",
+     "avg": 12.1,
+     "max": 19
+    },
+    {
+     "name": "Summon: Water Spirit",
+     "avg": 12.0,
+     "max": 16
+    },
+    {
+     "name": "Summon: Earth Spirit",
+     "avg": 11.9,
+     "max": 16
+    },
+    {
+     "name": "Spirit Revitalization",
+     "avg": 11.3,
+     "max": 19
+    },
+    {
+     "name": "Corrode",
+     "avg": 11.1,
+     "max": 19
+    },
+    {
+     "name": "Mental Focus",
+     "avg": 11.0,
+     "max": 18
+    },
+    {
+     "name": "Spirit's Descent",
+     "avg": 10.4,
+     "max": 17
+    },
+    {
+     "name": "Spirit Protection",
+     "avg": 10.2,
+     "max": 16
+    },
+    {
+     "name": "Summon: Ancient Spirit",
+     "avg": 9.0,
+     "max": 20
+    },
+    {
+     "name": "Consecutive Countercurrent",
+     "avg": 9.0,
+     "max": 18
+    },
+    {
+     "name": "Rapid Scattershot",
+     "avg": 8.8,
+     "max": 16
+    },
+    {
+     "name": "Spirit Communion",
+     "avg": 8.1,
+     "max": 18
+    },
+    {
+     "name": "Summon: Wind Spirit",
+     "avg": 7.3,
+     "max": 15
+    },
+    {
+     "name": "Revitalization Contract",
+     "avg": 6.6,
+     "max": 17
+    },
+    {
+     "name": "Soul's Cry",
+     "avg": 5.9,
+     "max": 15
+    },
+    {
+     "name": "Defiance",
+     "avg": 5.9,
+     "max": 16
+    },
+    {
+     "name": "Enhance: Spirit's Benediction",
+     "avg": 5.6,
+     "max": 16
+    },
+    {
+     "name": "Jointstrike: Corrode",
+     "avg": 5.2,
+     "max": 15
+    },
+    {
+     "name": "Flame Blessing",
+     "avg": 4.5,
+     "max": 15
+    },
+    {
+     "name": "Jointstrike: Destructive Attack",
+     "avg": 3.4,
+     "max": 15
+    },
+    {
+     "name": "Seize Magic",
+     "avg": 2.0,
+     "max": 10
+    },
+    {
+     "name": "Cursed Cloud",
+     "avg": 1.8,
+     "max": 10
+    },
+    {
+     "name": "Siphon",
+     "avg": 1.7,
+     "max": 15
+    },
+    {
+     "name": "Cry of Terror",
+     "avg": 1.2,
+     "max": 10
+    },
+    {
+     "name": "Magic Block",
+     "avg": 1.1,
+     "max": 6
+    },
+    {
+     "name": "Assault Terror",
+     "avg": 1.0,
+     "max": 11
+    },
+    {
+     "name": "Command: Proxy",
+     "avg": 0.9,
+     "max": 10
+    },
+    {
+     "name": "Kaisinel's Power",
+     "avg": 0.4,
+     "max": 3
+    }
+   ],
+   "arcana_stats": [
+    {
+     "name": "Parchment of Vigor",
+     "share_pct": 7,
+     "refine": "+0"
+    },
+    {
+     "name": "Compass of Vigor",
+     "share_pct": 7,
+     "refine": "+0"
+    },
+    {
+     "name": "Bell of Vigor",
+     "share_pct": 7,
+     "refine": "+0"
+    },
+    {
+     "name": "Chalice of Vigor",
+     "share_pct": 6,
+     "refine": "+0"
+    },
+    {
+     "name": "Mirror of Vigor",
+     "share_pct": 6,
+     "refine": "+0"
+    },
+    {
+     "name": "Chalice of Magic",
+     "share_pct": 6,
+     "refine": "+0"
+    },
+    {
+     "name": "Parchment of Magic",
+     "share_pct": 5,
+     "refine": "+0"
+    }
+   ]
+  },
+  "cleric": {
+   "build": "Build de Cleric",
+   "slug": "cleric",
+   "gw_slug": "cleric",
+   "skills": [
+    {
+     "name": "Earth's Retribution",
+     "pt": "Retribuição da Terra",
+     "level": "12",
+     "min": 12,
+     "max": 12,
+     "specs": "2/4",
+     "points": 8,
+     "skip": false
+    },
+    {
+     "name": "Judgment Thunder",
+     "pt": "Relâmpago do Julgamento",
+     "level": "20",
+     "min": 20,
+     "max": 20,
+     "specs": "1/2/5",
+     "points": 10,
+     "skip": false
+    },
+    {
+     "name": "Debilitating Mark",
+     "pt": "Marca da Debilitação",
+     "level": "12",
+     "min": 12,
+     "max": 12,
+     "specs": "2/4",
+     "points": 8,
+     "skip": false
+    },
+    {
+     "name": "Divine Aura",
+     "pt": "Aura Divina",
+     "level": "20",
+     "min": 20,
+     "max": 20,
+     "specs": "3/4/5",
+     "points": 10,
+     "skip": false
+    },
+    {
+     "name": "Chain of Torment",
+     "pt": "Corrente de Tormento",
+     "level": "12",
+     "min": 12,
+     "max": 12,
+     "specs": "2/4",
+     "points": 8,
+     "skip": false
+    },
+    {
+     "name": "Lightning Strike Scattershot",
+     "pt": "Rajada de Raios",
+     "level": null,
+     "min": null,
+     "max": null,
+     "specs": null,
+     "points": null,
+     "skip": true
+    },
+    {
+     "name": "Light of Regeneration",
+     "pt": "Luz da Regeneração",
+     "level": "16",
+     "min": 16,
+     "max": 16,
+     "specs": "4/5",
+     "points": 10,
+     "skip": false
+    },
+    {
+     "name": "Condemnation",
+     "pt": "Condenação",
+     "level": "20",
+     "min": 20,
+     "max": 20,
+     "specs": "2/4/5",
+     "points": 6,
+     "skip": false
+    },
+    {
+     "name": "Healing Light",
+     "pt": "Luz da Cura",
+     "level": "20",
+     "min": 20,
+     "max": 20,
+     "specs": "1/4/5",
+     "points": 10,
+     "skip": false
+    },
+    {
+     "name": "Radiant Recovery",
+     "pt": "Fulgor Restaurador",
+     "level": "20",
+     "min": 20,
+     "max": 20,
+     "specs": "2/3/5",
+     "points": 10,
+     "skip": false
+    },
+    {
+     "name": "Bolt",
+     "pt": "Trovão",
+     "level": "20",
+     "min": 20,
+     "max": 20,
+     "specs": "3/4/5",
+     "points": 8,
+     "skip": false
+    },
+    {
+     "name": "Defiance",
+     "pt": "Remoção de Impacto",
+     "level": "16",
+     "min": 16,
+     "max": 16,
+     "specs": "3/5",
+     "points": 10,
+     "skip": false
+    }
+   ],
+   "passives": [
+    {
+     "name": "Empyrean Lord's Grace",
+     "pt": "Mercê do Empíreo"
+    },
+    {
+     "name": "Earth's Grace",
+     "pt": "Mercê da Terra"
+    },
+    {
+     "name": "Healing Enhancement",
+     "pt": "Aprimoramento da Cura"
+    },
+    {
+     "name": "Warm Benediction",
+     "pt": "Bendição Cálida"
+    }
+   ],
+   "stigmas": [
+    {
+     "name": "Light of Protection",
+     "pt": "Luz da Proteção",
+     "rank": 20
+    },
+    {
+     "name": "Earth Punishment",
+     "pt": "Punição da Terra",
+     "rank": 20
+    },
+    {
+     "name": "Absolution",
+     "pt": "Absolvição",
+     "rank": 20
+    },
+    {
+     "name": "Summon Resurrection",
+     "pt": "Ressurreição por Invocação",
+     "rank": 20
+    }
+   ],
+   "stigmas_alt": [
+    {
+     "name": "Prayer of Amplification",
+     "pt": "Oração da Amplificação"
+    },
+    {
+     "name": "Resurrection",
+     "pt": "Ressurreição"
+    }
+   ],
+   "arcana": [
+    {
+     "arcana": "Cálice",
+     "type": "Vigor",
+     "gods": "Tempo"
+    },
+    {
+     "arcana": "Papiro",
+     "type": "Vigor",
+     "gods": "Vida / Destino"
+    },
+    {
+     "arcana": "Bússola",
+     "type": "Magia",
+     "gods": "Morte / Liberdade"
+    },
+    {
+     "arcana": "Sino",
+     "type": "Magia",
+     "gods": "Destruição"
+    },
+    {
+     "arcana": "Espelho",
+     "type": "Magia",
+     "gods": "Ilusão / Sabedoria"
+    }
+   ],
+   "arcana_note": null,
+   "enhancing": [
+    "Bônus de Golpe Potente",
+    "Amplificação de Dano de Arma",
+    "Amplificação de Dano",
+    "Ataque",
+    "Precisão Adicional",
+    "Acerto Crítico"
+   ],
+   "manastones": [
+    "Amplificação de Dano de Arma",
+    "Amplificação de Dano Crítico",
+    "Amplificação de Dano",
+    "Ataque"
+   ],
+   "titles": {
+    "offensive": [
+     "Resplendor Dourado",
+     "Livre das Amarras da Raça",
+     "Especialista em Teleporte"
+    ],
+    "defensive": [
+     "Dominação do Espaço",
+     "Santidade de Verteron"
+    ],
+    "utility": [
+     "Ai, Não Tenho Nada para Vestir",
+     "Do Inferno e de Volta"
+    ]
+   },
+   "wings": [
+    "Asas de Talisra do Vazio",
+    "Asas do Espírito da Floresta",
+    "Asas de Daeva Supremas",
+    "Asas do Pesadelo"
+   ],
+   "gear": [
+    {
+     "slot": "Main hand",
+     "item": "Spiritforged Mace",
+     "share_pct": 91,
+     "grade": "Unique",
+     "typical_enhance": "+10"
+    },
+    {
+     "slot": "Off hand",
+     "item": "Spiritforged Guard",
+     "share_pct": 86,
+     "grade": "Unique",
+     "typical_enhance": "+9"
+    },
+    {
+     "slot": "Helm",
+     "item": "Pilgrim Helm",
+     "share_pct": 25,
+     "grade": "Epic",
+     "typical_enhance": "+0"
+    },
+    {
+     "slot": "Pauldrons",
+     "item": "Liberator Pauldrons",
+     "share_pct": 25,
+     "grade": "Epic",
+     "typical_enhance": "+3"
+    },
+    {
+     "slot": "Chest",
+     "item": "Bakarma Breastplate",
+     "share_pct": 41,
+     "grade": "Unique",
+     "typical_enhance": "+7"
+    },
+    {
+     "slot": "Gloves",
+     "item": "Vakron Gloves",
+     "share_pct": 21,
+     "grade": "Unique",
+     "typical_enhance": "+10"
+    },
+    {
+     "slot": "Greaves",
+     "item": "Vakron Greaves",
+     "share_pct": 22,
+     "grade": "Unique",
+     "typical_enhance": "+10"
+    },
+    {
+     "slot": "Boots",
+     "item": "Vakron Boots",
+     "share_pct": 18,
+     "grade": "Unique",
+     "typical_enhance": "+10"
+    },
+    {
+     "slot": "Cloak",
+     "item": "Liberator Cloak",
+     "share_pct": 22,
+     "grade": "Epic",
+     "typical_enhance": "+0"
+    },
+    {
+     "slot": "Belt",
+     "item": "Noble Belt",
+     "share_pct": 68,
+     "grade": "Unique",
+     "typical_enhance": "+0"
+    },
+    {
+     "slot": "Necklace",
+     "item": "Pilgrim Necklace",
+     "share_pct": 33,
+     "grade": "Epic",
+     "typical_enhance": "+3"
+    },
+    {
+     "slot": "Earrings",
+     "item": "Liberator Earrings",
+     "share_pct": 38,
+     "grade": "Epic",
+     "typical_enhance": "+5"
+    },
+    {
+     "slot": "Rings",
+     "item": "Liberator Ring",
+     "share_pct": 34,
+     "grade": "Epic",
+     "typical_enhance": "+5"
+    },
+    {
+     "slot": "Bracelets",
+     "item": "Ascension Bracelet",
+     "share_pct": 48,
+     "grade": "Unique",
+     "typical_enhance": "+9"
+    },
+    {
+     "slot": "Amulet",
+     "item": "Revelation Amulet",
+     "share_pct": 80,
+     "grade": "Unique",
+     "typical_enhance": "+0"
+    },
+    {
+     "slot": "Runes",
+     "item": "Clash Rune",
+     "share_pct": 100,
+     "grade": "Special",
+     "typical_enhance": "+2"
+    }
+   ],
+   "skill_stats": [
+    {
+     "name": "Condemnation",
+     "avg": 13.1,
+     "max": 17
+    },
+    {
+     "name": "Judgment Thunder",
+     "avg": 13.0,
+     "max": 17
+    },
+    {
+     "name": "Earth's Retribution",
+     "avg": 12.9,
+     "max": 16
+    },
+    {
+     "name": "Chain of Torment",
+     "avg": 12.9,
+     "max": 16
+    },
+    {
+     "name": "Light of Regeneration",
+     "avg": 12.7,
+     "max": 16
+    },
+    {
+     "name": "Debilitating Mark",
+     "avg": 12.6,
+     "max": 17
+    },
+    {
+     "name": "Healing Light",
+     "avg": 12.6,
+     "max": 17
+    },
+    {
+     "name": "Divine Aura",
+     "avg": 12.6,
+     "max": 17
+    },
+    {
+     "name": "Radiant Recovery",
+     "avg": 12.4,
+     "max": 17
+    },
+    {
+     "name": "Empyrean Lord's Grace",
+     "avg": 12.4,
+     "max": 19
+    },
+    {
+     "name": "Warm Benediction",
+     "avg": 12.3,
+     "max": 18
+    },
+    {
+     "name": "Healing Enhancement",
+     "avg": 12.1,
+     "max": 19
+    },
+    {
+     "name": "Bolt",
+     "avg": 12.0,
+     "max": 16
+    },
+    {
+     "name": "Earth's Grace",
+     "avg": 11.8,
+     "max": 17
+    },
+    {
+     "name": "Immortal Veil",
+     "avg": 11.3,
+     "max": 18
+    },
+    {
+     "name": "Radiant Benediction",
+     "avg": 10.8,
+     "max": 18
+    },
+    {
+     "name": "Survival Willpower",
+     "avg": 9.4,
+     "max": 17
+    },
+    {
+     "name": "Prayer of Concentration",
+     "avg": 8.1,
+     "max": 18
+    },
+    {
+     "name": "Lightning Strike Scattershot",
+     "avg": 7.9,
+     "max": 16
+    },
+    {
+     "name": "Empyrean Lords' Benediction",
+     "avg": 7.4,
+     "max": 17
+    },
+    {
+     "name": "Earth Punishment",
+     "avg": 7.3,
+     "max": 20
+    },
+    {
+     "name": "Defiance",
+     "avg": 6.9,
+     "max": 15
+    },
+    {
+     "name": "Light of Protection",
+     "avg": 6.1,
+     "max": 15
+    },
+    {
+     "name": "Noble Aura",
+     "avg": 5.7,
+     "max": 15
+    },
+    {
+     "name": "Prayer of Amplification",
+     "avg": 4.8,
+     "max": 15
+    },
+    {
+     "name": "Heal Block",
+     "avg": 4.7,
+     "max": 17
+    },
+    {
+     "name": "Absolution",
+     "avg": 3.0,
+     "max": 11
+    },
+    {
+     "name": "Benevolence",
+     "avg": 3.0,
+     "max": 15
+    },
+    {
+     "name": "Yustiel's Power",
+     "avg": 2.8,
+     "max": 15
+    },
+    {
+     "name": "Summon Resurrection",
+     "avg": 2.5,
+     "max": 10
+    },
+    {
+     "name": "Voice of Doom",
+     "avg": 1.5,
+     "max": 10
+    },
+    {
+     "name": "Salvation",
+     "avg": 1.4,
+     "max": 13
+    },
+    {
+     "name": "Root",
+     "avg": 1.3,
+     "max": 10
+    },
+    {
+     "name": "Power Burst",
+     "avg": 0.8,
+     "max": 12
+    },
+    {
+     "name": "Assault Mark",
+     "avg": 0.6,
+     "max": 5
+    }
+   ],
+   "arcana_stats": [
+    {
+     "name": "Chalice of Vigor",
+     "share_pct": 8,
+     "refine": "+0"
+    },
+    {
+     "name": "Chalice of Magic",
+     "share_pct": 6,
+     "refine": "+0"
+    },
+    {
+     "name": "Mirror of Vigor",
+     "share_pct": 6,
+     "refine": "+0"
+    },
+    {
+     "name": "Parchment of Vigor",
+     "share_pct": 5,
+     "refine": "+0"
+    },
+    {
+     "name": "Compass of Magic",
+     "share_pct": 5,
+     "refine": "+0"
+    },
+    {
+     "name": "Bell of Magic",
+     "share_pct": 5,
+     "refine": "+0"
+    },
+    {
+     "name": "Bell of Vigor",
+     "share_pct": 5,
+     "refine": "+0"
+    }
+   ]
+  },
+  "chanter": {
+   "build": "Build de Chanter",
+   "slug": "chanter",
+   "gw_slug": "chanter",
+   "skills": [
+    {
+     "name": "Onslaught",
+     "pt": "Golpe Estilhaçante",
+     "level": "20",
+     "min": 20,
+     "max": 20,
+     "specs": "3/4/5",
+     "points": 10,
+     "skip": false
+    },
+    {
+     "name": "Incandescent Blow",
+     "pt": "Golpe Incandescente",
+     "level": "16",
+     "min": 16,
+     "max": 16,
+     "specs": "3/5",
+     "points": 8,
+     "skip": false
+    },
+    {
+     "name": "Rushing Smash",
+     "pt": "Esmagamento de Investida",
+     "level": "12",
+     "min": 12,
+     "max": 12,
+     "specs": "1/4",
+     "points": 8,
+     "skip": false
+    },
+    {
+     "name": "Impactful Crush",
+     "pt": "Golpe Destruidor",
+     "level": "12",
+     "min": 12,
+     "max": 12,
+     "specs": "3/4",
+     "points": 8,
+     "skip": false
+    },
+    {
+     "name": "Dark Crush",
+     "pt": "Esmagamento Sombrio",
+     "level": "20",
+     "min": 20,
+     "max": 20,
+     "specs": "3/4/5",
+     "points": 6,
+     "skip": false
+    },
+    {
+     "name": "Gust Rampage",
+     "pt": "Vendaval Desenfreado",
+     "level": null,
+     "min": null,
+     "max": null,
+     "specs": null,
+     "points": null,
+     "skip": true
+    },
+    {
+     "name": "Heat Wave Blow",
+     "pt": "Golpe da Onda Abrasadora",
+     "level": "12",
+     "min": 12,
+     "max": 12,
+     "specs": "3/4",
+     "points": 8,
+     "skip": false
+    },
+    {
+     "name": "Recuperation",
+     "pt": "Feitiço da Convalescença",
+     "level": "16-20",
+     "min": 16,
+     "max": 20,
+     "specs": "1/4",
+     "points": 9,
+     "skip": false
+    },
+    {
+     "name": "Tremor Crush",
+     "pt": "Esmagamento Vibrante",
+     "level": "12",
+     "min": 12,
+     "max": 12,
+     "specs": "2/3",
+     "points": 8,
+     "skip": false
+    },
+    {
+     "name": "Wave Blow",
+     "pt": "Golpe Ondulante",
+     "level": "12",
+     "min": 12,
+     "max": 12,
+     "specs": "1/4",
+     "points": 8,
+     "skip": false
+    },
+    {
+     "name": "Spinning Strike",
+     "pt": "Golpe Giratório",
+     "level": "20",
+     "min": 20,
+     "max": 20,
+     "specs": "1/2/3",
+     "points": 10,
+     "skip": false
+    },
+    {
+     "name": "Defiance",
+     "pt": "Remoção de Impacto",
+     "level": "16",
+     "min": 16,
+     "max": 16,
+     "specs": "3/5",
+     "points": 10,
+     "skip": false
+    }
+   ],
+   "passives": [
+    {
+     "name": "Wind's Promise",
+     "pt": "Promessa do Vento"
+    },
+    {
+     "name": "Impact Hit",
+     "pt": "Acerto de Impacto"
+    },
+    {
+     "name": "Attack Preparation",
+     "pt": "Preparar Ataque"
+    },
+    {
+     "name": "Earth's Promise",
+     "pt": "Promessa da Terra"
+    },
+    {
+     "name": "Inspiring Spell",
+     "pt": "Feitiço da Inspiração"
+    }
+   ],
+   "stigmas": [
+    {
+     "name": "Undefeated Mantra",
+     "pt": "Mantra do Imbatível",
+     "rank": 20
+    },
+    {
+     "name": "Power of the Storm",
+     "pt": "Soberania do Vendaval",
+     "rank": 5
+    },
+    {
+     "name": "Sprint Mantra",
+     "pt": "Mantra da Disparada",
+     "rank": 1
+    },
+    {
+     "name": "Focused Defense",
+     "pt": "Defesa Concentrada",
+     "rank": 5
+    }
+   ],
+   "stigmas_alt": [
+    {
+     "name": "Guardian's Blessing",
+     "pt": "Bênção da Guarda"
+    },
+    {
+     "name": "Impending Authority",
+     "pt": "Soberania do Bloqueio"
+    },
+    {
+     "name": "Marchutan's Wrath",
+     "pt": "Fúria de Marchutan"
+    }
+   ],
+   "arcana": [
+    {
+     "arcana": "Cálice",
+     "type": "Vigor",
+     "gods": "Tempo"
+    },
+    {
+     "arcana": "Papiro",
+     "type": "Vigor",
+     "gods": "Vida / Destino"
+    },
+    {
+     "arcana": "Bússola",
+     "type": "Magia",
+     "gods": "Morte / Liberdade"
+    },
+    {
+     "arcana": "Sino",
+     "type": "Magia",
+     "gods": "Destruição"
+    },
+    {
+     "arcana": "Espelho",
+     "type": "Magia",
+     "gods": "Ilusão / Sabedoria"
+    }
+   ],
+   "arcana_note": null,
+   "enhancing": [
+    "Bônus de Golpe Potente",
+    "Amplificação de Dano de Arma",
+    "Amplificação de Dano",
+    "Ataque",
+    "Precisão Adicional",
+    "Acerto Crítico"
+   ],
+   "manastones": [
+    "Amplificação de Dano de Ataque Frontal",
+    "Amplificação de Dano de Arma",
+    "Amplificação de Dano Crítico",
+    "Amplificação de Dano",
+    "Ataque"
+   ],
+   "titles": {
+    "offensive": [
+     "Livre das Amarras da Raça",
+     "Guardião de Verteron",
+     "Resplendor Dourado"
+    ],
+    "defensive": [
+     "Santidade de Verteron",
+     "Governar Todas as Coisas"
+    ],
+    "utility": [
+     "Do Inferno e de Volta",
+     "Ai, Não Tenho Nada para Vestir"
+    ]
+   },
+   "wings": [
+    "Asas de Véu da Escuridão",
+    "Asas do Espírito da Floresta",
+    "Asas de Talisra do Vazio"
+   ],
+   "gear": [
+    {
+     "slot": "Main hand",
+     "item": "Spiritforged Staff",
+     "share_pct": 88,
+     "grade": "Unique",
+     "typical_enhance": "+10"
+    },
+    {
+     "slot": "Off hand",
+     "item": "Spiritforged Guard",
+     "share_pct": 87,
+     "grade": "Unique",
+     "typical_enhance": "+10"
+    },
+    {
+     "slot": "Helm",
+     "item": "Pilgrim Helm",
+     "share_pct": 23,
+     "grade": "Epic",
+     "typical_enhance": "+3"
+    },
+    {
+     "slot": "Pauldrons",
+     "item": "Liberator Pauldrons",
+     "share_pct": 25,
+     "grade": "Epic",
+     "typical_enhance": "+4"
+    },
+    {
+     "slot": "Chest",
+     "item": "Bakarma Breastplate",
+     "share_pct": 38,
+     "grade": "Unique",
+     "typical_enhance": "+8"
+    },
+    {
+     "slot": "Gloves",
+     "item": "Vakron Gloves",
+     "share_pct": 24,
+     "grade": "Unique",
+     "typical_enhance": "+10"
+    },
+    {
+     "slot": "Greaves",
+     "item": "Vakron Greaves",
+     "share_pct": 29,
+     "grade": "Unique",
+     "typical_enhance": "+10"
+    },
+    {
+     "slot": "Boots",
+     "item": "Vakron Boots",
+     "share_pct": 19,
+     "grade": "Unique",
+     "typical_enhance": "+10"
+    },
+    {
+     "slot": "Cloak",
+     "item": "Vakron Cloak",
+     "share_pct": 23,
+     "grade": "Unique",
+     "typical_enhance": "+10"
+    },
+    {
+     "slot": "Belt",
+     "item": "Noble Belt",
+     "share_pct": 79,
+     "grade": "Unique",
+     "typical_enhance": "+0"
+    },
+    {
+     "slot": "Necklace",
+     "item": "Pilgrim Necklace",
+     "share_pct": 35,
+     "grade": "Epic",
+     "typical_enhance": "+4"
+    },
+    {
+     "slot": "Earrings",
+     "item": "Pilgrim Earrings",
+     "share_pct": 37,
+     "grade": "Epic",
+     "typical_enhance": "+5"
+    },
+    {
+     "slot": "Rings",
+     "item": "Pilgrim Ring",
+     "share_pct": 34,
+     "grade": "Epic",
+     "typical_enhance": "+5"
+    },
+    {
+     "slot": "Bracelets",
+     "item": "Ascension Bracelet",
+     "share_pct": 49,
+     "grade": "Unique",
+     "typical_enhance": "+10"
+    },
+    {
+     "slot": "Amulet",
+     "item": "Revelation Amulet",
+     "share_pct": 85,
+     "grade": "Unique",
+     "typical_enhance": "+0"
+    },
+    {
+     "slot": "Runes",
+     "item": "Clash Rune",
+     "share_pct": 100,
+     "grade": "Special",
+     "typical_enhance": "+2"
+    }
+   ],
+   "skill_stats": [
+    {
+     "name": "Dark Crush",
+     "avg": 13.9,
+     "max": 18
+    },
+    {
+     "name": "Onslaught",
+     "avg": 13.5,
+     "max": 16
+    },
+    {
+     "name": "Attack Preparation",
+     "avg": 13.5,
+     "max": 20
+    },
+    {
+     "name": "Incandescent Blow",
+     "avg": 13.4,
+     "max": 16
+    },
+    {
+     "name": "Spinning Strike",
+     "avg": 13.4,
+     "max": 17
+    },
+    {
+     "name": "Wind's Promise",
+     "avg": 13.2,
+     "max": 19
+    },
+    {
+     "name": "Recuperation",
+     "avg": 13.0,
+     "max": 16
+    },
+    {
+     "name": "Impactful Crush",
+     "avg": 12.8,
+     "max": 17
+    },
+    {
+     "name": "Rushing Smash",
+     "avg": 12.6,
+     "max": 16
+    },
+    {
+     "name": "Inspiring Spell",
+     "avg": 12.5,
+     "max": 18
+    },
+    {
+     "name": "Blessing of Life",
+     "avg": 12.1,
+     "max": 17
+    },
+    {
+     "name": "Earth's Promise",
+     "avg": 11.8,
+     "max": 18
+    },
+    {
+     "name": "Protection Circle",
+     "avg": 11.6,
+     "max": 18
+    },
+    {
+     "name": "Impact Hit",
+     "avg": 10.8,
+     "max": 18
+    },
+    {
+     "name": "Tremor Crush",
+     "avg": 10.4,
+     "max": 16
+    },
+    {
+     "name": "Undefeated Mantra",
+     "avg": 10.3,
+     "max": 20
+    },
+    {
+     "name": "Survival Willpower",
+     "avg": 10.0,
+     "max": 18
+    },
+    {
+     "name": "Heat Wave Blow",
+     "avg": 9.5,
+     "max": 16
+    },
+    {
+     "name": "Raging Spell",
+     "avg": 8.7,
+     "max": 18
+    },
+    {
+     "name": "Wave Blow",
+     "avg": 7.8,
+     "max": 15
+    },
+    {
+     "name": "Defiance",
+     "avg": 7.8,
+     "max": 16
+    },
+    {
+     "name": "Crossguard",
+     "avg": 7.2,
+     "max": 17
+    },
+    {
+     "name": "Gust Rampage",
+     "avg": 6.8,
+     "max": 16
+    },
+    {
+     "name": "Sprint Mantra",
+     "avg": 5.1,
+     "max": 15
+    },
+    {
+     "name": "Power of the Storm",
+     "avg": 4.4,
+     "max": 15
+    },
+    {
+     "name": "Marchutan's Wrath",
+     "avg": 3.7,
+     "max": 15
+    },
+    {
+     "name": "Fracturing Blow",
+     "avg": 2.2,
+     "max": 11
+    },
+    {
+     "name": "Impeding Authority",
+     "avg": 1.8,
+     "max": 10
+    },
+    {
+     "name": "Guardian Blessing",
+     "avg": 1.5,
+     "max": 10
+    },
+    {
+     "name": "Healing Touch",
+     "avg": 1.4,
+     "max": 10
+    },
+    {
+     "name": "Barrier Spell",
+     "avg": 1.2,
+     "max": 14
+    },
+    {
+     "name": "Focused Defense",
+     "avg": 1.2,
+     "max": 10
+    },
+    {
+     "name": "Ensnaring Mark",
+     "avg": 1.1,
+     "max": 10
+    },
+    {
+     "name": "Obliterate",
+     "avg": 0.7,
+     "max": 13
+    },
+    {
+     "name": "Assault Shock",
+     "avg": 0.3,
+     "max": 5
+    }
+   ],
+   "arcana_stats": [
+    {
+     "name": "Chalice of Vigor",
+     "share_pct": 10,
+     "refine": "+0"
+    },
+    {
+     "name": "Parchment of Vigor",
+     "share_pct": 7,
+     "refine": "+0"
+    },
+    {
+     "name": "Compass of Vigor",
+     "share_pct": 6,
+     "refine": "+0"
+    },
+    {
+     "name": "Mirror of Vigor",
+     "share_pct": 6,
+     "refine": "+0"
+    },
+    {
+     "name": "Bell of Vigor",
+     "share_pct": 5,
+     "refine": "+0"
+    },
+    {
+     "name": "Mirror of Magic",
+     "share_pct": 4,
+     "refine": "+0"
+    }
+   ]
+  }
+ }
+}

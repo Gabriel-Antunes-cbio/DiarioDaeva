@@ -1,0 +1,763 @@
+{
+ "collected": "2026-10-20",
+ "sources": {
+  "gear": "Shugo.GG",
+  "skills": "AION2 Index"
+ },
+ "profiles": {
+  "Kumaglad": {
+   "server": "Siel",
+   "region": "la",
+   "cls": "Gladiator",
+   "level": 45,
+   "faction": "Elyos",
+   "cp": 106302,
+   "gs": 1723,
+   "item_level": 2237,
+   "gear": [
+    {
+     "slot": "Main Hand",
+     "item": "Aulamus Greatsword",
+     "enchant": 13,
+     "grade": "Unique"
+    },
+    {
+     "slot": "Off-hand",
+     "item": "Vakron Guard",
+     "enchant": 10,
+     "grade": "Unique"
+    },
+    {
+     "slot": "Torso",
+     "item": "Vakron Breastplate",
+     "enchant": 10,
+     "grade": "Unique"
+    },
+    {
+     "slot": "Legs",
+     "item": "Gartua Greaves",
+     "enchant": 10,
+     "grade": "Unique"
+    },
+    {
+     "slot": "Helmet",
+     "item": "Vakron Helm",
+     "enchant": 10,
+     "grade": "Unique"
+    },
+    {
+     "slot": "Shoulders",
+     "item": "Vakron Pauldrons",
+     "enchant": 10,
+     "grade": "Unique"
+    },
+    {
+     "slot": "Gloves",
+     "item": "Vakron Gloves",
+     "enchant": 10,
+     "grade": "Unique"
+    },
+    {
+     "slot": "Boots",
+     "item": "Vakron Boots",
+     "enchant": 10,
+     "grade": "Unique"
+    },
+    {
+     "slot": "Cape",
+     "item": "Vakron Cloak",
+     "enchant": 10,
+     "grade": "Unique"
+    },
+    {
+     "slot": "Belt",
+     "item": "Noble Belt",
+     "enchant": 5,
+     "grade": "Unique"
+    },
+    {
+     "slot": "Necklace",
+     "item": "Aulamus Necklace",
+     "enchant": 10,
+     "grade": "Unique"
+    },
+    {
+     "slot": "Earring",
+     "item": "Enraged Kromede Earrings",
+     "enchant": 10,
+     "grade": "Unique"
+    },
+    {
+     "slot": "Earring",
+     "item": "Enraged Kromede Earrings",
+     "enchant": 10,
+     "grade": "Unique"
+    },
+    {
+     "slot": "Ring",
+     "item": "Aulamus Ring",
+     "enchant": 10,
+     "grade": "Unique"
+    },
+    {
+     "slot": "Ring",
+     "item": "Pilgrim Ring",
+     "enchant": 3,
+     "grade": "Epic"
+    },
+    {
+     "slot": "Bracelet",
+     "item": "Ascension Bracelet",
+     "enchant": 10,
+     "grade": "Unique"
+    },
+    {
+     "slot": "Bracelet",
+     "item": "Pilgrim Bracelet",
+     "enchant": 10,
+     "grade": "Epic"
+    },
+    {
+     "slot": "Rune2",
+     "item": "Clash Rune",
+     "enchant": 2,
+     "grade": "Special"
+    },
+    {
+     "slot": "Rune1",
+     "item": "Clash Rune",
+     "enchant": 2,
+     "grade": "Special"
+    },
+    {
+     "slot": "Amulet",
+     "item": "Revelation Amulet",
+     "enchant": 5,
+     "grade": "Unique"
+    },
+    {
+     "slot": "Arcana1",
+     "item": "Chalice of Vigor",
+     "enchant": 1,
+     "grade": "Unique"
+    },
+    {
+     "slot": "Arcana2",
+     "item": "Parchment of Vigor",
+     "enchant": 1,
+     "grade": "Rare"
+    },
+    {
+     "slot": "Arcana3",
+     "item": "Compass of Magic",
+     "enchant": 2,
+     "grade": "Epic"
+    },
+    {
+     "slot": "Arcana4",
+     "item": "Bell of Vigor",
+     "enchant": 0,
+     "grade": "Rare"
+    },
+    {
+     "slot": "Arcana5",
+     "item": "Mirror of Vigor",
+     "enchant": 0,
+     "grade": "Rare"
+    }
+   ],
+   "skills": {
+    "active": [
+     [
+      "Overhead Slam",
+      18
+     ],
+     [
+      "Rending Blow",
+      16
+     ],
+     [
+      "Leaping Slam",
+      15
+     ],
+     [
+      "Ruinous Blow",
+      15
+     ],
+     [
+      "Keen Strike",
+      14
+     ],
+     [
+      "Rush Strike",
+      14
+     ],
+     [
+      "Sword Aura Rampage",
+      14
+     ],
+     [
+      "Ankle Slice",
+      9
+     ],
+     [
+      "Mocking Blade",
+      3
+     ],
+     [
+      "Aerial Snare",
+      1
+     ],
+     [
+      "Defiance",
+      12
+     ],
+     [
+      "Crushing Wave",
+      3
+     ]
+    ],
+    "passive": [
+     [
+      "Murderous Burst",
+      17
+     ],
+     [
+      "Attack Preparation",
+      15
+     ],
+     [
+      "Blood Absorption",
+      15
+     ],
+     [
+      "Experienced Counterstrike",
+      14
+     ],
+     [
+      "Identify Weakness",
+      14
+     ],
+     [
+      "Survival Stance",
+      14
+     ],
+     [
+      "Survival Willpower",
+      14
+     ],
+     [
+      "Destructive Impulse",
+      13
+     ],
+     [
+      "Impact Hit",
+      13
+     ],
+     [
+      "Protection Armor",
+      13
+     ]
+    ],
+    "stigma": [
+     [
+      "Lunge Stance",
+      20
+     ],
+     [
+      "Zikel's Blessing",
+      10
+     ],
+     [
+      "Rage Burst",
+      8
+     ],
+     [
+      "Lifestealing Blade",
+      1
+     ],
+     [
+      "Blade Toss",
+      0
+     ],
+     [
+      "Focused Block",
+      0
+     ]
+    ]
+   }
+  },
+  "Fuwawa": {
+   "server": "Siel",
+   "region": "la",
+   "cls": "Ranger",
+   "level": 45,
+   "faction": "Elyos",
+   "cp": 71340,
+   "gs": 1457,
+   "item_level": 1457,
+   "gear": [
+    {
+     "slot": "Main Hand",
+     "item": "Spiritforged Bow",
+     "enchant": 10,
+     "grade": "Unique"
+    },
+    {
+     "slot": "Off-hand",
+     "item": "Spiritforged Guard",
+     "enchant": 10,
+     "grade": "Unique"
+    },
+    {
+     "slot": "Torso",
+     "item": "Bakarma Breastplate",
+     "enchant": 5,
+     "grade": "Unique"
+    },
+    {
+     "slot": "Legs",
+     "item": "Bakarma Greaves",
+     "enchant": 5,
+     "grade": "Unique"
+    },
+    {
+     "slot": "Helmet",
+     "item": "Bakarma Helm",
+     "enchant": 5,
+     "grade": "Unique"
+    },
+    {
+     "slot": "Shoulders",
+     "item": "Bakarma Pauldrons",
+     "enchant": 5,
+     "grade": "Unique"
+    },
+    {
+     "slot": "Gloves",
+     "item": "Unyielding Gloves",
+     "enchant": 0,
+     "grade": "Epic"
+    },
+    {
+     "slot": "Boots",
+     "item": "Unyielding Boots",
+     "enchant": 0,
+     "grade": "Epic"
+    },
+    {
+     "slot": "Cape",
+     "item": "Unyielding Cloak",
+     "enchant": 0,
+     "grade": "Epic"
+    },
+    {
+     "slot": "Belt",
+     "item": "Noble Belt",
+     "enchant": 4,
+     "grade": "Epic"
+    },
+    {
+     "slot": "Necklace",
+     "item": "Pilgrim Necklace",
+     "enchant": 5,
+     "grade": "Epic"
+    },
+    {
+     "slot": "Earring",
+     "item": "Pilgrim Earrings",
+     "enchant": 5,
+     "grade": "Epic"
+    },
+    {
+     "slot": "Earring",
+     "item": "Pilgrim Earrings",
+     "enchant": 5,
+     "grade": "Epic"
+    },
+    {
+     "slot": "Ring",
+     "item": "Pilgrim Ring",
+     "enchant": 5,
+     "grade": "Epic"
+    },
+    {
+     "slot": "Ring",
+     "item": "Pilgrim Ring",
+     "enchant": 5,
+     "grade": "Epic"
+    },
+    {
+     "slot": "Bracelet",
+     "item": "Ascension Bracelet",
+     "enchant": 10,
+     "grade": "Unique"
+    },
+    {
+     "slot": "Bracelet",
+     "item": "Pilgrim Bracelet",
+     "enchant": 5,
+     "grade": "Epic"
+    },
+    {
+     "slot": "Rune1",
+     "item": "Clash Rune",
+     "enchant": 2,
+     "grade": "Special"
+    },
+    {
+     "slot": "Rune2",
+     "item": "Clash Rune",
+     "enchant": 2,
+     "grade": "Special"
+    },
+    {
+     "slot": "Amulet",
+     "item": "Revelation Amulet",
+     "enchant": 0,
+     "grade": "Unique"
+    }
+   ],
+   "skills": {
+    "active": [
+     [
+      "Burst Arrow",
+      14
+     ],
+     [
+      "Deadshot",
+      14
+     ],
+     [
+      "Tempest Shot",
+      14
+     ],
+     [
+      "Drill Dart",
+      13
+     ],
+     [
+      "Marking Shot",
+      13
+     ],
+     [
+      "Snipe",
+      13
+     ],
+     [
+      "Explosion Trap",
+      12
+     ],
+     [
+      "Gale Arrow",
+      12
+     ],
+     [
+      "Snare Shot",
+      12
+     ],
+     [
+      "Suppressing Arrow",
+      12
+     ],
+     [
+      "Arrow Scattershot",
+      5
+     ],
+     [
+      "Defiance",
+      8
+     ]
+    ],
+    "passive": [
+     [
+      "Hunter's Soul",
+      17
+     ],
+     [
+      "Focused Eye",
+      14
+     ],
+     [
+      "Hunter's Resolve",
+      14
+     ],
+     [
+      "Vigilant Eye",
+      14
+     ],
+     [
+      "Melee Fire",
+      13
+     ],
+     [
+      "Concentrated Fire",
+      12
+     ],
+     [
+      "Wind Vigor",
+      11
+     ],
+     [
+      "Revitalization Contract",
+      8
+     ],
+     [
+      "Rooting Eye",
+      2
+     ],
+     [
+      "Unyielding Resolve",
+      2
+     ]
+    ],
+    "stigma": [
+     [
+      "Bow of Blessing",
+      10
+     ],
+     [
+      "Vaizel's Authority",
+      10
+     ],
+     [
+      "Griffon Arrow",
+      5
+     ],
+     [
+      "Supporting Fire",
+      0
+     ],
+     [
+      "Explosive Arrow",
+      0
+     ]
+    ]
+   }
+  },
+  "Mori": {
+   "server": "Siel",
+   "region": "la",
+   "cls": "Cleric",
+   "level": 30,
+   "faction": "Elyos",
+   "cp": 25001,
+   "gs": 476,
+   "item_level": 476,
+   "gear": [
+    {
+     "slot": "Main Hand",
+     "item": "Wind Breeze Mace",
+     "enchant": 0,
+     "grade": "Rare"
+    },
+    {
+     "slot": "Off-hand",
+     "item": "Wind Breeze Guard",
+     "enchant": 0,
+     "grade": "Rare"
+    },
+    {
+     "slot": "Torso",
+     "item": "Red Agate Breastplate",
+     "enchant": 0,
+     "grade": "Epic"
+    },
+    {
+     "slot": "Legs",
+     "item": "Red Agate Greaves",
+     "enchant": 0,
+     "grade": "Epic"
+    },
+    {
+     "slot": "Helmet",
+     "item": "Wind Breeze Helm",
+     "enchant": 0,
+     "grade": "Rare"
+    },
+    {
+     "slot": "Shoulders",
+     "item": "Wind Breeze Pauldrons",
+     "enchant": 0,
+     "grade": "Rare"
+    },
+    {
+     "slot": "Gloves",
+     "item": "Wind Breeze Gloves",
+     "enchant": 0,
+     "grade": "Rare"
+    },
+    {
+     "slot": "Boots",
+     "item": "Wind Breeze Boots",
+     "enchant": 0,
+     "grade": "Rare"
+    },
+    {
+     "slot": "Cape",
+     "item": "Red Agate Cloak",
+     "enchant": 0,
+     "grade": "Epic"
+    },
+    {
+     "slot": "Belt",
+     "item": "Noble Belt",
+     "enchant": 2,
+     "grade": "Rare"
+    },
+    {
+     "slot": "Necklace",
+     "item": "Facade Necklace",
+     "enchant": 0,
+     "grade": "Rare"
+    },
+    {
+     "slot": "Earring",
+     "item": "Facade Earrings",
+     "enchant": 0,
+     "grade": "Rare"
+    },
+    {
+     "slot": "Earring",
+     "item": "Dawn Earrings",
+     "enchant": 0,
+     "grade": "Common"
+    },
+    {
+     "slot": "Ring",
+     "item": "Facade Ring",
+     "enchant": 0,
+     "grade": "Rare"
+    },
+    {
+     "slot": "Ring",
+     "item": "Wind Breeze Ring",
+     "enchant": 0,
+     "grade": "Rare"
+    },
+    {
+     "slot": "Bracelet",
+     "item": "Facade Bracelet",
+     "enchant": 0,
+     "grade": "Rare"
+    },
+    {
+     "slot": "Bracelet",
+     "item": "Dawn Bracelet",
+     "enchant": 0,
+     "grade": "Common"
+    },
+    {
+     "slot": "Amulet",
+     "item": "Revelation Amulet",
+     "enchant": 9,
+     "grade": "Rare"
+    }
+   ],
+   "skills": {
+    "active": [
+     [
+      "Divine Aura",
+      12
+     ],
+     [
+      "Earth's Retribution",
+      11
+     ],
+     [
+      "Judgment Thunder",
+      11
+     ],
+     [
+      "Chain of Torment",
+      10
+     ],
+     [
+      "Debilitating Mark",
+      10
+     ],
+     [
+      "Condemnation",
+      9
+     ],
+     [
+      "Bolt",
+      6
+     ],
+     [
+      "Light of Regeneration",
+      6
+     ],
+     [
+      "Radiant Recovery",
+      3
+     ],
+     [
+      "Healing Light",
+      2
+     ],
+     [
+      "Defiance",
+      1
+     ],
+     [
+      "Lightning Strike Scattershot",
+      1
+     ]
+    ],
+    "passive": [
+     [
+      "Empyrean Lord's Grace",
+      7
+     ],
+     [
+      "Earth's Grace",
+      2
+     ],
+     [
+      "Empyrean Lords' Benediction",
+      2
+     ],
+     [
+      "Heal Block",
+      2
+     ],
+     [
+      "Warm Benediction",
+      2
+     ],
+     [
+      "Healing Enhancement",
+      1
+     ],
+     [
+      "Immortal Veil",
+      1
+     ],
+     [
+      "Prayer of Concentration",
+      1
+     ],
+     [
+      "Radiant Benediction",
+      1
+     ],
+     [
+      "Survival Willpower",
+      1
+     ]
+    ],
+    "stigma": [
+     [
+      "Earth Punishment",
+      5
+     ],
+     [
+      "Noble Aura",
+      4
+     ]
+    ]
+   }
+  }
+ }
+}

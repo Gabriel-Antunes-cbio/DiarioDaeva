@@ -18,6 +18,7 @@ from .chart import GrowthChart, fmt_int
 from .group import GroupError, get_kills, normalize_url, ping, post_kill
 from .profiles import ProfileError, fetch_details, fetch_profile, parse_link
 from .titles_tab import TitlesTab
+from .bis_tab import BisTab
 from .schedule import (
     EVENTS, FIELD_BOSSES, REGIONS, AlertTracker, fmt_left, next_occurrence, now_utc,
 )
@@ -248,7 +249,10 @@ class MainWindow(QMainWindow):
         self.tabs.addTab(self._build_chars_tab(), "Personagens")
         self.titles_tab = TitlesTab(self.store, self.current_char)
         self.tabs.addTab(self.titles_tab, "Títulos")
+        self.bis_tab = BisTab(self.current_char)
+        self.tabs.addTab(self.bis_tab, "BiS")
         self.tabs.addTab(self._build_settings_tab(), "Ajustes")
+        self.tabs.currentChanged.connect(lambda _: self._bis_refresh())
         v.addWidget(self.tabs, 1)
 
         self._build_tray()
@@ -504,6 +508,11 @@ class MainWindow(QMainWindow):
     def _titles_refresh(self):
         if hasattr(self, "titles_tab") and self.titles_tab.isVisible():
             self.titles_tab.refresh()
+        self._bis_refresh()
+
+    def _bis_refresh(self):
+        if hasattr(self, "bis_tab") and self.bis_tab.isVisible():
+            self.bis_tab.refresh()
 
     def set_metric(self, m: str):
         self.chart_metric = m
