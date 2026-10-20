@@ -115,6 +115,25 @@ def compare_arcana(build: dict, gear: list[dict] | None) -> list[dict]:
     return rows
 
 
+def group_slots(slots: list[dict] | None) -> list[dict]:
+    """Junta as peças de esquerda e direita quando a recomendação é a mesma ("Brinco (esq.)" + "(dir.)" -> "Brincos")."""
+    if not slots:
+        return []
+    plural = {"Brinco": "Brincos", "Anel": "Anéis", "Bracelete": "Braceletes"}
+    out = []
+    for s in slots:
+        base = s["slot"].split(" (")[0]
+        same = {k: s[k] for k in ("substats", "also", "stone", "divine")}
+        prev = out[-1] if out else None
+        if prev and prev["base"] == base and prev["same"] == same and base in plural:
+            prev["name"] = plural[base]
+            continue
+        out.append({"base": base, "name": s["slot"], "same": same, **same})
+    for o in out:
+        del o["base"], o["same"]
+    return out
+
+
 def compare(cls: str, level: int | None, skills: dict | None, gear: list[dict] | None, data: dict | None = None) -> dict:
     data = data or load()
     cid = class_id(cls)
@@ -131,6 +150,8 @@ def compare(cls: str, level: int | None, skills: dict | None, gear: list[dict] |
         "passives": [{"name": p["name"], "pt": p["pt"], "have": levels.get(_key(p["name"]))} for p in build["passives"]],
         "stigmas": compare_stigmas(build, levels, learned),
         "gear_stats": build["gear_stats"],
+        "gear_slots": group_slots(build.get("gear_slots", {}) and build["gear_slots"]["slots"]),
+        "gear_notes": (build.get("gear_slots") or {}).get("notes", []),
         "arcana": compare_arcana(build, gear), "arcana_note": build["arcana_note"],
         "arcana_stats": build["arcana_stats"][:4],
         "enhancing": build["enhancing"], "manastones": build["manastones"],

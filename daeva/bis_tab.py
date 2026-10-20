@@ -226,13 +226,30 @@ class BisTab(QWidget):
             def steps(lst):
                 return "".join(f"<tr><td style='color:{theme.ACCENT};padding:2px 10px 2px 0'><b>{i}</b></td>"
                                f"<td>{' ≈ '.join(esc(x) for x in step)}</td></tr>" for i, step in enumerate(lst, 1))
-            html = (f"<p><b>Status para buscar nos itens</b> "
-                    f"<span style='color:{theme.MUTED}'>(prioridade de aprimoramento da {esc(r['build'])})</span></p>"
-                    f"<table>{steps(gs['substats'])}</table>"
-                    f"<p><b>Manastones</b></p><table>{steps(gs['manastones'])}</table>")
-            if gs["notes"]:
-                html += "<p style='color:%s'>%s</p>" % (theme.MUTED, "<br>".join(esc(n) for n in gs["notes"]))
-            html += f"<p style='color:{theme.MUTED}'>≈ quer dizer que os dois valem quase o mesmo.</p>"
+            if r["gear_slots"]:
+                html = (f"<p style='color:{theme.MUTED}'>Substatus para buscar em cada peça, do mais importante (1) "
+                        "ao menos importante (5). O valor ao lado é a referência da build.</p>")
+                for g in r["gear_slots"]:
+                    stone = esc(g["stone"] or "")
+                    if g.get("divine"):
+                        stone += f" · Pedra Divina: {esc(g['divine'])}"
+                    rows = "".join(
+                        f"<tr><td style='color:{theme.ACCENT};padding:1px 10px 1px 0'><b>{n}</b></td>"
+                        f"<td style='padding:1px 14px 1px 0'>{esc(x['name'])}</td>"
+                        f"<td style='color:{theme.MUTED}'>{esc(x['ref'])}</td></tr>"
+                        for n, x in enumerate(g["substats"], 1))
+                    html += (f"<p style='margin-top:12px'><b>{esc(g['name'].upper())}</b>"
+                             f"<span style='color:{theme.MUTED}'> · {stone}</span></p><table>{rows}</table>")
+                    if g["also"]:
+                        html += f"<p style='color:{theme.MUTED}'>Também servem: {esc(', '.join(g['also']))}</p>"
+            else:
+                html = (f"<p style='color:{theme.MUTED}'>A lista peça por peça desta classe ainda não foi lida. "
+                        "Por enquanto, a prioridade geral da build:</p>"
+                        f"<table>{steps(gs['substats'])}</table>")
+            html += f"<p style='margin-top:12px'><b>Manastones</b></p><table>{steps(gs['manastones'])}</table>"
+            notes = list(gs["notes"]) + [n for n in r["gear_notes"] if not n.startswith("Manastones:")]
+            if notes:
+                html += "<p style='color:%s'>%s</p>" % (theme.MUTED, "<br>".join(esc(n) for n in notes))
         else:
             t = r["titles"]
             html = (f"<p><b>Aprimoramento:</b> {esc(' → '.join(r['enhancing']))}</p>"

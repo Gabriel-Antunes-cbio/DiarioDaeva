@@ -68,3 +68,19 @@ def test_stigmas_do_mori():
 def test_sem_arcana_no_perfil():
     r = run("Fuwawa")
     assert not r["summary"]["arcana_known"]
+
+
+def test_substatus_por_peca_do_clerigo():
+    r = run("Mori")
+    nomes = [s["name"] for s in r["gear_slots"]]
+    assert nomes[:3] == ["Arma", "Guarda", "Elmo"]
+    assert "Brincos" in nomes and "Anéis" in nomes and "Braceletes" in nomes and len(nomes) == 13
+    peito = next(s for s in r["gear_slots"] if s["name"] == "Peitoral")
+    assert [x["name"] for x in peito["substats"]] == ["Amplificação de Dano", "Mercê do Empíreo", "Mercê da Terra",
+                                                       "Acerto Crítico", "Precisão"]
+    assert peito["substats"][0]["ref"] == "+6,58%"
+    assert next(s for s in r["gear_slots"] if s["name"] == "Arma")["divine"] == "Soberba de Zikel"
+
+
+def test_classe_sem_lista_por_peca_ainda():
+    assert run("Kumaglad")["gear_slots"] == []

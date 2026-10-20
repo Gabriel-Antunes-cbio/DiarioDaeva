@@ -49,6 +49,12 @@ GEAR_STATS = {
 }
 
 
+def gear_slots(c):
+    """Substatus por peça, lidos da página da classe com tools/ler_equipamentos.py (quando já existem)."""
+    f = RAW / f"{c}.gear.json"
+    return json.load(open(f, encoding="utf-8")) if f.exists() else None
+
+
 def span(text):
     """'20' -> (20,20) · '16+' -> (16,None) · '16-20' -> (16,20) · '20 ou 16' -> (16,20)"""
     if text is None:
@@ -99,7 +105,7 @@ for c in CLASSES:
         "arcana": arc, "arcana_note": ARCANA_NOTE.get(c),
         "enhancing": pt["enhancing_priority"], "manastones": pt["manastone_priority"],
         "titles": pt["titles"], "wings": pt["wings"],
-        "gear_stats": GEAR_STATS[c], "skill_stats": g["skills"], "arcana_stats": g["arcana"],
+        "gear_stats": GEAR_STATS[c], "gear_slots": gear_slots(c), "skill_stats": g["skills"], "arcana_stats": g["arcana"],
     }
 OUT.write_text(json.dumps(out, ensure_ascii=False, indent=1), encoding="utf-8")
 print("ok", {c: (len(v["skills"]), len(v["stigmas"]), len(v["gear_stats"]["substats"])) for c, v in out["classes"].items()})
