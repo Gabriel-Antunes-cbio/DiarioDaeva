@@ -13,7 +13,7 @@ def main() -> int:
     app = QApplication(sys.argv)
     app.setApplicationName("Diário de Daeva")
     app.setQuitOnLastWindowClosed(False)  # continua na bandeja para os alertas
-    app.setStyleSheet(theme.QSS)
+    theme.load_fonts()
 
     lock = QLockFile(QDir(str(data_dir())).filePath("app.lock"))
     if not lock.tryLock(100):
@@ -21,7 +21,9 @@ def main() -> int:
                                 "O Diário de Daeva já está aberto. Procure o ícone na bandeja, perto do relógio.")
         return 0
 
-    win = MainWindow(Store())
+    store = Store()
+    theme.apply(app, store.settings)
+    win = MainWindow(store)
     win.show()
     return app.exec()
 

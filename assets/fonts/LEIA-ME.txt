@@ -1,0 +1,5 @@
+Fontes usadas pelos temas do Diário de Daeva. Todas vêm do repositório do Google Fonts
+(github.com/google/fonts) e são distribuídas sob a SIL Open Font License 1.1 (OFL.txt).
+
+IM Fell English · Oxanium · Barlow · EB Garamond · Pixelify Sans · VT323 · Silkscreen ·
+IBM Plex Mono · UnifrakturMaguntia · Shippori Mincho (só os caracteres latinos)

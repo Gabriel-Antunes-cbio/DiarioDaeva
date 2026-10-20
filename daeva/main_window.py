@@ -1,4 +1,4 @@
-"""Janela principal: abas Bosses, Personagens e Ajustes, alertas e ícone na bandeja."""
+"""Janela principal: abas Hoje, Bosses, Personagens, Títulos, BiS e Ajustes, alertas e ícone na bandeja."""
 from __future__ import annotations
 
 import json
@@ -8,21 +8,22 @@ from datetime import datetime, timedelta
 from PySide6.QtCore import QObject, QRunnable, Qt, QThreadPool, QTimer, QUrl, Signal
 from PySide6.QtGui import QAction, QDesktopServices, QIcon
 from PySide6.QtWidgets import (
-    QApplication, QCheckBox, QComboBox, QDialog, QDialogButtonBox, QFrame, QGridLayout,
+    QApplication, QCheckBox, QComboBox, QDialog, QDialogButtonBox, QFileDialog, QFrame, QGridLayout,
     QHBoxLayout, QInputDialog, QLabel, QLineEdit, QMainWindow, QMenu, QMessageBox, QPushButton,
-    QScrollArea, QSpinBox, QSystemTrayIcon, QTabWidget, QVBoxLayout, QWidget,
+    QScrollArea, QSlider, QSpinBox, QSystemTrayIcon, QTabWidget, QVBoxLayout, QWidget,
 )
 
-from . import GITHUB_REPO, __version__, theme
+from . import GITHUB_REPO, __version__, progress, theme
+from .widgets import DottedBar, GrimFrame, Leader, Pips, Trail
 from .chart import GrowthChart, fmt_int
 from .group import GroupError, get_kills, normalize_url, ping, post_kill
 from .profiles import ProfileError, fetch_details, fetch_profile, parse_link
 from .titles_tab import TitlesTab
 from .bis_tab import BisTab
 from .schedule import (
-    EVENTS, FIELD_BOSSES, REGIONS, AlertTracker, fmt_left, next_occurrence, now_utc,
+    EVENT_BY_ID, EVENTS, FIELD_BOSSES, FIELD_BY_ID, REGIONS, AlertTracker, fmt_left, next_occurrence, now_utc,
 )
-from .sound import play_alert, resource
+from .sound import SOUND_EXTS, SOUND_KINDS, play_alert, resource
 from .store import Store, data_dir, parse_iso
 
 WEEKDAYS = ["seg", "ter", "qua", "qui", "sex", "sáb", "dom"]
@@ -219,6 +220,7 @@ class MainWindow(QMainWindow):
         self.last_manual: dict[str, datetime] = {}
         self.chart_metric = "cp"
         self.event_rows: dict[str, EventRow] = {}
+        self.key_widgets: dict[str, tuple] = {}
         self.field_rows: dict[str, EventRow] = {}
         self._really_quit = False
         self._tray_hint_shown = False
@@ -234,24 +236,34 @@ class MainWindow(QMainWindow):
         v.setContentsMargins(14, 12, 14, 12)
         v.setSpacing(10)
         head = QHBoxLayout()
-        head.addWidget(label("Diário de Daeva", "title"))
-        head.addStretch(1)
+        head.setSpacing(10)
+        ident = QVBoxLayout()
+        ident.setSpacing(0)
+        ident.addWidget(label("Diário de Daeva", "title"))
+        self.who_label = label("", "who")
+        ident.addWidget(self.who_label)
+        head.addLayout(ident, 1)
         self.update_btn = QPushButton("Nova versão disponível")
         self.update_btn.setObjectName("primary")
         self.update_btn.hide()
         head.addWidget(self.update_btn)
+        self.group_dot = label("", "ok")
+        head.addWidget(self.group_dot, 0, Qt.AlignTop)
         v.addLayout(head)
         self.next_label = label("", "next", wrap=True)
         v.addWidget(self.next_label)
 
         self.tabs = QTabWidget()
-        self.tabs.addTab(self._build_bosses_tab(), "Bosses")
-        self.tabs.addTab(self._build_chars_tab(), "Personagens")
+        self.tabs.setUsesScrollButtons(True)
+        today = self._build_today_tab()
+        self.tabs.addTab(today, "HOJE")
+        self.tabs.addTab(self._build_bosses_tab(), "BOSSES")
+        self.tabs.addTab(self._build_chars_tab(), "PERSONAGENS")
         self.titles_tab = TitlesTab(self.store, self.current_char)
-        self.tabs.addTab(self.titles_tab, "Títulos")
+        self.tabs.addTab(self.titles_tab, "TÍTULOS")
         self.bis_tab = BisTab(self.current_char)
-        self.tabs.addTab(self.bis_tab, "BiS")
-        self.tabs.addTab(self._build_settings_tab(), "Ajustes")
+        self.tabs.addTab(self.bis_tab, "BIS")
+        self.tabs.addTab(self._build_settings_tab(), "AJUSTES")
         self.tabs.currentChanged.connect(lambda _: self._bis_refresh())
         v.addWidget(self.tabs, 1)
 
@@ -274,10 +286,235 @@ class MainWindow(QMainWindow):
         self.on_tick()
         self.render_character()
 
+    # ------------------------------------------------------------- hoje
+    def _build_today_tab(self) -> QWidget:
+        inner = QWidget()
+        v = QVBoxLayout(inner)
+        v.setContentsMargins(0, 10, 4, 10)
+        v.setSpacing(10)
+
+        self.hero = GrimFrame()
+        b = self.hero.body
+        top = QHBoxLayout()
+        top.addWidget(label("PRÓXIMO SPAWN", "section"))
+        top.addStretch(1)
+        self.h_tag = label("", "tagFill")
+        top.addWidget(self.h_tag)
+        b.addLayout(top)
+        self.h_name = label("—", "heroName")
+        b.addWidget(self.h_name)
+        self.h_count = label("—", "bigcount")
+        b.addWidget(self.h_count)
+        self.h_trail = Trail()
+        b.addWidget(self.h_trail)
+        times = QHBoxLayout()
+        self.h_left = label("", "muted", wrap=True)
+        self.h_right = label("", "muted", wrap=True)
+        self.h_right.setAlignment(Qt.AlignRight)
+        times.addWidget(self.h_left)
+        times.addStretch(1)
+        times.addWidget(self.h_right)
+        b.addLayout(times)
+        btns = QHBoxLayout()
+        self.h_kill = QPushButton("MORREU AGORA", objectName="primary")
+        self.h_ask = QPushButton("QUANTO FALTA")
+        self.h_kill.clicked.connect(lambda: self.hero_boss and self.mark_killed(self.hero_boss))
+        self.h_ask.clicked.connect(lambda: self.hero_boss and self.ask_remaining(self.hero_boss))
+        btns.addWidget(self.h_kill, 1)
+        btns.addWidget(self.h_ask, 1)
+        b.addLayout(btns)
+        self.hero_boss = None
+        v.addWidget(self.hero)
+
+        tiles = QHBoxLayout()
+        tiles.setSpacing(10)
+        self.t_cp = self._stat("COMBAT POWER")
+        self.t_gs = self._stat("GEAR SCORE")
+        tiles.addWidget(self.t_cp[0])
+        tiles.addWidget(self.t_gs[0])
+        v.addLayout(tiles)
+
+        self.today_energy = QFrame(objectName="card")
+        ev = QVBoxLayout(self.today_energy)
+        ev.setContentsMargins(14, 10, 14, 10)
+        ev.setSpacing(5)
+        er = QHBoxLayout()
+        er.addWidget(label("ENERGIA ODYLE", "section"))
+        er.addStretch(1)
+        self.te_value = label("—", "countdown")
+        er.addWidget(self.te_value)
+        ev.addLayout(er)
+        self.te_bar = DottedBar()
+        ev.addWidget(self.te_bar)
+        self.te_note = label("", "muted", wrap=True)
+        ev.addWidget(self.te_note)
+        v.addWidget(self.today_energy)
+
+        queue = QFrame(objectName="card")
+        qv = QVBoxLayout(queue)
+        qv.setContentsMargins(14, 10, 14, 10)
+        qv.setSpacing(6)
+        qv.addWidget(label("FILA DE EVENTOS", "section"))
+        self.queue_rows = []
+        for _ in range(6):
+            r = QHBoxLayout()
+            r.setSpacing(8)
+            t = label("", "evtime")
+            t.setMinimumWidth(64)
+            n = label("")
+            w = label("", "muted")
+            r.addWidget(t)
+            r.addWidget(n)
+            r.addWidget(Leader(), 1)
+            r.addWidget(w)
+            qv.addLayout(r)
+            self.queue_rows.append((t, n, w))
+        v.addWidget(queue)
+
+        self.title_card = QFrame(objectName="card")
+        tv = QVBoxLayout(self.title_card)
+        tv.setContentsMargins(14, 10, 14, 10)
+        tv.setSpacing(5)
+        tr = QHBoxLayout()
+        tr.addWidget(label("TÍTULO ALVO", "section"))
+        tr.addStretch(1)
+        self.tt_bonus = label("", "muted")
+        tr.addWidget(self.tt_bonus)
+        tv.addLayout(tr)
+        tn = QHBoxLayout()
+        self.tt_name = label("", "name")
+        self.tt_prog = label("", "countdown")
+        tn.addWidget(self.tt_name, 1)
+        tn.addWidget(self.tt_prog)
+        tv.addLayout(tn)
+        self.tt_bar = DottedBar()
+        tv.addWidget(self.tt_bar)
+        v.addWidget(self.title_card)
+        v.addStretch(1)
+        return self._scroll(inner)
+
+    def _pick_hero(self, now: datetime, tz: str):
+        """O que aparece no destaque da Hoje: o próximo boss de campo ou boss grande com alerta ligado."""
+        alerts = self.store.settings["alerts"]
+        cands = []
+        for bb in FIELD_BOSSES:
+            due = self.store.respawn_time(bb.id)
+            if due and due > now - timedelta(minutes=30) and (alerts.get(bb.id) or bb.big):
+                cands.append((due, "field", bb))
+        for ev in EVENTS:
+            if ev.kind == "big" and alerts.get(ev.id):
+                occ = next_occurrence(ev, now, tz)
+                if occ:
+                    cands.append((occ.start, "event", ev))
+        if cands:
+            return min(cands, key=lambda x: x[0])
+        c = self.current_char()
+        bid = "gartua_imortal" if c and str(c.get("faction", "")).lower().startswith("asmo") else "gartua"
+        return (None, "field", FIELD_BY_ID[bid])
+
+    def update_today(self, now: datetime, tz: str, lead: int):
+        when, kind, obj = self._pick_hero(now, tz)
+        alerts = self.store.settings["alerts"]
+        self.h_name.setText(obj.name)
+        self.h_tag.setText(f"ALERTA {lead} MIN")
+        self.h_tag.setVisible(bool(alerts.get(obj.id)))
+        is_field = kind == "field"
+        self.hero_boss = obj if is_field else None
+        self.h_kill.setVisible(is_field)
+        self.h_ask.setVisible(is_field)
+        if when is None:
+            self.h_count.setText("—")
+            self.h_trail.set_progress(0)
+            self.h_left.setText("sem registro")
+            self.h_right.setText("use Morreu agora ou Quanto falta")
+        else:
+            left = when - now
+            secs = max(0, int(left.total_seconds()))
+            self.h_count.setText(f"{secs // 3600}:{secs // 60 % 60:02d}:{secs % 60:02d}" if secs else "nasceu?")
+            if is_field:
+                total = obj.respawn_h * 3600
+                self.h_trail.set_progress(1 - secs / total if total else 1)
+                self.h_left.setText(f"morte · {(when - timedelta(hours=obj.respawn_h)).astimezone():%H:%M}")
+                self.h_right.setText(f"nasce · {when.astimezone():%H:%M}")
+            else:
+                self.h_trail.set_progress(1 - secs / (6 * 3600))
+                self.h_left.setText(obj.detail or obj.en)
+                self.h_right.setText(f"começa · {local_when(when)}")
+
+        c = self.current_char()
+        for (frame, _t, val, delta), key in ((self.t_cp, "cp"), (self.t_gs, "gear")):
+            val.setText(fmt_int(c.get(key)) if c else "—")
+            hist = (c or {}).get("history") or []
+            if len(hist) >= 2 and hist[-1][key] != hist[0][key]:
+                d = hist[-1][key] - hist[0][key]
+                delta.setText(f"{'+' if d > 0 else ''}{fmt_int(d)} desde {parse_iso(hist[0]['t']).astimezone():%d/%m}")
+            else:
+                delta.setText("")
+        if c:
+            self.t_gs[1].setText((c.get("gear_label") or "Gear score").upper())
+
+        # energia
+        member = bool(self.store.settings.get("membership"))
+        cap = progress.energy_cap(member)
+        cur = progress.energy_now((c or {}).get("energy"), now, member)
+        self.today_energy.setVisible(c is not None)
+        if cur is None:
+            self.te_value.setText(f"— / {cap}")
+            self.te_bar.set_progress(0)
+            self.te_note.setText("Informe a energia atual na aba Personagens; o app conta 5 por hora a partir daí.")
+        else:
+            self.te_value.setText(f"{cur} / {cap}")
+            self.te_bar.set_progress(cur / cap)
+            full = progress.energy_full_at(c.get("energy"), now, member)
+            rewards = cur // progress.ENERGY_COST
+            self.te_note.setText((f"Cheia em {fmt_left(full - now)} ({local_when(full)})" if full else "Cheia: gaste antes de perder energia")
+                                 + f" · dá para {rewards} recompensa{'s' if rewards != 1 else ''}")
+
+        # fila de eventos: os 5 próximos + o reset semanal sempre no fim
+        occs = []
+        for ev in EVENTS:
+            if ev.id == "reset_weekly":
+                continue
+            occ = next_occurrence(ev, now, tz)
+            if occ and not occ.live(now):
+                occs.append((occ.start, ev))
+        occs.sort(key=lambda x: x[0])
+        rows = occs[:5]
+        wk = next_occurrence(EVENT_BY_ID["reset_weekly"], now, tz)
+        if wk:
+            rows.append((wk.start, EVENT_BY_ID["reset_weekly"]))
+        for (t, n, w), item in zip(self.queue_rows, rows + [None] * 6):
+            if item is None:
+                t.setText(""); n.setText(""); w.setText("")
+                continue
+            start, ev = item
+            t.setText(fmt_left(start - now))
+            warn = ev.kind == "reset"
+            if t.property("warn") != warn:
+                t.setProperty("warn", warn)
+                restyle(t)
+            n.setText(ev.name)
+            w.setText(local_when(start))
+
+        # título alvo
+        tgt = self.store.target(c["id"]) if c else None
+        a = self.titles_tab.by_id.get(tgt["id"]) if tgt and hasattr(self, "titles_tab") else None
+        show = a is not None and not self.store.settings.get("compact")
+        self.title_card.setVisible(show)
+        if show:
+            self.tt_name.setText(a.title)
+            total = a.target_count
+            prog = int(tgt.get("progress", 0))
+            prog = min(prog, total) if total else prog
+            self.tt_prog.setText(f"{prog}/{total}" if total else "")
+            self.tt_bar.set_progress(prog / total if total else 0)
+            self.tt_bonus.setText(a.achievement)
+
     # ------------------------------------------------------------- bosses tab
     def _scroll(self, inner: QWidget) -> QScrollArea:
         sa = QScrollArea()
         sa.setWidgetResizable(True)
+        sa.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
         sa.setWidget(inner)
         return sa
 
@@ -295,6 +532,8 @@ class MainWindow(QMainWindow):
             row = EventRow(ev.name, ev.detail, tags, self.store.settings["alerts"].get(ev.id, False),
                            lambda on, k=ev.id: self.store.set_alert(k, on))
             self.event_rows[ev.id] = row
+            if ev.id in progress.KEYS:
+                self._add_keys(row, ev.id)
             v.addWidget(row)
 
         v.addSpacing(8)
@@ -323,6 +562,52 @@ class MainWindow(QMainWindow):
             v.addWidget(row)
         v.addStretch(1)
         return self._scroll(inner)
+
+    def _add_keys(self, row, kind: str):
+        row.extra.addWidget(label("CHAVES", "section"))
+        pips = Pips()
+        cnt = label("", "countdown")
+        minus = QPushButton("−1", objectName="step")
+        plus = QPushButton("+1", objectName="step")
+        tip = "Chaves do personagem escolhido na aba Personagens. Ajuste uma vez; depois o app soma as do reset diário."
+        for w in (minus, plus):
+            w.setToolTip(tip)
+        minus.clicked.connect(lambda: self.change_keys(kind, -1))
+        plus.clicked.connect(lambda: self.change_keys(kind, +1))
+        for w in (pips, cnt):
+            row.extra.addWidget(w)
+        row.extra.addStretch(1)
+        row.extra.addWidget(minus)
+        row.extra.addWidget(plus)
+        self.key_widgets[kind] = (row, pips, cnt, minus, plus)
+
+    def _keys_info(self, kind: str, now: datetime):
+        c = self.current_char()
+        member = bool(self.store.settings.get("membership"))
+        tz = REGIONS.get(self.store.settings.get("region", "la"), REGIONS["la"])[1]
+        cur = progress.keys_now(((c or {}).get("keys") or {}).get(kind), kind, now, tz, member) if c else None
+        return c, cur, progress.key_cap(kind, member)
+
+    def change_keys(self, kind: str, delta: int):
+        now = now_utc()
+        c, cur, cap = self._keys_info(kind, now)
+        if not c:
+            return
+        new = max(0, min(cap, (cur or 0) + delta))
+        self.store.set_keys(c["id"], kind, progress.keys_entry(new, now))
+        self.update_keys(now)
+
+    def update_keys(self, now: datetime):
+        for kind, (row, pips, cnt, minus, plus) in self.key_widgets.items():
+            c, cur, cap = self._keys_info(kind, now)
+            k = progress.KEYS[kind]
+            pips.set_value(cur or 0, cap)
+            cnt.setText(f"{'—' if cur is None else cur}/{cap}")
+            minus.setEnabled(bool(c) and (cur or 0) > 0)
+            plus.setEnabled(bool(c) and (cur or 0) < cap)
+            row.note.setText((f"Chaves de {c['name']} · " if c else "Adicione um personagem para contar as chaves · ")
+                             + f"+{k['daily']} por dia no reset, até {cap}")
+            row.note.show()
 
     def mark_killed(self, boss):
         now = now_utc()
@@ -436,6 +721,19 @@ class MainWindow(QMainWindow):
         stats.addWidget(self.stat_cp[0])
         stats.addWidget(self.stat_gear[0])
         c.addLayout(stats)
+        en = QHBoxLayout()
+        en.addWidget(label("ENERGIA ODYLE", "section"))
+        en.addStretch(1)
+        self.e_value = label("—", "countdown")
+        en.addWidget(self.e_value)
+        set_e = QPushButton("Informar energia…")
+        set_e.clicked.connect(self.ask_energy)
+        en.addWidget(set_e)
+        c.addLayout(en)
+        self.e_bar = DottedBar()
+        c.addWidget(self.e_bar)
+        self.e_note = label("", "muted", wrap=True)
+        c.addWidget(self.e_note)
         seg = QHBoxLayout()
         seg.addWidget(label("EVOLUÇÃO", "section"))
         seg.addStretch(1)
@@ -469,9 +767,91 @@ class MainWindow(QMainWindow):
         foot.addStretch(1)
         c.addLayout(foot)
         v.addWidget(self.card)
+
+        self.alts_card = QFrame(objectName="card")
+        al = QVBoxLayout(self.alts_card)
+        al.setContentsMargins(14, 10, 14, 10)
+        al.setSpacing(6)
+        al.addWidget(label("TODOS OS PERSONAGENS", "section"))
+        self.alts_box = QVBoxLayout()
+        self.alts_box.setSpacing(4)
+        al.addLayout(self.alts_box)
+        al.addWidget(label("Energia Odyle: 5 por hora. Limite 560, ou 840 com Membership "
+                           "(marque em Ajustes; vale para a conta toda).", "muted", wrap=True))
+        v.addWidget(self.alts_card)
+        self.alt_labels: dict[str, tuple] = {}
         v.addStretch(1)
         self.reload_combo()
         return self._scroll(inner)
+
+    def ask_energy(self):
+        c = self.current_char()
+        if not c:
+            return
+        now = now_utc()
+        member = bool(self.store.settings.get("membership"))
+        cap = progress.energy_cap(member)
+        cur = progress.energy_now(c.get("energy"), now, member)
+        val, ok = QInputDialog.getInt(self, "Energia Odyle", f"Quanto de energia {c['name']} tem agora?",
+                                      cur or 0, 0, cap)
+        if ok:
+            self.store.set_energy(c["id"], progress.energy_entry(val, now))
+            self.update_energy(now)
+
+    def update_energy(self, now: datetime):
+        c = self.current_char()
+        if not c or not hasattr(self, "e_value"):
+            return
+        member = bool(self.store.settings.get("membership"))
+        cap = progress.energy_cap(member)
+        cur = progress.energy_now(c.get("energy"), now, member)
+        if cur is None:
+            self.e_value.setText(f"— / {cap}")
+            self.e_bar.set_progress(0)
+            self.e_note.setText("Informe quanto tem agora; o app conta 5 por hora a partir daí.")
+        else:
+            self.e_value.setText(f"{cur} / {cap}")
+            self.e_bar.set_progress(cur / cap)
+            full = progress.energy_full_at(c.get("energy"), now, member)
+            self.e_note.setText(f"Cheia em {fmt_left(full - now)} ({local_when(full)})." if full
+                                else "Cheia. A energia que passar do limite se perde.")
+        for cid, (en_lbl, full_lbl) in self.alt_labels.items():
+            ch = self.store.find(cid)
+            if not ch:
+                continue
+            v = progress.energy_now(ch.get("energy"), now, member)
+            en_lbl.setText("—" if v is None else f"{v}/{cap}")
+            f = progress.energy_full_at(ch.get("energy"), now, member)
+            full_lbl.setText("" if v is None else ("cheia" if f is None else f"cheia em {fmt_left(f - now)}"))
+
+    def rebuild_alts(self):
+        while self.alts_box.count():
+            item = self.alts_box.takeAt(0)
+            lay = item.layout()
+            if lay:
+                while lay.count():
+                    w = lay.takeAt(0).widget()
+                    if w:
+                        w.deleteLater()
+        self.alt_labels = {}
+        cur = self.current_id()
+        for ch in self.store.characters:
+            r = QHBoxLayout()
+            r.setSpacing(8)
+            name = QPushButton(ch["name"], objectName="seg", checkable=True, checked=ch["id"] == cur)
+            name.clicked.connect(lambda _=False, cid=ch["id"]: self.reload_combo(cid) or self.render_character())
+            meta = label(" · ".join(x for x in (ch.get("cls") or "", f"Nv {ch['level']}" if ch.get("level") else "") if x),
+                         "muted")
+            en_lbl = label("—", "countdown")
+            full_lbl = label("", "muted")
+            r.addWidget(name)
+            r.addWidget(meta)
+            r.addWidget(Leader(), 1)
+            r.addWidget(en_lbl)
+            r.addWidget(full_lbl)
+            self.alts_box.addLayout(r)
+            self.alt_labels[ch["id"]] = (en_lbl, full_lbl)
+        self.alts_card.setVisible(bool(self.store.characters))
 
     def _stat(self, title: str):
         f = QFrame(objectName="stat")
@@ -491,7 +871,7 @@ class MainWindow(QMainWindow):
         self.char_combo.blockSignals(True)
         self.char_combo.clear()
         for c in self.store.characters:
-            self.char_combo.addItem(f"{c['name']} · {c['server']}", c["id"])
+            self.char_combo.addItem(f"{c['name']} · {c['server'].title()}", c["id"])
         if cur:
             i = self.char_combo.findData(cur)
             if i >= 0:
@@ -514,6 +894,14 @@ class MainWindow(QMainWindow):
         if hasattr(self, "bis_tab") and self.bis_tab.isVisible():
             self.bis_tab.refresh()
 
+    def update_header(self):
+        c = self.current_char()
+        if c:
+            bits = [c["name"], c.get("cls") or "", f"Nv {c['level']}" if c.get("level") else "", c.get("server", "").title()]
+            self.who_label.setText(" · ".join(b for b in bits if b))
+        else:
+            self.who_label.setText("Adicione seu personagem na aba Personagens")
+
     def set_metric(self, m: str):
         self.chart_metric = m
         self.render_character()
@@ -525,12 +913,14 @@ class MainWindow(QMainWindow):
         self.card.setVisible(has)
         self.remove_btn.setEnabled(has)
         self.char_combo.setVisible(bool(self.store.characters))
+        self.rebuild_alts()
+        self.update_header()
         if not has:
             return
         gl = c.get("gear_label") or "Gear score"
         self.c_name.setText(c["name"])
         region = REGIONS.get(c.get("region"), ("", ""))[0]
-        bits = [c.get("cls") or "", f"Nível {c['level']}" if c.get("level") else "", c["server"], region]
+        bits = [c.get("cls") or "", f"Nível {c['level']}" if c.get("level") else "", c["server"].title(), region]
         self.c_meta.setText(" · ".join(b for b in bits if b))
         self.stat_gear[1].setText(gl.upper())
         self.seg_gear.setText(gl)
@@ -567,6 +957,9 @@ class MainWindow(QMainWindow):
         self.refresh_btn.setText("Atualizando…" if busy else "Atualizar agora")
         self.open_btn.setText(f"Abrir no {site}")
         self.render_details(c)
+        now = now_utc()
+        self.update_energy(now)
+        self.update_keys(now)
 
     def render_details(self, c: dict):
         d = c.get("details") or {}
@@ -688,15 +1081,64 @@ class MainWindow(QMainWindow):
         v.setSpacing(10)
         s = self.store.settings
 
+        v.addWidget(label("APARÊNCIA", "section"))
+        g = QGridLayout()
+        g.setHorizontalSpacing(10)
+        g.setVerticalSpacing(6)
+        self.cb_theme = QComboBox()
+        for tid, t in theme.THEMES.items():
+            self.cb_theme.addItem(t["name"], tid)
+        self.cb_size = QComboBox()
+        for sid, (name, _) in theme.SIZES.items():
+            self.cb_size.addItem(name, sid)
+        self.cb_accent = QComboBox()
+        for aid, (name, *_r) in theme.ACCENTS.items():
+            self.cb_accent.addItem(name, aid)
+        for row_i, (text, combo, key, default) in enumerate((("Tema", self.cb_theme, "theme", "ely"),
+                                                              ("Tamanho do texto", self.cb_size, "text_size", "normal"),
+                                                              ("Cor de destaque", self.cb_accent, "accent", "def"))):
+            combo.setCurrentIndex(max(0, combo.findData(s.get(key, default))))
+            combo.currentIndexChanged.connect(lambda _=0, cb=combo, k=key: self.change_look(k, cb.currentData()))
+            g.addWidget(label(text), row_i, 0)
+            g.addWidget(combo, row_i, 1)
+        g.setColumnStretch(1, 1)
+        v.addLayout(g)
+        cb_compact = QCheckBox("Modo compacto")
+        cb_compact.setChecked(bool(s.get("compact")))
+        cb_compact.toggled.connect(lambda on: self.change_look("compact", on))
+        v.addWidget(cb_compact)
+        v.addWidget(label("Menos espaço entre os blocos e sem o título alvo na Hoje. "
+                          "Cabe melhor ao lado do jogo em monitor pequeno.", "muted", wrap=True))
+
+        v.addSpacing(6)
+        v.addWidget(label("CONTA", "section"))
+        cb_member = self._check("Tenho Membership (vale para a conta toda)", "membership")
+        cb_member.toggled.connect(lambda _: self.on_tick())
+        v.addWidget(cb_member)
+        v.addWidget(label("Com Membership: energia Odyle até 840 em vez de 560 e chaves do Festival Shugo até 21 "
+                          "em vez de 12.", "muted", wrap=True))
+
+        v.addSpacing(6)
         v.addWidget(label("ALERTAS", "section"))
         row = QHBoxLayout()
-        row.addWidget(label("Avisar"))
+        row.addWidget(label("Bosses e Abismo: avisar"))
         self.lead = QSpinBox(minimum=1, maximum=30, value=int(s.get("alert_minutes", 5)), suffix=" min")
         self.lead.valueChanged.connect(lambda n: self.store.set_setting("alert_minutes", n))
         row.addWidget(self.lead)
-        row.addWidget(label("antes do spawn"))
+        row.addWidget(label("antes"))
         row.addStretch(1)
         v.addLayout(row)
+        row_h = QHBoxLayout()
+        row_h.addWidget(label("Shugo e Invasão: avisar"))
+        lead_h = QSpinBox(minimum=1, maximum=10, value=int(s.get("alert_minutes_hourly", 2)), suffix=" min")
+        lead_h.valueChanged.connect(lambda n: self.store.set_setting("alert_minutes_hourly", n))
+        row_h.addWidget(lead_h)
+        row_h.addWidget(label("antes"))
+        row_h.addStretch(1)
+        v.addLayout(row_h)
+        v.addWidget(self._check("Não perturbe das 00:00 às 08:00", "dnd"))
+        v.addWidget(label("Silencia só o Festival Shugo e a Invasão Dimensional; os bosses grandes continuam avisando.",
+                          "muted", wrap=True))
         self.cb_sound = self._check("Tocar som", "sound")
         test = QPushButton("Testar alerta")
         test.clicked.connect(lambda: self.fire_alert("Teste de alerta", "É assim que o aviso vai aparecer."))
@@ -707,7 +1149,41 @@ class MainWindow(QMainWindow):
         v.addLayout(r2)
         v.addWidget(self._check("Mostrar notificação do Windows", "tray_notify"))
         v.addWidget(label("Os alertas ligados ficam na aba Bosses (caixa “Alerta” em cada linha). "
-                          "Por padrão: Nahma, Executores, Vigia Kaira e os dois Gartua.", "muted", wrap=True))
+                          "Por padrão: Nahma, Executores, Vigia Kaira, os dois Gartua e o Festival Shugo.",
+                          "muted", wrap=True))
+
+        v.addSpacing(6)
+        v.addWidget(label("SONS", "section"))
+        v.addWidget(label("Escolha um arquivo WAV ou MP3 para cada tipo de aviso. Sem arquivo, toca o som padrão.",
+                          "muted", wrap=True))
+        self.sound_labels = {}
+        for kind, title in SOUND_KINDS.items():
+            box = QVBoxLayout()
+            box.setSpacing(3)
+            box.addWidget(label(title))
+            r = QHBoxLayout()
+            name = label("", "muted")
+            self.sound_labels[kind] = name
+            pick = QPushButton("Escolher…")
+            pick.clicked.connect(lambda _=False, k=kind: self.pick_sound(k))
+            reset = QPushButton("Padrão")
+            reset.clicked.connect(lambda _=False, k=kind: self.set_sound(k, ""))
+            test_k = QPushButton("Testar")
+            test_k.clicked.connect(lambda _=False, k=kind: play_alert(k, self.store.settings))
+            r.addWidget(name, 1)
+            for w in (pick, reset, test_k):
+                r.addWidget(w)
+            box.addLayout(r)
+            v.addLayout(box)
+        rv = QHBoxLayout()
+        rv.addWidget(label("Volume"))
+        self.vol = QSlider(Qt.Horizontal, minimum=0, maximum=100, value=int(s.get("volume", 80)))
+        self.vol_lbl = label(f"{self.vol.value()}%", "muted")
+        self.vol.valueChanged.connect(lambda n: (self.vol_lbl.setText(f"{n}%"), self.store.set_setting("volume", n)))
+        rv.addWidget(self.vol, 1)
+        rv.addWidget(self.vol_lbl)
+        v.addLayout(rv)
+        self.refresh_sound_labels()
 
         v.addSpacing(6)
         v.addWidget(label("SERVIDOR", "section"))
@@ -725,10 +1201,12 @@ class MainWindow(QMainWindow):
 
         v.addSpacing(6)
         v.addWidget(label("JANELA", "section"))
-        cb_top = self._check("Sempre no topo (útil com o jogo em janela sem bordas)", "always_on_top")
+        cb_top = self._check("Sempre no topo", "always_on_top")
         cb_top.toggled.connect(lambda _: self._apply_on_top())
         v.addWidget(cb_top)
-        v.addWidget(self._check("Fechar para a bandeja (os alertas continuam funcionando)", "close_to_tray"))
+        v.addWidget(label("Útil com o jogo em janela sem bordas.", "muted", wrap=True))
+        v.addWidget(self._check("Fechar para a bandeja", "close_to_tray"))
+        v.addWidget(label("Ao fechar, o app fica perto do relógio e os alertas continuam.", "muted", wrap=True))
 
         v.addSpacing(6)
         v.addWidget(label("PERSONAGENS", "section"))
@@ -776,6 +1254,41 @@ class MainWindow(QMainWindow):
         v.addStretch(1)
         return self._scroll(inner)
 
+    def change_look(self, key: str, value):
+        self.store.set_setting(key, value)
+        theme.apply(QApplication.instance(), self.store.settings)
+        for w in self.findChildren(QWidget):
+            w.update()
+        self.render_character()
+        self.on_tick()
+        if self.bis_tab.isVisible():
+            self.bis_tab.refresh()
+
+    def pick_sound(self, kind: str):
+        path, _ = QFileDialog.getOpenFileName(self, "Escolher som", "", "Sons (*.wav *.mp3)")
+        if path:
+            self.set_sound(kind, path)
+
+    def set_sound(self, kind: str, path: str):
+        if path and not path.lower().endswith(SOUND_EXTS):
+            QMessageBox.warning(self, "Formato não aceito", "Escolha um arquivo .wav ou .mp3.")
+            return
+        sounds = dict(self.store.settings.get("sounds") or {})
+        sounds[kind] = path
+        self.store.set_setting("sounds", sounds)
+        self.refresh_sound_labels()
+
+    def refresh_sound_labels(self):
+        from pathlib import Path
+        for kind, lbl_w in self.sound_labels.items():
+            path = (self.store.settings.get("sounds") or {}).get(kind) or ""
+            if not path:
+                lbl_w.setText("Som padrão")
+            elif Path(path).is_file():
+                lbl_w.setText(Path(path).name)
+            else:
+                lbl_w.setText(f"{Path(path).name} (não encontrado; toca o padrão)")
+
     def _check(self, text: str, key: str) -> QCheckBox:
         cb = QCheckBox(text)
         cb.setChecked(bool(self.store.settings.get(key)))
@@ -820,24 +1333,30 @@ class MainWindow(QMainWindow):
         alerts = s["alerts"]
         upcoming: list[tuple[datetime, str]] = []
 
+        lead_h = int(s.get("alert_minutes_hourly", 2))
+        local_hour = now.astimezone().hour
+        f, t = int(s.get("dnd_from", 0)), int(s.get("dnd_to", 8))
+        quiet = bool(s.get("dnd")) and (f <= local_hour < t if f <= t else (local_hour >= f or local_hour < t))
         for ev in EVENTS:
             row = self.event_rows[ev.id]
             occ = next_occurrence(ev, now, tz)
             if occ is None:
                 continue
+            ev_lead = lead_h if ev.kind == "hourly" else lead
             if occ.live(now):
                 row.countdown.setText(f"termina em {fmt_left(occ.end - now)}")
                 row.set_state("live")
             else:
                 left = occ.start - now
                 row.countdown.setText(fmt_left(left))
-                row.set_state("soon" if left <= timedelta(minutes=lead) else "")
+                row.set_state("soon" if left <= timedelta(minutes=ev_lead) else "")
             row.when.setText(local_when(occ.start))
             if alerts.get(ev.id):
-                if not occ.live(now):
+                if not occ.live(now) and ev.kind != "hourly":
                     upcoming.append((occ.start, ev.name))
-                if self.tracker.due(f"{ev.id}:{occ.start.isoformat()}", occ.start, now, lead):
-                    self.fire_alert(f"{ev.name} em {lead} min", ev.detail or ev.en)
+                if self.tracker.due(f"{ev.id}:{occ.start.isoformat()}", occ.start, now, ev_lead):
+                    if not (quiet and ev.kind == "hourly"):
+                        self.fire_alert(f"{ev.name} em {ev_lead} min", ev.detail or ev.en, ev.kind)
 
         for b in FIELD_BOSSES:
             row = self.field_rows[b.id]
@@ -867,18 +1386,23 @@ class MainWindow(QMainWindow):
                 if alerts.get(b.id):
                     upcoming.append((due, b.name))
                     if self.tracker.due(f"{b.id}:{due.isoformat()}", due, now, lead):
-                        self.fire_alert(f"{b.name} em {lead} min", "Respawn pelo último registro do grupo.")
+                        self.fire_alert(f"{b.name} em {lead} min", "Respawn pelo último registro do grupo.", "big")
 
         if upcoming:
-            t, name = min(upcoming)
-            self.next_label.setText(f"Próximo alerta: <b>{name}</b> em {fmt_left(t - now)} ({local_when(t)})")
+            t_, name = min(upcoming)
+            self.next_label.setText(f"Próximo alerta: <b>{name}</b> em {fmt_left(t_ - now)} ({local_when(t_)})")
         else:
-            self.next_label.setText("Nenhum alerta ligado. Ligue em “Alerta” nas linhas da aba Bosses.")
+            self.next_label.setText("Nenhum alerta de boss ligado. Ligue em “Alerta” nas linhas da aba Bosses.")
+        self.group_dot.setText("● GRUPO ATIVO" if self.store.group_on and self.group_last_ok else "")
+        self.update_today(now, tz, lead)
+        self.update_keys(now)
+        if now.second % 20 == 0:
+            self.update_energy(now)
 
-    def fire_alert(self, title: str, body: str):
+    def fire_alert(self, title: str, body: str, kind: str = "big"):
         s = self.store.settings
         if s.get("sound", True):
-            play_alert()
+            play_alert(kind, s)
         if s.get("tray_notify", True) and self.tray.isVisible():
             self.tray.showMessage(title, body, QSystemTrayIcon.Information, 12000)
         QApplication.alert(self, 4000)

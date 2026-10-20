@@ -28,7 +28,7 @@ def data_dir() -> Path:
 
 
 def default_settings() -> dict:
-    alerts = {e.id: e.big for e in EVENTS}
+    alerts = {e.id: (e.big if e.default_alert is None else e.default_alert) for e in EVENTS}
     alerts.update({b.id: b.big for b in FIELD_BOSSES})
     return {
         "region": "la",
@@ -42,6 +42,18 @@ def default_settings() -> dict:
         "group_url": "",
         "group_key": "",
         "nickname": "",
+        # 2.0
+        "theme": "ely",
+        "text_size": "normal",
+        "compact": False,
+        "accent": "def",
+        "membership": False,
+        "alert_minutes_hourly": 2,
+        "dnd": True,
+        "dnd_from": 0,
+        "dnd_to": 8,
+        "sounds": {"big": "", "hourly": "", "reset": ""},
+        "volume": 80,
     }
 
 
@@ -106,8 +118,10 @@ class Store:
         saved = raw.get("settings") or {}
         alerts = dict(s["alerts"])
         alerts.update({k: bool(v) for k, v in (saved.get("alerts") or {}).items() if k in alerts})
-        s.update({k: v for k, v in saved.items() if k in s and k != "alerts"})
+        s.update({k: v for k, v in saved.items() if k in s and k not in ("alerts", "sounds")})
         s["alerts"] = alerts
+        s["sounds"] = dict(s["sounds"], **{k: str(v) for k, v in (saved.get("sounds") or {}).items()
+                                            if k in s["sounds"] and isinstance(v, str)})
         self.data["settings"] = s
 
     def save(self) -> None:
@@ -149,6 +163,18 @@ class Store:
         self.characters.append(c)
         self.save()
         return c
+
+    def set_energy(self, char_id: str, entry: dict) -> None:
+        c = self.find(char_id)
+        if c is not None:
+            c["energy"] = entry
+            self.save()
+
+    def set_keys(self, char_id: str, kind: str, entry: dict) -> None:
+        c = self.find(char_id)
+        if c is not None:
+            c.setdefault("keys", {})[kind] = entry
+            self.save()
 
     def remove_character(self, char_id: str) -> None:
         self.data["characters"] = [c for c in self.characters if c["id"] != char_id]

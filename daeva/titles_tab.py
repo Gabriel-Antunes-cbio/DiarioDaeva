@@ -77,6 +77,7 @@ class TitlesTab(QWidget):
         outer.setContentsMargins(0, 0, 0, 0)
         sa = QScrollArea()
         sa.setWidgetResizable(True)
+        sa.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
         outer.addWidget(sa)
         inner = QWidget()
         sa.setWidget(inner)

@@ -33,6 +33,8 @@ class Event:
     unconfirmed: bool = False
     detail: str = ""
     big: bool = False  # boss grande: alerta ligado por padrão
+    kind: str = "big"  # tipo de aviso e de som: "big" (bosses/Abismo), "hourly" (toda hora), "reset"
+    default_alert: bool | None = None  # quando None, segue `big`
 
 
 def _hours(hours, minute=0):
@@ -54,6 +56,14 @@ EVENTS: tuple[Event, ...] = (
     Event("rift", "Fenda Espaço-Tempo", "Spacetime Rift",
           _hours([2, 5, 8, 11, 14, 17, 20, 23]), None, 10,
           detail="Portal aberto por 10 minutos"),
+    Event("shugo", "Festival Shugo", "Shugo Festival", _hours(range(24)), None, 3, kind="hourly",
+          default_alert=True, detail="Toda hora cheia · entrada aberta por cerca de 3 min"),
+    Event("invasion", "Invasão Dimensional", "Dimensional Invasion", _hours(range(24), 30), None, 3,
+          kind="hourly", detail="Toda hora e meia · entrada aberta por cerca de 3 min"),
+    Event("reset_daily", "Reset diário", "Daily reset", ((4, 0),), None, 1, kind="reset",
+          detail="Missões diárias e chaves do dia"),
+    Event("reset_weekly", "Reset semanal", "Weekly reset", ((4, 0),), (QUA,), 1, kind="reset",
+          detail="Toda quarta-feira"),
 )
 
 

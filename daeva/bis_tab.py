@@ -3,19 +3,17 @@ from __future__ import annotations
 
 from PySide6.QtCore import Qt, QUrl
 from PySide6.QtGui import QDesktopServices
-from PySide6.QtWidgets import QFrame, QHBoxLayout, QLabel, QPushButton, QScrollArea, QVBoxLayout, QWidget
+from PySide6.QtWidgets import QFrame, QGridLayout, QHBoxLayout, QLabel, QPushButton, QScrollArea, QVBoxLayout, QWidget
 
 from . import bis, theme
 
 STATUS_TXT = {
-    "max": ("na meta", theme.OK), "acima": ("acima da meta", theme.OK), "ok": ("na meta", theme.OK), "falta": ("falta {gap}", theme.WARN),
-    "fora": ("fora da build", theme.MUTED), "fora_ok": ("fora da build", theme.MUTED),
-    "sem_dado": ("sem dado", theme.MUTED), "nao_aprendido": ("não aprendido", theme.WARN),
-    "refinar": ("refinar +{gap}", theme.WARN), "vazio": ("vazio", theme.WARN),
-    "tipo_errado": ("tipo diferente", theme.WARN),
+    "max": ("na meta", "OK"), "acima": ("acima da meta", "OK"), "ok": ("na meta", "OK"),
+    "falta": ("falta {gap}", "WARN"), "sem_dado": ("sem dado", "MUTED"), "nao_aprendido": ("não aprendido", "WARN"),
+    "refinar": ("refinar +{gap}", "WARN"), "vazio": ("vazio", "WARN"), "tipo_errado": ("tipo diferente", "WARN"),
 }
-SECTIONS = (("skills", "Skills"), ("stigmas", "Stigmas"), ("arcana", "Arcanas"), ("gear", "Equipamento"),
-            ("wings", "Asas e títulos"), ("notes", "Notas"))
+SECTIONS = (("skills", "SKILLS"), ("stigmas", "STIGMAS"), ("arcana", "ARCANAS"), ("gear", "EQUIPAMENTO"),
+            ("wings", "ASAS E TÍTULOS"), ("notes", "NOTAS"))
 
 
 def esc(t) -> str:
@@ -23,7 +21,8 @@ def esc(t) -> str:
 
 
 def tag(status: str, gap: int = 0) -> str:
-    text, color = STATUS_TXT.get(status, (status, theme.MUTED))
+    text, key = STATUS_TXT.get(status, (status, "MUTED"))
+    color = getattr(theme, key)
     return f"<span style='color:{color}'>{esc(text.format(gap=gap))}</span>"
 
 
@@ -53,6 +52,7 @@ class BisTab(QWidget):
         outer.setContentsMargins(0, 0, 0, 0)
         sa = QScrollArea()
         sa.setWidgetResizable(True)
+        sa.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
         outer.addWidget(sa)
         inner = QWidget()
         sa.setWidget(inner)
@@ -82,14 +82,14 @@ class BisTab(QWidget):
             self.stat_labels.append((val, note))
         v.addLayout(self.stats)
 
-        seg = QHBoxLayout()
+        seg = QGridLayout()
+        seg.setSpacing(6)
         self.seg_btns = {}
-        for key, text in SECTIONS:
+        for i, (key, text) in enumerate(SECTIONS):
             b = QPushButton(text, objectName="seg", checkable=True)
             b.clicked.connect(lambda _=False, k=key: self.set_section(k))
-            seg.addWidget(b)
+            seg.addWidget(b, i // 3, i % 3)
             self.seg_btns[key] = b
-        seg.addStretch(1)
         v.addLayout(seg)
         card = QFrame(objectName="card")
         cl = QVBoxLayout(card)
@@ -104,7 +104,7 @@ class BisTab(QWidget):
         self.note.setOpenExternalLinks(True)
         v.addWidget(self.note)
         foot = QHBoxLayout()
-        self.open_build = QPushButton("Abrir a build no Atreia Lens")
+        self.open_build = QPushButton("ABRIR A BUILD NO ATREIA LENS")
         self.open_build.clicked.connect(self._open_build)
         foot.addWidget(self.open_build)
         foot.addStretch(1)
