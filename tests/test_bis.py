@@ -19,7 +19,7 @@ def test_todas_as_classes_tem_build_completa():
                                     "spirit-master", "cleric", "chanter"}
     for cid, c in DATA["classes"].items():
         assert len(c["stigmas"]) == 4, cid
-        assert len(c["gear"]) == 16, cid
+        assert c["gear_stats"]["substats"] and c["gear_stats"]["manastones"], cid
         assert all(s["pt"] for s in c["skills"]), cid
         for s in c["skills"]:
             assert s["skip"] or s["min"] is not None, (cid, s["name"])
@@ -48,15 +48,20 @@ def test_kumaglad():
     assert sk["Sword Aura Rampage"]["status"] == "fora"
     arc = {a["arcana"]: a["status"] for a in r["arcana"]}
     assert arc == {"Cálice": "ok", "Papiro": "ok", "Bússola": "ok", "Sino": "tipo_errado", "Espelho": "tipo_errado"}
-    gear = {g["slot"]: g["status"] for g in r["gear"]}
-    assert gear["Gloves"] == "igual" and gear["Helm"] == "grau_acima"
+    assert r["gear_stats"]["substats"][0] == ["Bônus de Golpe Potente"]
+    assert r["gear_stats"]["substats"][-1] == ["Precisão Adicional", "Acerto Crítico"]
     assert len(r["todo"]) == 3
 
 
-def test_personagem_abaixo_do_45_nao_recebe_dica_de_equipamento():
+def test_prioridade_de_status_por_classe():
+    assert run("Fuwawa")["gear_stats"]["manastones"][0] == ["Amplificação de Dano de Ataque Frontal"]
+    assert run("Mori")["gear_stats"]["manastones"][0] == ["Amplificação de Dano de Arma", "Amplificação de Dano Crítico"]
+    assert DATA["classes"]["assassin"]["gear_stats"]["substats"][0] == ["Precisão"]
+
+
+def test_stigmas_do_mori():
     r = run("Mori")
     assert not r["endgame"]
-    assert all("Trocar" not in t["title"] and "Refinar" not in t["title"] for t in r["todo"])
     assert {s["status"] for s in r["stigmas"]["main"]} == {"nao_aprendido", "falta"}
 
 

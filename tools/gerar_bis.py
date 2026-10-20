@@ -19,6 +19,36 @@ ARCANA_NOTE = {
                 "Cálice: passivas Golpe Potente pela Retaguarda, Postura de Ataque Súbito, Exploração de Fraqueza.",
 }
 
+# Prioridade de status dos itens (aprimoramento + manastones), conferida linha a linha na página de cada classe.
+# Cada passo é uma lista: dois itens no mesmo passo valem quase o mesmo (≈ no site).
+ENH = [["Bônus de Golpe Potente"], ["Amplificação de Dano de Arma"], ["Amplificação de Dano"], ["Ataque"],
+       ["Precisão Adicional", "Acerto Crítico"]]
+MANA_FRONT = [["Amplificação de Dano de Ataque Frontal"], ["Amplificação de Dano de Arma", "Amplificação de Dano Crítico"],
+              ["Amplificação de Dano"], ["Ataque"]]
+MANA = [["Amplificação de Dano de Arma", "Amplificação de Dano Crítico"], ["Amplificação de Dano"], ["Ataque"]]
+FRONT_IF = "Ataque Frontal só se a sua build for frontal."
+GEAR_STATS = {
+    "gladiator": {"substats": ENH, "manastones": MANA_FRONT, "notes": [FRONT_IF]},
+    "ranger": {"substats": ENH, "manastones": MANA_FRONT, "notes": [FRONT_IF]},
+    "chanter": {"substats": ENH, "manastones": MANA_FRONT, "notes": [FRONT_IF]},
+    "templar": {"substats": ENH, "manastones": MANA_FRONT, "notes": []},
+    "cleric": {"substats": ENH, "manastones": MANA, "notes": []},
+    "spirit-master": {"substats": ENH, "manastones": MANA, "notes": []},
+    "sorcerer": {"substats": ENH, "manastones": MANA, "notes": []},
+    "assassin": {
+        "substats": [["Precisão"], ["Amplificação de Dano da Retaguarda"],
+                     ["Ataque", "Amplificação de Dano de Arma", "Golpe Potente", "Acerto Crítico", "Ataque contra Chefe/PvE"]],
+        "manastones": [["Amplificação de Dano da Retaguarda"], ["Amplificação de Dano de Arma"], ["Amplificação de Dano Crítico"],
+                       ["Ataque 30+"], ["Amplificação de Dano"]],
+        "notes": ["Ponto de partida: Acerto Crítico até cerca de 2.200, depois Precisão.",
+                  "Precisão primeiro só se o chefe ainda mostra erros ou aparos.",
+                  "Retaguarda só vale se você consegue ficar nas costas do chefe com consistência.",
+                  "Slots de Acerto Crítico: Acerto Crítico até a meta, depois Precisão; reserva Ataque contra Chefe 18+.",
+                  "Slots de Golpe Potente: Golpe Potente 2%+, depois Retaguarda 2,8%+.",
+                  "Mais Golpe Potente: comece pela Vinculação da Alma do elmo e da capa."]},
+}
+
+
 def span(text):
     """'20' -> (20,20) · '16+' -> (16,None) · '16-20' -> (16,20) · '20 ou 16' -> (16,20)"""
     if text is None:
@@ -37,7 +67,7 @@ out = {"sources": {
           "build": {"name": "Atreia Lens", "url": "https://atreialens.hartmannlab.xyz/{slug}",
                     "note": "Builds da comunidade, PvE. Nível final das skills e stigmas recomendados."},
           "stats": {"name": "GameWith Build Stats", "url": "https://gamewith.ai/aion2/en/build-stats/la/{gw_slug}",
-                    "note": "Itens mais usados pelos 360 personagens nível 45 de maior CP da América Latina."}},
+                    "note": "Nível médio das skills entre os 360 personagens nível 45 de maior CP da América Latina."}},
        "collected": {"build": "2026-10-20", "stats": "2026-10-07"},
        "classes": {}}
 gw = json.load(open(RAW / "gamewith.json"))
@@ -69,7 +99,7 @@ for c in CLASSES:
         "arcana": arc, "arcana_note": ARCANA_NOTE.get(c),
         "enhancing": pt["enhancing_priority"], "manastones": pt["manastone_priority"],
         "titles": pt["titles"], "wings": pt["wings"],
-        "gear": g["gear"], "skill_stats": g["skills"], "arcana_stats": g["arcana"],
+        "gear_stats": GEAR_STATS[c], "skill_stats": g["skills"], "arcana_stats": g["arcana"],
     }
 OUT.write_text(json.dumps(out, ensure_ascii=False, indent=1), encoding="utf-8")
-print("ok", {c: (len(v["skills"]), len(v["stigmas"]), len(v["gear"])) for c, v in out["classes"].items()})
+print("ok", {c: (len(v["skills"]), len(v["stigmas"]), len(v["gear_stats"]["substats"])) for c, v in out["classes"].items()})

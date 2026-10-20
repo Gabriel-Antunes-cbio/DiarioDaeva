@@ -8,7 +8,7 @@
   "stats": {
    "name": "GameWith Build Stats",
    "url": "https://gamewith.ai/aion2/en/build-stats/la/{gw_slug}",
-   "note": "Itens mais usados pelos 360 personagens nível 45 de maior CP da América Latina."
+   "note": "Nível médio das skills entre os 360 personagens nível 45 de maior CP da América Latina."
   }
  },
  "collected": {
@@ -262,120 +262,44 @@
     "Asas de Véu da Escuridão",
     "Asas de Daeva Supremas"
    ],
-   "gear": [
-    {
-     "slot": "Main hand",
-     "item": "Spiritforged Greatsword",
-     "share_pct": 92,
-     "grade": "Unique",
-     "typical_enhance": "+10"
-    },
-    {
-     "slot": "Off hand",
-     "item": "Spiritforged Guard",
-     "share_pct": 85,
-     "grade": "Unique",
-     "typical_enhance": "+8"
-    },
-    {
-     "slot": "Helm",
-     "item": "Liberator Helm",
-     "share_pct": 26,
-     "grade": "Epic",
-     "typical_enhance": "+0"
-    },
-    {
-     "slot": "Pauldrons",
-     "item": "Liberator Pauldrons",
-     "share_pct": 23,
-     "grade": "Epic",
-     "typical_enhance": "+0"
-    },
-    {
-     "slot": "Chest",
-     "item": "Bakarma Breastplate",
-     "share_pct": 40,
-     "grade": "Unique",
-     "typical_enhance": "+7"
-    },
-    {
-     "slot": "Gloves",
-     "item": "Vakron Gloves",
-     "share_pct": 19,
-     "grade": "Unique",
-     "typical_enhance": "+10"
-    },
-    {
-     "slot": "Greaves",
-     "item": "Vakron Greaves",
-     "share_pct": 24,
-     "grade": "Unique",
-     "typical_enhance": "+10"
-    },
-    {
-     "slot": "Boots",
-     "item": "Vakron Boots",
-     "share_pct": 19,
-     "grade": "Unique",
-     "typical_enhance": "+10"
-    },
-    {
-     "slot": "Cloak",
-     "item": "Liberator Cloak",
-     "share_pct": 22,
-     "grade": "Epic",
-     "typical_enhance": "+0"
-    },
-    {
-     "slot": "Belt",
-     "item": "Noble Belt",
-     "share_pct": 71,
-     "grade": "Unique",
-     "typical_enhance": "+0"
-    },
-    {
-     "slot": "Necklace",
-     "item": "Pilgrim Necklace",
-     "share_pct": 36,
-     "grade": "Epic",
-     "typical_enhance": "+4"
-    },
-    {
-     "slot": "Earrings",
-     "item": "Pilgrim Earrings",
-     "share_pct": 38,
-     "grade": "Epic",
-     "typical_enhance": "+5"
-    },
-    {
-     "slot": "Rings",
-     "item": "Pilgrim Ring",
-     "share_pct": 36,
-     "grade": "Epic",
-     "typical_enhance": "+5"
-    },
-    {
-     "slot": "Bracelets",
-     "item": "Ascension Bracelet",
-     "share_pct": 48,
-     "grade": "Unique",
-     "typical_enhance": "+10"
-    },
-    {
-     "slot": "Amulet",
-     "item": "Revelation Amulet",
-     "share_pct": 81,
-     "grade": "Unique",
-     "typical_enhance": "+0"
-    },
-    {
-     "slot": "Runes",
-     "item": "Clash Rune",
-     "share_pct": 100,
-     "grade": "Special",
-     "typical_enhance": "+2"
-    }
-   ],
+   "gear_stats": {
+    "substats": [
+     [
+      "Bônus de Golpe Potente"
+     ],
+     [
+      "Amplificação de Dano de Arma"
+     ],
+     [
+      "Amplificação de Dano"
+     ],
+     [
+      "Ataque"
+     ],
+     [
+      "Precisão Adicional",
+      "Acerto Crítico"
+     ]
+    ],
+    "manastones": [
+     [
+      "Amplificação de Dano de Ataque Frontal"
+     ],
+     [
+      "Amplificação de Dano de Arma",
+      "Amplificação de Dano Crítico"
+     ],
+     [
+      "Amplificação de Dano"
+     ],
+     [
+      "Ataque"
+     ]
+    ],
+    "notes": [
+     "Ataque Frontal só se a sua build for frontal."
+    ]
+   },
    "skill_stats": [
     {
      "name": "Rending Blow",
@@ -833,120 +757,42 @@
     "Asas de Daeva Superiores",
     "Asas de Talisra do Vazio"
    ],
-   "gear": [
-    {
-     "slot": "Main hand",
-     "item": "Spiritforged Longsword",
-     "share_pct": 89,
-     "grade": "Unique",
-     "typical_enhance": "+10"
-    },
-    {
-     "slot": "Off hand",
-     "item": "Spiritforged Guard",
-     "share_pct": 86,
-     "grade": "Unique",
-     "typical_enhance": "+10"
-    },
-    {
-     "slot": "Helm",
-     "item": "Pilgrim Helm",
-     "share_pct": 24,
-     "grade": "Epic",
-     "typical_enhance": "+3"
-    },
-    {
-     "slot": "Pauldrons",
-     "item": "Liberator Pauldrons",
-     "share_pct": 27,
-     "grade": "Epic",
-     "typical_enhance": "+3"
-    },
-    {
-     "slot": "Chest",
-     "item": "Bakarma Breastplate",
-     "share_pct": 36,
-     "grade": "Unique",
-     "typical_enhance": "+7"
-    },
-    {
-     "slot": "Gloves",
-     "item": "Vakron Gloves",
-     "share_pct": 20,
-     "grade": "Unique",
-     "typical_enhance": "+10"
-    },
-    {
-     "slot": "Greaves",
-     "item": "Vakron Greaves",
-     "share_pct": 21,
-     "grade": "Unique",
-     "typical_enhance": "+10"
-    },
-    {
-     "slot": "Boots",
-     "item": "Vakron Boots",
-     "share_pct": 18,
-     "grade": "Unique",
-     "typical_enhance": "+10"
-    },
-    {
-     "slot": "Cloak",
-     "item": "Liberator Cloak",
-     "share_pct": 25,
-     "grade": "Epic",
-     "typical_enhance": "+3"
-    },
-    {
-     "slot": "Belt",
-     "item": "Noble Belt",
-     "share_pct": 72,
-     "grade": "Unique",
-     "typical_enhance": "+0"
-    },
-    {
-     "slot": "Necklace",
-     "item": "Pilgrim Necklace",
-     "share_pct": 34,
-     "grade": "Epic",
-     "typical_enhance": "+4"
-    },
-    {
-     "slot": "Earrings",
-     "item": "Liberator Earrings",
-     "share_pct": 36,
-     "grade": "Epic",
-     "typical_enhance": "+3"
-    },
-    {
-     "slot": "Rings",
-     "item": "Pilgrim Ring",
-     "share_pct": 33,
-     "grade": "Epic",
-     "typical_enhance": "+4"
-    },
-    {
-     "slot": "Bracelets",
-     "item": "Ascension Bracelet",
-     "share_pct": 48,
-     "grade": "Unique",
-     "typical_enhance": "+10"
-    },
-    {
-     "slot": "Amulet",
-     "item": "Revelation Amulet",
-     "share_pct": 78,
-     "grade": "Unique",
-     "typical_enhance": "+0"
-    },
-    {
-     "slot": "Runes",
-     "item": "Clash Rune",
-     "share_pct": 100,
-     "grade": "Special",
-     "typical_enhance": "+2"
-    }
-   ],
+   "gear_stats": {
+    "substats": [
+     [
+      "Bônus de Golpe Potente"
+     ],
+     [
+      "Amplificação de Dano de Arma"
+     ],
+     [
+      "Amplificação de Dano"
+     ],
+     [
+      "Ataque"
+     ],
+     [
+      "Precisão Adicional",
+      "Acerto Crítico"
+     ]
+    ],
+    "manastones": [
+     [
+      "Amplificação de Dano de Ataque Frontal"
+     ],
+     [
+      "Amplificação de Dano de Arma",
+      "Amplificação de Dano Crítico"
+     ],
+     [
+      "Amplificação de Dano"
+     ],
+     [
+      "Ataque"
+     ]
+    ],
+    "notes": []
+   },
    "skill_stats": [
     {
      "name": "Judgment",
@@ -1356,120 +1202,48 @@
     "Asas de Talisra do Vazio",
     "Asas do Espírito da Floresta"
    ],
-   "gear": [
-    {
-     "slot": "Main hand",
-     "item": "Spiritforged Dagger",
-     "share_pct": 89,
-     "grade": "Unique",
-     "typical_enhance": "+10"
-    },
-    {
-     "slot": "Off hand",
-     "item": "Spiritforged Guard",
-     "share_pct": 87,
-     "grade": "Unique",
-     "typical_enhance": "+9"
-    },
-    {
-     "slot": "Helm",
-     "item": "Pilgrim Helm",
-     "share_pct": 26,
-     "grade": "Epic",
-     "typical_enhance": "+0"
-    },
-    {
-     "slot": "Pauldrons",
-     "item": "Pilgrim Pauldrons",
-     "share_pct": 28,
-     "grade": "Epic",
-     "typical_enhance": "+0"
-    },
-    {
-     "slot": "Chest",
-     "item": "Bakarma Breastplate",
-     "share_pct": 45,
-     "grade": "Unique",
-     "typical_enhance": "+7"
-    },
-    {
-     "slot": "Gloves",
-     "item": "Vakron Gloves",
-     "share_pct": 22,
-     "grade": "Unique",
-     "typical_enhance": "+10"
-    },
-    {
-     "slot": "Greaves",
-     "item": "Vakron Greaves",
-     "share_pct": 22,
-     "grade": "Unique",
-     "typical_enhance": "+10"
-    },
-    {
-     "slot": "Boots",
-     "item": "Vakron Boots",
-     "share_pct": 19,
-     "grade": "Unique",
-     "typical_enhance": "+10"
-    },
-    {
-     "slot": "Cloak",
-     "item": "Vakron Cloak",
-     "share_pct": 21,
-     "grade": "Unique",
-     "typical_enhance": "+10"
-    },
-    {
-     "slot": "Belt",
-     "item": "Noble Belt",
-     "share_pct": 64,
-     "grade": "Unique",
-     "typical_enhance": "+0"
-    },
-    {
-     "slot": "Necklace",
-     "item": "Pilgrim Necklace",
-     "share_pct": 38,
-     "grade": "Epic",
-     "typical_enhance": "+3"
-    },
-    {
-     "slot": "Earrings",
-     "item": "Pilgrim Earrings",
-     "share_pct": 37,
-     "grade": "Epic",
-     "typical_enhance": "+3"
-    },
-    {
-     "slot": "Rings",
-     "item": "Pilgrim Ring",
-     "share_pct": 35,
-     "grade": "Epic",
-     "typical_enhance": "+3"
-    },
-    {
-     "slot": "Bracelets",
-     "item": "Ascension Bracelet",
-     "share_pct": 48,
-     "grade": "Unique",
-     "typical_enhance": "+10"
-    },
-    {
-     "slot": "Amulet",
-     "item": "Revelation Amulet",
-     "share_pct": 77,
-     "grade": "Unique",
-     "typical_enhance": "+0"
-    },
-    {
-     "slot": "Runes",
-     "item": "Clash Rune",
-     "share_pct": 100,
-     "grade": "Special",
-     "typical_enhance": "+2"
-    }
-   ],
+   "gear_stats": {
+    "substats": [
+     [
+      "Precisão"
+     ],
+     [
+      "Amplificação de Dano da Retaguarda"
+     ],
+     [
+      "Ataque",
+      "Amplificação de Dano de Arma",
+      "Golpe Potente",
+      "Acerto Crítico",
+      "Ataque contra Chefe/PvE"
+     ]
+    ],
+    "manastones": [
+     [
+      "Amplificação de Dano da Retaguarda"
+     ],
+     [
+      "Amplificação de Dano de Arma"
+     ],
+     [
+      "Amplificação de Dano Crítico"
+     ],
+     [
+      "Ataque 30+"
+     ],
+     [
+      "Amplificação de Dano"
+     ]
+    ],
+    "notes": [
+     "Ponto de partida: Acerto Crítico até cerca de 2.200, depois Precisão.",
+     "Precisão primeiro só se o chefe ainda mostra erros ou aparos.",
+     "Retaguarda só vale se você consegue ficar nas costas do chefe com consistência.",
+     "Slots de Acerto Crítico: Acerto Crítico até a meta, depois Precisão; reserva Ataque contra Chefe 18+.",
+     "Slots de Golpe Potente: Golpe Potente 2%+, depois Retaguarda 2,8%+.",
+     "Mais Golpe Potente: comece pela Vinculação da Alma do elmo e da capa."
+    ]
+   },
    "skill_stats": [
     {
      "name": "Quick Slice",
@@ -1938,120 +1712,44 @@
     "Asas de Talisra do Vazio",
     "Asas da Kromede"
    ],
-   "gear": [
-    {
-     "slot": "Main hand",
-     "item": "Spiritforged Bow",
-     "share_pct": 87,
-     "grade": "Unique",
-     "typical_enhance": "+10"
-    },
-    {
-     "slot": "Off hand",
-     "item": "Spiritforged Guard",
-     "share_pct": 86,
-     "grade": "Unique",
-     "typical_enhance": "+10"
-    },
-    {
-     "slot": "Helm",
-     "item": "Liberator Helm",
-     "share_pct": 27,
-     "grade": "Epic",
-     "typical_enhance": "+3"
-    },
-    {
-     "slot": "Pauldrons",
-     "item": "Liberator Pauldrons",
-     "share_pct": 27,
-     "grade": "Epic",
-     "typical_enhance": "+3"
-    },
-    {
-     "slot": "Chest",
-     "item": "Bakarma Breastplate",
-     "share_pct": 37,
-     "grade": "Unique",
-     "typical_enhance": "+5"
-    },
-    {
-     "slot": "Gloves",
-     "item": "Vakron Gloves",
-     "share_pct": 20,
-     "grade": "Unique",
-     "typical_enhance": "+10"
-    },
-    {
-     "slot": "Greaves",
-     "item": "Vakron Greaves",
-     "share_pct": 23,
-     "grade": "Unique",
-     "typical_enhance": "+10"
-    },
-    {
-     "slot": "Boots",
-     "item": "Vakron Boots",
-     "share_pct": 21,
-     "grade": "Unique",
-     "typical_enhance": "+10"
-    },
-    {
-     "slot": "Cloak",
-     "item": "Liberator Cloak",
-     "share_pct": 23,
-     "grade": "Epic",
-     "typical_enhance": "+3"
-    },
-    {
-     "slot": "Belt",
-     "item": "Noble Belt",
-     "share_pct": 72,
-     "grade": "Unique",
-     "typical_enhance": "+0"
-    },
-    {
-     "slot": "Necklace",
-     "item": "Pilgrim Necklace",
-     "share_pct": 36,
-     "grade": "Epic",
-     "typical_enhance": "+4"
-    },
-    {
-     "slot": "Earrings",
-     "item": "Pilgrim Earrings",
-     "share_pct": 35,
-     "grade": "Epic",
-     "typical_enhance": "+5"
-    },
-    {
-     "slot": "Rings",
-     "item": "Pilgrim Ring",
-     "share_pct": 33,
-     "grade": "Epic",
-     "typical_enhance": "+5"
-    },
-    {
-     "slot": "Bracelets",
-     "item": "Ascension Bracelet",
-     "share_pct": 49,
-     "grade": "Unique",
-     "typical_enhance": "+10"
-    },
-    {
-     "slot": "Amulet",
-     "item": "Revelation Amulet",
-     "share_pct": 79,
-     "grade": "Unique",
-     "typical_enhance": "+0"
-    },
-    {
-     "slot": "Runes",
-     "item": "Clash Rune",
-     "share_pct": 100,
-     "grade": "Special",
-     "typical_enhance": "+2"
-    }
-   ],
+   "gear_stats": {
+    "substats": [
+     [
+      "Bônus de Golpe Potente"
+     ],
+     [
+      "Amplificação de Dano de Arma"
+     ],
+     [
+      "Amplificação de Dano"
+     ],
+     [
+      "Ataque"
+     ],
+     [
+      "Precisão Adicional",
+      "Acerto Crítico"
+     ]
+    ],
+    "manastones": [
+     [
+      "Amplificação de Dano de Ataque Frontal"
+     ],
+     [
+      "Amplificação de Dano de Arma",
+      "Amplificação de Dano Crítico"
+     ],
+     [
+      "Amplificação de Dano"
+     ],
+     [
+      "Ataque"
+     ]
+    ],
+    "notes": [
+     "Ataque Frontal só se a sua build for frontal."
+    ]
+   },
    "skill_stats": [
     {
      "name": "Snipe",
@@ -2502,120 +2200,39 @@
     "Asas de Talisra do Vazio",
     "Asas de Daeva Superiores"
    ],
-   "gear": [
-    {
-     "slot": "Main hand",
-     "item": "Spiritforged Spellbook",
-     "share_pct": 88,
-     "grade": "Unique",
-     "typical_enhance": "+10"
-    },
-    {
-     "slot": "Off hand",
-     "item": "Spiritforged Guard",
-     "share_pct": 85,
-     "grade": "Unique",
-     "typical_enhance": "+10"
-    },
-    {
-     "slot": "Helm",
-     "item": "Liberator Helm",
-     "share_pct": 26,
-     "grade": "Epic",
-     "typical_enhance": "+2"
-    },
-    {
-     "slot": "Pauldrons",
-     "item": "Liberator Pauldrons",
-     "share_pct": 25,
-     "grade": "Epic",
-     "typical_enhance": "+0"
-    },
-    {
-     "slot": "Chest",
-     "item": "Bakarma Breastplate",
-     "share_pct": 39,
-     "grade": "Unique",
-     "typical_enhance": "+6"
-    },
-    {
-     "slot": "Gloves",
-     "item": "Vakron Gloves",
-     "share_pct": 17,
-     "grade": "Unique",
-     "typical_enhance": "+10"
-    },
-    {
-     "slot": "Greaves",
-     "item": "Vakron Greaves",
-     "share_pct": 20,
-     "grade": "Unique",
-     "typical_enhance": "+10"
-    },
-    {
-     "slot": "Boots",
-     "item": "Vakron Boots",
-     "share_pct": 17,
-     "grade": "Unique",
-     "typical_enhance": "+10"
-    },
-    {
-     "slot": "Cloak",
-     "item": "Liberator Cloak",
-     "share_pct": 21,
-     "grade": "Epic",
-     "typical_enhance": "+0"
-    },
-    {
-     "slot": "Belt",
-     "item": "Noble Belt",
-     "share_pct": 62,
-     "grade": "Unique",
-     "typical_enhance": "+0"
-    },
-    {
-     "slot": "Necklace",
-     "item": "Pilgrim Necklace",
-     "share_pct": 33,
-     "grade": "Epic",
-     "typical_enhance": "+3"
-    },
-    {
-     "slot": "Earrings",
-     "item": "Liberator Earrings",
-     "share_pct": 36,
-     "grade": "Epic",
-     "typical_enhance": "+4"
-    },
-    {
-     "slot": "Rings",
-     "item": "Pilgrim Ring",
-     "share_pct": 31,
-     "grade": "Epic",
-     "typical_enhance": "+3"
-    },
-    {
-     "slot": "Bracelets",
-     "item": "Ascension Bracelet",
-     "share_pct": 47,
-     "grade": "Unique",
-     "typical_enhance": "+10"
-    },
-    {
-     "slot": "Amulet",
-     "item": "Revelation Amulet",
-     "share_pct": 74,
-     "grade": "Unique",
-     "typical_enhance": "+0"
-    },
-    {
-     "slot": "Runes",
-     "item": "Clash Rune",
-     "share_pct": 100,
-     "grade": "Special",
-     "typical_enhance": "+2"
-    }
-   ],
+   "gear_stats": {
+    "substats": [
+     [
+      "Bônus de Golpe Potente"
+     ],
+     [
+      "Amplificação de Dano de Arma"
+     ],
+     [
+      "Amplificação de Dano"
+     ],
+     [
+      "Ataque"
+     ],
+     [
+      "Precisão Adicional",
+      "Acerto Crítico"
+     ]
+    ],
+    "manastones": [
+     [
+      "Amplificação de Dano de Arma",
+      "Amplificação de Dano Crítico"
+     ],
+     [
+      "Amplificação de Dano"
+     ],
+     [
+      "Ataque"
+     ]
+    ],
+    "notes": []
+   },
    "skill_stats": [
     {
      "name": "Flame Arrow",
@@ -3070,120 +2687,39 @@
     "Asas da Kromede",
     "Asas de Daeva Supremas"
    ],
-   "gear": [
-    {
-     "slot": "Main hand",
-     "item": "Spiritforged Orb",
-     "share_pct": 89,
-     "grade": "Unique",
-     "typical_enhance": "+10"
-    },
-    {
-     "slot": "Off hand",
-     "item": "Spiritforged Guard",
-     "share_pct": 84,
-     "grade": "Unique",
-     "typical_enhance": "+7"
-    },
-    {
-     "slot": "Helm",
-     "item": "Liberator Helm",
-     "share_pct": 26,
-     "grade": "Epic",
-     "typical_enhance": "+0"
-    },
-    {
-     "slot": "Pauldrons",
-     "item": "Liberator Pauldrons",
-     "share_pct": 28,
-     "grade": "Epic",
-     "typical_enhance": "+0"
-    },
-    {
-     "slot": "Chest",
-     "item": "Bakarma Breastplate",
-     "share_pct": 41,
-     "grade": "Unique",
-     "typical_enhance": "+6"
-    },
-    {
-     "slot": "Gloves",
-     "item": "Anguish Gloves",
-     "share_pct": 19,
-     "grade": "Epic",
-     "typical_enhance": "+0"
-    },
-    {
-     "slot": "Greaves",
-     "item": "Vakron Greaves",
-     "share_pct": 19,
-     "grade": "Unique",
-     "typical_enhance": "+10"
-    },
-    {
-     "slot": "Boots",
-     "item": "Anguish Boots",
-     "share_pct": 18,
-     "grade": "Epic",
-     "typical_enhance": "+0"
-    },
-    {
-     "slot": "Cloak",
-     "item": "Liberator Cloak",
-     "share_pct": 23,
-     "grade": "Epic",
-     "typical_enhance": "+0"
-    },
-    {
-     "slot": "Belt",
-     "item": "Noble Belt",
-     "share_pct": 61,
-     "grade": "Unique",
-     "typical_enhance": "+0"
-    },
-    {
-     "slot": "Necklace",
-     "item": "Pilgrim Necklace",
-     "share_pct": 36,
-     "grade": "Epic",
-     "typical_enhance": "+3"
-    },
-    {
-     "slot": "Earrings",
-     "item": "Pilgrim Earrings",
-     "share_pct": 36,
-     "grade": "Epic",
-     "typical_enhance": "+3"
-    },
-    {
-     "slot": "Rings",
-     "item": "Pilgrim Ring",
-     "share_pct": 32,
-     "grade": "Epic",
-     "typical_enhance": "+3"
-    },
-    {
-     "slot": "Bracelets",
-     "item": "Ascension Bracelet",
-     "share_pct": 45,
-     "grade": "Unique",
-     "typical_enhance": "+10"
-    },
-    {
-     "slot": "Amulet",
-     "item": "Revelation Amulet",
-     "share_pct": 70,
-     "grade": "Unique",
-     "typical_enhance": "+0"
-    },
-    {
-     "slot": "Runes",
-     "item": "Clash Rune",
-     "share_pct": 100,
-     "grade": "Special",
-     "typical_enhance": "+2"
-    }
-   ],
+   "gear_stats": {
+    "substats": [
+     [
+      "Bônus de Golpe Potente"
+     ],
+     [
+      "Amplificação de Dano de Arma"
+     ],
+     [
+      "Amplificação de Dano"
+     ],
+     [
+      "Ataque"
+     ],
+     [
+      "Precisão Adicional",
+      "Acerto Crítico"
+     ]
+    ],
+    "manastones": [
+     [
+      "Amplificação de Dano de Arma",
+      "Amplificação de Dano Crítico"
+     ],
+     [
+      "Amplificação de Dano"
+     ],
+     [
+      "Ataque"
+     ]
+    ],
+    "notes": []
+   },
    "skill_stats": [
     {
      "name": "Spirit Strike",
@@ -3638,120 +3174,39 @@
     "Asas de Daeva Supremas",
     "Asas do Pesadelo"
    ],
-   "gear": [
-    {
-     "slot": "Main hand",
-     "item": "Spiritforged Mace",
-     "share_pct": 91,
-     "grade": "Unique",
-     "typical_enhance": "+10"
-    },
-    {
-     "slot": "Off hand",
-     "item": "Spiritforged Guard",
-     "share_pct": 86,
-     "grade": "Unique",
-     "typical_enhance": "+9"
-    },
-    {
-     "slot": "Helm",
-     "item": "Pilgrim Helm",
-     "share_pct": 25,
-     "grade": "Epic",
-     "typical_enhance": "+0"
-    },
-    {
-     "slot": "Pauldrons",
-     "item": "Liberator Pauldrons",
-     "share_pct": 25,
-     "grade": "Epic",
-     "typical_enhance": "+3"
-    },
-    {
-     "slot": "Chest",
-     "item": "Bakarma Breastplate",
-     "share_pct": 41,
-     "grade": "Unique",
-     "typical_enhance": "+7"
-    },
-    {
-     "slot": "Gloves",
-     "item": "Vakron Gloves",
-     "share_pct": 21,
-     "grade": "Unique",
-     "typical_enhance": "+10"
-    },
-    {
-     "slot": "Greaves",
-     "item": "Vakron Greaves",
-     "share_pct": 22,
-     "grade": "Unique",
-     "typical_enhance": "+10"
-    },
-    {
-     "slot": "Boots",
-     "item": "Vakron Boots",
-     "share_pct": 18,
-     "grade": "Unique",
-     "typical_enhance": "+10"
-    },
-    {
-     "slot": "Cloak",
-     "item": "Liberator Cloak",
-     "share_pct": 22,
-     "grade": "Epic",
-     "typical_enhance": "+0"
-    },
-    {
-     "slot": "Belt",
-     "item": "Noble Belt",
-     "share_pct": 68,
-     "grade": "Unique",
-     "typical_enhance": "+0"
-    },
-    {
-     "slot": "Necklace",
-     "item": "Pilgrim Necklace",
-     "share_pct": 33,
-     "grade": "Epic",
-     "typical_enhance": "+3"
-    },
-    {
-     "slot": "Earrings",
-     "item": "Liberator Earrings",
-     "share_pct": 38,
-     "grade": "Epic",
-     "typical_enhance": "+5"
-    },
-    {
-     "slot": "Rings",
-     "item": "Liberator Ring",
-     "share_pct": 34,
-     "grade": "Epic",
-     "typical_enhance": "+5"
-    },
-    {
-     "slot": "Bracelets",
-     "item": "Ascension Bracelet",
-     "share_pct": 48,
-     "grade": "Unique",
-     "typical_enhance": "+9"
-    },
-    {
-     "slot": "Amulet",
-     "item": "Revelation Amulet",
-     "share_pct": 80,
-     "grade": "Unique",
-     "typical_enhance": "+0"
-    },
-    {
-     "slot": "Runes",
-     "item": "Clash Rune",
-     "share_pct": 100,
-     "grade": "Special",
-     "typical_enhance": "+2"
-    }
-   ],
+   "gear_stats": {
+    "substats": [
+     [
+      "Bônus de Golpe Potente"
+     ],
+     [
+      "Amplificação de Dano de Arma"
+     ],
+     [
+      "Amplificação de Dano"
+     ],
+     [
+      "Ataque"
+     ],
+     [
+      "Precisão Adicional",
+      "Acerto Crítico"
+     ]
+    ],
+    "manastones": [
+     [
+      "Amplificação de Dano de Arma",
+      "Amplificação de Dano Crítico"
+     ],
+     [
+      "Amplificação de Dano"
+     ],
+     [
+      "Ataque"
+     ]
+    ],
+    "notes": []
+   },
    "skill_stats": [
     {
      "name": "Condemnation",
@@ -4214,120 +3669,44 @@
     "Asas do Espírito da Floresta",
     "Asas de Talisra do Vazio"
    ],
-   "gear": [
-    {
-     "slot": "Main hand",
-     "item": "Spiritforged Staff",
-     "share_pct": 88,
-     "grade": "Unique",
-     "typical_enhance": "+10"
-    },
-    {
-     "slot": "Off hand",
-     "item": "Spiritforged Guard",
-     "share_pct": 87,
-     "grade": "Unique",
-     "typical_enhance": "+10"
-    },
-    {
-     "slot": "Helm",
-     "item": "Pilgrim Helm",
-     "share_pct": 23,
-     "grade": "Epic",
-     "typical_enhance": "+3"
-    },
-    {
-     "slot": "Pauldrons",
-     "item": "Liberator Pauldrons",
-     "share_pct": 25,
-     "grade": "Epic",
-     "typical_enhance": "+4"
-    },
-    {
-     "slot": "Chest",
-     "item": "Bakarma Breastplate",
-     "share_pct": 38,
-     "grade": "Unique",
-     "typical_enhance": "+8"
-    },
-    {
-     "slot": "Gloves",
-     "item": "Vakron Gloves",
-     "share_pct": 24,
-     "grade": "Unique",
-     "typical_enhance": "+10"
-    },
-    {
-     "slot": "Greaves",
-     "item": "Vakron Greaves",
-     "share_pct": 29,
-     "grade": "Unique",
-     "typical_enhance": "+10"
-    },
-    {
-     "slot": "Boots",
-     "item": "Vakron Boots",
-     "share_pct": 19,
-     "grade": "Unique",
-     "typical_enhance": "+10"
-    },
-    {
-     "slot": "Cloak",
-     "item": "Vakron Cloak",
-     "share_pct": 23,
-     "grade": "Unique",
-     "typical_enhance": "+10"
-    },
-    {
-     "slot": "Belt",
-     "item": "Noble Belt",
-     "share_pct": 79,
-     "grade": "Unique",
-     "typical_enhance": "+0"
-    },
-    {
-     "slot": "Necklace",
-     "item": "Pilgrim Necklace",
-     "share_pct": 35,
-     "grade": "Epic",
-     "typical_enhance": "+4"
-    },
-    {
-     "slot": "Earrings",
-     "item": "Pilgrim Earrings",
-     "share_pct": 37,
-     "grade": "Epic",
-     "typical_enhance": "+5"
-    },
-    {
-     "slot": "Rings",
-     "item": "Pilgrim Ring",
-     "share_pct": 34,
-     "grade": "Epic",
-     "typical_enhance": "+5"
-    },
-    {
-     "slot": "Bracelets",
-     "item": "Ascension Bracelet",
-     "share_pct": 49,
-     "grade": "Unique",
-     "typical_enhance": "+10"
-    },
-    {
-     "slot": "Amulet",
-     "item": "Revelation Amulet",
-     "share_pct": 85,
-     "grade": "Unique",
-     "typical_enhance": "+0"
-    },
-    {
-     "slot": "Runes",
-     "item": "Clash Rune",
-     "share_pct": 100,
-     "grade": "Special",
-     "typical_enhance": "+2"
-    }
-   ],
+   "gear_stats": {
+    "substats": [
+     [
+      "Bônus de Golpe Potente"
+     ],
+     [
+      "Amplificação de Dano de Arma"
+     ],
+     [
+      "Amplificação de Dano"
+     ],
+     [
+      "Ataque"
+     ],
+     [
+      "Precisão Adicional",
+      "Acerto Crítico"
+     ]
+    ],
+    "manastones": [
+     [
+      "Amplificação de Dano de Ataque Frontal"
+     ],
+     [
+      "Amplificação de Dano de Arma",
+      "Amplificação de Dano Crítico"
+     ],
+     [
+      "Amplificação de Dano"
+     ],
+     [
+      "Ataque"
+     ]
+    ],
+    "notes": [
+     "Ataque Frontal só se a sua build for frontal."
+    ]
+   },
    "skill_stats": [
     {
      "name": "Dark Crush",

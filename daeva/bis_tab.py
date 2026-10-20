@@ -70,7 +70,7 @@ class BisTab(QWidget):
         self.stats = QHBoxLayout()
         self.stats.setSpacing(10)
         self.stat_labels = []
-        for title in ("SKILLS NA META", "STIGMAS NA META", "ARCANAS CERTAS", "EQUIPAMENTO"):
+        for title in ("SKILLS NA META", "STIGMAS NA META", "ARCANAS CERTAS"):
             f = QFrame(objectName="stat")
             fl = QVBoxLayout(f)
             fl.setContentsMargins(10, 8, 10, 8)
@@ -165,9 +165,9 @@ class BisTab(QWidget):
         self.open_build.setEnabled(True)
         self.header.setText(f"{c['name']} · {r['build']}")
         lvl = f"nível {r['level']}" if r.get("level") else ""
-        sub = "Comparado com a build da classe no Atreia Lens e com os itens mais usados pelos top 360 da América Latina."
+        sub = "Comparado com a build da classe no Atreia Lens."
         if not r["endgame"]:
-            sub += f" Você está no {lvl}: as metas são de nível 45, e o equipamento só entra nas dicas a partir dele."
+            sub += f" Você está no {lvl}: as metas da build são de nível 45."
         self.sub.setText(sub)
         s = r["summary"]
         vals = [
@@ -175,7 +175,6 @@ class BisTab(QWidget):
             (f"{s['stigmas_ok']} de {s['stigmas_total']}", "stigmas principais"),
             (f"{s['arcana_ok']} de {s['arcana_total']}" if s["arcana_known"] else "—",
              "tipo igual ao da build" if s["arcana_known"] else "não aparecem no perfil"),
-            (f"{s['gear_match'] + s['gear_up']} de {s['gear_total']}", "igual ou acima dos top"),
         ]
         for (val, note), (a, b) in zip(self.stat_labels, vals):
             val.setText(a)
@@ -189,9 +188,8 @@ class BisTab(QWidget):
         self.note.setText(
             "Os níveis de skill do AION2 Index já somam o bônus do Daevanion. "
             f"Build: <a style='color:{theme.LIVE}' href='https://atreialens.hartmannlab.xyz/{r['class']}'>Atreia Lens</a> · "
-            f"itens mais usados: <a style='color:{theme.LIVE}' "
-            f"href='https://gamewith.ai/aion2/en/build-stats/la/{r['gw_slug']}'>GameWith</a> "
-            f"(coletados em {self.data['collected']['stats'][8:10]}/{self.data['collected']['stats'][5:7]}).")
+            f"nível médio das skills: <a style='color:{theme.LIVE}' "
+            f"href='https://gamewith.ai/aion2/en/build-stats/la/{r['gw_slug']}'>GameWith</a>.")
         self.render_section()
 
     def render_section(self):
@@ -237,14 +235,18 @@ class BisTab(QWidget):
             top = ", ".join(f"{esc(a['name'])} {a['share_pct']}%" for a in r["arcana_stats"])
             html += f"<p><span style='color:{theme.MUTED}'>Mais usadas pelos top:</span> {top}</p>"
         elif self.section == "gear":
-            rows = []
-            for g in r["gear"]:
-                mine = f"{esc(g['item'])} +{g['enchant']}" if g["item"] else "—"
-                top = f"{esc(g['top_item'])} +{g['top_enchant']} · {g['share']}%"
-                rows.append([esc(g["slot_pt"]), mine, esc(g["grade"]), top, tag(g["status"], g["refine_gap"])])
-            html = table(["SLOT", "VOCÊ", "GRAU", "MAIS USADO PELOS TOP", ""], rows)
-            html += (f"<p style='color:{theme.MUTED}'>“Mais usado” não quer dizer melhor: compare o item level "
-                     "antes de trocar uma peça de grau igual ou maior.</p>")
+            gs = r["gear_stats"]
+
+            def steps(lst):
+                return "".join(f"<tr><td style='color:{theme.ACCENT};padding:2px 10px 2px 0'><b>{i}</b></td>"
+                               f"<td>{' ≈ '.join(esc(x) for x in step)}</td></tr>" for i, step in enumerate(lst, 1))
+            html = (f"<p><b>Status para buscar nos itens</b> "
+                    f"<span style='color:{theme.MUTED}'>(prioridade de aprimoramento da {esc(r['build'])})</span></p>"
+                    f"<table>{steps(gs['substats'])}</table>"
+                    f"<p><b>Manastones</b></p><table>{steps(gs['manastones'])}</table>")
+            if gs["notes"]:
+                html += "<p style='color:%s'>%s</p>" % (theme.MUTED, "<br>".join(esc(n) for n in gs["notes"]))
+            html += f"<p style='color:{theme.MUTED}'>≈ quer dizer que os dois valem quase o mesmo.</p>"
         else:
             t = r["titles"]
             html = (f"<p><b>Aprimoramento:</b> {esc(' → '.join(r['enhancing']))}</p>"
