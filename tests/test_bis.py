@@ -50,7 +50,7 @@ def test_kumaglad():
     assert arc == {"Cálice": "ok", "Papiro": "ok", "Bússola": "ok", "Sino": "tipo_errado", "Espelho": "tipo_errado"}
     assert r["gear_stats"]["substats"][0] == ["Bônus de Golpe Potente"]
     assert r["gear_stats"]["substats"][-1] == ["Precisão Adicional", "Acerto Crítico"]
-    assert len(r["todo"]) == 3
+    assert "todo" not in r
 
 
 def test_prioridade_de_status_por_classe():

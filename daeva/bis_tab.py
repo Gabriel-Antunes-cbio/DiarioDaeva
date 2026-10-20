@@ -84,15 +84,6 @@ class BisTab(QWidget):
             self.stat_labels.append((val, note))
         v.addLayout(self.stats)
 
-        v.addWidget(lbl("O QUE FAZER PRIMEIRO", "section"))
-        self.todo = lbl("")
-        self.todo.setTextFormat(Qt.RichText)
-        todo_card = QFrame(objectName="card")
-        tl = QVBoxLayout(todo_card)
-        tl.setContentsMargins(14, 12, 14, 12)
-        tl.addWidget(self.todo)
-        v.addWidget(todo_card)
-
         seg = QHBoxLayout()
         self.seg_btns = {}
         for key, text in SECTIONS:
@@ -152,8 +143,7 @@ class BisTab(QWidget):
     def _empty(self, msg: str):
         self.header.setText("BiS")
         self.sub.setText(msg)
-        for w in (self.todo, self.body):
-            w.setText("")
+        self.body.setText("")
         for val, note in self.stat_labels:
             val.setText("—")
             note.setText("")
@@ -179,12 +169,6 @@ class BisTab(QWidget):
         for (val, note), (a, b) in zip(self.stat_labels, vals):
             val.setText(a)
             note.setText(b)
-        if r["todo"]:
-            self.todo.setText("<br>".join(
-                f"<b style='color:{theme.ACCENT}'>{i}</b>&nbsp; <b>{esc(t['title'])}</b><br>"
-                f"<span style='color:{theme.MUTED}'>{esc(t['why'])}</span>" for i, t in enumerate(r["todo"], 1)))
-        else:
-            self.todo.setText("Nada urgente: o personagem já está na meta da build.")
         self.note.setText(
             "Os níveis de skill do AION2 Index já somam o bônus do Daevanion. "
             f"Build: <a style='color:{theme.LIVE}' href='https://atreialens.hartmannlab.xyz/{r['class']}'>Atreia Lens</a> · "

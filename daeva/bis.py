@@ -115,30 +115,6 @@ def compare_arcana(build: dict, gear: list[dict] | None) -> list[dict]:
     return rows
 
 
-def priorities(result: dict, limit: int = 3) -> list[dict]:
-    """As poucas coisas que mais aproximam o personagem da build, em ordem."""
-    cand = []
-    for s in result["stigmas"]["main"]:
-        if s["status"] == "nao_aprendido":
-            cand.append((30, "Aprender o stigma " + s["pt"], f"Faz parte dos 4 principais da build (rank {s['target']})."))
-        elif s["status"] == "falta":
-            cand.append((s["gap"] * 1.2, f"Subir o stigma {s['pt']} de {s['have']} para {s['target']}",
-                         "É um dos 4 stigmas principais da build."))
-    for s in result["skills"]:
-        if s["status"] == "falta":
-            weight = (s["points"] or 6) / 10
-            cand.append((s["gap"] * weight, f"Subir {s['pt']} de {s['have']} para {s['target']}",
-                         f"Prioridade {s['points'] or '-'} na build."))
-    for a in result["arcana"]:
-        if a["status"] == "tipo_errado":
-            cand.append((7, f"Trocar a arcana {a['arcana']} de {a['have']['kind']} para {a['want']}",
-                         f"A build usa {a['arcana']} de {a['want']} ({a['gods']})."))
-        elif a["status"] == "vazio":
-            cand.append((9, f"Equipar a arcana {a['arcana']} de {a['want']}", f"Deuses da build: {a['gods']}."))
-    cand.sort(key=lambda c: -c[0])
-    return [{"title": t, "why": w} for _, t, w in cand[:limit]]
-
-
 def compare(cls: str, level: int | None, skills: dict | None, gear: list[dict] | None, data: dict | None = None) -> dict:
     data = data or load()
     cid = class_id(cls)
@@ -160,7 +136,6 @@ def compare(cls: str, level: int | None, skills: dict | None, gear: list[dict] |
         "enhancing": build["enhancing"], "manastones": build["manastones"],
         "titles": build["titles"], "wings": build["wings"],
     }
-    result["todo"] = priorities(result)
     sk = [s for s in result["skills"] if not s["status"].startswith("fora") and s["status"] != "sem_dado"]
     result["summary"] = {
         "skills_ok": sum(s["status"] in ("ok", "max", "acima") for s in sk), "skills_total": len(sk),
