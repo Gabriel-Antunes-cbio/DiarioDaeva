@@ -136,6 +136,17 @@ bash bot/instalar_servico.sh
 
 Para atualizar depois: `cd ~/DiarioDaeva && git pull && sudo systemctl restart daeva-bot`.
 
+## Alternativa: Microsoft Azure (conta gratuita)
+
+A conta gratuita dá US$ 200 de crédito por 30 dias e, por 12 meses, 750 h/mês das VMs **B2ats v2** e **B2pts v2** e 2 discos **Premium SSD P6 (64 GB)**. Para manter os serviços gratuitos depois dos 30 dias, é preciso passar a conta para **pagamento conforme o uso** (os itens gratuitos continuam sem custo). O IP público pode ser cobrado à parte depois do crédito.
+
+1. No portal, procure **Serviços gratuitos** e crie a VM Linux por lá.
+2. **Básico:** grupo de recursos `daeva`, nome `daeva-bot`, imagem **Ubuntu Server 24.04 LTS (x64)**, tamanho **Standard_B2ats_v2**, autenticação **chave SSH** com usuário `azureuser`, portas de entrada: **SSH (22)**.
+3. **Discos:** **SSD Premium**, tamanho **64 GiB (P6)**.
+4. **Criar** → baixe a chave `.pem`.
+5. Na VM: **Rede → Configurações de rede → Criar regra de porta → Regra de porta de entrada**: porta de destino `8080`, protocolo **TCP**.
+6. No Windows: `ssh -i caminho\da\chave.pem azureuser@IP_PUBLICO` e rode os mesmos comandos da seção do Google Cloud (passo 5).
+
 ## Parte 3: ligar o app dos amigos
 
 Mande para cada amigo, **por mensagem privada** e não no canal aberto:
