@@ -11,13 +11,11 @@ STATUS_TXT = {
     "max": ("na meta", theme.OK), "acima": ("acima da meta", theme.OK), "ok": ("na meta", theme.OK), "falta": ("falta {gap}", theme.WARN),
     "fora": ("fora da build", theme.MUTED), "fora_ok": ("fora da build", theme.MUTED),
     "sem_dado": ("sem dado", theme.MUTED), "nao_aprendido": ("não aprendido", theme.WARN),
-    "igual": ("igual aos top", theme.OK), "refinar": ("refinar +{gap}", theme.WARN),
-    "grau_acima": ("grau acima", theme.OK), "grau_abaixo": ("grau abaixo", theme.WARN),
-    "outro": ("outro item", theme.MUTED), "vazio": ("vazio", theme.WARN),
+    "refinar": ("refinar +{gap}", theme.WARN), "vazio": ("vazio", theme.WARN),
     "tipo_errado": ("tipo diferente", theme.WARN),
 }
 SECTIONS = (("skills", "Skills"), ("stigmas", "Stigmas"), ("arcana", "Arcanas"), ("gear", "Equipamento"),
-            ("ref", "Referência"))
+            ("wings", "Asas e títulos"), ("notes", "Notas"))
 
 
 def esc(t) -> str:
@@ -155,7 +153,7 @@ class BisTab(QWidget):
         self.open_build.setEnabled(True)
         self.header.setText(f"{c['name']} · {r['build']}")
         lvl = f"nível {r['level']}" if r.get("level") else ""
-        sub = "Comparado com a build da classe no Atreia Lens."
+        sub = f"Comparado com a build da classe no Atreia Lens ({r['mode']} · {r['stage']} · {r['weapon']})."
         if not r["endgame"]:
             sub += f" Você está no {lvl}: as metas da build são de nível 45."
         self.sub.setText(sub)
@@ -164,18 +162,15 @@ class BisTab(QWidget):
             (f"{s['skills_ok']} de {s['skills_total']}", "skills da build"),
             (f"{s['stigmas_ok']} de {s['stigmas_total']}", "stigmas principais"),
             (f"{s['arcana_ok']} de {s['arcana_total']}" if s["arcana_known"] else "—",
-             "tipo igual ao da build" if s["arcana_known"] else "não aparecem no perfil"),
+             "tipo e refino da build" if s["arcana_known"] else "não aparecem no perfil"),
         ]
         for (val, note), (a, b) in zip(self.stat_labels, vals):
             val.setText(a)
             note.setText(b)
         self.note.setText(
             "Os níveis de skill do AION2 Index já somam o bônus do Daevanion. "
-            f"Build, stigmas, arcanas e status dos itens: <a style='color:{theme.LIVE}' "
-            f"href='https://atreialens.hartmannlab.xyz/{r['class']}'>Atreia Lens (atreialens.hartmannlab.xyz)</a>, "
-            "feito pela comunidade · "
-            f"nível médio das skills: <a style='color:{theme.LIVE}' "
-            f"href='https://gamewith.ai/aion2/en/build-stats/la/{r['gw_slug']}'>GameWith</a>.")
+            f"Build completa: <a style='color:{theme.LIVE}' href='https://atreialens.hartmannlab.xyz/{r['class']}'>"
+            "Atreia Lens (atreialens.hartmannlab.xyz)</a>, feito pela comunidade.")
         self.render_section()
 
     def render_section(self):
@@ -184,78 +179,69 @@ class BisTab(QWidget):
         r = self.result
         if not r:
             return
+        muted = lambda t: f"<span style='color:{theme.MUTED}'>{t}</span>"
         if self.section == "skills":
             rows = []
             for s in r["skills"]:
-                have = "—" if s["have"] is None else str(s["have"])
-                meta = s["target"] or "N/A"
-                rows.append([esc(s["pt"]), f"<b>{have}</b>", esc(meta), esc(s["specs"] or "—"),
-                             f"{s['avg']:.1f}".replace(".", ",") if s.get("avg") is not None else "—",
+                p = s["parts"]
+                parts = " + ".join(f"{v} {k}" for k, v in (("base", p["base"]), ("Daevanion", p["daevanion"]),
+                                                            ("arcanas", p["arcanas"]), ("joias", p["joias"])) if v)
+                rows.append([esc(s["pt"]) + "<br>" + muted(esc(" · ".join(s["effects"]))),
+                             f"<b>{'—' if s['have'] is None else s['have']}</b>", str(s["target"]), muted(esc(parts)),
                              tag(s["status"], s["gap"])])
-            html = table(["SKILL", "VOCÊ", "META", "ESPEC.", "MÉDIA TOP", ""], rows)
+            html = table(["SKILL", "VOCÊ", "META", "COMPOSIÇÃO DA META", ""], rows)
             pas = ", ".join(f"{esc(p['pt'])} <b>{p['have'] if p['have'] is not None else '—'}</b>" for p in r["passives"])
-            html += f"<p><span style='color:{theme.MUTED}'>Passivas, em ordem de prioridade:</span> {pas}</p>"
+            html += f"<p>{muted('Passivas, em ordem de prioridade:')} {pas}</p>"
         elif self.section == "stigmas":
             rows = [[esc(s["pt"]), f"<b>{'—' if s['have'] is None else s['have']}</b>", str(s["target"]),
                      tag(s["status"], s["gap"])] for s in r["stigmas"]["main"]]
-            html = table(["STIGMA PRINCIPAL", "VOCÊ", "RANK", ""], rows)
+            html = table(["STIGMA", "VOCÊ", "RANK", ""], rows)
             alt = ", ".join(f"{esc(a['pt'])} <b>{'—' if a['have'] is None else a['have']}</b>" for a in r["stigmas"]["alt"])
             if alt:
-                html += f"<p><span style='color:{theme.MUTED}'>Alternativas:</span> {alt}</p>"
-            html += (f"<p style='color:{theme.MUTED}'>O AION2 Index não diz quais stigmas estão equipados, "
-                     "só o nível de cada um.</p>")
+                html += f"<p>{muted('Também bons:')} {alt}</p>"
+            html += f"<p>{muted('O AION2 Index não diz quais stigmas estão equipados, só o nível de cada um.')}</p>"
         elif self.section == "arcana":
-            if r["arcana"]:
-                rows = []
-                for a in r["arcana"]:
-                    have = a["have"]
-                    mine = f"{esc(a['arcana'])} de {esc(have['kind'])} +{have['enchant']}" if have else "—"
-                    rows.append([esc(a["arcana"]), f"de {esc(a['want'])}", esc(a["gods"]), mine, tag(a["status"])])
-                html = table(["ARCANA", "BUILD", "DEUSES", "VOCÊ", ""], rows)
-            else:
-                html = ""
-            if r["arcana_note"]:
-                html += f"<p>{esc(r['arcana_note'])}</p>"
+            html = ""
+            for a in r["arcana"]:
+                have = a["have"]
+                mine = (f"você: {esc(a['base'])} {'da' if have['kind'] == 'Mana' else 'do'} {esc(have['kind'])} "
+                        f"+{have['enchant']}") if have else "você: —"
+                lines = ", ".join(f"{esc(x['name'])} {esc(x['value'])}" for x in a["lines"])
+                html += (f"<p style='margin-top:10px'><b>{esc(a['name'])}</b> · {esc(a['god'])} "
+                         f"{'' if a['status'] == 'sem_dado' else tag(a['status'], a['refine_gap'])}<br>"
+                         f"{muted(lines)}<br>{muted(mine)}</p>")
             if not r["summary"]["arcana_known"]:
-                html += f"<p style='color:{theme.MUTED}'>As arcanas deste personagem não aparecem no perfil público.</p>"
-            top = ", ".join(f"{esc(a['name'])} {a['share_pct']}%" for a in r["arcana_stats"])
-            html += f"<p><span style='color:{theme.MUTED}'>Mais usadas pelos top:</span> {top}</p>"
+                html += f"<p>{muted('As arcanas deste personagem não aparecem no perfil público.')}</p>"
         elif self.section == "gear":
-            gs = r["gear_stats"]
-
-            def steps(lst):
-                return "".join(f"<tr><td style='color:{theme.ACCENT};padding:2px 10px 2px 0'><b>{i}</b></td>"
-                               f"<td>{' ≈ '.join(esc(x) for x in step)}</td></tr>" for i, step in enumerate(lst, 1))
-            if r["gear_slots"]:
-                html = (f"<p style='color:{theme.MUTED}'>Substatus para buscar em cada peça, do mais importante (1) "
-                        "ao menos importante (5). O valor ao lado é a referência da build.</p>")
-                for g in r["gear_slots"]:
-                    stone = esc(g["stone"] or "")
-                    if g.get("divine"):
-                        stone += f" · Pedra Divina: {esc(g['divine'])}"
-                    rows = "".join(
-                        f"<tr><td style='color:{theme.ACCENT};padding:1px 10px 1px 0'><b>{n}</b></td>"
-                        f"<td style='padding:1px 14px 1px 0'>{esc(x['name'])}</td>"
-                        f"<td style='color:{theme.MUTED}'>{esc(x['ref'])}</td></tr>"
-                        for n, x in enumerate(g["substats"], 1))
-                    html += (f"<p style='margin-top:12px'><b>{esc(g['name'].upper())}</b>"
-                             f"<span style='color:{theme.MUTED}'> · {stone}</span></p><table>{rows}</table>")
-                    if g["also"]:
-                        html += f"<p style='color:{theme.MUTED}'>Também servem: {esc(', '.join(g['also']))}</p>"
-            else:
-                html = (f"<p style='color:{theme.MUTED}'>A lista peça por peça desta classe ainda não foi lida. "
-                        "Por enquanto, a prioridade geral da build:</p>"
-                        f"<table>{steps(gs['substats'])}</table>")
-            html += f"<p style='margin-top:12px'><b>Manastones</b></p><table>{steps(gs['manastones'])}</table>"
-            notes = list(gs["notes"]) + [n for n in r["gear_notes"] if not n.startswith("Manastones:")]
-            if notes:
-                html += "<p style='color:%s'>%s</p>" % (theme.MUTED, "<br>".join(esc(n) for n in notes))
+            html = f"<p>{muted('Substatus para buscar em cada peça, do mais importante (1) ao menos importante (5). O valor é a referência da build.')}</p>"
+            for g in r["gear_slots"]:
+                stone = esc(g["stone"] or "")
+                if g.get("divine"):
+                    stone += f" · Pedra Divina: {esc(g['divine'])}"
+                rows = "".join(
+                    f"<tr><td style='color:{theme.ACCENT};padding:1px 10px 1px 0'><b>{n}</b></td>"
+                    f"<td style='padding:1px 14px 1px 0'>{esc(x['name'])}</td>"
+                    f"<td style='color:{theme.MUTED}'>{esc(x['ref'])}</td></tr>"
+                    for n, x in enumerate(g["substats"], 1))
+                html += f"<p style='margin-top:12px'><b>{esc(g['name'].upper())}</b>{muted(' · ' + stone)}</p><table>{rows}</table>"
+                if g["also"]:
+                    html += f"<p>{muted('Também servem: ' + esc(', '.join(g['also'])))}</p>"
+            if r["gear_notes"]:
+                html += "<p style='margin-top:12px'><b>Notas de equipamentos</b></p>" + "".join(
+                    f"<p>{muted(esc(n))}</p>" for n in r["gear_notes"])
+        elif self.section == "wings":
+            wings = ", ".join(esc(w["name"]) + (" <b>(principal)</b>" if w["main"] else "") for w in r["wings"])
+            html = f"<p><b>Asas:</b> {wings}</p>"
+            for kind in ("Ataque", "Defesa", "Utilidade"):
+                ts = [t for t in r["titles"] if t["type"] == kind]
+                if ts:
+                    html += f"<p style='margin-top:10px'><b>Títulos de {kind.lower()}</b></p>"
+                    for t in ts:
+                        stats = ", ".join(f"{esc(x['name'])} {esc(x['value'])}" for x in t["stats"])
+                        html += (f"<p>{esc(t['name'])}{' <b>(principal)</b>' if t['main'] else ''}"
+                                 f"{'<br>' + muted(stats) if stats else ''}</p>")
+            html += "".join(f"<p>{muted(esc(n))}</p>" for n in r["wings_notes"])
         else:
-            t = r["titles"]
-            html = (f"<p><b>Aprimoramento:</b> {esc(' → '.join(r['enhancing']))}</p>"
-                    f"<p><b>Manastones:</b> {esc(' → '.join(r['manastones']))}</p>"
-                    f"<p><b>Títulos ofensivos:</b> {esc(', '.join(t.get('offensive', [])))}<br>"
-                    f"<b>Defensivos:</b> {esc(', '.join(t.get('defensive', [])))}<br>"
-                    f"<b>Utilidade:</b> {esc(', '.join(t.get('utility', [])))}</p>"
-                    f"<p><b>Asas:</b> {esc(', '.join(r['wings']))}</p>")
+            html = f"<p><b>Rotação</b></p><p>{muted(esc(r['rotation']))}</p><p><b>Notas de skills</b></p>"
+            html += "".join(f"<p>{muted(esc(n))}</p>" for n in r["skill_notes"])
         self.body.setText(html)

@@ -1,7 +1,8 @@
-"""Aba BiS: compara o personagem com a build da classe.
+"""Aba BiS: compara o personagem com a build da classe dele no Atreia Lens.
 
-A build (skills, stigmas, arcanas e a prioridade de status dos itens) vem do Atreia Lens, por classe.
-O nível médio das skills entre os top da América Latina vem do GameWith. Tudo fica em daeva/data/bis.json.
+Tudo da build (skills, stigmas, arcanas, substatus de cada peça, asas, títulos e notas) vem das páginas de
+classe do Atreia Lens, guardadas em daeva/data/bis.json (gerado por tools/gerar_bis.py).
+Do personagem vêm só os dados dele: skills (AION2 Index) e arcanas (Shugo.GG).
 """
 from __future__ import annotations
 
@@ -10,6 +11,7 @@ import re
 from pathlib import Path
 
 DATA_FILE = Path(__file__).with_name("data") / "bis.json"
+END_LEVEL = 45
 
 CLASS_ALIASES = {
     "gladiator": "gladiator", "gladiador": "gladiator",
@@ -21,16 +23,18 @@ CLASS_ALIASES = {
     "cleric": "cleric", "clerigo": "cleric",
     "chanter": "chanter", "cantor": "chanter",
 }
-
-END_LEVEL = 45
+# Arcanas no Shugo.GG ("Chalice of Vigor +1") -> nomes do Atreia Lens ("Cálice do Vigor")
+ARCANA_BASE = {"chalice": "Cálice", "parchment": "Manuscrito", "scroll": "Manuscrito", "manuscript": "Manuscrito",
+               "compass": "Bússola", "bell": "Sino", "mirror": "Espelho"}
+ARCANA_KIND = {"vigor": "Vigor", "magic": "Mana", "mana": "Mana"}
 
 
 def load(path: Path = DATA_FILE) -> dict:
     return json.loads(path.read_text(encoding="utf-8"))
 
 
-def _key(s: str) -> str:
-    s = s.lower().translate(str.maketrans("áàâãéêíóôõúç", "aaaaeeiooouc"))
+def _key(s: str | None) -> str:
+    s = (s or "").lower().translate(str.maketrans("áàâãéêíóôõúç", "aaaaeeiooouc"))
     return re.sub(r"[^a-z0-9]", "", s)
 
 
@@ -46,26 +50,20 @@ def _levels(skills: dict | None) -> dict[str, int]:
     return out
 
 
-def compare_skills(build: dict, levels: dict[str, int], stats: dict[str, dict]) -> list[dict]:
+def compare_skills(build: dict, levels: dict[str, int]) -> list[dict]:
     rows = []
     for s in build["skills"]:
-        have = levels.get(_key(s["name"]))
-        st = stats.get(_key(s["name"]), {})
-        row = {"name": s["name"], "pt": s["pt"], "have": have, "target": s["level"], "min": s["min"],
-               "max": s["max"], "specs": s["specs"], "points": s["points"], "avg": st.get("avg")}
-        if s["skip"]:
-            row["status"] = "fora" if have else "fora_ok"
-            row["gap"] = 0
-        elif have is None:
+        have = levels.get(_key(s["en"]))
+        row = {"pt": s["pt"], "en": s["en"], "have": have, "target": s["final"],
+               "parts": {k: s[k] for k in ("base", "daevanion", "arcanas", "joias")}, "effects": s["effects"]}
+        if have is None:
             row["status"], row["gap"] = "sem_dado", 0
-        elif have > (s["max"] or s["min"]):
+        elif have > s["final"]:
             row["status"], row["gap"] = "acima", 0
-        elif have >= (s["max"] or s["min"]):
+        elif have == s["final"]:
             row["status"], row["gap"] = "max", 0
-        elif have >= s["min"]:
-            row["status"], row["gap"] = "ok", 0
         else:
-            row["status"], row["gap"] = "falta", s["min"] - have
+            row["status"], row["gap"] = "falta", s["final"] - have
         rows.append(row)
     return rows
 
@@ -73,64 +71,64 @@ def compare_skills(build: dict, levels: dict[str, int], stats: dict[str, dict]) 
 def compare_stigmas(build: dict, levels: dict[str, int], learned: set[str]) -> dict:
     main = []
     for s in build["stigmas"]:
-        k = _key(s["name"])
-        have = levels.get(k)
+        k = _key(s["en"])
         known = k in learned
+        have = levels.get(k) if known else None
         if not known:
             status, gap = "nao_aprendido", s["rank"]
         elif have >= s["rank"]:
             status, gap = "ok", 0
         else:
             status, gap = "falta", s["rank"] - have
-        main.append({"name": s["name"], "pt": s["pt"], "have": have if known else None, "target": s["rank"],
-                     "status": status, "gap": gap})
-    alt = [{"name": s["name"], "pt": s["pt"], "have": levels.get(_key(s["name"])) if _key(s["name"]) in learned else None}
-           for s in build["stigmas_alt"]]
+        main.append({"pt": s["pt"], "en": s["en"], "have": have, "target": s["rank"], "status": status, "gap": gap})
+    alt = [{"pt": a["pt"], "have": levels.get(_key(a["en"])) if a["en"] and _key(a["en"]) in learned else None}
+           for a in build["stigmas_alt"]]
     return {"main": main, "alt": alt}
 
 
-ARCANA_PT = {"chalice": "Cálice", "parchment": "Papiro", "scroll": "Papiro", "compass": "Bússola",
-             "bell": "Sino", "mirror": "Espelho"}
-ARCANA_KIND_PT = {"vigor": "Vigor", "magic": "Magia"}
-
-
 def compare_arcana(build: dict, gear: list[dict] | None) -> list[dict]:
-    """Arcanas aparecem no Shugo.GG como linhas Arcana1..5 ('Chalice of Vigor +1')."""
+    """O Shugo.GG lista as arcanas como linhas Arcana1..5 ('Chalice of Vigor +1')."""
     mine = {}
     for piece in gear or []:
         if not piece["slot"].strip().lower().startswith("arcana"):
             continue
         m = re.match(r"(\w+) of (\w+)", piece["item"].strip(), re.I)
-        if m:
-            pt = ARCANA_PT.get(m.group(1).lower())
-            if pt:
-                mine[pt] = {"kind": ARCANA_KIND_PT.get(m.group(2).lower(), m.group(2)), "item": piece["item"],
-                            "enchant": int(piece.get("enchant", 0)), "grade": piece.get("grade", "")}
+        if m and m.group(1).lower() in ARCANA_BASE:
+            mine[ARCANA_BASE[m.group(1).lower()]] = {
+                "kind": ARCANA_KIND.get(m.group(2).lower(), m.group(2)),
+                "enchant": int(piece.get("enchant", 0)), "grade": piece.get("grade", "")}
     rows = []
-    for a in build["arcana"]:
-        want = "Magia" if _key(a["type"]) in ("magia", "magica", "magic") else a["type"]
-        have = mine.get(a["arcana"])
-        status = "sem_dado" if not mine else ("vazio" if not have else ("ok" if have["kind"] == want else "tipo_errado"))
-        rows.append({"arcana": a["arcana"], "want": want, "gods": a["gods"], "have": have, "status": status})
+    for a in build["arcanas"]:
+        have = mine.get(a["base"])
+        if not mine:
+            status = "sem_dado"
+        elif not have:
+            status = "vazio"
+        elif have["kind"] != a["kind"]:
+            status = "tipo_errado"
+        elif have["enchant"] < a["refine"]:
+            status = "refinar"
+        else:
+            status = "ok"
+        rows.append({**a, "have": have, "status": status,
+                     "refine_gap": max(0, a["refine"] - have["enchant"]) if have and status == "refinar" else 0})
     return rows
 
 
 def group_slots(slots: list[dict] | None) -> list[dict]:
-    """Junta as peças de esquerda e direita quando a recomendação é a mesma ("Brinco (esq.)" + "(dir.)" -> "Brincos")."""
-    if not slots:
-        return []
+    """Junta esquerda e direita quando a recomendação é igual ("Brinco (esq.)" + "(dir.)" -> "Brincos")."""
     plural = {"Brinco": "Brincos", "Anel": "Anéis", "Bracelete": "Braceletes"}
     out = []
-    for s in slots:
+    for s in slots or []:
         base = s["slot"].split(" (")[0]
-        same = {k: s[k] for k in ("substats", "also", "stone", "divine")}
+        same = {k: s[k] for k in ("substats", "also", "stone", "stone_lines", "divine")}
         prev = out[-1] if out else None
-        if prev and prev["base"] == base and prev["same"] == same and base in plural:
+        if prev and prev["_base"] == base and prev["_same"] == same and base in plural:
             prev["name"] = plural[base]
             continue
-        out.append({"base": base, "name": s["slot"], "same": same, **same})
+        out.append({"_base": base, "_same": same, "name": s["slot"], **same})
     for o in out:
-        del o["base"], o["same"]
+        del o["_base"], o["_same"]
     return out
 
 
@@ -139,31 +137,27 @@ def compare(cls: str, level: int | None, skills: dict | None, gear: list[dict] |
     cid = class_id(cls)
     if not cid:
         raise ValueError(f"Classe desconhecida: {cls!r}")
-    build = data["classes"][cid]
+    b = data["classes"][cid]
     levels = _levels(skills)
     learned = {_key(n) for n, _ in (skills or {}).get("stigma", [])}
-    stats = {_key(s["name"]): s for s in build["skill_stats"]}
-    result = {
-        "class": cid, "gw_slug": build["gw_slug"], "build": build["build"], "level": level,
-        "endgame": (level or 0) >= END_LEVEL,
-        "skills": compare_skills(build, levels, stats),
-        "passives": [{"name": p["name"], "pt": p["pt"], "have": levels.get(_key(p["name"]))} for p in build["passives"]],
-        "stigmas": compare_stigmas(build, levels, learned),
-        "gear_stats": build["gear_stats"],
-        "gear_slots": group_slots(build.get("gear_slots", {}) and build["gear_slots"]["slots"]),
-        "gear_notes": (build.get("gear_slots") or {}).get("notes", []),
-        "arcana": compare_arcana(build, gear), "arcana_note": build["arcana_note"],
-        "arcana_stats": build["arcana_stats"][:4],
-        "enhancing": build["enhancing"], "manastones": build["manastones"],
-        "titles": build["titles"], "wings": build["wings"],
+    r = {
+        "class": cid, "build": b["build"], "weapon": b["weapon"], "mode": b["mode"], "stage": b["stage"],
+        "level": level, "endgame": (level or 0) >= END_LEVEL,
+        "skills": compare_skills(b, levels),
+        "passives": [{"pt": p["pt"], "have": levels.get(_key(p["en"]))} for p in b["passives"]],
+        "stigmas": compare_stigmas(b, levels, learned),
+        "arcana": compare_arcana(b, gear),
+        "gear_slots": group_slots(b["gear"]), "gear_notes": b["gear_notes"],
+        "wings": b["wings"], "titles": b["titles"], "wings_notes": b["wings_notes"],
+        "rotation": b["rotation"], "skill_notes": b["skill_notes"],
     }
-    sk = [s for s in result["skills"] if not s["status"].startswith("fora") and s["status"] != "sem_dado"]
-    result["summary"] = {
-        "skills_ok": sum(s["status"] in ("ok", "max", "acima") for s in sk), "skills_total": len(sk),
-        "stigmas_ok": sum(s["status"] == "ok" for s in result["stigmas"]["main"]),
-        "stigmas_total": len(result["stigmas"]["main"]),
-        "arcana_ok": sum(a["status"] == "ok" for a in result["arcana"]),
-        "arcana_total": len(result["arcana"]),
-        "arcana_known": any(a["status"] != "sem_dado" for a in result["arcana"]),
+    sk = [s for s in r["skills"] if s["status"] != "sem_dado"]
+    r["summary"] = {
+        "skills_ok": sum(s["status"] in ("max", "acima") for s in sk), "skills_total": len(r["skills"]),
+        "stigmas_ok": sum(s["status"] == "ok" for s in r["stigmas"]["main"]),
+        "stigmas_total": len(r["stigmas"]["main"]),
+        "arcana_ok": sum(a["status"] == "ok" for a in r["arcana"]),
+        "arcana_total": len(r["arcana"]),
+        "arcana_known": any(a["status"] != "sem_dado" for a in r["arcana"]),
     }
-    return result
+    return r
