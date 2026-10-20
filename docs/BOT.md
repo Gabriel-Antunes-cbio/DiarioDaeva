@@ -100,10 +100,7 @@ Deve aparecer `Conectado como Diário de Daeva#...` e `API do app ouvindo na por
 ### Deixar ligado para sempre
 
 ```bash
-sudo cp bot/daeva-bot.service /etc/systemd/system/
-sudo systemctl daemon-reload
-sudo systemctl enable --now daeva-bot
-sudo systemctl status daeva-bot          # deve mostrar "active (running)"
+bash bot/instalar_servico.sh             # deve mostrar "active (running)"
 ```
 
 Com isso, o bot volta sozinho se cair ou se a VM reiniciar. Para ver o que ele está fazendo: `journalctl -u daeva-bot -f`.
@@ -113,6 +110,31 @@ Com isso, o bot volta sozinho se cair ou se a VM reiniciar. Para ver o que ele e
 ```bash
 cd ~/DiarioDaeva && git pull && sudo systemctl restart daeva-bot
 ```
+
+## Alternativa: Google Cloud (e2-micro)
+
+O Google Cloud tem uma VM **e2-micro** gratuita, mas só nas regiões `us-central1`, `us-east1` e `us-west1`, com disco **Standard** de até 30 GB. O IP externo pode ser cobrado à parte (alguns dólares por mês) quando acabar o crédito de teste. Crie um alerta de orçamento em **Faturamento → Orçamentos e alertas**.
+
+1. **Compute Engine → Instâncias de VM → Criar instância**: nome `daeva-bot`, região `us-central1`, tipo **e2-micro**.
+2. **Disco de inicialização → Alterar**: **Ubuntu 24.04 LTS**, tipo **Disco permanente padrão** (Standard), 30 GB. O padrão "Balanceado" não entra no gratuito.
+3. **Rede → Tags de rede**: `daeva`. Crie a VM.
+4. **Rede VPC → Firewall → Criar regra**: nome `daeva-8080`, destinos **Tags de destino especificadas** = `daeva`, intervalo de origem `0.0.0.0/0`, protocolo **TCP** porta `8080`.
+5. Na lista de VMs, clique em **SSH** (abre um terminal no navegador) e rode:
+
+```bash
+sudo apt update && sudo apt install -y python3-venv git
+git clone https://github.com/Gabriel-Antunes-cbio/DiarioDaeva.git ~/DiarioDaeva
+cd ~/DiarioDaeva
+python3 -m venv .venv
+.venv/bin/pip install -r bot/requirements.txt
+cp bot/.env.example bot/.env
+nano bot/.env
+bash bot/instalar_servico.sh
+```
+
+6. Anote o **IP externo** da VM. O endereço para o app é `http://IP_EXTERNO:8080`.
+
+Para atualizar depois: `cd ~/DiarioDaeva && git pull && sudo systemctl restart daeva-bot`.
 
 ## Parte 3: ligar o app dos amigos
 
