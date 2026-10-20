@@ -171,7 +171,9 @@ class BisTab(QWidget):
             note.setText(b)
         self.note.setText(
             "Os níveis de skill do AION2 Index já somam o bônus do Daevanion. "
-            f"Build: <a style='color:{theme.LIVE}' href='https://atreialens.hartmannlab.xyz/{r['class']}'>Atreia Lens</a> · "
+            f"Build, stigmas, arcanas e status dos itens: <a style='color:{theme.LIVE}' "
+            f"href='https://atreialens.hartmannlab.xyz/{r['class']}'>Atreia Lens (atreialens.hartmannlab.xyz)</a>, "
+            "feito pela comunidade · "
             f"nível médio das skills: <a style='color:{theme.LIVE}' "
             f"href='https://gamewith.ai/aion2/en/build-stats/la/{r['gw_slug']}'>GameWith</a>.")
         self.render_section()
