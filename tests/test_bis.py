@@ -82,5 +82,11 @@ def test_substatus_por_peca_do_clerigo():
     assert next(s for s in r["gear_slots"] if s["name"] == "Arma")["divine"] == "Soberba de Zikel"
 
 
-def test_classe_sem_lista_por_peca_ainda():
-    assert run("Kumaglad")["gear_slots"] == []
+def test_todas_as_classes_tem_lista_por_peca():
+    for cid, c in DATA["classes"].items():
+        slots = c["gear_slots"]["slots"]
+        assert len(slots) == (14 if cid == "assassin" else 16), cid
+        assert all(len(s["substats"]) == 5 for s in slots), cid
+    anel = next(s for s in run("Kumaglad")["gear_slots"] if s["name"] == "Anéis")
+    assert [x["name"] for x in anel["substats"]][:3] == ["Esmagada Descendente", "Golpe Feroz Dilacerante",
+                                                         "Golpe Feroz da Perdição"]

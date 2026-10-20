@@ -1,0 +1,1354 @@
+
+ATREIA Lens
+Descobrir
+Hub / Início
+Atreia Lens App
+Beta
+Classes
+
+Chanter
+
+Ranger
+
+Cleric
+
+Spirit Master
+
+Gladiator
+
+Sorcerer
+
+Templar
+
+Assassin
+Biblioteca
+Ordem de progressão
+Checklist Semanal
+Guias
+Comunidade
+Banco de dados
+Ferramentas
+Timers
+Gerador de Builds
+Beta
+
+App Atreia Lens
+Companion gratuito para PC
+
+Festival Shugo
+41:55
+
+Fenda do Espaço-Tempo
+2h 41m
+
+Cerco do Artefato
+1d 15h
+Reset diário
+10h 41m
+
+Parceiro online
+Dean
+Apoiar
+475
+online agora
+PT
+/
+EN
+Editar uma cópia
+Info
+Skills
+Arcanas
+Daevanion
+Rotação & Macro
+Equipamentos
+Asas & Títulos
+Panteão
+Genus Insight
+
+Build da comunidade
+Build de Spirit Master
+Spirit Master · por Atreia Lens
+
+PvE
+Late game (final)
+Elyos
+Orbe
+10/10
+partes preenchidas
+Skills
+Skills ativas
+
+Impacto Gélido
+Nível final 15
+Base
+10
+Daevanion
++4
+Arcanas
++1
++50% Multi-Hit on hit
++2% Attack on landing [Earth Tremor] (Up to 5 stacks)
+
+Combustão
+Nível final 20
+Base
+7
+Daevanion
++4
+Arcanas
++7
+Jóias
++2
+Deals up to 12% more damage when less targets are hit
++20% Skill Speed
+Adds [Ashy Call] Chain Skill
+
+Invocação: Espírito do Fogo
+Nível final 15
+Base
+10
+Daevanion
++4
+Arcanas
++1
++20% Fire Spirit Critical Hit damage
+10% chance to activate skill when Fire Spirit lands attack
+
+Invocação: Espírito da Água
+Nível final 15
+Base
+10
+Daevanion
++2
+Arcanas
++3
++10% Water Spirit Attack
+10% chance to activate skill when Water Spirit lands attack
+
+Invocação: Espírito da Terra
+Nível final 12
+Base
+8
+Daevanion
++4
++20% PvE Damage Tolerance and +10 PvP Damage Tolerance to Earth Spirit
+10% chance to activate skill when Earth Spirit lands attack
+
+Ataque Conjunto: Maldição
+Nível final 16
+Base
+7
+Daevanion
++4
+Arcanas
++3
+Jóias
++2
++2s Curse duration
++50% Multi-Hit on hit
+
+Remoção de Impacto
+Nível final 10
+Base
+10
+Restores 20% HP on using [Defiance]
+
+Fusão Elemental
+Nível final 20
+Base
+6
+Daevanion
++4
+Arcanas
++8
+Jóias
++2
+Extra damage after 3s on hit
++10 all Element Boost on hit
+25% chance to regain Four Elements
+
+Domínio do Espaço
+Nível final 13
+Base
+10
+Daevanion
++3
+Extra damage after 3s on hit
++50% Multi-Hit chance on hit
+Stigmas
+
+Invocação: Espírito Ancestral
+Rank 20
+
+Aprimoramento: Bendição do Espírito
+Rank 20
+
+Ataque Conjunto: Corrosão
+Rank 20
+
+Bênção do Fogo Ardente
+Rank 20
+Notas de skills
+Priorize as habilidades com (20) enquanto nivela.
+
+Níveis finais e slots de especialização de cada habilidade, em ordem de prioridade:
+
+Impacto Gélido — nível 16+, especializações 3/4
+Combustão — nível 20, especializações 2/4/5
+Invocação: Espírito do Fogo — nível 16-20, especializações 2/3/5
+Invocação: Espírito da Água — nível 16-20, especializações 2/3/5
+Ataque Conjunto: Maldição — nível 16-20, especializações 1/2/3
+Rajada Contínua — N/A
+Invocação: Espírito da Terra — nível 12-16, especializações 2/3
+Domínio do Espaço — nível 16, especializações 2/3
+Invocação: Espírito do Vento — N/A
+Clamor da Alma — N/A
+Fusão Elemental — nível 20, especializações 2/3/5
+Remoção de Impacto — nível 16, especializações 3/5
+Prioridade de passivas: 1 Golpe Espiritual · 2 Concentração Mental · 3 Unificação Elemental · 4 Revitalização Espiritual
+
+Estigmas: Invocação: Espírito Ancestral · Aprimoramento: Bendição do Espírito · Ataque Conjunto: Corrosão · Bênção do Fogo Ardente. Também bom: Ataque Conjunto: Ofensiva da Perdição, Sucção.
+
+Estatísticas de deus no arcana: Cálice (Vigor) Tempo · Papiro (Vigor) Vida / Destino · Bússola (Mágica) Morte / Liberdade · Sino (Mágica) Destruição · Espelho (Mágica) Ilusão / Sabedoria.
+
+Arcanas
+
+Cálice do Vigor +5
+Cálice
+Tempo [Siel]
++25
+Fusão Elemental
++4
+Combustão
++3
+Golpe Espiritual
++1
+Concentração Mental
++1
+
+Manuscrito do Vigor +5
+Manuscrito
+Vida [Yustiel]
++25
+Fusão Elemental
++4
+Ataque Conjunto: Maldição
++3
+Invocação: Espírito do Fogo
++1
+Impacto Gélido
++1
+
+Bússola da Mana +5
+Bússola
+Morte [Triniel]
++25
+Combustão
++4
+Invocação: Espírito da Água
++3
+
+Sino da Mana +5
+Sino
+Destruição [Zikel]
++25
+Golpe Espiritual
++4
+Unificação Elemental
++3
+Revitalização Espiritual
++1
+
+Espelho da Mana +5
+Espelho
+Sabedoria [Lumiel]
++25
+Concentração Mental
++4
+Daevanion
+400 / 416 pontos usados
+
+Nezekan
+99 pts
+Zikel
+89 pts
+Vaizel
+100 pts
+Triniel
+112 pts
+VELDE4
+ATAAD1
+RESAA1
+2
+RESAA1
+3
+2
+ACECR1
+REDDE4
+ACECR1
+3
+PM1
+DEFAD1
+PM1
+DEFAD1
+RESAA1
+PM1
+2
+DEFAD1
+PV1
+ACECR1
+3
+PV1
+3
+PV1
+2
+PV1
+RESAA1
+DEFAD1
+ATAAD1
+DEFAD1
+PM1
+ATAAD1
+3
+PV1
+PM1
+ATAAD1
+RESAA1
+2
+PM1
+ACECR1
+RESAA1
+3
+DEFAD1
+★
+ATAAD1
+3
+ACECR1
+RESAA1
+PV1
+2
+ACECR1
+DEFAD1
+PV1
+PM1
+3
+DEFAD1
+PV1
+ATAAD1
+DEFAD1
+ATAAD1
+ACECR1
+PM1
+2
+PM1
+3
+PM1
+3
+RESAA1
+PM1
+ATAAD1
+2
+PV1
+ACECR1
+ATAAD1
+PV1
+ATAAD1
+PV1
+3
+RESAA1
+REDDE4
+RESAA1
+2
+3
+ACECR1
+2
+ACECR1
+DEFAD1
+VELDE4
+ativo
+Stats de todos os tabuleiros
+Acerto Crítico
++135
+Acerto de Golpes Múltiplos
++4,5%
+Amplificação de Dano
++3%
+Amplificação de Dano Crítico
++3%
+Ataque Adicional
++87
+Defesa Adicional
++690
+PM
++1.500
+PV
++2.500
+Redução de Tempo de Recarga
++3%
+Resistência a Acerto Crítico
++120
+Resistência a Golpes Múltiplos
++1,5%
+Tolerância a Dano
++3%
+Tolerância a Dano Crítico
++1,5%
+Velocidade de Combate
++3%
+Níveis de skill
+Impacto Gélido
++4 nv
+Combustão
++4 nv
+Clamor da Alma
++1 nv
+Invocação: Espírito do Fogo
++4 nv
+Invocação: Espírito da Água
++2 nv
+Invocação: Espírito do Vento
++4 nv
+Invocação: Espírito da Terra
++4 nv
+Ataque Conjunto: Maldição
++4 nv
+Fusão Elemental
++4 nv
+Domínio do Espaço
++3 nv
+Golpe Espiritual
++4 nv
+Proteção do Espírito
++4 nv
+Advento do Espírito
++4 nv
+Erosão
++4 nv
+Revitalização Espiritual
++4 nv
+Concentração Mental
++4 nv
+Sinergia Espiritual
++4 nv
+Unificação Elemental
++4 nv
+Pacto de Revitalização
++4 nv
+Refluxo Contínuo
++4 nv
+Rotação · macro + setup
+Pressione manualmente as teclas 1-3 (buffs) e então segure o LMB + RMB (macro). Seu Invocação: Espírito do Vento (tecla 4) é meio inútil, principalmente usado para farm de mobs. Você também pode invocar seus pets manualmente alguns segundos antes do pré-pull, então inicie sua rotação. Macro: [ = clique esquerdo, ] = macro no jogo. Teclas: Jogabilidade > Macro = botão direito do mouse; Slot de Habilidade Rápida: Uso Rápido 1 = botão esquerdo do mouse / R; Tecla de Habilidade Especial Separada: DESLIGADO.
+
+Barra de skills
+
+3
+
+
+2
+
+
+
+
+1
+
+
+
+
+
+
+
+
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+Você segura
+Você aperta
+A macro dispara
+Macro no jogo
+Passo 01
+
+Skill
+Invocação: Espírito da Água
+Atraso
+10
+ms
+Passo 02
+
+Skill
+Ataque Conjunto: Maldição
+Atraso
+10
+ms
+Você segura
+11 — Impacto Gélido
+Macro — Invocação: Espírito da Água → Ataque Conjunto: Maldição
+Você aperta
+1 — Bênção do Fogo Ardente / Aprimoramento: Bendição do Espírito
+2 — Ataque Conjunto: Corrosão
+3 — Invocação: Espírito Ancestral
+Essa rotação está funcionando pra você? Uma doação ajuda a manter builds como essa em dia.
+
+Pix (LivePix)
+Ko-fi
+Equipamentos
+Prioridade dos substats
+1
+Mais importante
+2
+3
+4
+5
+Menos importante
+Arma
+
+Item Default +0
+Item craftado
+Substats
+1
+Amplificação de Dano de Arma
++9,64%
+2
+Velocidade de Combate
++12,98%
+3
+Poder
++32
+4
+Exatidão
++32
+5
+Amplificação de Dano
++7,3%
+Também servem
+Acerto de Golpes Múltiplos
+Ataque
+Pedra de Mana
+
+Pedra de Mana Superior
+Amplificação de Dano de Arma
++1%
+Amplificação de Dano Crítico
++1%
+Amplificação de Dano
++1%
+Ataque
++10
+Pedras Divinas
+
+Soberba de Zikel
+Guarda
+
+Item Default +0
+Item craftado
+Substats
+1
+Amplificação de Dano de Arma
++7,73%
+2
+Velocidade de Combate
++10,12%
+3
+Amplificação de Dano
++5,85%
+4
+Poder
++27
+5
+Exatidão
++27
+Também servem
+Acerto de Golpes Múltiplos
+Ataque
+Pedra de Mana
+
+Pedra de Mana Superior
+Amplificação de Dano de Arma
++1%
+Amplificação de Dano Crítico
++1%
+Amplificação de Dano
++1%
+Ataque
++10
+Elmo
+
+Item Default +0
+Item craftado
+Substats
+1
+Cura Recebida
++19,22%
+2
+Golpe Espiritual
++1
+3
+Concentração Mental
++1
+4
+Golpe Potente
++2,2%
+5
+Aumento de Ataque
++2,2%
+Também servem
+Acerto Crítico
+Ataque
+Pedra de Mana
+
+Pedra de Mana Superior
+Amplificação de Dano de Arma
++1%
+Amplificação de Dano Crítico
++1%
+Amplificação de Dano
++1%
+Ataque
++10
+Ombreiras
+
+Item Default +0
+Item craftado
+Substats
+1
+Amplificação de Dano Crítico
++12,84%
+2
+Golpe Espiritual
++1
+3
+Concentração Mental
++1
+4
+Precisão
++43
+5
+Acerto Crítico
++33
+Também servem
+Ataque
+Aumento de Defesa
+Pedra de Mana
+
+Pedra de Mana Superior
+Amplificação de Dano de Arma
++1%
+Amplificação de Dano Crítico
++1%
+Amplificação de Dano
++1%
+Ataque
++10
+Peitoral
+
+Item Default +0
+Item craftado
+Substats
+1
+Amplificação de Dano
++6,58%
+2
+Golpe Espiritual
++1
+3
+Concentração Mental
++1
+4
+Acerto Crítico
++47
+5
+Precisão
++61
+Também servem
+Ataque
+Aumento de Defesa
+Pedra de Mana
+
+Pedra de Mana Superior
+Amplificação de Dano de Arma
++1%
+Amplificação de Dano Crítico
++1%
+Amplificação de Dano
++1%
+Ataque
++10
+Calças
+
+Item Default +0
+Item craftado
+Substats
+1
+Tolerância a Dano
++11,56%
+2
+Golpe Espiritual
++1
+3
+Concentração Mental
++1
+4
+Acerto Perfeito
++5,33%
+5
+Aumento de Ataque
++2,4%
+Também servem
+Acerto Crítico
+Ataque
+Pedra de Mana
+
+Pedra de Mana Superior
+Amplificação de Dano de Arma
++1%
+Amplificação de Dano Crítico
++1%
+Amplificação de Dano
++1%
+Ataque
++10
+Luvas
+
+Item Default +0
+Item craftado
+Substats
+1
+Velocidade de Combate
++7,25%
+2
+Golpe Espiritual
++1
+3
+Concentração Mental
++1
+4
+Acerto Perfeito
++3,42%
+5
+Acerto Crítico
++30
+Também servem
+Ataque
+Aumento de Defesa
+Pedra de Mana
+
+Pedra de Mana Superior
+Amplificação de Dano de Arma
++1%
+Amplificação de Dano Crítico
++1%
+Amplificação de Dano
++1%
+Ataque
++10
+Botas
+
+Item Default +0
+Item craftado
+Substats
+1
+Velocidade de Movimento
++10,28%
+2
+Golpe Espiritual
++1
+3
+Concentração Mental
++1
+4
+Acerto Perfeito
++4,37%
+5
+Acerto Crítico
++37
+Também servem
+Ataque
+Aumento de Defesa
+Pedra de Mana
+
+Pedra de Mana Superior
+Amplificação de Dano de Arma
++1%
+Amplificação de Dano Crítico
++1%
+Amplificação de Dano
++1%
+Ataque
++10
+Capa
+
+Item Default +0
+Item craftado
+Substats
+1
+Golpe Potente
++1,77%
+2
+Aumento de Ataque
++1,77%
+3
+Golpe Espiritual
++1
+4
+Concentração Mental
++1
+5
+Acerto Crítico
++33
+Também servem
+Ataque
+Pedra de Mana
+
+Pedra de Mana Superior
+Amplificação de Dano de Arma
++1%
+Amplificação de Dano Crítico
++1%
+Amplificação de Dano
++1%
+Ataque
++10
+Colar
+
+Item Default +0
+Item craftado
+Substats
+1
+Golpe Espiritual
++1
+2
+Concentração Mental
++1
+3
+Poder
++20
+4
+Exatidão
++20
+5
+Precisão
++70
+Também servem
+Acerto Crítico
+Ataque
+Pedra de Mana
+
+Pedra Vital Superior
+Amplificação de Dano de Arma
++1%
+Amplificação de Dano Crítico
++1%
+Amplificação de Dano
++1%
+Ataque
++10
+Brinco (esq.)
+
+Item Default +0
+Item craftado
+Substats
+1
+Golpe Espiritual
++1
+2
+Concentração Mental
++1
+3
+Poder
++16
+4
+Exatidão
++16
+5
+Precisão
++61
+Também servem
+Acerto Crítico
+Ataque
+Pedra de Mana
+
+Pedra Vital Superior
+Amplificação de Dano de Arma
++1%
+Amplificação de Dano Crítico
++1%
+Amplificação de Dano
++1%
+Ataque
++10
+Brinco (dir.)
+
+Item Default +0
+Item craftado
+Substats
+1
+Golpe Espiritual
++1
+2
+Concentração Mental
++1
+3
+Poder
++16
+4
+Exatidão
++16
+5
+Precisão
++61
+Também servem
+Acerto Crítico
+Ataque
+Pedra de Mana
+
+Pedra Vital Superior
+Amplificação de Dano de Arma
++1%
+Amplificação de Dano Crítico
++1%
+Amplificação de Dano
++1%
+Ataque
++10
+Anel (esq.)
+
+Item Default +0
+Item craftado
+Substats
+1
+Fusão Elemental
++1
+2
+Combustão
++1
+3
+Ataque Conjunto: Maldição
++1
+4
+Poder
++14
+5
+Exatidão
++14
+Também servem
+Invocação: Espírito do Fogo
+Invocação: Espírito da Água
+Ataque
+Pedra de Mana
+
+Pedra Vital Superior
+Amplificação de Dano de Arma
++1%
+Amplificação de Dano Crítico
++1%
+Amplificação de Dano
++1%
+Ataque
++10
+Anel (dir.)
+
+Item Default +0
+Item craftado
+Substats
+1
+Fusão Elemental
++1
+2
+Combustão
++1
+3
+Ataque Conjunto: Maldição
++1
+4
+Poder
++14
+5
+Exatidão
++14
+Também servem
+Invocação: Espírito do Fogo
+Invocação: Espírito da Água
+Ataque
+Pedra de Mana
+
+Pedra Vital Superior
+Amplificação de Dano de Arma
++1%
+Amplificação de Dano Crítico
++1%
+Amplificação de Dano
++1%
+Ataque
++10
+Bracelete (esq.)
+
+Item Default +0
+Item craftado
+Substats
+1
+Sabedoria [Lumiel]
++17
+2
+Destruição [Zikel]
++17
+3
+Tempo [Siel]
++17
+4
+Ilusão [Kaisinel]
++17
+5
+Morte [Triniel]
++17
+Também servem
+Justiça [Nezekan]
+Vida [Yustiel]
+Espaço [Israphel]
+Liberdade [Vaizel]
+Destino [Marchutan]
+Pedra de Mana
+
+Pedra Vital Superior
+Amplificação de Dano de Arma
++1%
+Amplificação de Dano Crítico
++1%
+Amplificação de Dano
++1%
+Ataque
++10
+Bracelete (dir.)
+
+Item Default +0
+Item craftado
+Substats
+1
+Sabedoria [Lumiel]
++17
+2
+Destruição [Zikel]
++17
+3
+Tempo [Siel]
++17
+4
+Ilusão [Kaisinel]
++17
+5
+Morte [Triniel]
++17
+Também servem
+Justiça [Nezekan]
+Vida [Yustiel]
+Espaço [Israphel]
+Liberdade [Vaizel]
+Destino [Marchutan]
+Pedra de Mana
+
+Pedra Vital Superior
+Amplificação de Dano de Arma
++1%
+Amplificação de Dano Crítico
++1%
+Amplificação de Dano
++1%
+Ataque
++10
+Total do equipamento
+Acerto Crítico
++180
+Acerto Perfeito
++13,12%
+Amplificação de Dano
++35,73%
+Amplificação de Dano Crítico
++28,84%
+Amplificação de Dano de Arma
++33,37%
+Ataque
++160
+Aumento de Ataque
++6,37%
+Cura Recebida
++19,22%
+Destruição [Zikel]
++34
+Exatidão
++139
+Golpe Potente
++3,97%
+Ilusão [Kaisinel]
++34
+Morte [Triniel]
++34
+Poder
++139
+Precisão
++296
+Sabedoria [Lumiel]
++34
+Tempo [Siel]
++34
+Tolerância a Dano
++11,56%
+Velocidade de Combate
++30,35%
+Velocidade de Movimento
++10,28%
+Notas de equipamentos
+Teostones: veneno e besta performam melhor no início; mais tarde, todos eles performam de forma semelhante.
+
+Manastones: Amplificação de Dano de Arma ≈ Amplificação de Dano Crítico ▸ Amplificação de Dano ▸ Ataque.
+
+Asas & Títulos
+Asa equipada
+
+Asas do Espírito da FlorestaPrincipal
+Único
+
+Asas de Fragmento Negro
+Único
+
+Asas da Kromede
+Único
+Títulos equipados
+
+Livre das Amarras da RaçaPrincipal
+Ataque
+Acerto Crítico
++68
+Ataque Adicional
++34
+Amplificação de Dano em JvA
++4,5%
+
+Especialista em Teleporte
+Ataque
+Precisão em JvA
++58
+Amplificação de Dano em JvA
++3,1%
+
+Guardião de Verteron
+Ataque
+Penetração
++210
+Amplificação de Dano em JvA
++3%
+
+Santo de EltnenPrincipal
+Defesa
+Defesa Adicional
++300
+Tolerância a Dano
++5%
+Defesa de Acerto Crítico
++350
+
+Em Busca da Luz
+Defesa
+Defesa Adicional
++300
+Defesa em JvA
++350
+Tolerância a Dano de Arma
++5,5%
+
+Do Inferno e de VoltaPrincipal
+Utilidade
+PV
++900
+Vigor
++22.500
+Redução de Tempo de Recarga
++3%
+
+Ai, Não Tenho Nada para Vestir
+Utilidade
+Recuperação Natural de PV
++42
+Velocidade de Combate
++3,5%
+Redução de Tempo de Recarga
++3,5%
+Notas de asas e títulos
+Mais equipados nas builds Global da classe: Asas do Espírito da Floresta · Asas de Fragmento Negro · Asas da Kromede · Asas de Daeva Supremas.
+Melhor para nivelar: Onda Azul, Lutador, Espírito da Floresta, Pesadelo, Asas de Talisra do Vazio, Daeva Final.
+Prioridade de aprimoramento: bônus de Golpe Potente, então Amplificação de Dano de Arma, Amplificação de Dano, Ataque, e Precisão Adicional e Acerto Crítico.
+
+Títulos. Ofensivos: Livre das Amarras da Raça, depois Especialista em Teleporte, depois Guardião de Verteron. Defensivos: Santo de Eltnen, depois Em Busca da Luz. Utilidade: Do Inferno e de Volta, depois Ai, Não Tenho Nada para Vestir.
+
+Panteão
+
+Gartua da Eternidade
+Quadro 1 · Vida 5 · bg_god_wisdom 5 · Destino 5 · Ilusão 5
+
+Gartua Imortal
+Quadro 2 · Vida 5 · bg_god_wisdom 5 · Destino 5 · Ilusão 5
+
+Ludra Abissal (Vinculado)
+Quadro 3 · bg_god_wisdom 5 · Destino 5 · Ilusão 5
+
+Draupnir
+Quadro 4 · Vida 4 · bg_god_wisdom 4 · Ilusão 4
+
+Ilha Aérea de Vakron
+Quadro 5 · Vida 4 · bg_god_wisdom 4 · Ilusão 4
+
+Ansas Divino
+Quadro 6 · Vida 4 · bg_god_wisdom 4 · Ilusão 4
+
+Kasia do Sonho Ilusório
+Quadro 7 · Vida 4 · bg_god_wisdom 4 · Ilusão 4
+
+Krao
+Quadro 8 · bg_god_wisdom 4 · Destino 4 · Ilusão 4
+
+Gruta do Chifre Feroz
+Quadro 9 · bg_god_wisdom 4 · Destino 4 · Ilusão 4
+
+Vigilante Kairah
+Quadro 10 · bg_god_wisdom 4 · Destino 4 · Ilusão 4
+
+K’nash, Arma de Vigilância
+Quadro 11 · bg_god_wisdom 4 · Destino 4 · Ilusão 4
+
+Centurião Demiros
+Quadro 12 · bg_god_wisdom 4 · Destino 4 · Ilusão 4
+
+Bakarma Transcendido (Vinculado)
+Estátua 1 · Morte 12 · Espaço 12 · Liberdade 12
+
+Artefato da Eternidade (Vinculado)
+Estátua 2 · Morte 10 · Liberdade 10
+
+Espelho de Asahr (Vinculado)
+Estátua 3 · Morte 10 · Espaço 10
+
+Kibelisk (Vinculado)
+Estátua 4 · Espaço 10 · Liberdade 10
+
+Aparição de Zikel (Vinculado)
+Colosso · Tempo 45 · Justiça 45 · Destruição 45
+Pontos por divindade
+Destruição
+45
+Tempo
+45
+Justiça
+45
+Ilusão
+51
+Liberdade
+32
+Morte
+32
+Espaço
+32
+Vida
+26
+Destino
+35
+Notas do Panteão
+Colosso: prioridade em Zikel / Kromede (o aparecimento de Zikel está definido).
+Estatuas: prioridade em Liberdade, Morte e Espaço.
+Pinturas: prioridade em Ilusão e Sabedoria, então Vida.
+
+Genus Insight
+Special Insight
+9/9
+Cogni Insight
+9/9
+Fera Insight
+9/9
+Natura Insight
+9/9
+Varian Insight
+9/9
+Slot 1
+Ataque Máx.
++20
+Épico
+Ataque Adicional
++16
+Épico
+Slot 2
+Aumento de PV
++1,6%
+Épico
+Slot 3
+Acerto Crítico
++30
+Épico
+Precisão Adicional
++40
+Épico
+Dano Adicional do Fragmento de Poder
++16
+Épico
+Slot 4
+Golpe Potente
++3%
+Épico
+Slot 5
+Ataque Máx.
++20
+Épico
+Ataque Adicional
++16
+Épico
+Slot 6
+Acerto Crítico
++30
+Épico
+Precisão Adicional
++40
+Épico
+Dano Adicional do Fragmento de Poder
++16
+Épico
+Slot 7
+Tolerância a Dano
++3%
+Épico
+Solidez
++3%
+Épico
+Slot 8
+Aumento de PV
++1,6%
+Épico
+Slot 9
+Acerto Crítico
++30
+Épico
+Precisão Adicional
++40
+Épico
+Dano Adicional do Fragmento de Poder
++16
+Épico
+Notas do Genus Insight
+Linhas 3, 6 e 9: Dano Adicional do Fragmento de Poder apenas se seu limite não for atingido.
+
+Essa build te ajudou? Ajude a mantê-la em dia.
+Todo patch pode mudar as melhores skills, equipamentos e rotação, e acompanhar isso leva tempo. Uma doação paga por isso.
+Doar via Pix (LivePix)
+Doar no Ko-fi
+
+ATREIA Lens
+Plataforma companheira de Atreia • Recursos feitos pela comunidade
+Política de Privacidade
+Configurar cookies
+Doar via Pix (LivePix)
+Doar no Ko-fi
+v0.1.0

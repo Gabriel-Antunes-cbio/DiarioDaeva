@@ -300,7 +300,804 @@
      "Ataque Frontal só se a sua build for frontal."
     ]
    },
-   "gear_slots": null,
+   "gear_slots": {
+    "slots": [
+     {
+      "slot": "Arma",
+      "substats": [
+       {
+        "name": "Amplificação de Dano de Arma",
+        "ref": "+9,64%"
+       },
+       {
+        "name": "Velocidade de Combate",
+        "ref": "+12,98%"
+       },
+       {
+        "name": "Poder",
+        "ref": "+32"
+       },
+       {
+        "name": "Exatidão",
+        "ref": "+32"
+       },
+       {
+        "name": "Amplificação de Dano",
+        "ref": "+7,3%"
+       }
+      ],
+      "also": [
+       "Acerto de Golpes Múltiplos",
+       "Ataque"
+      ],
+      "stone": "Pedra de Mana Superior",
+      "stone_lines": [
+       {
+        "name": "Amplificação de Dano de Ataque Frontal",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano de Arma",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano Crítico",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano",
+        "ref": "+1%"
+       }
+      ],
+      "divine": "Soberba de Zikel"
+     },
+     {
+      "slot": "Guarda",
+      "substats": [
+       {
+        "name": "Amplificação de Dano de Arma",
+        "ref": "+7,73%"
+       },
+       {
+        "name": "Velocidade de Combate",
+        "ref": "+10,12%"
+       },
+       {
+        "name": "Amplificação de Dano",
+        "ref": "+5,85%"
+       },
+       {
+        "name": "Poder",
+        "ref": "+27"
+       },
+       {
+        "name": "Exatidão",
+        "ref": "+27"
+       }
+      ],
+      "also": [
+       "Acerto de Golpes Múltiplos",
+       "Ataque"
+      ],
+      "stone": "Pedra de Mana Superior",
+      "stone_lines": [
+       {
+        "name": "Amplificação de Dano de Ataque Frontal",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano de Arma",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano Crítico",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano",
+        "ref": "+1%"
+       }
+      ],
+      "divine": null
+     },
+     {
+      "slot": "Elmo",
+      "substats": [
+       {
+        "name": "Cura Recebida",
+        "ref": "+19,22%"
+       },
+       {
+        "name": "Acerto de Impacto",
+        "ref": "+1"
+       },
+       {
+        "name": "Preparar Ataque",
+        "ref": "+1"
+       },
+       {
+        "name": "Golpe Potente",
+        "ref": "+2,2%"
+       },
+       {
+        "name": "Aumento de Ataque",
+        "ref": "+2,2%"
+       }
+      ],
+      "also": [
+       "Acerto Crítico",
+       "Ataque"
+      ],
+      "stone": "Pedra de Mana Superior",
+      "stone_lines": [
+       {
+        "name": "Amplificação de Dano de Ataque Frontal",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano de Arma",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano Crítico",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano",
+        "ref": "+1%"
+       }
+      ],
+      "divine": null
+     },
+     {
+      "slot": "Ombreiras",
+      "substats": [
+       {
+        "name": "Amplificação de Dano Crítico",
+        "ref": "+12,84%"
+       },
+       {
+        "name": "Acerto de Impacto",
+        "ref": "+1"
+       },
+       {
+        "name": "Preparar Ataque",
+        "ref": "+1"
+       },
+       {
+        "name": "Precisão",
+        "ref": "+43"
+       },
+       {
+        "name": "Acerto Crítico",
+        "ref": "+33"
+       }
+      ],
+      "also": [
+       "Ataque",
+       "Aumento de Defesa"
+      ],
+      "stone": "Pedra de Mana Superior",
+      "stone_lines": [
+       {
+        "name": "Amplificação de Dano de Ataque Frontal",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano de Arma",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano Crítico",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano",
+        "ref": "+1%"
+       }
+      ],
+      "divine": null
+     },
+     {
+      "slot": "Peitoral",
+      "substats": [
+       {
+        "name": "Amplificação de Dano",
+        "ref": "+6,58%"
+       },
+       {
+        "name": "Acerto de Impacto",
+        "ref": "+1"
+       },
+       {
+        "name": "Preparar Ataque",
+        "ref": "+1"
+       },
+       {
+        "name": "Acerto Crítico",
+        "ref": "+47"
+       },
+       {
+        "name": "Precisão",
+        "ref": "+61"
+       }
+      ],
+      "also": [
+       "Ataque",
+       "Aumento de Defesa"
+      ],
+      "stone": "Pedra de Mana Superior",
+      "stone_lines": [
+       {
+        "name": "Amplificação de Dano de Ataque Frontal",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano de Arma",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano Crítico",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano",
+        "ref": "+1%"
+       }
+      ],
+      "divine": null
+     },
+     {
+      "slot": "Calças",
+      "substats": [
+       {
+        "name": "Tolerância a Dano",
+        "ref": "+11,56%"
+       },
+       {
+        "name": "Acerto de Impacto",
+        "ref": "+1"
+       },
+       {
+        "name": "Preparar Ataque",
+        "ref": "+1"
+       },
+       {
+        "name": "Acerto Perfeito",
+        "ref": "+5,33%"
+       },
+       {
+        "name": "Aumento de Ataque",
+        "ref": "+2,4%"
+       }
+      ],
+      "also": [
+       "Acerto Crítico",
+       "Ataque"
+      ],
+      "stone": "Pedra de Mana Superior",
+      "stone_lines": [
+       {
+        "name": "Amplificação de Dano de Ataque Frontal",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano de Arma",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano Crítico",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano",
+        "ref": "+1%"
+       }
+      ],
+      "divine": null
+     },
+     {
+      "slot": "Luvas",
+      "substats": [
+       {
+        "name": "Velocidade de Combate",
+        "ref": "+7,25%"
+       },
+       {
+        "name": "Acerto de Impacto",
+        "ref": "+1"
+       },
+       {
+        "name": "Preparar Ataque",
+        "ref": "+1"
+       },
+       {
+        "name": "Acerto Perfeito",
+        "ref": "+3,42%"
+       },
+       {
+        "name": "Acerto Crítico",
+        "ref": "+30"
+       }
+      ],
+      "also": [
+       "Ataque",
+       "Aumento de Defesa"
+      ],
+      "stone": "Pedra de Mana Superior",
+      "stone_lines": [
+       {
+        "name": "Amplificação de Dano de Ataque Frontal",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano de Arma",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano Crítico",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano",
+        "ref": "+1%"
+       }
+      ],
+      "divine": null
+     },
+     {
+      "slot": "Botas",
+      "substats": [
+       {
+        "name": "Velocidade de Movimento",
+        "ref": "+10,28%"
+       },
+       {
+        "name": "Acerto de Impacto",
+        "ref": "+1"
+       },
+       {
+        "name": "Preparar Ataque",
+        "ref": "+1"
+       },
+       {
+        "name": "Acerto Perfeito",
+        "ref": "+4,37%"
+       },
+       {
+        "name": "Acerto Crítico",
+        "ref": "+37"
+       }
+      ],
+      "also": [
+       "Ataque",
+       "Aumento de Defesa"
+      ],
+      "stone": "Pedra de Mana Superior",
+      "stone_lines": [
+       {
+        "name": "Amplificação de Dano de Ataque Frontal",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano de Arma",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano Crítico",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano",
+        "ref": "+1%"
+       }
+      ],
+      "divine": null
+     },
+     {
+      "slot": "Capa",
+      "substats": [
+       {
+        "name": "Acerto de Impacto",
+        "ref": "+1"
+       },
+       {
+        "name": "Preparar Ataque",
+        "ref": "+1"
+       },
+       {
+        "name": "Golpe Potente",
+        "ref": "+1,77%"
+       },
+       {
+        "name": "Aumento de Ataque",
+        "ref": "+1,77%"
+       },
+       {
+        "name": "Acerto Crítico",
+        "ref": "+33"
+       }
+      ],
+      "also": [
+       "Ataque"
+      ],
+      "stone": "Pedra de Mana Superior",
+      "stone_lines": [
+       {
+        "name": "Amplificação de Dano de Ataque Frontal",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano de Arma",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano Crítico",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano",
+        "ref": "+1%"
+       }
+      ],
+      "divine": null
+     },
+     {
+      "slot": "Colar",
+      "substats": [
+       {
+        "name": "Acerto de Impacto",
+        "ref": "+1"
+       },
+       {
+        "name": "Preparar Ataque",
+        "ref": "+1"
+       },
+       {
+        "name": "Contra-ataque Hábil",
+        "ref": "+1"
+       },
+       {
+        "name": "Poder",
+        "ref": "+20"
+       },
+       {
+        "name": "Exatidão",
+        "ref": "+20"
+       }
+      ],
+      "also": [
+       "Precisão",
+       "Acerto Crítico",
+       "Ataque"
+      ],
+      "stone": "Pedra Vital Superior",
+      "stone_lines": [
+       {
+        "name": "Amplificação de Dano de Ataque Frontal",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano de Arma",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano Crítico",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano",
+        "ref": "+1%"
+       }
+      ],
+      "divine": null
+     },
+     {
+      "slot": "Brinco (esq.)",
+      "substats": [
+       {
+        "name": "Acerto de Impacto",
+        "ref": "+1"
+       },
+       {
+        "name": "Preparar Ataque",
+        "ref": "+1"
+       },
+       {
+        "name": "Contra-ataque Hábil",
+        "ref": "+1"
+       },
+       {
+        "name": "Poder",
+        "ref": "+16"
+       },
+       {
+        "name": "Exatidão",
+        "ref": "+16"
+       }
+      ],
+      "also": [
+       "Precisão",
+       "Acerto Crítico",
+       "Ataque"
+      ],
+      "stone": "Pedra Vital Superior",
+      "stone_lines": [
+       {
+        "name": "Amplificação de Dano de Ataque Frontal",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano de Arma",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano Crítico",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano",
+        "ref": "+1%"
+       }
+      ],
+      "divine": null
+     },
+     {
+      "slot": "Brinco (dir.)",
+      "substats": [
+       {
+        "name": "Acerto de Impacto",
+        "ref": "+1"
+       },
+       {
+        "name": "Preparar Ataque",
+        "ref": "+1"
+       },
+       {
+        "name": "Contra-ataque Hábil",
+        "ref": "+1"
+       },
+       {
+        "name": "Poder",
+        "ref": "+16"
+       },
+       {
+        "name": "Exatidão",
+        "ref": "+16"
+       }
+      ],
+      "also": [
+       "Precisão",
+       "Acerto Crítico",
+       "Ataque"
+      ],
+      "stone": "Pedra Vital Superior",
+      "stone_lines": [
+       {
+        "name": "Amplificação de Dano de Ataque Frontal",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano de Arma",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano Crítico",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano",
+        "ref": "+1%"
+       }
+      ],
+      "divine": null
+     },
+     {
+      "slot": "Anel (esq.)",
+      "substats": [
+       {
+        "name": "Esmagada Descendente",
+        "ref": "+1"
+       },
+       {
+        "name": "Golpe Feroz Dilacerante",
+        "ref": "+1"
+       },
+       {
+        "name": "Golpe Feroz da Perdição",
+        "ref": "+1"
+       },
+       {
+        "name": "Poder",
+        "ref": "+14"
+       },
+       {
+        "name": "Exatidão",
+        "ref": "+14"
+       }
+      ],
+      "also": [
+       "Ataque"
+      ],
+      "stone": "Pedra Vital Superior",
+      "stone_lines": [
+       {
+        "name": "Amplificação de Dano de Ataque Frontal",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano de Arma",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano Crítico",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano",
+        "ref": "+1%"
+       }
+      ],
+      "divine": null
+     },
+     {
+      "slot": "Anel (dir.)",
+      "substats": [
+       {
+        "name": "Esmagada Descendente",
+        "ref": "+1"
+       },
+       {
+        "name": "Golpe Feroz Dilacerante",
+        "ref": "+1"
+       },
+       {
+        "name": "Golpe Feroz da Perdição",
+        "ref": "+1"
+       },
+       {
+        "name": "Poder",
+        "ref": "+14"
+       },
+       {
+        "name": "Exatidão",
+        "ref": "+14"
+       }
+      ],
+      "also": [
+       "Ataque"
+      ],
+      "stone": "Pedra Vital Superior",
+      "stone_lines": [
+       {
+        "name": "Amplificação de Dano de Ataque Frontal",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano de Arma",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano Crítico",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano",
+        "ref": "+1%"
+       }
+      ],
+      "divine": null
+     },
+     {
+      "slot": "Bracelete (esq.)",
+      "substats": [
+       {
+        "name": "Sabedoria [Lumiel]",
+        "ref": "+17"
+       },
+       {
+        "name": "Destruição [Zikel]",
+        "ref": "+17"
+       },
+       {
+        "name": "Tempo [Siel]",
+        "ref": "+17"
+       },
+       {
+        "name": "Ilusão [Kaisinel]",
+        "ref": "+17"
+       },
+       {
+        "name": "Morte [Triniel]",
+        "ref": "+17"
+       }
+      ],
+      "also": [
+       "Justiça [Nezekan]",
+       "Vida [Yustiel]",
+       "Espaço [Israphel]",
+       "Liberdade [Vaizel]",
+       "Destino [Marchutan]"
+      ],
+      "stone": "Pedra Vital Superior",
+      "stone_lines": [
+       {
+        "name": "Amplificação de Dano de Ataque Frontal",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano de Arma",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano Crítico",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano",
+        "ref": "+1%"
+       }
+      ],
+      "divine": null
+     },
+     {
+      "slot": "Bracelete (dir.)",
+      "substats": [
+       {
+        "name": "Sabedoria [Lumiel]",
+        "ref": "+17"
+       },
+       {
+        "name": "Destruição [Zikel]",
+        "ref": "+17"
+       },
+       {
+        "name": "Tempo [Siel]",
+        "ref": "+17"
+       },
+       {
+        "name": "Ilusão [Kaisinel]",
+        "ref": "+17"
+       },
+       {
+        "name": "Morte [Triniel]",
+        "ref": "+17"
+       }
+      ],
+      "also": [
+       "Justiça [Nezekan]",
+       "Vida [Yustiel]",
+       "Espaço [Israphel]",
+       "Liberdade [Vaizel]",
+       "Destino [Marchutan]"
+      ],
+      "stone": "Pedra Vital Superior",
+      "stone_lines": [
+       {
+        "name": "Amplificação de Dano de Ataque Frontal",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano de Arma",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano Crítico",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano",
+        "ref": "+1%"
+       }
+      ],
+      "divine": null
+     }
+    ],
+    "notes": [
+     "Teostones: veneno e besta performam melhor no início; mais tarde, todos eles performam de forma semelhante.",
+     "Manastones: Amplificação de Dano de Ataque Frontal (se build frontal) ▸ Amplificação de Dano de Arma ≈ Amplificação de Dano Crítico ▸ Amplificação de Dano ▸ Ataque."
+    ]
+   },
    "skill_stats": [
     {
      "name": "Rending Blow",
@@ -794,7 +1591,808 @@
     ],
     "notes": []
    },
-   "gear_slots": null,
+   "gear_slots": {
+    "slots": [
+     {
+      "slot": "Arma",
+      "substats": [
+       {
+        "name": "Amplificação de Dano de Arma",
+        "ref": "+9,64%"
+       },
+       {
+        "name": "Velocidade de Combate",
+        "ref": "+12,98%"
+       },
+       {
+        "name": "Poder",
+        "ref": "+32"
+       },
+       {
+        "name": "Exatidão",
+        "ref": "+32"
+       },
+       {
+        "name": "Amplificação de Dano",
+        "ref": "+7,3%"
+       }
+      ],
+      "also": [
+       "Acerto de Golpes Múltiplos",
+       "Ataque"
+      ],
+      "stone": "Pedra de Mana Superior",
+      "stone_lines": [
+       {
+        "name": "Amplificação de Dano de Ataque Frontal",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano de Arma",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano Crítico",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano",
+        "ref": "+1%"
+       }
+      ],
+      "divine": "Soberba de Zikel"
+     },
+     {
+      "slot": "Guarda",
+      "substats": [
+       {
+        "name": "Amplificação de Dano de Arma",
+        "ref": "+7,73%"
+       },
+       {
+        "name": "Velocidade de Combate",
+        "ref": "+10,12%"
+       },
+       {
+        "name": "Amplificação de Dano",
+        "ref": "+5,85%"
+       },
+       {
+        "name": "Poder",
+        "ref": "+27"
+       },
+       {
+        "name": "Exatidão",
+        "ref": "+27"
+       }
+      ],
+      "also": [
+       "Acerto de Golpes Múltiplos",
+       "Ataque"
+      ],
+      "stone": "Pedra de Mana Superior",
+      "stone_lines": [
+       {
+        "name": "Amplificação de Dano de Ataque Frontal",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano de Arma",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano Crítico",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano",
+        "ref": "+1%"
+       }
+      ],
+      "divine": null
+     },
+     {
+      "slot": "Elmo",
+      "substats": [
+       {
+        "name": "Cura Recebida",
+        "ref": "+19,22%"
+       },
+       {
+        "name": "Exaltação",
+        "ref": "+1"
+       },
+       {
+        "name": "Acerto de Impacto",
+        "ref": "+1"
+       },
+       {
+        "name": "Golpe Potente",
+        "ref": "+2,2%"
+       },
+       {
+        "name": "Aumento de Ataque",
+        "ref": "+2,2%"
+       }
+      ],
+      "also": [
+       "Acerto Crítico",
+       "Ataque"
+      ],
+      "stone": "Pedra de Mana Superior",
+      "stone_lines": [
+       {
+        "name": "Amplificação de Dano de Ataque Frontal",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano de Arma",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano Crítico",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano",
+        "ref": "+1%"
+       }
+      ],
+      "divine": null
+     },
+     {
+      "slot": "Ombreiras",
+      "substats": [
+       {
+        "name": "Amplificação de Dano Crítico",
+        "ref": "+12,84%"
+       },
+       {
+        "name": "Exaltação",
+        "ref": "+1"
+       },
+       {
+        "name": "Acerto de Impacto",
+        "ref": "+1"
+       },
+       {
+        "name": "Precisão",
+        "ref": "+43"
+       },
+       {
+        "name": "Acerto Crítico",
+        "ref": "+33"
+       }
+      ],
+      "also": [
+       "Ataque",
+       "Aumento de Defesa"
+      ],
+      "stone": "Pedra de Mana Superior",
+      "stone_lines": [
+       {
+        "name": "Amplificação de Dano de Ataque Frontal",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano de Arma",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano Crítico",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano",
+        "ref": "+1%"
+       }
+      ],
+      "divine": null
+     },
+     {
+      "slot": "Peitoral",
+      "substats": [
+       {
+        "name": "Amplificação de Dano",
+        "ref": "+6,58%"
+       },
+       {
+        "name": "Exaltação",
+        "ref": "+1"
+       },
+       {
+        "name": "Acerto de Impacto",
+        "ref": "+1"
+       },
+       {
+        "name": "Acerto Crítico",
+        "ref": "+47"
+       },
+       {
+        "name": "Precisão",
+        "ref": "+61"
+       }
+      ],
+      "also": [
+       "Ataque",
+       "Aumento de Defesa"
+      ],
+      "stone": "Pedra de Mana Superior",
+      "stone_lines": [
+       {
+        "name": "Amplificação de Dano de Ataque Frontal",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano de Arma",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano Crítico",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano",
+        "ref": "+1%"
+       }
+      ],
+      "divine": null
+     },
+     {
+      "slot": "Calças",
+      "substats": [
+       {
+        "name": "Tolerância a Dano",
+        "ref": "+11,56%"
+       },
+       {
+        "name": "Exaltação",
+        "ref": "+1"
+       },
+       {
+        "name": "Acerto de Impacto",
+        "ref": "+1"
+       },
+       {
+        "name": "Acerto Perfeito",
+        "ref": "+5,33%"
+       },
+       {
+        "name": "Aumento de Ataque",
+        "ref": "+2,4%"
+       }
+      ],
+      "also": [
+       "Acerto Crítico",
+       "Ataque"
+      ],
+      "stone": "Pedra de Mana Superior",
+      "stone_lines": [
+       {
+        "name": "Amplificação de Dano de Ataque Frontal",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano de Arma",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano Crítico",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano",
+        "ref": "+1%"
+       }
+      ],
+      "divine": null
+     },
+     {
+      "slot": "Luvas",
+      "substats": [
+       {
+        "name": "Velocidade de Combate",
+        "ref": "+7,25%"
+       },
+       {
+        "name": "Exaltação",
+        "ref": "+1"
+       },
+       {
+        "name": "Acerto de Impacto",
+        "ref": "+1"
+       },
+       {
+        "name": "Acerto Perfeito",
+        "ref": "+3,42%"
+       },
+       {
+        "name": "Acerto Crítico",
+        "ref": "+30"
+       }
+      ],
+      "also": [
+       "Ataque",
+       "Aumento de Defesa"
+      ],
+      "stone": "Pedra de Mana Superior",
+      "stone_lines": [
+       {
+        "name": "Amplificação de Dano de Ataque Frontal",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano de Arma",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano Crítico",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano",
+        "ref": "+1%"
+       }
+      ],
+      "divine": null
+     },
+     {
+      "slot": "Botas",
+      "substats": [
+       {
+        "name": "Velocidade de Movimento",
+        "ref": "+10,28%"
+       },
+       {
+        "name": "Exaltação",
+        "ref": "+1"
+       },
+       {
+        "name": "Acerto de Impacto",
+        "ref": "+1"
+       },
+       {
+        "name": "Acerto Perfeito",
+        "ref": "+4,37%"
+       },
+       {
+        "name": "Acerto Crítico",
+        "ref": "+37"
+       }
+      ],
+      "also": [
+       "Ataque",
+       "Aumento de Defesa"
+      ],
+      "stone": "Pedra de Mana Superior",
+      "stone_lines": [
+       {
+        "name": "Amplificação de Dano de Ataque Frontal",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano de Arma",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano Crítico",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano",
+        "ref": "+1%"
+       }
+      ],
+      "divine": null
+     },
+     {
+      "slot": "Capa",
+      "substats": [
+       {
+        "name": "Exaltação",
+        "ref": "+1"
+       },
+       {
+        "name": "Acerto de Impacto",
+        "ref": "+1"
+       },
+       {
+        "name": "Golpe Potente",
+        "ref": "+1,77%"
+       },
+       {
+        "name": "Aumento de Ataque",
+        "ref": "+1,77%"
+       },
+       {
+        "name": "Acerto Crítico",
+        "ref": "+33"
+       }
+      ],
+      "also": [
+       "Ataque"
+      ],
+      "stone": "Pedra de Mana Superior",
+      "stone_lines": [
+       {
+        "name": "Amplificação de Dano de Ataque Frontal",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano de Arma",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano Crítico",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano",
+        "ref": "+1%"
+       }
+      ],
+      "divine": null
+     },
+     {
+      "slot": "Colar",
+      "substats": [
+       {
+        "name": "Exaltação",
+        "ref": "+1"
+       },
+       {
+        "name": "Acerto de Impacto",
+        "ref": "+1"
+       },
+       {
+        "name": "Rugido do Insulto",
+        "ref": "+1"
+       },
+       {
+        "name": "Poder",
+        "ref": "+20"
+       },
+       {
+        "name": "Exatidão",
+        "ref": "+20"
+       }
+      ],
+      "also": [
+       "Precisão",
+       "Acerto Crítico",
+       "Ataque"
+      ],
+      "stone": "Pedra Vital Superior",
+      "stone_lines": [
+       {
+        "name": "Amplificação de Dano de Ataque Frontal",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano de Arma",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano Crítico",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano",
+        "ref": "+1%"
+       }
+      ],
+      "divine": null
+     },
+     {
+      "slot": "Brinco (esq.)",
+      "substats": [
+       {
+        "name": "Exaltação",
+        "ref": "+1"
+       },
+       {
+        "name": "Acerto de Impacto",
+        "ref": "+1"
+       },
+       {
+        "name": "Rugido do Insulto",
+        "ref": "+1"
+       },
+       {
+        "name": "Poder",
+        "ref": "+16"
+       },
+       {
+        "name": "Exatidão",
+        "ref": "+16"
+       }
+      ],
+      "also": [
+       "Precisão",
+       "Acerto Crítico",
+       "Ataque"
+      ],
+      "stone": "Pedra Vital Superior",
+      "stone_lines": [
+       {
+        "name": "Amplificação de Dano de Ataque Frontal",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano de Arma",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano Crítico",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano",
+        "ref": "+1%"
+       }
+      ],
+      "divine": null
+     },
+     {
+      "slot": "Brinco (dir.)",
+      "substats": [
+       {
+        "name": "Exaltação",
+        "ref": "+1"
+       },
+       {
+        "name": "Acerto de Impacto",
+        "ref": "+1"
+       },
+       {
+        "name": "Rugido do Insulto",
+        "ref": "+1"
+       },
+       {
+        "name": "Poder",
+        "ref": "+16"
+       },
+       {
+        "name": "Exatidão",
+        "ref": "+16"
+       }
+      ],
+      "also": [
+       "Precisão",
+       "Acerto Crítico",
+       "Ataque"
+      ],
+      "stone": "Pedra Vital Superior",
+      "stone_lines": [
+       {
+        "name": "Amplificação de Dano de Ataque Frontal",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano de Arma",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano Crítico",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano",
+        "ref": "+1%"
+       }
+      ],
+      "divine": null
+     },
+     {
+      "slot": "Anel (esq.)",
+      "substats": [
+       {
+        "name": "Golpe Furioso",
+        "ref": "+1"
+       },
+       {
+        "name": "Punição",
+        "ref": "+1"
+       },
+       {
+        "name": "Julgamento",
+        "ref": "+1"
+       },
+       {
+        "name": "Poder",
+        "ref": "+14"
+       },
+       {
+        "name": "Exatidão",
+        "ref": "+14"
+       }
+      ],
+      "also": [
+       "Agressão Contínua",
+       "Golpe do Amparo",
+       "Ataque"
+      ],
+      "stone": "Pedra Vital Superior",
+      "stone_lines": [
+       {
+        "name": "Amplificação de Dano de Ataque Frontal",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano de Arma",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano Crítico",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano",
+        "ref": "+1%"
+       }
+      ],
+      "divine": null
+     },
+     {
+      "slot": "Anel (dir.)",
+      "substats": [
+       {
+        "name": "Golpe Furioso",
+        "ref": "+1"
+       },
+       {
+        "name": "Punição",
+        "ref": "+1"
+       },
+       {
+        "name": "Julgamento",
+        "ref": "+1"
+       },
+       {
+        "name": "Poder",
+        "ref": "+14"
+       },
+       {
+        "name": "Exatidão",
+        "ref": "+14"
+       }
+      ],
+      "also": [
+       "Agressão Contínua",
+       "Golpe do Amparo",
+       "Ataque"
+      ],
+      "stone": "Pedra Vital Superior",
+      "stone_lines": [
+       {
+        "name": "Amplificação de Dano de Ataque Frontal",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano de Arma",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano Crítico",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano",
+        "ref": "+1%"
+       }
+      ],
+      "divine": null
+     },
+     {
+      "slot": "Bracelete (esq.)",
+      "substats": [
+       {
+        "name": "Sabedoria [Lumiel]",
+        "ref": "+17"
+       },
+       {
+        "name": "Destruição [Zikel]",
+        "ref": "+17"
+       },
+       {
+        "name": "Tempo [Siel]",
+        "ref": "+17"
+       },
+       {
+        "name": "Ilusão [Kaisinel]",
+        "ref": "+17"
+       },
+       {
+        "name": "Morte [Triniel]",
+        "ref": "+17"
+       }
+      ],
+      "also": [
+       "Justiça [Nezekan]",
+       "Vida [Yustiel]",
+       "Espaço [Israphel]",
+       "Liberdade [Vaizel]",
+       "Destino [Marchutan]"
+      ],
+      "stone": "Pedra Vital Superior",
+      "stone_lines": [
+       {
+        "name": "Amplificação de Dano de Ataque Frontal",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano de Arma",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano Crítico",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano",
+        "ref": "+1%"
+       }
+      ],
+      "divine": null
+     },
+     {
+      "slot": "Bracelete (dir.)",
+      "substats": [
+       {
+        "name": "Sabedoria [Lumiel]",
+        "ref": "+17"
+       },
+       {
+        "name": "Destruição [Zikel]",
+        "ref": "+17"
+       },
+       {
+        "name": "Tempo [Siel]",
+        "ref": "+17"
+       },
+       {
+        "name": "Ilusão [Kaisinel]",
+        "ref": "+17"
+       },
+       {
+        "name": "Morte [Triniel]",
+        "ref": "+17"
+       }
+      ],
+      "also": [
+       "Justiça [Nezekan]",
+       "Vida [Yustiel]",
+       "Espaço [Israphel]",
+       "Liberdade [Vaizel]",
+       "Destino [Marchutan]"
+      ],
+      "stone": "Pedra Vital Superior",
+      "stone_lines": [
+       {
+        "name": "Amplificação de Dano de Ataque Frontal",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano de Arma",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano Crítico",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano",
+        "ref": "+1%"
+       }
+      ],
+      "divine": null
+     }
+    ],
+    "notes": [
+     "Teostones: veneno e besta performam melhor no início; depois todos eles performam de forma semelhante.",
+     "Manastones: Amplificação de Dano de Ataque Frontal ▸ Amplificação de Dano de Arma ≈ Amplificação de Dano Crítico ▸ Amplificação de Dano ▸ Ataque."
+    ]
+   },
    "skill_stats": [
     {
      "name": "Judgment",
@@ -1246,7 +2844,702 @@
      "Mais Golpe Potente: comece pela Vinculação da Alma do elmo e da capa."
     ]
    },
-   "gear_slots": null,
+   "gear_slots": {
+    "slots": [
+     {
+      "slot": "Arma",
+      "substats": [
+       {
+        "name": "Velocidade de Combate",
+        "ref": "+12,98%"
+       },
+       {
+        "name": "Poder",
+        "ref": "+32"
+       },
+       {
+        "name": "Amplificação de Dano de Arma",
+        "ref": "+9,64%"
+       },
+       {
+        "name": "Amplificação de Dano",
+        "ref": "+7,3%"
+       },
+       {
+        "name": "Acerto de Golpes Múltiplos",
+        "ref": "+9,64%"
+       }
+      ],
+      "also": [
+       "Exatidão",
+       "Ataque",
+       "Acerto Crítico"
+      ],
+      "stone": "Pedra de Mana Superior",
+      "stone_lines": [
+       {
+        "name": "Amplificação de Dano da Retaguarda",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano de Arma",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano Crítico",
+        "ref": "+1%"
+       },
+       {
+        "name": "Ataque",
+        "ref": "+10"
+       }
+      ],
+      "divine": null
+     },
+     {
+      "slot": "Guarda",
+      "substats": [
+       {
+        "name": "Velocidade de Combate",
+        "ref": "+10,12%"
+       },
+       {
+        "name": "Poder",
+        "ref": "+27"
+       },
+       {
+        "name": "Amplificação de Dano de Arma",
+        "ref": "+7,73%"
+       },
+       {
+        "name": "Amplificação de Dano",
+        "ref": "+5,85%"
+       },
+       {
+        "name": "Acerto de Golpes Múltiplos",
+        "ref": "+7,73%"
+       }
+      ],
+      "also": [
+       "Exatidão",
+       "Ataque",
+       "Acerto Crítico"
+      ],
+      "stone": "Pedra de Mana Superior",
+      "stone_lines": [
+       {
+        "name": "Amplificação de Dano da Retaguarda",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano de Arma",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano Crítico",
+        "ref": "+1%"
+       },
+       {
+        "name": "Ataque",
+        "ref": "+10"
+       }
+      ],
+      "divine": null
+     },
+     {
+      "slot": "Elmo",
+      "substats": [
+       {
+        "name": "Aumento de Ataque",
+        "ref": "+2,2%"
+       },
+       {
+        "name": "Ataque",
+        "ref": "+29"
+       },
+       {
+        "name": "Golpe Potente pela Retaguarda",
+        "ref": "+1"
+       },
+       {
+        "name": "Postura de Ataque Súbito",
+        "ref": "+1"
+       },
+       {
+        "name": "Acerto de Impacto",
+        "ref": "+1"
+       }
+      ],
+      "also": [
+       "Exploração de Fraqueza"
+      ],
+      "stone": "Pedra de Mana Superior",
+      "stone_lines": [
+       {
+        "name": "Amplificação de Dano da Retaguarda",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano de Arma",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano Crítico",
+        "ref": "+1%"
+       },
+       {
+        "name": "Ataque",
+        "ref": "+10"
+       }
+      ],
+      "divine": null
+     },
+     {
+      "slot": "Ombreiras",
+      "substats": [
+       {
+        "name": "Amplificação de Dano Crítico",
+        "ref": "+12,84%"
+       },
+       {
+        "name": "Ataque",
+        "ref": "+24"
+       },
+       {
+        "name": "Golpe Potente pela Retaguarda",
+        "ref": "+1"
+       },
+       {
+        "name": "Postura de Ataque Súbito",
+        "ref": "+1"
+       },
+       {
+        "name": "Acerto de Impacto",
+        "ref": "+1"
+       }
+      ],
+      "also": [
+       "Exploração de Fraqueza"
+      ],
+      "stone": "Pedra de Mana Superior",
+      "stone_lines": [
+       {
+        "name": "Amplificação de Dano da Retaguarda",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano de Arma",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano Crítico",
+        "ref": "+1%"
+       },
+       {
+        "name": "Ataque",
+        "ref": "+10"
+       }
+      ],
+      "divine": null
+     },
+     {
+      "slot": "Peitoral",
+      "substats": [
+       {
+        "name": "Amplificação de Dano",
+        "ref": "+6,58%"
+       },
+       {
+        "name": "Ataque",
+        "ref": "+33"
+       },
+       {
+        "name": "Golpe Potente pela Retaguarda",
+        "ref": "+1"
+       },
+       {
+        "name": "Postura de Ataque Súbito",
+        "ref": "+1"
+       },
+       {
+        "name": "Acerto de Impacto",
+        "ref": "+1"
+       }
+      ],
+      "also": [
+       "Exploração de Fraqueza"
+      ],
+      "stone": "Pedra de Mana Superior",
+      "stone_lines": [
+       {
+        "name": "Amplificação de Dano da Retaguarda",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano de Arma",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano Crítico",
+        "ref": "+1%"
+       },
+       {
+        "name": "Ataque",
+        "ref": "+10"
+       }
+      ],
+      "divine": null
+     },
+     {
+      "slot": "Calças",
+      "substats": [
+       {
+        "name": "Tolerância a Dano",
+        "ref": "+11,56%"
+       },
+       {
+        "name": "Aumento de Ataque",
+        "ref": "+2,4%"
+       },
+       {
+        "name": "Ataque",
+        "ref": "+31"
+       },
+       {
+        "name": "Golpe Potente pela Retaguarda",
+        "ref": "+1"
+       },
+       {
+        "name": "Postura de Ataque Súbito",
+        "ref": "+1"
+       }
+      ],
+      "also": [
+       "Acerto de Impacto",
+       "Exploração de Fraqueza"
+      ],
+      "stone": "Pedra de Mana Superior",
+      "stone_lines": [
+       {
+        "name": "Amplificação de Dano da Retaguarda",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano de Arma",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano Crítico",
+        "ref": "+1%"
+       },
+       {
+        "name": "Ataque",
+        "ref": "+10"
+       }
+      ],
+      "divine": null
+     },
+     {
+      "slot": "Luvas",
+      "substats": [
+       {
+        "name": "Velocidade de Combate",
+        "ref": "+7,25%"
+       },
+       {
+        "name": "Ataque",
+        "ref": "+22"
+       },
+       {
+        "name": "Golpe Potente pela Retaguarda",
+        "ref": "+1"
+       },
+       {
+        "name": "Postura de Ataque Súbito",
+        "ref": "+1"
+       },
+       {
+        "name": "Acerto de Impacto",
+        "ref": "+1"
+       }
+      ],
+      "also": [
+       "Exploração de Fraqueza"
+      ],
+      "stone": "Pedra de Mana Superior",
+      "stone_lines": [
+       {
+        "name": "Amplificação de Dano da Retaguarda",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano de Arma",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano Crítico",
+        "ref": "+1%"
+       },
+       {
+        "name": "Ataque",
+        "ref": "+10"
+       }
+      ],
+      "divine": null
+     },
+     {
+      "slot": "Botas",
+      "substats": [
+       {
+        "name": "Velocidade de Movimento",
+        "ref": "+10,28%"
+       },
+       {
+        "name": "Ataque",
+        "ref": "+27"
+       },
+       {
+        "name": "Golpe Potente pela Retaguarda",
+        "ref": "+1"
+       },
+       {
+        "name": "Postura de Ataque Súbito",
+        "ref": "+1"
+       },
+       {
+        "name": "Acerto de Impacto",
+        "ref": "+1"
+       }
+      ],
+      "also": [
+       "Exploração de Fraqueza"
+      ],
+      "stone": "Pedra de Mana Superior",
+      "stone_lines": [
+       {
+        "name": "Amplificação de Dano da Retaguarda",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano de Arma",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano Crítico",
+        "ref": "+1%"
+       },
+       {
+        "name": "Ataque",
+        "ref": "+10"
+       }
+      ],
+      "divine": null
+     },
+     {
+      "slot": "Capa",
+      "substats": [
+       {
+        "name": "Aumento de Ataque",
+        "ref": "+1,77%"
+       },
+       {
+        "name": "Ataque",
+        "ref": "+24"
+       },
+       {
+        "name": "Golpe Potente pela Retaguarda",
+        "ref": "+1"
+       },
+       {
+        "name": "Postura de Ataque Súbito",
+        "ref": "+1"
+       },
+       {
+        "name": "Acerto de Impacto",
+        "ref": "+1"
+       }
+      ],
+      "also": [
+       "Exploração de Fraqueza"
+      ],
+      "stone": "Pedra de Mana Superior",
+      "stone_lines": [
+       {
+        "name": "Amplificação de Dano da Retaguarda",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano de Arma",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano Crítico",
+        "ref": "+1%"
+       },
+       {
+        "name": "Ataque",
+        "ref": "+10"
+       }
+      ],
+      "divine": null
+     },
+     {
+      "slot": "Colar",
+      "substats": [
+       {
+        "name": "Ataque",
+        "ref": "+38"
+       },
+       {
+        "name": "Acerto Crítico",
+        "ref": "+54"
+       },
+       {
+        "name": "Golpe Potente pela Retaguarda",
+        "ref": "+1"
+       },
+       {
+        "name": "Postura de Ataque Súbito",
+        "ref": "+1"
+       },
+       {
+        "name": "Acerto de Impacto",
+        "ref": "+1"
+       }
+      ],
+      "also": [
+       "Exploração de Fraqueza",
+       "Prontidão",
+       "Fenda da Defesa"
+      ],
+      "stone": "Pedra Vital Superior",
+      "stone_lines": [
+       {
+        "name": "Amplificação de Dano da Retaguarda",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano de Arma",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano Crítico",
+        "ref": "+1%"
+       },
+       {
+        "name": "Ataque",
+        "ref": "+10"
+       }
+      ],
+      "divine": null
+     },
+     {
+      "slot": "Brinco (esq.)",
+      "substats": [
+       {
+        "name": "Ataque",
+        "ref": "+33"
+       },
+       {
+        "name": "Acerto Crítico",
+        "ref": "+47"
+       },
+       {
+        "name": "Golpe Potente pela Retaguarda",
+        "ref": "+1"
+       },
+       {
+        "name": "Postura de Ataque Súbito",
+        "ref": "+1"
+       },
+       {
+        "name": "Acerto de Impacto",
+        "ref": "+1"
+       }
+      ],
+      "also": [
+       "Exploração de Fraqueza",
+       "Prontidão",
+       "Fenda da Defesa"
+      ],
+      "stone": "Pedra Vital Superior",
+      "stone_lines": [
+       {
+        "name": "Amplificação de Dano da Retaguarda",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano de Arma",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano Crítico",
+        "ref": "+1%"
+       },
+       {
+        "name": "Ataque",
+        "ref": "+10"
+       }
+      ],
+      "divine": null
+     },
+     {
+      "slot": "Brinco (dir.)",
+      "substats": [
+       {
+        "name": "Ataque",
+        "ref": "+33"
+       },
+       {
+        "name": "Acerto Crítico",
+        "ref": "+47"
+       },
+       {
+        "name": "Golpe Potente pela Retaguarda",
+        "ref": "+1"
+       },
+       {
+        "name": "Postura de Ataque Súbito",
+        "ref": "+1"
+       },
+       {
+        "name": "Acerto de Impacto",
+        "ref": "+1"
+       }
+      ],
+      "also": [
+       "Exploração de Fraqueza",
+       "Prontidão",
+       "Fenda da Defesa"
+      ],
+      "stone": "Pedra Vital Superior",
+      "stone_lines": [
+       {
+        "name": "Amplificação de Dano da Retaguarda",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano de Arma",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano Crítico",
+        "ref": "+1%"
+       },
+       {
+        "name": "Ataque",
+        "ref": "+10"
+       }
+      ],
+      "divine": null
+     },
+     {
+      "slot": "Anel (esq.)",
+      "substats": [
+       {
+        "name": "Estocada no Coração",
+        "ref": "+1"
+       },
+       {
+        "name": "Explosão de Insígnia",
+        "ref": "+1"
+       },
+       {
+        "name": "Corte Rápido",
+        "ref": "+1"
+       },
+       {
+        "name": "Desenfreio da Tempestade",
+        "ref": "+1"
+       },
+       {
+        "name": "Ataque",
+        "ref": "+29"
+       }
+      ],
+      "also": [
+       "Acerto Crítico"
+      ],
+      "stone": "Pedra Vital Superior",
+      "stone_lines": [
+       {
+        "name": "Amplificação de Dano da Retaguarda",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano de Arma",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano Crítico",
+        "ref": "+1%"
+       },
+       {
+        "name": "Ataque",
+        "ref": "+10"
+       }
+      ],
+      "divine": null
+     },
+     {
+      "slot": "Anel (dir.)",
+      "substats": [
+       {
+        "name": "Estocada no Coração",
+        "ref": "+1"
+       },
+       {
+        "name": "Explosão de Insígnia",
+        "ref": "+1"
+       },
+       {
+        "name": "Corte Rápido",
+        "ref": "+1"
+       },
+       {
+        "name": "Desenfreio da Tempestade",
+        "ref": "+1"
+       },
+       {
+        "name": "Ataque",
+        "ref": "+29"
+       }
+      ],
+      "also": [
+       "Acerto Crítico"
+      ],
+      "stone": "Pedra Vital Superior",
+      "stone_lines": [
+       {
+        "name": "Amplificação de Dano da Retaguarda",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano de Arma",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano Crítico",
+        "ref": "+1%"
+       },
+       {
+        "name": "Ataque",
+        "ref": "+10"
+       }
+      ],
+      "divine": null
+     }
+    ],
+    "notes": [
+     "Cada slot tem um ou dois efeitos que definem seu valor: garanta esses primeiro e depois use Ataque, níveis de skills e outros stats ofensivos para completar o item. Mantenha o efeito-chave de cada peça de armadura e depois procure Golpe Potente pela Retaguarda, Postura de Ataque Súbito, Acerto de Impacto e Exploração de Fraqueza (Golpe Potente pela Retaguarda = Postura de Ataque Súbito > Acerto de Impacto > Exploração de Fraqueza). Use as joias para alcançar marcos de skills; não rerrole um nível de skill útil, ativa ou passiva, só porque outro item mostra mais Poder de Combate.",
+     "Arma (adagas duplas): Velocidade de Combate, depois Poder > Amplificação de Dano de Arma > Amplificação de Dano, depois Acerto de Golpes Múltiplos / Exatidão > Ataque > Acerto Crítico; Velocidade de Combate, Poder, Amplificação de Dano de Arma, Amplificação de Dano e Ataque importam mais que um número maior de Poder de Combate sozinho.",
+     "Elmo e capa: Golpe Potente (Smite) + Ataque (Aumento) · Ombreiras: Amplificação de Dano Crítico · Peitoral: Amplificação de Dano · Calças: Tolerância a Dano + Ataque (Aumento) · Luvas: Velocidade de Combate · Botas: Velocidade de Movimento · Colar e brincos: Ataque, Acerto Crítico depois da checagem de acerto (também Prontidão > Fenda da Defesa) · Anéis: marco de skill ativa — Estocada no Coração > Explosão de Insígnia > Corte Rápido > Desenfreio da Tempestade, depois Ataque > Acerto Crítico após um marco 16/20 útil. Toda peça também quer Ataque.",
+     "Precisão: confira com buffs do grupo ativos. Não existe um requisito único para todo chefe; se os ataques ainda erram ou são aparados, você precisa de mais Precisão.",
+     "Prioridade de Manastone: Amplificação de Dano da Retaguarda (melhor quando a posição pelas costas é confiável) > Amplificação de Dano de Arma (multiplicador forte e confiável) > Amplificação de Dano Crítico (o valor sobe com a taxa real de Acerto Crítico) > Ataque 30+ / 25 (30+ pode competir; +25 não é o vencedor padrão) > Amplificação de Dano (categoria aditiva; compare seus totais). Com tempo pelas costas confiável e Acerto Crítico estável, use isto como base; Ataque +30 ou mais pode subir, mas precisa ser calculado com seus stats atuais. Se o encontro arruinar o tempo pelas costas, recalcule em vez de forçar Amplificação de Dano da Retaguarda em primeiro lugar.",
+     "Onde conseguir mais Smite: comece pelos soul binds de elmo e capa; também pelos slots 3/9 do Genus, a passiva de Smite e seus bônus de nível de skill, Panteão, arte, títulos ofensivos, asas e soul binds de bracelete. Amplificação de Dano da Retaguarda: comece pelas manastones e pelos slots 3/9 do Genus, depois considere soul binds e bônus de coleção após conferir as dicas ao vivo. O stat só vale quando o ataque é reconhecido como pelas costas. Títulos, asas, arte e recompensas sazonais podem mudar: confirme de onde o item vem hoje antes de pagar por rerrolagens ou melhorias.",
+     "Matemática de dano (testada): (1 + Dano + JvA + Chefe + Raça) × (1 + Bônus Pelas Costas). A amplificação geral, de JvA, de chefe e de raça se somam; o bônus pelas costas / Back Attack é um multiplicador separado quando a condição de retaguarda se aplica. Exemplo: 5% Chefe + 50% Dano + 5% Costas = 1,55 × 1,05 = 1,6275, enquanto 10% Chefe + 50% Dano = 1,60 e 5% Chefe + 55% Dano = 1,60 (Dano contra Chefe e Amplificação de Dano geral são iguais contra um chefe). Para comparar dois stats, adicione cada rolagem à categoria a que pertence, multiplique as categorias separadas e considere seu tempo real pelas costas: a maior porcentagem na dica não é necessariamente o maior aumento final. Faça testes de mesma duração, mudando um stat por vez. Multi-hit é menos certo e não tem um valor universal exato."
+    ]
+   },
    "skill_stats": [
     {
      "name": "Quick Slice",
@@ -1753,7 +4046,798 @@
      "Ataque Frontal só se a sua build for frontal."
     ]
    },
-   "gear_slots": null,
+   "gear_slots": {
+    "slots": [
+     {
+      "slot": "Arma",
+      "substats": [
+       {
+        "name": "Amplificação de Dano de Arma",
+        "ref": "+9,64%"
+       },
+       {
+        "name": "Velocidade de Combate",
+        "ref": "+12,98%"
+       },
+       {
+        "name": "Poder",
+        "ref": "+32"
+       },
+       {
+        "name": "Exatidão",
+        "ref": "+32"
+       },
+       {
+        "name": "Amplificação de Dano",
+        "ref": "+7,3%"
+       }
+      ],
+      "also": [
+       "Acerto de Golpes Múltiplos",
+       "Ataque"
+      ],
+      "stone": "Pedra de Mana Superior",
+      "stone_lines": [
+       {
+        "name": "Amplificação de Dano de Ataque Frontal",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano de Arma",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano Crítico",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano",
+        "ref": "+1%"
+       }
+      ],
+      "divine": "Soberba de Zikel"
+     },
+     {
+      "slot": "Guarda",
+      "substats": [
+       {
+        "name": "Amplificação de Dano de Arma",
+        "ref": "+7,73%"
+       },
+       {
+        "name": "Velocidade de Combate",
+        "ref": "+10,12%"
+       },
+       {
+        "name": "Amplificação de Dano",
+        "ref": "+5,85%"
+       },
+       {
+        "name": "Poder",
+        "ref": "+27"
+       },
+       {
+        "name": "Exatidão",
+        "ref": "+27"
+       }
+      ],
+      "also": [
+       "Acerto de Golpes Múltiplos",
+       "Ataque"
+      ],
+      "stone": "Pedra de Mana Superior",
+      "stone_lines": [
+       {
+        "name": "Amplificação de Dano de Ataque Frontal",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano de Arma",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano Crítico",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano",
+        "ref": "+1%"
+       }
+      ],
+      "divine": null
+     },
+     {
+      "slot": "Elmo",
+      "substats": [
+       {
+        "name": "Cura Recebida",
+        "ref": "+19,22%"
+       },
+       {
+        "name": "Olho da Concentração",
+        "ref": "+1"
+       },
+       {
+        "name": "Determinação do Caçador",
+        "ref": "+1"
+       },
+       {
+        "name": "Golpe Potente",
+        "ref": "+2,2%"
+       },
+       {
+        "name": "Aumento de Ataque",
+        "ref": "+2,2%"
+       }
+      ],
+      "also": [
+       "Acerto Crítico",
+       "Ataque"
+      ],
+      "stone": "Pedra de Mana Superior",
+      "stone_lines": [
+       {
+        "name": "Amplificação de Dano de Ataque Frontal",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano de Arma",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano Crítico",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano",
+        "ref": "+1%"
+       }
+      ],
+      "divine": null
+     },
+     {
+      "slot": "Ombreiras",
+      "substats": [
+       {
+        "name": "Amplificação de Dano Crítico",
+        "ref": "+12,84%"
+       },
+       {
+        "name": "Olho da Concentração",
+        "ref": "+1"
+       },
+       {
+        "name": "Determinação do Caçador",
+        "ref": "+1"
+       },
+       {
+        "name": "Precisão",
+        "ref": "+43"
+       },
+       {
+        "name": "Acerto Crítico",
+        "ref": "+33"
+       }
+      ],
+      "also": [
+       "Ataque",
+       "Aumento de Defesa"
+      ],
+      "stone": "Pedra de Mana Superior",
+      "stone_lines": [
+       {
+        "name": "Amplificação de Dano de Ataque Frontal",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano de Arma",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano Crítico",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano",
+        "ref": "+1%"
+       }
+      ],
+      "divine": null
+     },
+     {
+      "slot": "Peitoral",
+      "substats": [
+       {
+        "name": "Amplificação de Dano",
+        "ref": "+6,58%"
+       },
+       {
+        "name": "Olho da Concentração",
+        "ref": "+1"
+       },
+       {
+        "name": "Determinação do Caçador",
+        "ref": "+1"
+       },
+       {
+        "name": "Acerto Crítico",
+        "ref": "+47"
+       },
+       {
+        "name": "Precisão",
+        "ref": "+61"
+       }
+      ],
+      "also": [
+       "Ataque",
+       "Aumento de Defesa"
+      ],
+      "stone": "Pedra de Mana Superior",
+      "stone_lines": [
+       {
+        "name": "Amplificação de Dano de Ataque Frontal",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano de Arma",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano Crítico",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano",
+        "ref": "+1%"
+       }
+      ],
+      "divine": null
+     },
+     {
+      "slot": "Calças",
+      "substats": [
+       {
+        "name": "Tolerância a Dano",
+        "ref": "+11,56%"
+       },
+       {
+        "name": "Olho da Concentração",
+        "ref": "+1"
+       },
+       {
+        "name": "Determinação do Caçador",
+        "ref": "+1"
+       },
+       {
+        "name": "Acerto Perfeito",
+        "ref": "+5,33%"
+       },
+       {
+        "name": "Aumento de Ataque",
+        "ref": "+2,4%"
+       }
+      ],
+      "also": [
+       "Acerto Crítico",
+       "Ataque"
+      ],
+      "stone": "Pedra de Mana Superior",
+      "stone_lines": [
+       {
+        "name": "Amplificação de Dano de Ataque Frontal",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano de Arma",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano Crítico",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano",
+        "ref": "+1%"
+       }
+      ],
+      "divine": null
+     },
+     {
+      "slot": "Luvas",
+      "substats": [
+       {
+        "name": "Velocidade de Combate",
+        "ref": "+7,25%"
+       },
+       {
+        "name": "Olho da Concentração",
+        "ref": "+1"
+       },
+       {
+        "name": "Determinação do Caçador",
+        "ref": "+1"
+       },
+       {
+        "name": "Acerto Perfeito",
+        "ref": "+3,42%"
+       },
+       {
+        "name": "Acerto Crítico",
+        "ref": "+30"
+       }
+      ],
+      "also": [
+       "Ataque"
+      ],
+      "stone": "Pedra de Mana Superior",
+      "stone_lines": [
+       {
+        "name": "Amplificação de Dano de Ataque Frontal",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano de Arma",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano Crítico",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano",
+        "ref": "+1%"
+       }
+      ],
+      "divine": null
+     },
+     {
+      "slot": "Botas",
+      "substats": [
+       {
+        "name": "Velocidade de Movimento",
+        "ref": "+10,28%"
+       },
+       {
+        "name": "Olho da Concentração",
+        "ref": "+1"
+       },
+       {
+        "name": "Determinação do Caçador",
+        "ref": "+1"
+       },
+       {
+        "name": "Acerto Perfeito",
+        "ref": "+4,37%"
+       },
+       {
+        "name": "Acerto Crítico",
+        "ref": "+37"
+       }
+      ],
+      "also": [
+       "Ataque"
+      ],
+      "stone": "Pedra de Mana Superior",
+      "stone_lines": [
+       {
+        "name": "Amplificação de Dano de Ataque Frontal",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano de Arma",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano Crítico",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano",
+        "ref": "+1%"
+       }
+      ],
+      "divine": null
+     },
+     {
+      "slot": "Capa",
+      "substats": [
+       {
+        "name": "Olho da Concentração",
+        "ref": "+1"
+       },
+       {
+        "name": "Determinação do Caçador",
+        "ref": "+1"
+       },
+       {
+        "name": "Golpe Potente",
+        "ref": "+1,77%"
+       },
+       {
+        "name": "Aumento de Ataque",
+        "ref": "+1,77%"
+       },
+       {
+        "name": "Acerto Crítico",
+        "ref": "+33"
+       }
+      ],
+      "also": [
+       "Ataque"
+      ],
+      "stone": "Pedra de Mana Superior",
+      "stone_lines": [
+       {
+        "name": "Amplificação de Dano de Ataque Frontal",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano de Arma",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano Crítico",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano",
+        "ref": "+1%"
+       }
+      ],
+      "divine": null
+     },
+     {
+      "slot": "Colar",
+      "substats": [
+       {
+        "name": "Olho da Concentração",
+        "ref": "+1"
+       },
+       {
+        "name": "Determinação do Caçador",
+        "ref": "+1"
+       },
+       {
+        "name": "Poder",
+        "ref": "+20"
+       },
+       {
+        "name": "Exatidão",
+        "ref": "+20"
+       },
+       {
+        "name": "Precisão",
+        "ref": "+70"
+       }
+      ],
+      "also": [
+       "Acerto Crítico",
+       "Ataque"
+      ],
+      "stone": "Pedra Vital Superior",
+      "stone_lines": [
+       {
+        "name": "Amplificação de Dano de Ataque Frontal",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano de Arma",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano Crítico",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano",
+        "ref": "+1%"
+       }
+      ],
+      "divine": null
+     },
+     {
+      "slot": "Brinco (esq.)",
+      "substats": [
+       {
+        "name": "Olho da Concentração",
+        "ref": "+1"
+       },
+       {
+        "name": "Determinação do Caçador",
+        "ref": "+1"
+       },
+       {
+        "name": "Poder",
+        "ref": "+16"
+       },
+       {
+        "name": "Exatidão",
+        "ref": "+16"
+       },
+       {
+        "name": "Precisão",
+        "ref": "+61"
+       }
+      ],
+      "also": [
+       "Acerto Crítico",
+       "Ataque"
+      ],
+      "stone": "Pedra Vital Superior",
+      "stone_lines": [
+       {
+        "name": "Amplificação de Dano de Ataque Frontal",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano de Arma",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano Crítico",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano",
+        "ref": "+1%"
+       }
+      ],
+      "divine": null
+     },
+     {
+      "slot": "Brinco (dir.)",
+      "substats": [
+       {
+        "name": "Olho da Concentração",
+        "ref": "+1"
+       },
+       {
+        "name": "Determinação do Caçador",
+        "ref": "+1"
+       },
+       {
+        "name": "Poder",
+        "ref": "+16"
+       },
+       {
+        "name": "Exatidão",
+        "ref": "+16"
+       },
+       {
+        "name": "Precisão",
+        "ref": "+61"
+       }
+      ],
+      "also": [
+       "Acerto Crítico",
+       "Ataque"
+      ],
+      "stone": "Pedra Vital Superior",
+      "stone_lines": [
+       {
+        "name": "Amplificação de Dano de Ataque Frontal",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano de Arma",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano Crítico",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano",
+        "ref": "+1%"
+       }
+      ],
+      "divine": null
+     },
+     {
+      "slot": "Anel (esq.)",
+      "substats": [
+       {
+        "name": "Flecha de Vento Tempestuoso",
+        "ref": "+1"
+       },
+       {
+        "name": "Flecha Certeira",
+        "ref": "+1"
+       },
+       {
+        "name": "Disparo Rápido",
+        "ref": "+1"
+       },
+       {
+        "name": "Flecha Pontiaguda",
+        "ref": "+1"
+       },
+       {
+        "name": "Poder",
+        "ref": "+14"
+       }
+      ],
+      "also": [
+       "Exatidão",
+       "Flecha de Ruptura",
+       "Ataque"
+      ],
+      "stone": "Pedra Vital Superior",
+      "stone_lines": [
+       {
+        "name": "Amplificação de Dano de Ataque Frontal",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano de Arma",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano Crítico",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano",
+        "ref": "+1%"
+       }
+      ],
+      "divine": null
+     },
+     {
+      "slot": "Anel (dir.)",
+      "substats": [
+       {
+        "name": "Flecha de Vento Tempestuoso",
+        "ref": "+1"
+       },
+       {
+        "name": "Flecha Certeira",
+        "ref": "+1"
+       },
+       {
+        "name": "Disparo Rápido",
+        "ref": "+1"
+       },
+       {
+        "name": "Flecha Pontiaguda",
+        "ref": "+1"
+       },
+       {
+        "name": "Poder",
+        "ref": "+14"
+       }
+      ],
+      "also": [
+       "Exatidão",
+       "Flecha de Ruptura",
+       "Ataque"
+      ],
+      "stone": "Pedra Vital Superior",
+      "stone_lines": [
+       {
+        "name": "Amplificação de Dano de Ataque Frontal",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano de Arma",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano Crítico",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano",
+        "ref": "+1%"
+       }
+      ],
+      "divine": null
+     },
+     {
+      "slot": "Bracelete (esq.)",
+      "substats": [
+       {
+        "name": "Sabedoria [Lumiel]",
+        "ref": "+17"
+       },
+       {
+        "name": "Destruição [Zikel]",
+        "ref": "+17"
+       },
+       {
+        "name": "Tempo [Siel]",
+        "ref": "+17"
+       },
+       {
+        "name": "Ilusão [Kaisinel]",
+        "ref": "+17"
+       },
+       {
+        "name": "Liberdade [Vaizel]",
+        "ref": "+17"
+       }
+      ],
+      "also": [
+       "Morte [Triniel]",
+       "Vida [Yustiel]"
+      ],
+      "stone": "Pedra Vital Superior",
+      "stone_lines": [
+       {
+        "name": "Amplificação de Dano de Ataque Frontal",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano de Arma",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano Crítico",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano",
+        "ref": "+1%"
+       }
+      ],
+      "divine": null
+     },
+     {
+      "slot": "Bracelete (dir.)",
+      "substats": [
+       {
+        "name": "Sabedoria [Lumiel]",
+        "ref": "+17"
+       },
+       {
+        "name": "Destruição [Zikel]",
+        "ref": "+17"
+       },
+       {
+        "name": "Tempo [Siel]",
+        "ref": "+17"
+       },
+       {
+        "name": "Ilusão [Kaisinel]",
+        "ref": "+17"
+       },
+       {
+        "name": "Liberdade [Vaizel]",
+        "ref": "+17"
+       }
+      ],
+      "also": [
+       "Morte [Triniel]",
+       "Vida [Yustiel]"
+      ],
+      "stone": "Pedra Vital Superior",
+      "stone_lines": [
+       {
+        "name": "Amplificação de Dano de Ataque Frontal",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano de Arma",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano Crítico",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano",
+        "ref": "+1%"
+       }
+      ],
+      "divine": null
+     }
+    ],
+    "notes": [
+     "Teostones: veneno e besta performam melhor no início; mais tarde, todos eles performam de forma semelhante.",
+     "Manastones: Amplificação de Dano de Ataque Frontal (se build frontal) ▸ Amplificação de Dano de Arma ≈ Amplificação de Dano Crítico ▸ Amplificação de Dano ▸ Ataque.",
+     "Pulseiras: Sabedoria > Destruição > Tempo > Ilusão. Liberdade e morte para preencher / Acerto Crítico e Precisão / Vida."
+    ]
+   },
    "skill_stats": [
     {
      "name": "Snipe",
@@ -2237,7 +5321,805 @@
     ],
     "notes": []
    },
-   "gear_slots": null,
+   "gear_slots": {
+    "slots": [
+     {
+      "slot": "Arma",
+      "substats": [
+       {
+        "name": "Amplificação de Dano de Arma",
+        "ref": "+9,64%"
+       },
+       {
+        "name": "Velocidade de Combate",
+        "ref": "+12,98%"
+       },
+       {
+        "name": "Poder",
+        "ref": "+32"
+       },
+       {
+        "name": "Exatidão",
+        "ref": "+32"
+       },
+       {
+        "name": "Amplificação de Dano",
+        "ref": "+7,3%"
+       }
+      ],
+      "also": [
+       "Acerto de Golpes Múltiplos",
+       "Ataque"
+      ],
+      "stone": "Pedra de Mana Superior",
+      "stone_lines": [
+       {
+        "name": "Amplificação de Dano de Arma",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano Crítico",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano",
+        "ref": "+1%"
+       },
+       {
+        "name": "Ataque",
+        "ref": "+10"
+       }
+      ],
+      "divine": "Soberba de Zikel"
+     },
+     {
+      "slot": "Guarda",
+      "substats": [
+       {
+        "name": "Amplificação de Dano de Arma",
+        "ref": "+7,73%"
+       },
+       {
+        "name": "Velocidade de Combate",
+        "ref": "+10,12%"
+       },
+       {
+        "name": "Amplificação de Dano",
+        "ref": "+5,85%"
+       },
+       {
+        "name": "Poder",
+        "ref": "+27"
+       },
+       {
+        "name": "Exatidão",
+        "ref": "+27"
+       }
+      ],
+      "also": [
+       "Acerto de Golpes Múltiplos",
+       "Ataque"
+      ],
+      "stone": "Pedra de Mana Superior",
+      "stone_lines": [
+       {
+        "name": "Amplificação de Dano de Arma",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano Crítico",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano",
+        "ref": "+1%"
+       },
+       {
+        "name": "Ataque",
+        "ref": "+10"
+       }
+      ],
+      "divine": null
+     },
+     {
+      "slot": "Elmo",
+      "substats": [
+       {
+        "name": "Cura Recebida",
+        "ref": "+19,22%"
+       },
+       {
+        "name": "Manto de Chamas",
+        "ref": "+1"
+       },
+       {
+        "name": "Marca de Fogo",
+        "ref": "+1"
+       },
+       {
+        "name": "Golpe Potente",
+        "ref": "+2,2%"
+       },
+       {
+        "name": "Aumento de Ataque",
+        "ref": "+2,2%"
+       }
+      ],
+      "also": [
+       "Acerto Crítico",
+       "Ataque"
+      ],
+      "stone": "Pedra de Mana Superior",
+      "stone_lines": [
+       {
+        "name": "Amplificação de Dano de Arma",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano Crítico",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano",
+        "ref": "+1%"
+       },
+       {
+        "name": "Ataque",
+        "ref": "+10"
+       }
+      ],
+      "divine": null
+     },
+     {
+      "slot": "Ombreiras",
+      "substats": [
+       {
+        "name": "Amplificação de Dano Crítico",
+        "ref": "+12,84%"
+       },
+       {
+        "name": "Manto de Chamas",
+        "ref": "+1"
+       },
+       {
+        "name": "Marca de Fogo",
+        "ref": "+1"
+       },
+       {
+        "name": "Precisão",
+        "ref": "+43"
+       },
+       {
+        "name": "Acerto Crítico",
+        "ref": "+33"
+       }
+      ],
+      "also": [
+       "Ataque",
+       "Aumento de Defesa"
+      ],
+      "stone": "Pedra de Mana Superior",
+      "stone_lines": [
+       {
+        "name": "Amplificação de Dano de Arma",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano Crítico",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano",
+        "ref": "+1%"
+       },
+       {
+        "name": "Ataque",
+        "ref": "+10"
+       }
+      ],
+      "divine": null
+     },
+     {
+      "slot": "Peitoral",
+      "substats": [
+       {
+        "name": "Amplificação de Dano",
+        "ref": "+6,58%"
+       },
+       {
+        "name": "Manto de Chamas",
+        "ref": "+1"
+       },
+       {
+        "name": "Marca de Fogo",
+        "ref": "+1"
+       },
+       {
+        "name": "Acerto Crítico",
+        "ref": "+47"
+       },
+       {
+        "name": "Precisão",
+        "ref": "+61"
+       }
+      ],
+      "also": [
+       "Ataque",
+       "Aumento de Defesa"
+      ],
+      "stone": "Pedra de Mana Superior",
+      "stone_lines": [
+       {
+        "name": "Amplificação de Dano de Arma",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano Crítico",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano",
+        "ref": "+1%"
+       },
+       {
+        "name": "Ataque",
+        "ref": "+10"
+       }
+      ],
+      "divine": null
+     },
+     {
+      "slot": "Calças",
+      "substats": [
+       {
+        "name": "Tolerância a Dano",
+        "ref": "+11,56%"
+       },
+       {
+        "name": "Manto de Chamas",
+        "ref": "+1"
+       },
+       {
+        "name": "Marca de Fogo",
+        "ref": "+1"
+       },
+       {
+        "name": "Acerto Perfeito",
+        "ref": "+5,33%"
+       },
+       {
+        "name": "Aumento de Ataque",
+        "ref": "+2,4%"
+       }
+      ],
+      "also": [
+       "Acerto Crítico",
+       "Ataque"
+      ],
+      "stone": "Pedra de Mana Superior",
+      "stone_lines": [
+       {
+        "name": "Amplificação de Dano de Arma",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano Crítico",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano",
+        "ref": "+1%"
+       },
+       {
+        "name": "Ataque",
+        "ref": "+10"
+       }
+      ],
+      "divine": null
+     },
+     {
+      "slot": "Luvas",
+      "substats": [
+       {
+        "name": "Velocidade de Combate",
+        "ref": "+7,25%"
+       },
+       {
+        "name": "Manto de Chamas",
+        "ref": "+1"
+       },
+       {
+        "name": "Marca de Fogo",
+        "ref": "+1"
+       },
+       {
+        "name": "Acerto Perfeito",
+        "ref": "+3,42%"
+       },
+       {
+        "name": "Acerto Crítico",
+        "ref": "+30"
+       }
+      ],
+      "also": [
+       "Ataque",
+       "Aumento de Defesa"
+      ],
+      "stone": "Pedra de Mana Superior",
+      "stone_lines": [
+       {
+        "name": "Amplificação de Dano de Arma",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano Crítico",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano",
+        "ref": "+1%"
+       },
+       {
+        "name": "Ataque",
+        "ref": "+10"
+       }
+      ],
+      "divine": null
+     },
+     {
+      "slot": "Botas",
+      "substats": [
+       {
+        "name": "Velocidade de Movimento",
+        "ref": "+10,28%"
+       },
+       {
+        "name": "Manto de Chamas",
+        "ref": "+1"
+       },
+       {
+        "name": "Marca de Fogo",
+        "ref": "+1"
+       },
+       {
+        "name": "Acerto Perfeito",
+        "ref": "+4,37%"
+       },
+       {
+        "name": "Acerto Crítico",
+        "ref": "+37"
+       }
+      ],
+      "also": [
+       "Ataque",
+       "Aumento de Defesa"
+      ],
+      "stone": "Pedra de Mana Superior",
+      "stone_lines": [
+       {
+        "name": "Amplificação de Dano de Arma",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano Crítico",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano",
+        "ref": "+1%"
+       },
+       {
+        "name": "Ataque",
+        "ref": "+10"
+       }
+      ],
+      "divine": null
+     },
+     {
+      "slot": "Capa",
+      "substats": [
+       {
+        "name": "Manto de Chamas",
+        "ref": "+1"
+       },
+       {
+        "name": "Marca de Fogo",
+        "ref": "+1"
+       },
+       {
+        "name": "Golpe Potente",
+        "ref": "+1,77%"
+       },
+       {
+        "name": "Aumento de Ataque",
+        "ref": "+1,77%"
+       },
+       {
+        "name": "Acerto Crítico",
+        "ref": "+33"
+       }
+      ],
+      "also": [
+       "Ataque"
+      ],
+      "stone": "Pedra de Mana Superior",
+      "stone_lines": [
+       {
+        "name": "Amplificação de Dano de Arma",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano Crítico",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano",
+        "ref": "+1%"
+       },
+       {
+        "name": "Ataque",
+        "ref": "+10"
+       }
+      ],
+      "divine": null
+     },
+     {
+      "slot": "Colar",
+      "substats": [
+       {
+        "name": "Manto de Chamas",
+        "ref": "+1"
+       },
+       {
+        "name": "Poder",
+        "ref": "+20"
+       },
+       {
+        "name": "Exatidão",
+        "ref": "+20"
+       },
+       {
+        "name": "Marca de Fogo",
+        "ref": "+1"
+       },
+       {
+        "name": "Precisão",
+        "ref": "+70"
+       }
+      ],
+      "also": [
+       "Acerto Crítico",
+       "Ataque"
+      ],
+      "stone": "Pedra Vital Superior",
+      "stone_lines": [
+       {
+        "name": "Amplificação de Dano de Arma",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano Crítico",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano",
+        "ref": "+1%"
+       },
+       {
+        "name": "Ataque",
+        "ref": "+10"
+       }
+      ],
+      "divine": null
+     },
+     {
+      "slot": "Brinco (esq.)",
+      "substats": [
+       {
+        "name": "Manto de Chamas",
+        "ref": "+1"
+       },
+       {
+        "name": "Poder",
+        "ref": "+16"
+       },
+       {
+        "name": "Exatidão",
+        "ref": "+16"
+       },
+       {
+        "name": "Marca de Fogo",
+        "ref": "+1"
+       },
+       {
+        "name": "Precisão",
+        "ref": "+61"
+       }
+      ],
+      "also": [
+       "Acerto Crítico",
+       "Ataque"
+      ],
+      "stone": "Pedra Vital Superior",
+      "stone_lines": [
+       {
+        "name": "Amplificação de Dano de Arma",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano Crítico",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano",
+        "ref": "+1%"
+       },
+       {
+        "name": "Ataque",
+        "ref": "+10"
+       }
+      ],
+      "divine": null
+     },
+     {
+      "slot": "Brinco (dir.)",
+      "substats": [
+       {
+        "name": "Manto de Chamas",
+        "ref": "+1"
+       },
+       {
+        "name": "Poder",
+        "ref": "+16"
+       },
+       {
+        "name": "Exatidão",
+        "ref": "+16"
+       },
+       {
+        "name": "Marca de Fogo",
+        "ref": "+1"
+       },
+       {
+        "name": "Precisão",
+        "ref": "+61"
+       }
+      ],
+      "also": [
+       "Acerto Crítico",
+       "Ataque"
+      ],
+      "stone": "Pedra Vital Superior",
+      "stone_lines": [
+       {
+        "name": "Amplificação de Dano de Arma",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano Crítico",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano",
+        "ref": "+1%"
+       },
+       {
+        "name": "Ataque",
+        "ref": "+10"
+       }
+      ],
+      "divine": null
+     },
+     {
+      "slot": "Anel (esq.)",
+      "substats": [
+       {
+        "name": "Súplica de Concentração",
+        "ref": "+1"
+       },
+       {
+        "name": "Chamas Infernais",
+        "ref": "+1"
+       },
+       {
+        "name": "Poder",
+        "ref": "+14"
+       },
+       {
+        "name": "Exatidão",
+        "ref": "+14"
+       },
+       {
+        "name": "Vento do Frio Intenso",
+        "ref": "+1"
+       }
+      ],
+      "also": [
+       "Explosão de Chamas",
+       "Flecha Flamejante",
+       "Saraivada Flamejante"
+      ],
+      "stone": "Pedra Vital Superior",
+      "stone_lines": [
+       {
+        "name": "Amplificação de Dano de Arma",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano Crítico",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano",
+        "ref": "+1%"
+       },
+       {
+        "name": "Ataque",
+        "ref": "+10"
+       }
+      ],
+      "divine": null
+     },
+     {
+      "slot": "Anel (dir.)",
+      "substats": [
+       {
+        "name": "Súplica de Concentração",
+        "ref": "+1"
+       },
+       {
+        "name": "Chamas Infernais",
+        "ref": "+1"
+       },
+       {
+        "name": "Poder",
+        "ref": "+14"
+       },
+       {
+        "name": "Exatidão",
+        "ref": "+14"
+       },
+       {
+        "name": "Vento do Frio Intenso",
+        "ref": "+1"
+       }
+      ],
+      "also": [
+       "Explosão de Chamas",
+       "Flecha Flamejante",
+       "Saraivada Flamejante"
+      ],
+      "stone": "Pedra Vital Superior",
+      "stone_lines": [
+       {
+        "name": "Amplificação de Dano de Arma",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano Crítico",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano",
+        "ref": "+1%"
+       },
+       {
+        "name": "Ataque",
+        "ref": "+10"
+       }
+      ],
+      "divine": null
+     },
+     {
+      "slot": "Bracelete (esq.)",
+      "substats": [
+       {
+        "name": "Sabedoria [Lumiel]",
+        "ref": "+17"
+       },
+       {
+        "name": "Destruição [Zikel]",
+        "ref": "+17"
+       },
+       {
+        "name": "Tempo [Siel]",
+        "ref": "+17"
+       },
+       {
+        "name": "Ilusão [Kaisinel]",
+        "ref": "+17"
+       },
+       {
+        "name": "Morte [Triniel]",
+        "ref": "+17"
+       }
+      ],
+      "also": [
+       "Justiça [Nezekan]",
+       "Vida [Yustiel]",
+       "Espaço [Israphel]",
+       "Liberdade [Vaizel]",
+       "Destino [Marchutan]"
+      ],
+      "stone": "Pedra Vital Superior",
+      "stone_lines": [
+       {
+        "name": "Amplificação de Dano de Arma",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano Crítico",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano",
+        "ref": "+1%"
+       },
+       {
+        "name": "Ataque",
+        "ref": "+10"
+       }
+      ],
+      "divine": null
+     },
+     {
+      "slot": "Bracelete (dir.)",
+      "substats": [
+       {
+        "name": "Sabedoria [Lumiel]",
+        "ref": "+17"
+       },
+       {
+        "name": "Destruição [Zikel]",
+        "ref": "+17"
+       },
+       {
+        "name": "Tempo [Siel]",
+        "ref": "+17"
+       },
+       {
+        "name": "Ilusão [Kaisinel]",
+        "ref": "+17"
+       },
+       {
+        "name": "Morte [Triniel]",
+        "ref": "+17"
+       }
+      ],
+      "also": [
+       "Justiça [Nezekan]",
+       "Vida [Yustiel]",
+       "Espaço [Israphel]",
+       "Liberdade [Vaizel]",
+       "Destino [Marchutan]"
+      ],
+      "stone": "Pedra Vital Superior",
+      "stone_lines": [
+       {
+        "name": "Amplificação de Dano de Arma",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano Crítico",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano",
+        "ref": "+1%"
+       },
+       {
+        "name": "Ataque",
+        "ref": "+10"
+       }
+      ],
+      "divine": null
+     }
+    ],
+    "notes": [
+     "Teostones: veneno e besta performam melhor no início; mais tarde, todos eles performam de forma semelhante.",
+     "Manastones: Amplificação de Dano de Arma ≈ Amplificação de Dano Crítico ▸ Amplificação de Dano ▸ Ataque."
+    ]
+   },
    "skill_stats": [
     {
      "name": "Flame Arrow",
@@ -2725,7 +6607,805 @@
     ],
     "notes": []
    },
-   "gear_slots": null,
+   "gear_slots": {
+    "slots": [
+     {
+      "slot": "Arma",
+      "substats": [
+       {
+        "name": "Amplificação de Dano de Arma",
+        "ref": "+9,64%"
+       },
+       {
+        "name": "Velocidade de Combate",
+        "ref": "+12,98%"
+       },
+       {
+        "name": "Poder",
+        "ref": "+32"
+       },
+       {
+        "name": "Exatidão",
+        "ref": "+32"
+       },
+       {
+        "name": "Amplificação de Dano",
+        "ref": "+7,3%"
+       }
+      ],
+      "also": [
+       "Acerto de Golpes Múltiplos",
+       "Ataque"
+      ],
+      "stone": "Pedra de Mana Superior",
+      "stone_lines": [
+       {
+        "name": "Amplificação de Dano de Arma",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano Crítico",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano",
+        "ref": "+1%"
+       },
+       {
+        "name": "Ataque",
+        "ref": "+10"
+       }
+      ],
+      "divine": "Soberba de Zikel"
+     },
+     {
+      "slot": "Guarda",
+      "substats": [
+       {
+        "name": "Amplificação de Dano de Arma",
+        "ref": "+7,73%"
+       },
+       {
+        "name": "Velocidade de Combate",
+        "ref": "+10,12%"
+       },
+       {
+        "name": "Amplificação de Dano",
+        "ref": "+5,85%"
+       },
+       {
+        "name": "Poder",
+        "ref": "+27"
+       },
+       {
+        "name": "Exatidão",
+        "ref": "+27"
+       }
+      ],
+      "also": [
+       "Acerto de Golpes Múltiplos",
+       "Ataque"
+      ],
+      "stone": "Pedra de Mana Superior",
+      "stone_lines": [
+       {
+        "name": "Amplificação de Dano de Arma",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano Crítico",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano",
+        "ref": "+1%"
+       },
+       {
+        "name": "Ataque",
+        "ref": "+10"
+       }
+      ],
+      "divine": null
+     },
+     {
+      "slot": "Elmo",
+      "substats": [
+       {
+        "name": "Cura Recebida",
+        "ref": "+19,22%"
+       },
+       {
+        "name": "Golpe Espiritual",
+        "ref": "+1"
+       },
+       {
+        "name": "Concentração Mental",
+        "ref": "+1"
+       },
+       {
+        "name": "Golpe Potente",
+        "ref": "+2,2%"
+       },
+       {
+        "name": "Aumento de Ataque",
+        "ref": "+2,2%"
+       }
+      ],
+      "also": [
+       "Acerto Crítico",
+       "Ataque"
+      ],
+      "stone": "Pedra de Mana Superior",
+      "stone_lines": [
+       {
+        "name": "Amplificação de Dano de Arma",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano Crítico",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano",
+        "ref": "+1%"
+       },
+       {
+        "name": "Ataque",
+        "ref": "+10"
+       }
+      ],
+      "divine": null
+     },
+     {
+      "slot": "Ombreiras",
+      "substats": [
+       {
+        "name": "Amplificação de Dano Crítico",
+        "ref": "+12,84%"
+       },
+       {
+        "name": "Golpe Espiritual",
+        "ref": "+1"
+       },
+       {
+        "name": "Concentração Mental",
+        "ref": "+1"
+       },
+       {
+        "name": "Precisão",
+        "ref": "+43"
+       },
+       {
+        "name": "Acerto Crítico",
+        "ref": "+33"
+       }
+      ],
+      "also": [
+       "Ataque",
+       "Aumento de Defesa"
+      ],
+      "stone": "Pedra de Mana Superior",
+      "stone_lines": [
+       {
+        "name": "Amplificação de Dano de Arma",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano Crítico",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano",
+        "ref": "+1%"
+       },
+       {
+        "name": "Ataque",
+        "ref": "+10"
+       }
+      ],
+      "divine": null
+     },
+     {
+      "slot": "Peitoral",
+      "substats": [
+       {
+        "name": "Amplificação de Dano",
+        "ref": "+6,58%"
+       },
+       {
+        "name": "Golpe Espiritual",
+        "ref": "+1"
+       },
+       {
+        "name": "Concentração Mental",
+        "ref": "+1"
+       },
+       {
+        "name": "Acerto Crítico",
+        "ref": "+47"
+       },
+       {
+        "name": "Precisão",
+        "ref": "+61"
+       }
+      ],
+      "also": [
+       "Ataque",
+       "Aumento de Defesa"
+      ],
+      "stone": "Pedra de Mana Superior",
+      "stone_lines": [
+       {
+        "name": "Amplificação de Dano de Arma",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano Crítico",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano",
+        "ref": "+1%"
+       },
+       {
+        "name": "Ataque",
+        "ref": "+10"
+       }
+      ],
+      "divine": null
+     },
+     {
+      "slot": "Calças",
+      "substats": [
+       {
+        "name": "Tolerância a Dano",
+        "ref": "+11,56%"
+       },
+       {
+        "name": "Golpe Espiritual",
+        "ref": "+1"
+       },
+       {
+        "name": "Concentração Mental",
+        "ref": "+1"
+       },
+       {
+        "name": "Acerto Perfeito",
+        "ref": "+5,33%"
+       },
+       {
+        "name": "Aumento de Ataque",
+        "ref": "+2,4%"
+       }
+      ],
+      "also": [
+       "Acerto Crítico",
+       "Ataque"
+      ],
+      "stone": "Pedra de Mana Superior",
+      "stone_lines": [
+       {
+        "name": "Amplificação de Dano de Arma",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano Crítico",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano",
+        "ref": "+1%"
+       },
+       {
+        "name": "Ataque",
+        "ref": "+10"
+       }
+      ],
+      "divine": null
+     },
+     {
+      "slot": "Luvas",
+      "substats": [
+       {
+        "name": "Velocidade de Combate",
+        "ref": "+7,25%"
+       },
+       {
+        "name": "Golpe Espiritual",
+        "ref": "+1"
+       },
+       {
+        "name": "Concentração Mental",
+        "ref": "+1"
+       },
+       {
+        "name": "Acerto Perfeito",
+        "ref": "+3,42%"
+       },
+       {
+        "name": "Acerto Crítico",
+        "ref": "+30"
+       }
+      ],
+      "also": [
+       "Ataque",
+       "Aumento de Defesa"
+      ],
+      "stone": "Pedra de Mana Superior",
+      "stone_lines": [
+       {
+        "name": "Amplificação de Dano de Arma",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano Crítico",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano",
+        "ref": "+1%"
+       },
+       {
+        "name": "Ataque",
+        "ref": "+10"
+       }
+      ],
+      "divine": null
+     },
+     {
+      "slot": "Botas",
+      "substats": [
+       {
+        "name": "Velocidade de Movimento",
+        "ref": "+10,28%"
+       },
+       {
+        "name": "Golpe Espiritual",
+        "ref": "+1"
+       },
+       {
+        "name": "Concentração Mental",
+        "ref": "+1"
+       },
+       {
+        "name": "Acerto Perfeito",
+        "ref": "+4,37%"
+       },
+       {
+        "name": "Acerto Crítico",
+        "ref": "+37"
+       }
+      ],
+      "also": [
+       "Ataque",
+       "Aumento de Defesa"
+      ],
+      "stone": "Pedra de Mana Superior",
+      "stone_lines": [
+       {
+        "name": "Amplificação de Dano de Arma",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano Crítico",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano",
+        "ref": "+1%"
+       },
+       {
+        "name": "Ataque",
+        "ref": "+10"
+       }
+      ],
+      "divine": null
+     },
+     {
+      "slot": "Capa",
+      "substats": [
+       {
+        "name": "Golpe Potente",
+        "ref": "+1,77%"
+       },
+       {
+        "name": "Aumento de Ataque",
+        "ref": "+1,77%"
+       },
+       {
+        "name": "Golpe Espiritual",
+        "ref": "+1"
+       },
+       {
+        "name": "Concentração Mental",
+        "ref": "+1"
+       },
+       {
+        "name": "Acerto Crítico",
+        "ref": "+33"
+       }
+      ],
+      "also": [
+       "Ataque"
+      ],
+      "stone": "Pedra de Mana Superior",
+      "stone_lines": [
+       {
+        "name": "Amplificação de Dano de Arma",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano Crítico",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano",
+        "ref": "+1%"
+       },
+       {
+        "name": "Ataque",
+        "ref": "+10"
+       }
+      ],
+      "divine": null
+     },
+     {
+      "slot": "Colar",
+      "substats": [
+       {
+        "name": "Golpe Espiritual",
+        "ref": "+1"
+       },
+       {
+        "name": "Concentração Mental",
+        "ref": "+1"
+       },
+       {
+        "name": "Poder",
+        "ref": "+20"
+       },
+       {
+        "name": "Exatidão",
+        "ref": "+20"
+       },
+       {
+        "name": "Precisão",
+        "ref": "+70"
+       }
+      ],
+      "also": [
+       "Acerto Crítico",
+       "Ataque"
+      ],
+      "stone": "Pedra Vital Superior",
+      "stone_lines": [
+       {
+        "name": "Amplificação de Dano de Arma",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano Crítico",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano",
+        "ref": "+1%"
+       },
+       {
+        "name": "Ataque",
+        "ref": "+10"
+       }
+      ],
+      "divine": null
+     },
+     {
+      "slot": "Brinco (esq.)",
+      "substats": [
+       {
+        "name": "Golpe Espiritual",
+        "ref": "+1"
+       },
+       {
+        "name": "Concentração Mental",
+        "ref": "+1"
+       },
+       {
+        "name": "Poder",
+        "ref": "+16"
+       },
+       {
+        "name": "Exatidão",
+        "ref": "+16"
+       },
+       {
+        "name": "Precisão",
+        "ref": "+61"
+       }
+      ],
+      "also": [
+       "Acerto Crítico",
+       "Ataque"
+      ],
+      "stone": "Pedra Vital Superior",
+      "stone_lines": [
+       {
+        "name": "Amplificação de Dano de Arma",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano Crítico",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano",
+        "ref": "+1%"
+       },
+       {
+        "name": "Ataque",
+        "ref": "+10"
+       }
+      ],
+      "divine": null
+     },
+     {
+      "slot": "Brinco (dir.)",
+      "substats": [
+       {
+        "name": "Golpe Espiritual",
+        "ref": "+1"
+       },
+       {
+        "name": "Concentração Mental",
+        "ref": "+1"
+       },
+       {
+        "name": "Poder",
+        "ref": "+16"
+       },
+       {
+        "name": "Exatidão",
+        "ref": "+16"
+       },
+       {
+        "name": "Precisão",
+        "ref": "+61"
+       }
+      ],
+      "also": [
+       "Acerto Crítico",
+       "Ataque"
+      ],
+      "stone": "Pedra Vital Superior",
+      "stone_lines": [
+       {
+        "name": "Amplificação de Dano de Arma",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano Crítico",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano",
+        "ref": "+1%"
+       },
+       {
+        "name": "Ataque",
+        "ref": "+10"
+       }
+      ],
+      "divine": null
+     },
+     {
+      "slot": "Anel (esq.)",
+      "substats": [
+       {
+        "name": "Fusão Elemental",
+        "ref": "+1"
+       },
+       {
+        "name": "Combustão",
+        "ref": "+1"
+       },
+       {
+        "name": "Ataque Conjunto: Maldição",
+        "ref": "+1"
+       },
+       {
+        "name": "Poder",
+        "ref": "+14"
+       },
+       {
+        "name": "Exatidão",
+        "ref": "+14"
+       }
+      ],
+      "also": [
+       "Invocação: Espírito do Fogo",
+       "Invocação: Espírito da Água",
+       "Ataque"
+      ],
+      "stone": "Pedra Vital Superior",
+      "stone_lines": [
+       {
+        "name": "Amplificação de Dano de Arma",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano Crítico",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano",
+        "ref": "+1%"
+       },
+       {
+        "name": "Ataque",
+        "ref": "+10"
+       }
+      ],
+      "divine": null
+     },
+     {
+      "slot": "Anel (dir.)",
+      "substats": [
+       {
+        "name": "Fusão Elemental",
+        "ref": "+1"
+       },
+       {
+        "name": "Combustão",
+        "ref": "+1"
+       },
+       {
+        "name": "Ataque Conjunto: Maldição",
+        "ref": "+1"
+       },
+       {
+        "name": "Poder",
+        "ref": "+14"
+       },
+       {
+        "name": "Exatidão",
+        "ref": "+14"
+       }
+      ],
+      "also": [
+       "Invocação: Espírito do Fogo",
+       "Invocação: Espírito da Água",
+       "Ataque"
+      ],
+      "stone": "Pedra Vital Superior",
+      "stone_lines": [
+       {
+        "name": "Amplificação de Dano de Arma",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano Crítico",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano",
+        "ref": "+1%"
+       },
+       {
+        "name": "Ataque",
+        "ref": "+10"
+       }
+      ],
+      "divine": null
+     },
+     {
+      "slot": "Bracelete (esq.)",
+      "substats": [
+       {
+        "name": "Sabedoria [Lumiel]",
+        "ref": "+17"
+       },
+       {
+        "name": "Destruição [Zikel]",
+        "ref": "+17"
+       },
+       {
+        "name": "Tempo [Siel]",
+        "ref": "+17"
+       },
+       {
+        "name": "Ilusão [Kaisinel]",
+        "ref": "+17"
+       },
+       {
+        "name": "Morte [Triniel]",
+        "ref": "+17"
+       }
+      ],
+      "also": [
+       "Justiça [Nezekan]",
+       "Vida [Yustiel]",
+       "Espaço [Israphel]",
+       "Liberdade [Vaizel]",
+       "Destino [Marchutan]"
+      ],
+      "stone": "Pedra Vital Superior",
+      "stone_lines": [
+       {
+        "name": "Amplificação de Dano de Arma",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano Crítico",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano",
+        "ref": "+1%"
+       },
+       {
+        "name": "Ataque",
+        "ref": "+10"
+       }
+      ],
+      "divine": null
+     },
+     {
+      "slot": "Bracelete (dir.)",
+      "substats": [
+       {
+        "name": "Sabedoria [Lumiel]",
+        "ref": "+17"
+       },
+       {
+        "name": "Destruição [Zikel]",
+        "ref": "+17"
+       },
+       {
+        "name": "Tempo [Siel]",
+        "ref": "+17"
+       },
+       {
+        "name": "Ilusão [Kaisinel]",
+        "ref": "+17"
+       },
+       {
+        "name": "Morte [Triniel]",
+        "ref": "+17"
+       }
+      ],
+      "also": [
+       "Justiça [Nezekan]",
+       "Vida [Yustiel]",
+       "Espaço [Israphel]",
+       "Liberdade [Vaizel]",
+       "Destino [Marchutan]"
+      ],
+      "stone": "Pedra Vital Superior",
+      "stone_lines": [
+       {
+        "name": "Amplificação de Dano de Arma",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano Crítico",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano",
+        "ref": "+1%"
+       },
+       {
+        "name": "Ataque",
+        "ref": "+10"
+       }
+      ],
+      "divine": null
+     }
+    ],
+    "notes": [
+     "Teostones: veneno e besta performam melhor no início; mais tarde, todos eles performam de forma semelhante.",
+     "Manastones: Amplificação de Dano de Arma ≈ Amplificação de Dano Crítico ▸ Amplificação de Dano ▸ Ataque."
+    ]
+   },
    "skill_stats": [
     {
      "name": "Spirit Strike",
@@ -4517,7 +9197,808 @@
      "Ataque Frontal só se a sua build for frontal."
     ]
    },
-   "gear_slots": null,
+   "gear_slots": {
+    "slots": [
+     {
+      "slot": "Arma",
+      "substats": [
+       {
+        "name": "Amplificação de Dano de Arma",
+        "ref": "+9,64%"
+       },
+       {
+        "name": "Velocidade de Combate",
+        "ref": "+12,98%"
+       },
+       {
+        "name": "Poder",
+        "ref": "+32"
+       },
+       {
+        "name": "Exatidão",
+        "ref": "+32"
+       },
+       {
+        "name": "Amplificação de Dano",
+        "ref": "+7,3%"
+       }
+      ],
+      "also": [
+       "Acerto de Golpes Múltiplos",
+       "Ataque"
+      ],
+      "stone": "Pedra de Mana Superior",
+      "stone_lines": [
+       {
+        "name": "Amplificação de Dano de Ataque Frontal",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano de Arma",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano Crítico",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano",
+        "ref": "+1%"
+       }
+      ],
+      "divine": "Soberba de Zikel"
+     },
+     {
+      "slot": "Guarda",
+      "substats": [
+       {
+        "name": "Amplificação de Dano de Arma",
+        "ref": "+7,73%"
+       },
+       {
+        "name": "Velocidade de Combate",
+        "ref": "+10,12%"
+       },
+       {
+        "name": "Amplificação de Dano",
+        "ref": "+5,85%"
+       },
+       {
+        "name": "Poder",
+        "ref": "+27"
+       },
+       {
+        "name": "Exatidão",
+        "ref": "+27"
+       }
+      ],
+      "also": [
+       "Acerto de Golpes Múltiplos",
+       "Ataque"
+      ],
+      "stone": "Pedra de Mana Superior",
+      "stone_lines": [
+       {
+        "name": "Amplificação de Dano de Ataque Frontal",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano de Arma",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano Crítico",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano",
+        "ref": "+1%"
+       }
+      ],
+      "divine": null
+     },
+     {
+      "slot": "Elmo",
+      "substats": [
+       {
+        "name": "Cura Recebida",
+        "ref": "+19,22%"
+       },
+       {
+        "name": "Promessa do Vento",
+        "ref": "+1"
+       },
+       {
+        "name": "Acerto de Impacto",
+        "ref": "+1"
+       },
+       {
+        "name": "Golpe Potente",
+        "ref": "+2,2%"
+       },
+       {
+        "name": "Aumento de Ataque",
+        "ref": "+2,2%"
+       }
+      ],
+      "also": [
+       "Acerto Crítico",
+       "Ataque"
+      ],
+      "stone": "Pedra de Mana Superior",
+      "stone_lines": [
+       {
+        "name": "Amplificação de Dano de Ataque Frontal",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano de Arma",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano Crítico",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano",
+        "ref": "+1%"
+       }
+      ],
+      "divine": null
+     },
+     {
+      "slot": "Ombreiras",
+      "substats": [
+       {
+        "name": "Amplificação de Dano Crítico",
+        "ref": "+12,84%"
+       },
+       {
+        "name": "Promessa do Vento",
+        "ref": "+1"
+       },
+       {
+        "name": "Acerto de Impacto",
+        "ref": "+1"
+       },
+       {
+        "name": "Precisão",
+        "ref": "+43"
+       },
+       {
+        "name": "Acerto Crítico",
+        "ref": "+33"
+       }
+      ],
+      "also": [
+       "Ataque",
+       "Aumento de Defesa"
+      ],
+      "stone": "Pedra de Mana Superior",
+      "stone_lines": [
+       {
+        "name": "Amplificação de Dano de Ataque Frontal",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano de Arma",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano Crítico",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano",
+        "ref": "+1%"
+       }
+      ],
+      "divine": null
+     },
+     {
+      "slot": "Peitoral",
+      "substats": [
+       {
+        "name": "Amplificação de Dano",
+        "ref": "+6,58%"
+       },
+       {
+        "name": "Promessa do Vento",
+        "ref": "+1"
+       },
+       {
+        "name": "Acerto de Impacto",
+        "ref": "+1"
+       },
+       {
+        "name": "Acerto Crítico",
+        "ref": "+47"
+       },
+       {
+        "name": "Precisão",
+        "ref": "+61"
+       }
+      ],
+      "also": [
+       "Ataque",
+       "Aumento de Defesa"
+      ],
+      "stone": "Pedra de Mana Superior",
+      "stone_lines": [
+       {
+        "name": "Amplificação de Dano de Ataque Frontal",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano de Arma",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano Crítico",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano",
+        "ref": "+1%"
+       }
+      ],
+      "divine": null
+     },
+     {
+      "slot": "Calças",
+      "substats": [
+       {
+        "name": "Tolerância a Dano",
+        "ref": "+11,56%"
+       },
+       {
+        "name": "Promessa do Vento",
+        "ref": "+1"
+       },
+       {
+        "name": "Acerto de Impacto",
+        "ref": "+1"
+       },
+       {
+        "name": "Acerto Perfeito",
+        "ref": "+5,33%"
+       },
+       {
+        "name": "Aumento de Ataque",
+        "ref": "+2,4%"
+       }
+      ],
+      "also": [
+       "Acerto Crítico",
+       "Ataque"
+      ],
+      "stone": "Pedra de Mana Superior",
+      "stone_lines": [
+       {
+        "name": "Amplificação de Dano de Ataque Frontal",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano de Arma",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano Crítico",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano",
+        "ref": "+1%"
+       }
+      ],
+      "divine": null
+     },
+     {
+      "slot": "Luvas",
+      "substats": [
+       {
+        "name": "Velocidade de Combate",
+        "ref": "+7,25%"
+       },
+       {
+        "name": "Promessa do Vento",
+        "ref": "+1"
+       },
+       {
+        "name": "Acerto de Impacto",
+        "ref": "+1"
+       },
+       {
+        "name": "Acerto Perfeito",
+        "ref": "+3,42%"
+       },
+       {
+        "name": "Acerto Crítico",
+        "ref": "+30"
+       }
+      ],
+      "also": [
+       "Ataque",
+       "Aumento de Defesa"
+      ],
+      "stone": "Pedra de Mana Superior",
+      "stone_lines": [
+       {
+        "name": "Amplificação de Dano de Ataque Frontal",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano de Arma",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano Crítico",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano",
+        "ref": "+1%"
+       }
+      ],
+      "divine": null
+     },
+     {
+      "slot": "Botas",
+      "substats": [
+       {
+        "name": "Velocidade de Movimento",
+        "ref": "+10,28%"
+       },
+       {
+        "name": "Promessa do Vento",
+        "ref": "+1"
+       },
+       {
+        "name": "Acerto de Impacto",
+        "ref": "+1"
+       },
+       {
+        "name": "Acerto Perfeito",
+        "ref": "+4,37%"
+       },
+       {
+        "name": "Acerto Crítico",
+        "ref": "+37"
+       }
+      ],
+      "also": [
+       "Ataque",
+       "Aumento de Defesa"
+      ],
+      "stone": "Pedra de Mana Superior",
+      "stone_lines": [
+       {
+        "name": "Amplificação de Dano de Ataque Frontal",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano de Arma",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano Crítico",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano",
+        "ref": "+1%"
+       }
+      ],
+      "divine": null
+     },
+     {
+      "slot": "Capa",
+      "substats": [
+       {
+        "name": "Promessa do Vento",
+        "ref": "+1"
+       },
+       {
+        "name": "Acerto de Impacto",
+        "ref": "+1"
+       },
+       {
+        "name": "Golpe Potente",
+        "ref": "+1,77%"
+       },
+       {
+        "name": "Aumento de Ataque",
+        "ref": "+1,77%"
+       },
+       {
+        "name": "Acerto Crítico",
+        "ref": "+33"
+       }
+      ],
+      "also": [
+       "Ataque"
+      ],
+      "stone": "Pedra de Mana Superior",
+      "stone_lines": [
+       {
+        "name": "Amplificação de Dano de Ataque Frontal",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano de Arma",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano Crítico",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano",
+        "ref": "+1%"
+       }
+      ],
+      "divine": null
+     },
+     {
+      "slot": "Colar",
+      "substats": [
+       {
+        "name": "Promessa do Vento",
+        "ref": "+1"
+       },
+       {
+        "name": "Acerto de Impacto",
+        "ref": "+1"
+       },
+       {
+        "name": "Preparar Ataque",
+        "ref": "+1"
+       },
+       {
+        "name": "Poder",
+        "ref": "+20"
+       },
+       {
+        "name": "Exatidão",
+        "ref": "+20"
+       }
+      ],
+      "also": [
+       "Precisão",
+       "Acerto Crítico",
+       "Ataque"
+      ],
+      "stone": "Pedra Vital Superior",
+      "stone_lines": [
+       {
+        "name": "Amplificação de Dano de Ataque Frontal",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano de Arma",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano Crítico",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano",
+        "ref": "+1%"
+       }
+      ],
+      "divine": null
+     },
+     {
+      "slot": "Brinco (esq.)",
+      "substats": [
+       {
+        "name": "Promessa do Vento",
+        "ref": "+1"
+       },
+       {
+        "name": "Acerto de Impacto",
+        "ref": "+1"
+       },
+       {
+        "name": "Preparar Ataque",
+        "ref": "+1"
+       },
+       {
+        "name": "Poder",
+        "ref": "+16"
+       },
+       {
+        "name": "Exatidão",
+        "ref": "+16"
+       }
+      ],
+      "also": [
+       "Precisão",
+       "Acerto Crítico",
+       "Ataque"
+      ],
+      "stone": "Pedra Vital Superior",
+      "stone_lines": [
+       {
+        "name": "Amplificação de Dano de Ataque Frontal",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano de Arma",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano Crítico",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano",
+        "ref": "+1%"
+       }
+      ],
+      "divine": null
+     },
+     {
+      "slot": "Brinco (dir.)",
+      "substats": [
+       {
+        "name": "Promessa do Vento",
+        "ref": "+1"
+       },
+       {
+        "name": "Acerto de Impacto",
+        "ref": "+1"
+       },
+       {
+        "name": "Preparar Ataque",
+        "ref": "+1"
+       },
+       {
+        "name": "Poder",
+        "ref": "+16"
+       },
+       {
+        "name": "Exatidão",
+        "ref": "+16"
+       }
+      ],
+      "also": [
+       "Precisão",
+       "Acerto Crítico",
+       "Ataque"
+      ],
+      "stone": "Pedra Vital Superior",
+      "stone_lines": [
+       {
+        "name": "Amplificação de Dano de Ataque Frontal",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano de Arma",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano Crítico",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano",
+        "ref": "+1%"
+       }
+      ],
+      "divine": null
+     },
+     {
+      "slot": "Anel (esq.)",
+      "substats": [
+       {
+        "name": "Esmagamento Sombrio",
+        "ref": "+1"
+       },
+       {
+        "name": "Golpe Estilhaçante",
+        "ref": "+1"
+       },
+       {
+        "name": "Poder",
+        "ref": "+14"
+       },
+       {
+        "name": "Exatidão",
+        "ref": "+14"
+       },
+       {
+        "name": "Golpe Giratório",
+        "ref": "+1"
+       }
+      ],
+      "also": [
+       "Feitiço da Convalescença",
+       "Golpe Incandescente",
+       "Ataque"
+      ],
+      "stone": "Pedra Vital Superior",
+      "stone_lines": [
+       {
+        "name": "Amplificação de Dano de Ataque Frontal",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano de Arma",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano Crítico",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano",
+        "ref": "+1%"
+       }
+      ],
+      "divine": null
+     },
+     {
+      "slot": "Anel (dir.)",
+      "substats": [
+       {
+        "name": "Esmagamento Sombrio",
+        "ref": "+1"
+       },
+       {
+        "name": "Golpe Estilhaçante",
+        "ref": "+1"
+       },
+       {
+        "name": "Poder",
+        "ref": "+14"
+       },
+       {
+        "name": "Exatidão",
+        "ref": "+14"
+       },
+       {
+        "name": "Golpe Giratório",
+        "ref": "+1"
+       }
+      ],
+      "also": [
+       "Feitiço da Convalescença",
+       "Golpe Incandescente",
+       "Ataque"
+      ],
+      "stone": "Pedra Vital Superior",
+      "stone_lines": [
+       {
+        "name": "Amplificação de Dano de Ataque Frontal",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano de Arma",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano Crítico",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano",
+        "ref": "+1%"
+       }
+      ],
+      "divine": null
+     },
+     {
+      "slot": "Bracelete (esq.)",
+      "substats": [
+       {
+        "name": "Sabedoria [Lumiel]",
+        "ref": "+17"
+       },
+       {
+        "name": "Destruição [Zikel]",
+        "ref": "+17"
+       },
+       {
+        "name": "Tempo [Siel]",
+        "ref": "+17"
+       },
+       {
+        "name": "Ilusão [Kaisinel]",
+        "ref": "+17"
+       },
+       {
+        "name": "Morte [Triniel]",
+        "ref": "+17"
+       }
+      ],
+      "also": [
+       "Justiça [Nezekan]",
+       "Vida [Yustiel]",
+       "Espaço [Israphel]",
+       "Liberdade [Vaizel]",
+       "Destino [Marchutan]"
+      ],
+      "stone": "Pedra Vital Superior",
+      "stone_lines": [
+       {
+        "name": "Amplificação de Dano de Ataque Frontal",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano de Arma",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano Crítico",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano",
+        "ref": "+1%"
+       }
+      ],
+      "divine": null
+     },
+     {
+      "slot": "Bracelete (dir.)",
+      "substats": [
+       {
+        "name": "Sabedoria [Lumiel]",
+        "ref": "+17"
+       },
+       {
+        "name": "Destruição [Zikel]",
+        "ref": "+17"
+       },
+       {
+        "name": "Tempo [Siel]",
+        "ref": "+17"
+       },
+       {
+        "name": "Ilusão [Kaisinel]",
+        "ref": "+17"
+       },
+       {
+        "name": "Morte [Triniel]",
+        "ref": "+17"
+       }
+      ],
+      "also": [
+       "Justiça [Nezekan]",
+       "Vida [Yustiel]",
+       "Espaço [Israphel]",
+       "Liberdade [Vaizel]",
+       "Destino [Marchutan]"
+      ],
+      "stone": "Pedra Vital Superior",
+      "stone_lines": [
+       {
+        "name": "Amplificação de Dano de Ataque Frontal",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano de Arma",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano Crítico",
+        "ref": "+1%"
+       },
+       {
+        "name": "Amplificação de Dano",
+        "ref": "+1%"
+       }
+      ],
+      "divine": null
+     }
+    ],
+    "notes": [
+     "Teostones: veneno e besta performam melhor no início; mais tarde, todos eles performam de forma semelhante.",
+     "Manastones: Amplificação de Dano de Ataque Frontal (se build frontal) ▸ Amplificação de Dano de Arma ≈ Amplificação de Dano Crítico ▸ Amplificação de Dano ▸ Ataque."
+    ]
+   },
    "skill_stats": [
     {
      "name": "Dark Crush",

@@ -1,0 +1,1404 @@
+
+ATREIA Lens
+Descobrir
+Hub / Início
+Atreia Lens App
+Beta
+Classes
+
+Chanter
+
+Ranger
+
+Cleric
+
+Spirit Master
+
+Gladiator
+
+Sorcerer
+
+Templar
+
+Assassin
+Biblioteca
+Ordem de progressão
+Checklist Semanal
+Guias
+Comunidade
+Banco de dados
+Ferramentas
+Timers
+Gerador de Builds
+Beta
+
+App Atreia Lens
+Companion gratuito para PC
+
+Festival Shugo
+41:58
+
+Fenda do Espaço-Tempo
+2h 41m
+
+Cerco do Artefato
+1d 15h
+Reset diário
+10h 41m
+
+Parceiro online
+Dean
+Apoiar
+475
+online agora
+PT
+/
+EN
+Editar uma cópia
+Info
+Skills
+Arcanas
+Daevanion
+Rotação & Macro
+Equipamentos
+Asas & Títulos
+Panteão
+Genus Insight
+
+Build da comunidade
+Build de Gladiator
+Gladiator · por Atreia Lens
+
+PvE
+Late game (final)
+Elyos
+Espada grande
+10/10
+partes preenchidas
+Skills
+Skills ativas
+
+Golpe Feroz Dilacerante
+Nível final 20
+Base
+10
+Daevanion
++4
+Arcanas
++4
+Jóias
++2
+Changes to mobile skill
+Deals up to 12% more damage when less targets are hit
+Restores 50 MP on landing a Critical Hit
+
+Golpe Afiado
+Nível final 12
+Base
+7
+Daevanion
++4
+Arcanas
++1
+Absorbs 1% HP
+-1s [Ruinous Blow] cooldown on hit
+
+Onda Esmagadora
+Nível final 11
+Base
+10
+Arcanas
++1
+Absorbs 2% HP
+
+Golpe Feroz da Perdição
+Nível final 19
+Base
+10
+Daevanion
++4
+Arcanas
++3
+Jóias
++2
++20% Skill Speed
+Extra damage on hit
+
+Esmagada Descendente
+Nível final 20
+Base
+10
+Daevanion
++4
+Arcanas
++4
+Jóias
++2
+Adds [Upward Strike] Chain Skill
+Critical Hit on hit
+Remove cooldown
+
+Salto Esmagador
+Nível final 12
+Base
+7
+Daevanion
++4
+Arcanas
++1
+Prepare for Battle effect on the caster for 3s
+Resets cooldown on defeating an enemy
+
+Corte no Tornozelo
+Nível final 12
+Base
+8
+Daevanion
++4
++16m [Ankle Slice] range
+Ignores Block and Evasion and lands as Multi-Hit
+
+Remoção de Impacto
+Nível final 13
+Base
+10
+Arcanas
++3
+Restores 20% HP on using [Defiance]
+
+Espada do Massacre
+Nível final 14
+Base
+10
+Daevanion
++4
+Absorbs 4% HP, absorbs 15% HP of target with Incapacitated Immunity
+
+Aprisionamento Aéreo
+Nível final 12
+Base
+8
+Daevanion
++4
+Multi-Hit on hit
++100% damage to targets with Incapacitated Immunity
+
+Golpe de Investida
+Nível final 12
+Base
+8
+Daevanion
++4
++10m range
+-10s cooldown
+Stigmas
+
+Postura de Assalto
+Rank 20
+
+Bênção de Zikel
+Rank 20
+
+Explosão de Ira
+Rank 20
+
+Bloqueio Concentrado
+Rank 20
+Notas de skills
+Priorize as habilidades com (20) enquanto nivela.
+
+Slots de nível final e especialização de cada habilidade, em ordem de prioridade:
+
+Golpe Afiado — nível 12, especializações 2/4
+Golpe Feroz Dilacerante — nível 20, especializações 3/4/5
+Salto Esmagador — nível 12, especializações 1/3
+Espada do Massacre — nível 16, especializações 1/5
+Esmagada Descendente — nível 20, especializações 3/4/5
+Desenfreio da Aura da Espada — N/A
+Corte no Tornozelo — nível 12, especializações 3/4
+Onda Esmagadora — nível 12, especializações 1/4
+Golpe de Investida — nível 12, especializações 2/4
+Aprisionamento Aéreo — nível 12, especializações 1/3
+Golpe Feroz da Perdição — nível 20, especializações 1/4/5
+Remoção de Impacto — nível 16, especializações 3/5
+Prioridade de passivas: 1 Acerto de Impacto · 2 Preparar Ataque · 3 Contra-ataque Hábil · 4 Ruptura da Intenção Assassina · 5 Detecção de Fraqueza
+
+Estigmas: Postura de Assalto · Bênção de Zikel · Explosão de Ira · Bloqueio Concentrado. Também bom: Espada Vampírica, Armadura da Onda.
+
+Estatísticas de deus no arcana: Cálice (Vigor) Tempo · Papiro (Vigor) Vida / Destino · Bússola (Mágica) Morte / Liberdade · Sino (Mágica) Destruição · Espelho (Mágica) Ilusão / Sabedoria.
+
+Arcanas
+
+Cálice do Vigor +5
+Cálice
+Tempo [Siel]
++25
+Preparar Ataque
++4
+Contra-ataque Hábil
++3
+Acerto de Impacto
++1
+Ruptura da Intenção Assassina
++1
+
+Manuscrito do Vigor +5
+Manuscrito
+Vida [Yustiel]
++25
+Esmagada Descendente
++4
+Golpe Feroz da Perdição
++3
+Salto Esmagador
++1
+Golpe Afiado
++1
+
+Bússola da Mana +5
+Bússola
+Morte [Triniel]
++25
+Golpe Feroz Dilacerante
++4
+Remoção de Impacto
++3
+Onda Esmagadora
++1
+Desenfreio da Aura da Espada
++1
+
+Sino da Mana +5
+Sino
+Destruição [Zikel]
++25
+Preparar Ataque
++4
+Absorção de Sangue
++3
+Vontade de Sobreviver
++1
+Ímpeto Destrutivo
++1
+
+Espelho da Mana +5
+Espelho
+Sabedoria [Lumiel]
++25
+Ruptura da Intenção Assassina
++4
+Acerto de Impacto
++3
+Contra-ataque Hábil
++1
+Armadura da Proteção
++1
+Daevanion
+416 / 416 pontos usados
+
+Nezekan
+101 pts
+Zikel
+93 pts
+Vaizel
+102 pts
+Triniel
+120 pts
+VELDE4
+ATAAD1
+RESAA1
+2
+RESAA1
+3
+2
+ACECR1
+REDDE4
+ACECR1
+3
+PM1
+DEFAD1
+PM1
+DEFAD1
+RESAA1
+PM1
+2
+DEFAD1
+PV1
+ACECR1
+3
+PV1
+3
+PV1
+2
+PV1
+RESAA1
+DEFAD1
+ATAAD1
+DEFAD1
+PM1
+ATAAD1
+3
+PV1
+PM1
+ATAAD1
+RESAA1
+2
+PM1
+ACECR1
+RESAA1
+3
+DEFAD1
+★
+ATAAD1
+3
+ACECR1
+RESAA1
+PV1
+2
+ACECR1
+DEFAD1
+PV1
+PM1
+3
+DEFAD1
+PV1
+ATAAD1
+DEFAD1
+ATAAD1
+ACECR1
+PM1
+2
+PM1
+3
+PM1
+3
+RESAA1
+PM1
+ATAAD1
+2
+PV1
+ACECR1
+ATAAD1
+PV1
+ATAAD1
+PV1
+3
+RESAA1
+REDDE4
+RESAA1
+2
+3
+ACECR1
+2
+ACECR1
+DEFAD1
+VELDE4
+ativo
+Stats de todos os tabuleiros
+Acerto Crítico
++115
+Acerto de Golpes Múltiplos
++4,5%
+Amplificação de Dano
++3%
+Amplificação de Dano Crítico
++3%
+Ataque Adicional
++72
+Defesa Adicional
++750
+PM
++1.300
+PV
++2.600
+Redução de Tempo de Recarga
++3%
+Resistência a Acerto Crítico
++140
+Resistência a Golpes Múltiplos
++4,5%
+Tolerância a Dano
++3%
+Tolerância a Dano Crítico
++3%
+Velocidade de Combate
++3%
+Níveis de skill
+Golpe Feroz Dilacerante
++4 nv
+Golpe Afiado
++4 nv
+Golpe Feroz da Perdição
++4 nv
+Esmagada Descendente
++4 nv
+Salto Esmagador
++4 nv
+Corte no Tornozelo
++4 nv
+Desenfreio da Aura da Espada
++4 nv
+Espada do Massacre
++4 nv
+Aprisionamento Aéreo
++4 nv
+Golpe de Investida
++4 nv
+Postura de Sobrevivência
++4 nv
+Armadura da Proteção
++4 nv
+Absorção de Sangue
++4 nv
+Detecção de Fraqueza
++4 nv
+Preparar Ataque
++4 nv
+Acerto de Impacto
++4 nv
+Ímpeto Destrutivo
++4 nv
+Contra-ataque Hábil
++4 nv
+Ruptura da Intenção Assassina
++4 nv
+Rotação · macro + setup
+Segure o macro. Você vai experimentar problemas de mana até que você consiga RMB no nível 16, então segure LMB + RMB (macro) no início, pois seu LMB será sua fonte de mana. Teclas: Jogabilidade > Macro = botão direito do mouse; Slot de Habilidade Rápida: Uso Rápido 1 = botão esquerdo do mouse / R; Tecla de Habilidade Especial Separada: DESLIGADO.
+
+Barra de skills
+3
+
+
+2
+
+
+
+1
+
+
+
+
+
+
+
+
+
+
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+Você segura
+Você aperta
+A macro dispara
+Macro no jogo
+Passo 01
+
+Skill
+Bênção de Zikel
+Atraso
+10
+ms
+Passo 02
+
+Skill
+Espada Vampírica
+Atraso
+10
+ms
+Passo 03
+
+Skill
+Explosão de Ira
+Atraso
+10
+ms
+Você segura
+11 — Golpe Afiado
+Macro — Bênção de Zikel → Espada Vampírica → Explosão de Ira
+Você aperta
+—
+Essa rotação está funcionando pra você? Uma doação ajuda a manter builds como essa em dia.
+
+Pix (LivePix)
+Ko-fi
+Equipamentos
+Prioridade dos substats
+1
+Mais importante
+2
+3
+4
+5
+Menos importante
+Arma
+
+Item Default +0
+Item craftado
+Substats
+1
+Amplificação de Dano de Arma
++9,64%
+2
+Velocidade de Combate
++12,98%
+3
+Poder
++32
+4
+Exatidão
++32
+5
+Amplificação de Dano
++7,3%
+Também servem
+Acerto de Golpes Múltiplos
+Ataque
+Pedra de Mana
+
+Pedra de Mana Superior
+Amplificação de Dano de Ataque Frontal
++1%
+Amplificação de Dano de Arma
++1%
+Amplificação de Dano Crítico
++1%
+Amplificação de Dano
++1%
+Pedras Divinas
+
+Soberba de Zikel
+Guarda
+
+Item Default +0
+Item craftado
+Substats
+1
+Amplificação de Dano de Arma
++7,73%
+2
+Velocidade de Combate
++10,12%
+3
+Amplificação de Dano
++5,85%
+4
+Poder
++27
+5
+Exatidão
++27
+Também servem
+Acerto de Golpes Múltiplos
+Ataque
+Pedra de Mana
+
+Pedra de Mana Superior
+Amplificação de Dano de Ataque Frontal
++1%
+Amplificação de Dano de Arma
++1%
+Amplificação de Dano Crítico
++1%
+Amplificação de Dano
++1%
+Elmo
+
+Item Default +0
+Item craftado
+Substats
+1
+Cura Recebida
++19,22%
+2
+Acerto de Impacto
++1
+3
+Preparar Ataque
++1
+4
+Golpe Potente
++2,2%
+5
+Aumento de Ataque
++2,2%
+Também servem
+Acerto Crítico
+Ataque
+Pedra de Mana
+
+Pedra de Mana Superior
+Amplificação de Dano de Ataque Frontal
++1%
+Amplificação de Dano de Arma
++1%
+Amplificação de Dano Crítico
++1%
+Amplificação de Dano
++1%
+Ombreiras
+
+Item Default +0
+Item craftado
+Substats
+1
+Amplificação de Dano Crítico
++12,84%
+2
+Acerto de Impacto
++1
+3
+Preparar Ataque
++1
+4
+Precisão
++43
+5
+Acerto Crítico
++33
+Também servem
+Ataque
+Aumento de Defesa
+Pedra de Mana
+
+Pedra de Mana Superior
+Amplificação de Dano de Ataque Frontal
++1%
+Amplificação de Dano de Arma
++1%
+Amplificação de Dano Crítico
++1%
+Amplificação de Dano
++1%
+Peitoral
+
+Item Default +0
+Item craftado
+Substats
+1
+Amplificação de Dano
++6,58%
+2
+Acerto de Impacto
++1
+3
+Preparar Ataque
++1
+4
+Acerto Crítico
++47
+5
+Precisão
++61
+Também servem
+Ataque
+Aumento de Defesa
+Pedra de Mana
+
+Pedra de Mana Superior
+Amplificação de Dano de Ataque Frontal
++1%
+Amplificação de Dano de Arma
++1%
+Amplificação de Dano Crítico
++1%
+Amplificação de Dano
++1%
+Calças
+
+Item Default +0
+Item craftado
+Substats
+1
+Tolerância a Dano
++11,56%
+2
+Acerto de Impacto
++1
+3
+Preparar Ataque
++1
+4
+Acerto Perfeito
++5,33%
+5
+Aumento de Ataque
++2,4%
+Também servem
+Acerto Crítico
+Ataque
+Pedra de Mana
+
+Pedra de Mana Superior
+Amplificação de Dano de Ataque Frontal
++1%
+Amplificação de Dano de Arma
++1%
+Amplificação de Dano Crítico
++1%
+Amplificação de Dano
++1%
+Luvas
+
+Item Default +0
+Item craftado
+Substats
+1
+Velocidade de Combate
++7,25%
+2
+Acerto de Impacto
++1
+3
+Preparar Ataque
++1
+4
+Acerto Perfeito
++3,42%
+5
+Acerto Crítico
++30
+Também servem
+Ataque
+Aumento de Defesa
+Pedra de Mana
+
+Pedra de Mana Superior
+Amplificação de Dano de Ataque Frontal
++1%
+Amplificação de Dano de Arma
++1%
+Amplificação de Dano Crítico
++1%
+Amplificação de Dano
++1%
+Botas
+
+Item Default +0
+Item craftado
+Substats
+1
+Velocidade de Movimento
++10,28%
+2
+Acerto de Impacto
++1
+3
+Preparar Ataque
++1
+4
+Acerto Perfeito
++4,37%
+5
+Acerto Crítico
++37
+Também servem
+Ataque
+Aumento de Defesa
+Pedra de Mana
+
+Pedra de Mana Superior
+Amplificação de Dano de Ataque Frontal
++1%
+Amplificação de Dano de Arma
++1%
+Amplificação de Dano Crítico
++1%
+Amplificação de Dano
++1%
+Capa
+
+Item Default +0
+Item craftado
+Substats
+1
+Acerto de Impacto
++1
+2
+Preparar Ataque
++1
+3
+Golpe Potente
++1,77%
+4
+Aumento de Ataque
++1,77%
+5
+Acerto Crítico
++33
+Também servem
+Ataque
+Pedra de Mana
+
+Pedra de Mana Superior
+Amplificação de Dano de Ataque Frontal
++1%
+Amplificação de Dano de Arma
++1%
+Amplificação de Dano Crítico
++1%
+Amplificação de Dano
++1%
+Colar
+
+Item Default +0
+Item craftado
+Substats
+1
+Acerto de Impacto
++1
+2
+Preparar Ataque
++1
+3
+Contra-ataque Hábil
++1
+4
+Poder
++20
+5
+Exatidão
++20
+Também servem
+Precisão
+Acerto Crítico
+Ataque
+Pedra de Mana
+
+Pedra Vital Superior
+Amplificação de Dano de Ataque Frontal
++1%
+Amplificação de Dano de Arma
++1%
+Amplificação de Dano Crítico
++1%
+Amplificação de Dano
++1%
+Brinco (esq.)
+
+Item Default +0
+Item craftado
+Substats
+1
+Acerto de Impacto
++1
+2
+Preparar Ataque
++1
+3
+Contra-ataque Hábil
++1
+4
+Poder
++16
+5
+Exatidão
++16
+Também servem
+Precisão
+Acerto Crítico
+Ataque
+Pedra de Mana
+
+Pedra Vital Superior
+Amplificação de Dano de Ataque Frontal
++1%
+Amplificação de Dano de Arma
++1%
+Amplificação de Dano Crítico
++1%
+Amplificação de Dano
++1%
+Brinco (dir.)
+
+Item Default +0
+Item craftado
+Substats
+1
+Acerto de Impacto
++1
+2
+Preparar Ataque
++1
+3
+Contra-ataque Hábil
++1
+4
+Poder
++16
+5
+Exatidão
++16
+Também servem
+Precisão
+Acerto Crítico
+Ataque
+Pedra de Mana
+
+Pedra Vital Superior
+Amplificação de Dano de Ataque Frontal
++1%
+Amplificação de Dano de Arma
++1%
+Amplificação de Dano Crítico
++1%
+Amplificação de Dano
++1%
+Anel (esq.)
+
+Item Default +0
+Item craftado
+Substats
+1
+Esmagada Descendente
++1
+2
+Golpe Feroz Dilacerante
++1
+3
+Golpe Feroz da Perdição
++1
+4
+Poder
++14
+5
+Exatidão
++14
+Também servem
+Ataque
+Pedra de Mana
+
+Pedra Vital Superior
+Amplificação de Dano de Ataque Frontal
++1%
+Amplificação de Dano de Arma
++1%
+Amplificação de Dano Crítico
++1%
+Amplificação de Dano
++1%
+Anel (dir.)
+
+Item Default +0
+Item craftado
+Substats
+1
+Esmagada Descendente
++1
+2
+Golpe Feroz Dilacerante
++1
+3
+Golpe Feroz da Perdição
++1
+4
+Poder
++14
+5
+Exatidão
++14
+Também servem
+Ataque
+Pedra de Mana
+
+Pedra Vital Superior
+Amplificação de Dano de Ataque Frontal
++1%
+Amplificação de Dano de Arma
++1%
+Amplificação de Dano Crítico
++1%
+Amplificação de Dano
++1%
+Bracelete (esq.)
+
+Item Default +0
+Item craftado
+Substats
+1
+Sabedoria [Lumiel]
++17
+2
+Destruição [Zikel]
++17
+3
+Tempo [Siel]
++17
+4
+Ilusão [Kaisinel]
++17
+5
+Morte [Triniel]
++17
+Também servem
+Justiça [Nezekan]
+Vida [Yustiel]
+Espaço [Israphel]
+Liberdade [Vaizel]
+Destino [Marchutan]
+Pedra de Mana
+
+Pedra Vital Superior
+Amplificação de Dano de Ataque Frontal
++1%
+Amplificação de Dano de Arma
++1%
+Amplificação de Dano Crítico
++1%
+Amplificação de Dano
++1%
+Bracelete (dir.)
+
+Item Default +0
+Item craftado
+Substats
+1
+Sabedoria [Lumiel]
++17
+2
+Destruição [Zikel]
++17
+3
+Tempo [Siel]
++17
+4
+Ilusão [Kaisinel]
++17
+5
+Morte [Triniel]
++17
+Também servem
+Justiça [Nezekan]
+Vida [Yustiel]
+Espaço [Israphel]
+Liberdade [Vaizel]
+Destino [Marchutan]
+Pedra de Mana
+
+Pedra Vital Superior
+Amplificação de Dano de Ataque Frontal
++1%
+Amplificação de Dano de Arma
++1%
+Amplificação de Dano Crítico
++1%
+Amplificação de Dano
++1%
+Total do equipamento
+Acerto Crítico
++180
+Acerto Perfeito
++13,12%
+Amplificação de Dano
++35,73%
+Amplificação de Dano Crítico
++28,84%
+Amplificação de Dano de Arma
++33,37%
+Amplificação de Dano de Ataque Frontal
++16%
+Aumento de Ataque
++6,37%
+Cura Recebida
++19,22%
+Destruição [Zikel]
++34
+Exatidão
++139
+Golpe Potente
++3,97%
+Ilusão [Kaisinel]
++34
+Morte [Triniel]
++34
+Poder
++139
+Precisão
++104
+Sabedoria [Lumiel]
++34
+Tempo [Siel]
++34
+Tolerância a Dano
++11,56%
+Velocidade de Combate
++30,35%
+Velocidade de Movimento
++10,28%
+Notas de equipamentos
+Teostones: veneno e besta performam melhor no início; mais tarde, todos eles performam de forma semelhante.
+
+Manastones: Amplificação de Dano de Ataque Frontal (se build frontal) ▸ Amplificação de Dano de Arma ≈ Amplificação de Dano Crítico ▸ Amplificação de Dano ▸ Ataque.
+
+Asas & Títulos
+Asa equipada
+
+Asas da KromedePrincipal
+Único
+
+Asas do Pesadelo
+Único
+
+Asas de Véu da Escuridão
+Único
+Títulos equipados
+
+Livre das Amarras da RaçaPrincipal
+Ataque
+Acerto Crítico
++68
+Ataque Adicional
++34
+Amplificação de Dano em JvA
++4,5%
+
+Resplendor Dourado
+Ataque
+Precisão Adicional
++60
+Ataque Crítico
++45
+Amplificação de Dano Crítico
++3%
+
+Guardião de Verteron
+Ataque
+Penetração
++210
+Amplificação de Dano em JvA
++3%
+
+Dominação do EspaçoPrincipal
+Defesa
+PV
++1.000
+Defesa Adicional
++340
+Tolerância a Dano em JvA
++4,5%
+
+Governar Todas as Coisas
+Defesa
+Defesa Adicional
++320
+Tolerância a Dano pela Retaguarda
++3%
+Tolerância a Dano contra Chefe
++4%
+
+Santidade de Verteron
+Defesa
+Bloqueio
++100
+Defesa Adicional
++300
+Tolerância a Dano
++3%
+
+Pegadas da JornadaPrincipal
+Utilidade
+PV
++900
+Recuperação Natural de Vigor
++2.800
+Velocidade de Combate
++3%
+
+Ai, Não Tenho Nada para Vestir
+Utilidade
+Recuperação Natural de PV
++42
+Velocidade de Combate
++3,5%
+Redução de Tempo de Recarga
++3,5%
+
+Do Inferno e de Volta
+Utilidade
+PV
++900
+Vigor
++22.500
+Redução de Tempo de Recarga
++3%
+Notas de asas e títulos
+Mais equipados nas builds Global da classe: Asas da Kromede · Asas do Pesadelo · Asas de Véu da Escuridão · Asas de Daeva Supremas.
+Melhor para nivelar: Onda Azul, Brawler, Espírito da Floresta, Pesadelo, Asas de Talisra do Vazio, Daeva Final.
+Prioridade de aprimoramento: bônus de Golpe Potente, então Amplificação de Dano de Arma, Amplificação de Dano, Ataque, e Precisão Adicional e Acerto Crítico.
+
+Títulos. Ofensivos: Livre das Amarras da Raça, depois Resplendor Dourado, depois Guardião de Verteron. Defensivos: Dominação do Espaço, depois Governar Todas as Coisas, depois Santidade de Verteron. Utilidade: Pegadas da Jornada, depois Ai, Não Tenho Nada para Vestir, depois Do Inferno e de Volta.
+
+Panteão
+
+Gartua da Eternidade
+Quadro 1 · Vida 5 · bg_god_wisdom 5 · Destino 5 · Ilusão 5
+
+Gartua Imortal
+Quadro 2 · Vida 5 · bg_god_wisdom 5 · Destino 5 · Ilusão 5
+
+Ludra Abissal (Vinculado)
+Quadro 3 · bg_god_wisdom 5 · Destino 5 · Ilusão 5
+
+Draupnir
+Quadro 4 · Vida 4 · bg_god_wisdom 4 · Ilusão 4
+
+Ilha Aérea de Vakron
+Quadro 5 · Vida 4 · bg_god_wisdom 4 · Ilusão 4
+
+Ansas Divino
+Quadro 6 · Vida 4 · bg_god_wisdom 4 · Ilusão 4
+
+Kasia do Sonho Ilusório
+Quadro 7 · Vida 4 · bg_god_wisdom 4 · Ilusão 4
+
+Krao
+Quadro 8 · bg_god_wisdom 4 · Destino 4 · Ilusão 4
+
+Gruta do Chifre Feroz
+Quadro 9 · bg_god_wisdom 4 · Destino 4 · Ilusão 4
+
+Vigilante Kairah
+Quadro 10 · bg_god_wisdom 4 · Destino 4 · Ilusão 4
+
+K’nash, Arma de Vigilância
+Quadro 11 · bg_god_wisdom 4 · Destino 4 · Ilusão 4
+
+Centurião Demiros
+Quadro 12 · bg_god_wisdom 4 · Destino 4 · Ilusão 4
+
+Bakarma Transcendido (Vinculado)
+Estátua 1 · Morte 12 · Espaço 12 · Liberdade 12
+
+Artefato da Eternidade (Vinculado)
+Estátua 2 · Morte 10 · Liberdade 10
+
+Espelho de Asahr (Vinculado)
+Estátua 3 · Morte 10 · Espaço 10
+
+Kibelisk (Vinculado)
+Estátua 4 · Espaço 10 · Liberdade 10
+
+Aparição de Zikel (Vinculado)
+Colosso · Tempo 45 · Justiça 45 · Destruição 45
+Pontos por divindade
+Destruição
+45
+Tempo
+45
+Justiça
+45
+Ilusão
+51
+Liberdade
+32
+Morte
+32
+Espaço
+32
+Vida
+26
+Destino
+35
+Notas do Panteão
+Colosso: prioridade em Zikel / Kromede (conjunto de Aparição de Zikel).
+Estatuas: prioridade em Liberdade, Morte e Espaço.
+Pinturas: prioridade em Ilusão e Sabedoria, então Vida.
+
+Genus Insight
+Special Insight
+9/9
+Cogni Insight
+9/9
+Fera Insight
+9/9
+Natura Insight
+9/9
+Varian Insight
+9/9
+Slot 1
+Ataque Máx.
++20
+Épico
+Ataque Adicional
++16
+Épico
+Slot 2
+Aumento de PV
++1,6%
+Épico
+Slot 3
+Acerto Crítico
++30
+Épico
+Precisão Adicional
++40
+Épico
+Dano Adicional do Fragmento de Poder
++16
+Épico
+Slot 4
+Golpe Potente
++3%
+Épico
+Slot 5
+Ataque Máx.
++20
+Épico
+Ataque Adicional
++16
+Épico
+Slot 6
+Acerto Crítico
++30
+Épico
+Precisão Adicional
++40
+Épico
+Dano Adicional do Fragmento de Poder
++16
+Épico
+Slot 7
+Tolerância a Dano
++3%
+Épico
+Solidez
++3%
+Épico
+Slot 8
+Aumento de PV
++1,6%
+Épico
+Slot 9
+Acerto Crítico
++30
+Épico
+Precisão Adicional
++40
+Épico
+Dano Adicional do Fragmento de Poder
++16
+Épico
+Notas do Genus Insight
+Linhas 3, 6 e 9: Dano Adicional do Fragmento de Poder apenas se seu limite não for alcançado.
+
+Essa build te ajudou? Ajude a mantê-la em dia.
+Todo patch pode mudar as melhores skills, equipamentos e rotação, e acompanhar isso leva tempo. Uma doação paga por isso.
+Doar via Pix (LivePix)
+Doar no Ko-fi
+
+ATREIA Lens
+Plataforma companheira de Atreia • Recursos feitos pela comunidade
+Política de Privacidade
+Configurar cookies
+Doar via Pix (LivePix)
+Doar no Ko-fi
+v0.1.0

@@ -53,8 +53,10 @@ def parse(text: str) -> dict:
             i += 2
         slots.append(slot)
     missing = [s for s in SLOTS if s not in {x["slot"] for x in slots}]
+    if len(slots) < 10:
+        raise SystemExit(f"Achei só {len(slots)} peças; a parte Equipamentos foi copiada inteira?")
     if missing:
-        raise SystemExit(f"Peças que não achei no texto: {missing}")
+        print("Aviso: a página não traz", ", ".join(missing))
     for s in slots:
         if len(s["substats"]) != 5:
             raise SystemExit(f"{s['slot']}: achei {len(s['substats'])} substatus em vez de 5")

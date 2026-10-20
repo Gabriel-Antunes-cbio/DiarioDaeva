@@ -1,0 +1,1278 @@
+
+ATREIA Lens
+Descobrir
+Hub / Início
+Atreia Lens App
+Beta
+Classes
+
+Chanter
+
+Ranger
+
+Cleric
+
+Spirit Master
+
+Gladiator
+
+Sorcerer
+
+Templar
+
+Assassin
+Biblioteca
+Ordem de progressão
+Checklist Semanal
+Guias
+Comunidade
+Banco de dados
+Ferramentas
+Timers
+Gerador de Builds
+Beta
+
+App Atreia Lens
+Companion gratuito para PC
+
+Festival Shugo
+42:09
+
+Fenda do Espaço-Tempo
+2h 42m
+
+Cerco do Artefato
+1d 15h
+Reset diário
+10h 42m
+
+Parceiro online
+Dean
+Apoiar
+473
+online agora
+PT
+/
+EN
+Editar uma cópia
+Info
+Skills
+Arcanas
+Daevanion
+Rotação & Macro
+Equipamentos
+Asas & Títulos
+Panteão
+Genus Insight
+
+Build da comunidade
+Build de Assassin
+Assassin · por Atreia Lens
+
+PvE
+Late game (final)
+Elyos
+Adaga
+10/10
+partes preenchidas
+Skills
+Skills ativas
+
+Corte Rápido
+Nível final 18
+Base
+10
+Daevanion
++4
+Arcanas
++2
+Jóias
++2
++50% Multi-Hit on hit
+-1s [Insignia Explosion] cooldown on hit
+
+Corte do Clarão
+Nível final 10
+Base
+10
++6m Range
+
+Emboscada
+Nível final 14
+Base
+10
+Daevanion
++4
+
+Rugido da Besta
+Nível final 18
+Base
+10
+Daevanion
++4
+Arcanas
++4
++20% Skill Speed
+Deals up to 12% more damage when less targets are hit
+
+Explosão de Insígnia
+Nível final 19
+Base
+10
+Daevanion
++4
+Arcanas
++3
+Jóias
++2
++50% Multi-Hit on hit
+-3s cooldown
+
+Corte do Tornado
+Nível final 10
+Base
+10
++50% Multi-Hit on hit
+
+Queda da Sombra
+Nível final 11
+Base
+10
+Daevanion
++1
+Absorbs 10% HP
+
+Remoção de Impacto
+Nível final 12
+Base
+9
+Daevanion
++1
+Arcanas
++2
+Restores 1000 Stamina on using [Defiance]
+Restores 20% HP on using [Defiance]
+
+Desenfreio da Tempestade
+Nível final 16
+Base
+8
+Daevanion
++4
+Arcanas
++2
+Jóias
++2
+Absorbs 5% HP
+Multi-Hit on hit
+
+Estocada no Coração
+Nível final 19
+Base
+10
+Daevanion
++4
+Arcanas
++3
+Jóias
++2
+Multi-Hit on hit
+Resets [Heart Gore] cooldown on landing a Critical Hit
+
+Infiltração
+Nível final 11
+Base
+10
+Daevanion
++1
++10m [Infiltrate] range
+Stigmas
+
+Clone Ilusório
+Rank 20
+
+Pacto da Celeridade
+Rank 20
+
+Punhal de Triniel
+Rank 20
+
+Presa da Besta
+Rank 20
+Notas de skills
+Build: DPS estável contra chefes. Recomendada para a maioria dos chefes: mantém as recargas principais juntas, deixa espaço para jogar na defensiva e não exige uma execução perfeita. Estigmas: Clone Ilusório, Pacto da Celeridade, Presa da Besta, Punhal de Triniel.
+
+Núcleo ativo: Corte Rápido, Estocada no Coração e Explosão de Insígnia no nível 20. Três principais passivas: Golpe Potente pela Retaguarda, Postura de Ataque Súbito, Exploração de Fraqueza (não negligencie os níveis das passivas). Meta de recarga: cerca de 35%+ (um alvo prático de testes, não um limite oficial). Ficar pelas costas importa mais que o DPS teórico; guarde uma skill de movimento para as mecânicas do chefe.
+
+Priorize a consistência enquanto aprende: mantenha a trait de roubo de vida de Estocada no Coração e Explosão de Insígnia no nível 20. Baixar Explosão de Insígnia para 16 para ganhar níveis de passivas é uma otimização de endgame, não uma build inicial.
+
+Solo / farm em campo: mantenha uma ferramenta de recuperação e dano em área suficiente para limpar grupos de monstros; um DPS um pouco menor no boneco de treino é aceitável se reduzir o tempo parado. Mesmos estigmas, Queda da Sombra para recuperação e a trait de dano em área em Corte do Tornado; mantenha uma skill de movimento para escapar ou se reposicionar.
+
+Skills — nível final e traits:
+
+Corte Rápido — nível 20, traits 3 / 4 / 5. Seu principal ataque repetível. 3: dano de golpes múltiplos. 4: repetir Corte Rápido traz Explosão de Insígnia de volta mais cedo. 5: acertos críticos mais confiáveis. Progressão: troque a trait de golpes múltiplos pela de roubo de vida quando a sobrevivência custar mais tempo de combate do que o dano extra vale.
+Estocada no Coração — nível 20, traits 4 / 5. Golpe de alta prioridade; 4: recuperação de vida, 5: melhora a interação de acerto crítico e runas. Com equipamento melhor e Acerto Crítico confiável, builds de alto nível podem adicionar a trait 1 ou 3; mantenha 4 / 5 enquanto progride.
+Explosão de Insígnia — nível 20 (ou 16), traits 2 / 5. Onde você gasta as runas acumuladas pelo resto da rotação. 2: gestão de runas, 5: dano de burst. O nível 20 é o padrão seguro; pare no 16 só quando os quatro pontos economizados completarem níveis de passivas mais valiosos (Golpe Potente pela Retaguarda 36, Postura de Ataque Súbito 34, Exploração de Fraqueza 29, Acerto de Impacto 25 é um alvo de endgame, não um requisito).
+Rugido da Besta — nível 20 (ou 12), traits 2 / 3 / 4: dano confiável contra chefes em vez de efeitos de controle. O nível 12 é um bom ponto de parada quando sua parcela do seu dano é pequena.
+Desenfreio da Tempestade — nível 16, traits 1 / 4. Uma ponte para a janela de stagger: use durante o stagger do chefe quando seu burst principal não estiver disponível, não em todo stagger. A trait de reset, inconsistente, é evitada.
+Queda da Sombra — nível 12+, traits 1 / 3. Cura imediata (1) e um pequeno reposicionamento (3); mantenha para jogar solo, progressão e chefes desconhecidos.
+Corte do Tornado — nível 12 ou 16, trait conforme o conteúdo: 1 dano parado contra chefe (golpes múltiplos), 3 movimento / alcance, 2 dano em área (farm e grupos; muito menos valor contra um único chefe). Evite a versão de movimento perto de bordas letais.
+Corte do Clarão — nível 8+, traits 2 / 4: alcance e um uso consecutivo extra, para terminar em uma boa posição pelas costas.
+Infiltração — nível 8+, traits de alcance (2) e recuperação (1): uma ferramenta de presença para chegar às costas do chefe e manter o fluxo de recursos. A opção de dano é pior se criar tempo parado depois.
+Remoção de Impacto — nível 12 com traits 2 / 3, ou nível 16 com traits 3 / 5 quando o ponto mais forte justificar os pontos extras. Utilidade em primeiro lugar; a recarga dela não pode mais ser reduzida.
+Emboscada — nível 16 (ordem de skills do arcana).
+Ordem das passivas: S — Golpe Potente pela Retaguarda (invista primeiro: o Assassin ataca pelas costas), Postura de Ataque Súbito (a principal passiva ofensiva para as janelas de burst), Exploração de Fraqueza (+0,5% de Ataque por nível no teste de referência, um investimento inicial mais forte que Acerto de Impacto) · A — Acerto de Impacto · B — Sexto Sentido Aguçado / recuperação (adicione recuperação quando o encontro exigir, depois continue investindo em dano).
+
+Estigmas: 1 Clone Ilusório — a especialização 5 reduz a recarga sempre que você acerta um crítico pelas costas, por isso vem primeiro. 2 Pacto da Celeridade — use junto com Clone Ilusório; com redução de recarga suficiente, os dois buffs ficam prontos para a mesma janela de burst. 3 Punhal de Triniel — mais que uma skill de dano: o efeito de recarga e a janela de dano pelas costas mantêm os buffs principais sincronizados. 4 Presa da Besta — um buff ofensivo central.
+
+Ciclo de burst: Clone Ilusório + Pacto da Celeridade + Presa da Besta iniciam o burst → Punhal de Triniel causa dano e ativa o efeito de recarga → críticos pelas costas trazem Clone Ilusório de volta mais cedo. Premissas: 80% de tempo pelas costas e 35%+ de redução de recarga deixam cerca de 11,6 s de Clone Ilusório e cerca de 14 s de Pacto da Celeridade restantes (uma estimativa testada, não uma fórmula oficial; muda com a Velocidade de Combate, o tempo pelas costas, ataques errados, latência e mecânicas do chefe). Use Punhal de Triniel normalmente quando suas recargas estiverem distantes; segure-a por cerca de 3–8 segundos só quando isso a alinhar com a próxima janela de Clone Ilusório sem custar um cast inteiro.
+
+Arcana: ordem de evolução Papiro → Bússola → Cálice. Papiro: Corte Rápido · Estocada no Coração · Explosão de Insígnia, a peça principal de skills ativas (busque uma distribuição útil de 4/2 ou 3/3/2 em vez de copiar uma rolagem perfeita de endgame). Bússola: Rugido da Besta · Desenfreio da Tempestade · Remoção de Impacto (Desenfreio da Tempestade +2 e Remoção de Impacto +2 são rolagens flexíveis práticas; a antiga rolagem de Ataque Surpresa não é mais obrigatória). Cálice: níveis de skills passivas — Golpe Potente pela Retaguarda, Postura de Ataque Súbito e Exploração de Fraqueza costumam ser o motivo de dois Assassins com Poder de Combate parecido causarem dano diferente. Complete as skills ativas primeiro: Estocada no Coração 20 > Explosão de Insígnia 20 > Corte Rápido 20 > Rugido da Besta 20 > Desenfreio da Tempestade 16 > Emboscada 16. O conjunto ideal de skills inclui Estocada no Coração, Corte Rápido, Explosão de Insígnia, Emboscada, Golpe Potente pela Retaguarda, Postura de Ataque Súbito, Acerto de Impacto e Exploração de Fraqueza.
+
+Compare um bônus útil de nível 16 ou 20 de skill com um item que mostra mais Poder de Combate: escolha o nível da skill quando ele melhorar sua rotação e seu dano reais.
+
+Arcanas
+
+Cálice do Vigor +5
+Cálice
+Tempo [Siel]
++25
+Golpe Potente pela Retaguarda
++4
+Postura de Ataque Súbito
++3
+Exploração de Fraqueza
++1
+
+Manuscrito do Vigor +5
+Manuscrito
+Vida [Yustiel]
++25
+Estocada no Coração
++3
+Explosão de Insígnia
++3
+Corte Rápido
++2
+
+Bússola da Mana +5
+Bússola
+Morte [Triniel]
++25
+Rugido da Besta
++4
+Desenfreio da Tempestade
++2
+Remoção de Impacto
++2
+Daevanion
+381 / 416 pontos usados
+
+Nezekan
+91 pts
+Zikel
+93 pts
+Vaizel
+90 pts
+Triniel
+107 pts
+VELDE4
+ATAAD1
+RESAA1
+2
+RESAA1
+3
+2
+ACECR1
+REDDE4
+ACECR1
+3
+PM1
+DEFAD1
+PM1
+DEFAD1
+RESAA1
+PM1
+2
+DEFAD1
+PV1
+ACECR1
+3
+PV1
+3
+PV1
+2
+PV1
+RESAA1
+DEFAD1
+ATAAD1
+DEFAD1
+PM1
+ATAAD1
+3
+PV1
+PM1
+ATAAD1
+RESAA1
+2
+PM1
+ACECR1
+RESAA1
+3
+DEFAD1
+★
+ATAAD1
+3
+ACECR1
+RESAA1
+PV1
+2
+ACECR1
+DEFAD1
+PV1
+PM1
+3
+DEFAD1
+PV1
+ATAAD1
+DEFAD1
+ATAAD1
+ACECR1
+PM1
+2
+PM1
+3
+PM1
+3
+RESAA1
+PM1
+ATAAD1
+2
+PV1
+ACECR1
+ATAAD1
+PV1
+ATAAD1
+PV1
+3
+RESAA1
+REDDE4
+RESAA1
+2
+3
+ACECR1
+2
+ACECR1
+DEFAD1
+VELDE4
+ativo
+Stats de todos os tabuleiros
+Acerto Crítico
++230
+Acerto de Golpes Múltiplos
++4,5%
+Amplificação de Dano
++3%
+Amplificação de Dano Crítico
++3%
+Ataque Adicional
++135
+Defesa Adicional
++840
+PM
++1.300
+PV
++2.400
+Redução de Tempo de Recarga
++3%
+Resistência a Acerto Crítico
++135
+Velocidade de Combate
++3%
+Níveis de skill
+Corte Rápido
++4 nv
+Emboscada
++4 nv
+Rugido da Besta
++4 nv
+Explosão de Insígnia
++4 nv
+Queda da Sombra
++1 nv
+Remoção de Impacto
++1 nv
+Desenfreio da Tempestade
++4 nv
+Estocada no Coração
++4 nv
+Infiltração
++1 nv
+Sexto Sentido Aguçado
++2 nv
+Exploração de Fraqueza
++4 nv
+Aplicação de Veneno
++1 nv
+Golpe Potente pela Retaguarda
++4 nv
+Postura de Ataque Súbito
++4 nv
+Acerto de Impacto
++4 nv
+Postura de Emboscada
++4 nv
+Fenda da Defesa
++2 nv
+Pacto de Revitalização
++1 nv
+Prontidão
++4 nv
+Notas do Daevanion
+Priorize os marcos de skills em vez da raridade dos blocos. Laranja → Azul → Verde → Branco é uma boa prioridade padrão; ignore-a quando um bloco de raridade menor completar de imediato um marco de skill de nível 12, 16 ou 20. Para os nós normais de JvA: Ataque → Acerto Crítico / Precisão → HP → Defesa. Complete as boards iniciais aos poucos, mas nunca atrase uma trait central só para terminar todos os blocos.
+
+Rotação · macro + setup
+Abertura: Clone Ilusório + Pacto da Celeridade + Presa da Besta → Punhal de Triniel → sequência principal pelas costas. Use prioridades em vez de uma rotação fixa: o movimento e as mecânicas do chefe interrompem qualquer sequência exata. Macro: Explosão de Insígnia vai na macro nativa do jogo (atraso de 10 ms), ao lado do ataque normal. Teclas: [ = ataque normal, ] = macro do jogo. Mantenha a sequência automática curta. Teclas manuais: Rugido da Besta (aperte de propósito numa janela segura de dano), Clone Ilusório, Pacto da Celeridade, Punhal de Triniel, movimento, defesa, Desenfreio da Tempestade e os usos condicionais de Explosão de Insígnia. Os vídeos combinam ataques normais repetidos com os slots de macro nativos e a fila de skills; o atraso exato depende da Velocidade de Combate, da latência e do hardware. Refaça o teste sempre que a Velocidade de Combate ou a redução de recarga mudar (cerca de 1.300–1.400 acertos registrados no teste de treino é uma checagem de consistência, não uma meta de DPS).
+
+Barra de skills
+
+3
+
+2
+
+
+
+
+
+
+1
+
+
+
+
+
+
+
+
+
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+Você segura
+Você aperta
+A macro dispara
+Macro no jogo
+Passo 01
+
+Skill
+Explosão de Insígnia
+Atraso
+10
+ms
+Prioridade de skills
+Clone IlusórioAbertura: junto com Pacto da Celeridade e Presa da Besta
+Pacto da Celeridade
+Presa da Besta
+Punhal de TrinielCausa dano e ativa o efeito de recarga. Segure-a por 3–8 segundos apenas para alinhá-la com a próxima janela de Clone Ilusório
+Corte RápidoSequência principal pelas costas durante toda a janela de buffs
+Estocada no Coração
+Explosão de InsígniaUse depois de acumular as runas, não como preenchimento
+Rugido da BestaTecla manual, fora da macro
+Desenfreio da TempestadeSó quando houver stagger e Clone Ilusório estiver indisponível
+Abertura
+
+Clone Ilusório
+→
+
+Pacto da Celeridade
+→
+
+Presa da Besta
+→
+
+Punhal de Triniel
+Você segura
+11 — Corte Rápido
+Você aperta
+7 — Presa da Besta / Punhal de Triniel
+8 — Clone Ilusório / Pacto da Celeridade
+Faça
+Estabeleça a posição pelas costas antes de se comprometer: entre com Emboscada, Ataque Sigiloso ou Infiltração, mas mantenha uma ferramenta livre para o movimento forçado do chefe.
+Use Corte Rápido, Estocada no Coração, Explosão de Insígnia e Rugido da Besta durante toda a janela de buffs (Clone Ilusório, Pacto da Celeridade e Presa da Besta ativos).
+Use skills defensivas quando elas evitarem tempo parado: a recuperação de Queda da Sombra e Postura de Evasão mantêm você atacando. Evitar uma morte ou uma retirada vale mais do que uma skill ofensiva a mais.
+Atrase uma recarga só quando isso melhorar o próximo burst (antes da invulnerabilidade do chefe, de um movimento forçado ou da próxima janela de Clone Ilusório).
+
+Evite
+Não aperte Desenfreio da Tempestade automaticamente a cada stagger.
+Não segure Punhal de Triniel indefinidamente.
+Não use Explosão de Insígnia como preenchimento antes de acumular as runas.
+Não coloque Rugido da Besta na macro só porque seu ping é baixo.
+
+Notas da rotação
+Por que meu DPS está baixo? (10 checagens, teste uma mudança por vez) 1 Erros de Precisão — inspecione erros e aparos num intervalo repetível; adicione Precisão só até a checagem de acerto estabilizar. 2 Pouco tempo pelas costas — meça com que frequência os ataques recebem o bônus de retaguarda; guarde uma skill de movimento para as viradas do chefe. 3 Clone Ilusório e Pacto da Celeridade se separando — alinhe o par, a menos que segurar custe um cast completo. 4 Punhal segurado por tempo demais — uma espera de 3-8 segundos pode funcionar, segurar indefinidamente perde casts. 5 Timing errado da Explosão de Insígnia — use depois de acumular as runas, não como preenchimento. 6 Desenfreio da Tempestade desperdiçada — use para cobrir um stagger quando o ciclo principal do Clone estiver indisponível. 7 Ataques normais perdidos — conte os acertos registrados num tempo fixo, deixe ataques normais seguros para a animação entre as skills e refaça o teste após mudanças de velocidade. 8 Excesso de Acerto Crítico ou Precisão — repita a checagem com os buffs reais do grupo; mova o excedente para Ataque, níveis de skills ou multiplicadores separados. 9 Armadilha do Poder de Combate — prefira um bônus útil de nível 16 / 20 de skill ao item com mais Poder de Combate. 10 Defesa removida cedo demais — conte mortes, retiradas, poções e tempo pelas costas perdido; restaure recuperação ou tolerância até a luta ser repetível. Protocolo da sala de treino: mesma duração, alvo, posição pelas costas, consumíveis, estado de buffs do grupo e abertura; registre erros, tempo pelas costas, contagem de ataques normais, separação de Clone/Swift, casts do Punhal e mortes ou retiradas forçadas.
+
+Antes de puxar. Avalie seus stats com os buffs que você realmente usa na raide; conferir só a ficha sem buffs pode desperdiçar Acerto Crítico, Precisão ou Velocidade de Combate. Runs regulares: comida, bebida e um Pergaminho de Velocidade de Combate — use comida para cobrir Precisão ou Acerto Crítico faltando, depois favoreça Ataque. Progressão: escolha sobrevivência antes de consumíveis de dano caros (defesa, Tolerância a Dano ou recuperação podem aumentar o DPS real quando evitam uma morte, retirada ou perda de tempo pelas costas). Parses: guarde buffs raros de curta duração para tentativas de kill ou comparações controladas; a build padrão não deve depender deles. Chanter: reconfira Velocidade de Combate, redução de recarga e stats de dano (Soberania do Vendaval pode levar a build à meta testada de 88% / 56%) e não monte a build em torno do buff se seu grupo habitual nem sempre o tem. Templar: aggro estável e direção previsível aumentam o tempo pelas costas; coordene as viradas do chefe e as puxadas em vez de gastar toda skill de movimento corrigindo sua posição. Healer: remova ferramentas defensivas só depois que a sobrevivência for consistente. Com todos os buffs do grupo ativos, confira erros, consistência de Acerto Crítico, Velocidade de Combate, redução de recarga e tempo pelas costas, e só então mova o excesso de stats para Ataque, níveis de skills, Smite ou Amplificação de Dano da Retaguarda.
+
+Essa rotação está funcionando pra você? Uma doação ajuda a manter builds como essa em dia.
+
+Pix (LivePix)
+Ko-fi
+Equipamentos
+Prioridade dos substats
+1
+Mais importante
+2
+3
+4
+5
+Menos importante
+Arma
+
+Item Default +0
+Item craftado
+Substats
+1
+Velocidade de Combate
++12,98%
+2
+Poder
++32
+3
+Amplificação de Dano de Arma
++9,64%
+4
+Amplificação de Dano
++7,3%
+5
+Acerto de Golpes Múltiplos
++9,64%
+Também servem
+Exatidão
+Ataque
+Acerto Crítico
+Pedra de Mana
+
+Pedra de Mana Superior
+Amplificação de Dano da Retaguarda
++1%
+Amplificação de Dano de Arma
++1%
+Amplificação de Dano Crítico
++1%
+Ataque
++10
+Guarda
+
+Item Default +0
+Item craftado
+Substats
+1
+Velocidade de Combate
++10,12%
+2
+Poder
++27
+3
+Amplificação de Dano de Arma
++7,73%
+4
+Amplificação de Dano
++5,85%
+5
+Acerto de Golpes Múltiplos
++7,73%
+Também servem
+Exatidão
+Ataque
+Acerto Crítico
+Pedra de Mana
+
+Pedra de Mana Superior
+Amplificação de Dano da Retaguarda
++1%
+Amplificação de Dano de Arma
++1%
+Amplificação de Dano Crítico
++1%
+Ataque
++10
+Elmo
+
+Item Default +0
+Item craftado
+Substats
+1
+Aumento de Ataque
++2,2%
+2
+Ataque
++29
+3
+Golpe Potente pela Retaguarda
++1
+4
+Postura de Ataque Súbito
++1
+5
+Acerto de Impacto
++1
+Também servem
+Exploração de Fraqueza
+Pedra de Mana
+
+Pedra de Mana Superior
+Amplificação de Dano da Retaguarda
++1%
+Amplificação de Dano de Arma
++1%
+Amplificação de Dano Crítico
++1%
+Ataque
++10
+Ombreiras
+
+Item Default +0
+Item craftado
+Substats
+1
+Amplificação de Dano Crítico
++12,84%
+2
+Ataque
++24
+3
+Golpe Potente pela Retaguarda
++1
+4
+Postura de Ataque Súbito
++1
+5
+Acerto de Impacto
++1
+Também servem
+Exploração de Fraqueza
+Pedra de Mana
+
+Pedra de Mana Superior
+Amplificação de Dano da Retaguarda
++1%
+Amplificação de Dano de Arma
++1%
+Amplificação de Dano Crítico
++1%
+Ataque
++10
+Peitoral
+
+Item Default +0
+Item craftado
+Substats
+1
+Amplificação de Dano
++6,58%
+2
+Ataque
++33
+3
+Golpe Potente pela Retaguarda
++1
+4
+Postura de Ataque Súbito
++1
+5
+Acerto de Impacto
++1
+Também servem
+Exploração de Fraqueza
+Pedra de Mana
+
+Pedra de Mana Superior
+Amplificação de Dano da Retaguarda
++1%
+Amplificação de Dano de Arma
++1%
+Amplificação de Dano Crítico
++1%
+Ataque
++10
+Calças
+
+Item Default +0
+Item craftado
+Substats
+1
+Tolerância a Dano
++11,56%
+2
+Aumento de Ataque
++2,4%
+3
+Ataque
++31
+4
+Golpe Potente pela Retaguarda
++1
+5
+Postura de Ataque Súbito
++1
+Também servem
+Acerto de Impacto
+Exploração de Fraqueza
+Pedra de Mana
+
+Pedra de Mana Superior
+Amplificação de Dano da Retaguarda
++1%
+Amplificação de Dano de Arma
++1%
+Amplificação de Dano Crítico
++1%
+Ataque
++10
+Luvas
+
+Item Default +0
+Item craftado
+Substats
+1
+Velocidade de Combate
++7,25%
+2
+Ataque
++22
+3
+Golpe Potente pela Retaguarda
++1
+4
+Postura de Ataque Súbito
++1
+5
+Acerto de Impacto
++1
+Também servem
+Exploração de Fraqueza
+Pedra de Mana
+
+Pedra de Mana Superior
+Amplificação de Dano da Retaguarda
++1%
+Amplificação de Dano de Arma
++1%
+Amplificação de Dano Crítico
++1%
+Ataque
++10
+Botas
+
+Item Default +0
+Item craftado
+Substats
+1
+Velocidade de Movimento
++10,28%
+2
+Ataque
++27
+3
+Golpe Potente pela Retaguarda
++1
+4
+Postura de Ataque Súbito
++1
+5
+Acerto de Impacto
++1
+Também servem
+Exploração de Fraqueza
+Pedra de Mana
+
+Pedra de Mana Superior
+Amplificação de Dano da Retaguarda
++1%
+Amplificação de Dano de Arma
++1%
+Amplificação de Dano Crítico
++1%
+Ataque
++10
+Capa
+
+Item Default +0
+Item craftado
+Substats
+1
+Aumento de Ataque
++1,77%
+2
+Ataque
++24
+3
+Golpe Potente pela Retaguarda
++1
+4
+Postura de Ataque Súbito
++1
+5
+Acerto de Impacto
++1
+Também servem
+Exploração de Fraqueza
+Pedra de Mana
+
+Pedra de Mana Superior
+Amplificação de Dano da Retaguarda
++1%
+Amplificação de Dano de Arma
++1%
+Amplificação de Dano Crítico
++1%
+Ataque
++10
+Colar
+
+Item Default +0
+Item craftado
+Substats
+1
+Ataque
++38
+2
+Acerto Crítico
++54
+3
+Golpe Potente pela Retaguarda
++1
+4
+Postura de Ataque Súbito
++1
+5
+Acerto de Impacto
++1
+Também servem
+Exploração de Fraqueza
+Prontidão
+Fenda da Defesa
+Pedra de Mana
+
+Pedra Vital Superior
+Amplificação de Dano da Retaguarda
++1%
+Amplificação de Dano de Arma
++1%
+Amplificação de Dano Crítico
++1%
+Ataque
++10
+Brinco (esq.)
+
+Item Default +0
+Item craftado
+Substats
+1
+Ataque
++33
+2
+Acerto Crítico
++47
+3
+Golpe Potente pela Retaguarda
++1
+4
+Postura de Ataque Súbito
++1
+5
+Acerto de Impacto
++1
+Também servem
+Exploração de Fraqueza
+Prontidão
+Fenda da Defesa
+Pedra de Mana
+
+Pedra Vital Superior
+Amplificação de Dano da Retaguarda
++1%
+Amplificação de Dano de Arma
++1%
+Amplificação de Dano Crítico
++1%
+Ataque
++10
+Brinco (dir.)
+
+Item Default +0
+Item craftado
+Substats
+1
+Ataque
++33
+2
+Acerto Crítico
++47
+3
+Golpe Potente pela Retaguarda
++1
+4
+Postura de Ataque Súbito
++1
+5
+Acerto de Impacto
++1
+Também servem
+Exploração de Fraqueza
+Prontidão
+Fenda da Defesa
+Pedra de Mana
+
+Pedra Vital Superior
+Amplificação de Dano da Retaguarda
++1%
+Amplificação de Dano de Arma
++1%
+Amplificação de Dano Crítico
++1%
+Ataque
++10
+Anel (esq.)
+
+Item Default +0
+Item craftado
+Substats
+1
+Estocada no Coração
++1
+2
+Explosão de Insígnia
++1
+3
+Corte Rápido
++1
+4
+Desenfreio da Tempestade
++1
+5
+Ataque
++29
+Também servem
+Acerto Crítico
+Pedra de Mana
+
+Pedra Vital Superior
+Amplificação de Dano da Retaguarda
++1%
+Amplificação de Dano de Arma
++1%
+Amplificação de Dano Crítico
++1%
+Ataque
++10
+Anel (dir.)
+
+Item Default +0
+Item craftado
+Substats
+1
+Estocada no Coração
++1
+2
+Explosão de Insígnia
++1
+3
+Corte Rápido
++1
+4
+Desenfreio da Tempestade
++1
+5
+Ataque
++29
+Também servem
+Acerto Crítico
+Pedra de Mana
+
+Pedra Vital Superior
+Amplificação de Dano da Retaguarda
++1%
+Amplificação de Dano de Arma
++1%
+Amplificação de Dano Crítico
++1%
+Ataque
++10
+Total do equipamento
+Acerto Crítico
++148
+Acerto de Golpes Múltiplos
++17,37%
+Amplificação de Dano
++19,73%
+Amplificação de Dano Crítico
++26,84%
+Amplificação de Dano da Retaguarda
++14%
+Amplificação de Dano de Arma
++31,37%
+Ataque
++492
+Aumento de Ataque
++6,37%
+Poder
++59
+Tolerância a Dano
++11,56%
+Velocidade de Combate
++30,35%
+Velocidade de Movimento
++10,28%
+Notas de equipamentos
+Cada slot tem um ou dois efeitos que definem seu valor: garanta esses primeiro e depois use Ataque, níveis de skills e outros stats ofensivos para completar o item. Mantenha o efeito-chave de cada peça de armadura e depois procure Golpe Potente pela Retaguarda, Postura de Ataque Súbito, Acerto de Impacto e Exploração de Fraqueza (Golpe Potente pela Retaguarda = Postura de Ataque Súbito > Acerto de Impacto > Exploração de Fraqueza). Use as joias para alcançar marcos de skills; não rerrole um nível de skill útil, ativa ou passiva, só porque outro item mostra mais Poder de Combate.
+
+Arma (adagas duplas): Velocidade de Combate, depois Poder > Amplificação de Dano de Arma > Amplificação de Dano, depois Acerto de Golpes Múltiplos / Exatidão > Ataque > Acerto Crítico; Velocidade de Combate, Poder, Amplificação de Dano de Arma, Amplificação de Dano e Ataque importam mais que um número maior de Poder de Combate sozinho.
+
+Elmo e capa: Golpe Potente (Smite) + Ataque (Aumento) · Ombreiras: Amplificação de Dano Crítico · Peitoral: Amplificação de Dano · Calças: Tolerância a Dano + Ataque (Aumento) · Luvas: Velocidade de Combate · Botas: Velocidade de Movimento · Colar e brincos: Ataque, Acerto Crítico depois da checagem de acerto (também Prontidão > Fenda da Defesa) · Anéis: marco de skill ativa — Estocada no Coração > Explosão de Insígnia > Corte Rápido > Desenfreio da Tempestade, depois Ataque > Acerto Crítico após um marco 16/20 útil. Toda peça também quer Ataque.
+
+Precisão: confira com buffs do grupo ativos. Não existe um requisito único para todo chefe; se os ataques ainda erram ou são aparados, você precisa de mais Precisão.
+
+Prioridade de Manastone: Amplificação de Dano da Retaguarda (melhor quando a posição pelas costas é confiável) > Amplificação de Dano de Arma (multiplicador forte e confiável) > Amplificação de Dano Crítico (o valor sobe com a taxa real de Acerto Crítico) > Ataque 30+ / 25 (30+ pode competir; +25 não é o vencedor padrão) > Amplificação de Dano (categoria aditiva; compare seus totais). Com tempo pelas costas confiável e Acerto Crítico estável, use isto como base; Ataque +30 ou mais pode subir, mas precisa ser calculado com seus stats atuais. Se o encontro arruinar o tempo pelas costas, recalcule em vez de forçar Amplificação de Dano da Retaguarda em primeiro lugar.
+
+Onde conseguir mais Smite: comece pelos soul binds de elmo e capa; também pelos slots 3/9 do Genus, a passiva de Smite e seus bônus de nível de skill, Panteão, arte, títulos ofensivos, asas e soul binds de bracelete. Amplificação de Dano da Retaguarda: comece pelas manastones e pelos slots 3/9 do Genus, depois considere soul binds e bônus de coleção após conferir as dicas ao vivo. O stat só vale quando o ataque é reconhecido como pelas costas. Títulos, asas, arte e recompensas sazonais podem mudar: confirme de onde o item vem hoje antes de pagar por rerrolagens ou melhorias.
+
+Matemática de dano (testada): (1 + Dano + JvA + Chefe + Raça) × (1 + Bônus Pelas Costas). A amplificação geral, de JvA, de chefe e de raça se somam; o bônus pelas costas / Back Attack é um multiplicador separado quando a condição de retaguarda se aplica. Exemplo: 5% Chefe + 50% Dano + 5% Costas = 1,55 × 1,05 = 1,6275, enquanto 10% Chefe + 50% Dano = 1,60 e 5% Chefe + 55% Dano = 1,60 (Dano contra Chefe e Amplificação de Dano geral são iguais contra um chefe). Para comparar dois stats, adicione cada rolagem à categoria a que pertence, multiplique as categorias separadas e considere seu tempo real pelas costas: a maior porcentagem na dica não é necessariamente o maior aumento final. Faça testes de mesma duração, mudando um stat por vez. Multi-hit é menos certo e não tem um valor universal exato.
+
+Asas & Títulos
+Asa equipada
+
+Asas de Talisra do VazioPrincipal
+Único
+
+Asas do Espírito da Floresta
+Único
+Títulos equipados
+
+Livre das Amarras da RaçaPrincipal
+Ataque
+Acerto Crítico
++68
+Ataque Adicional
++34
+Amplificação de Dano em JvA
++4,5%
+
+Guardião de Verteron
+Ataque
+Penetração
++210
+Amplificação de Dano em JvA
++3%
+
+Governar Todas as CoisasPrincipal
+Defesa
+Defesa Adicional
++320
+Tolerância a Dano pela Retaguarda
++3%
+Tolerância a Dano contra Chefe
++4%
+
+Santidade de Verteron
+Defesa
+Bloqueio
++100
+Defesa Adicional
++300
+Tolerância a Dano
++3%
+
+Ai, Não Tenho Nada para VestirPrincipal
+Utilidade
+Recuperação Natural de PV
++42
+Velocidade de Combate
++3,5%
+Redução de Tempo de Recarga
++3,5%
+Herança do Dragão Sábio
+Utilidade
+
+Do Inferno e de Volta
+Utilidade
+PV
++900
+Vigor
++22.500
+Redução de Tempo de Recarga
++3%
+Notas de asas e títulos
+Asas: Asas de Talisra do Vazio primeiro; alternativa Asas do Espírito da Floresta. Confira a obtenção atual e compare velocidade / redução de recarga com os buffs do seu grupo.
+
+Títulos. Ofensivo: Livre das Amarras da Raça primeiro (ou o título de 4% de Smite); alternativas Guardião de Verteron / Altgard. Defensivo: Governar Todas as Coisas; Santidade de Verteron / Altgard — troque só quando a sobrevivência devolver tempo de combate real. Utilidade: Ai, Não Tenho Nada para Vestir; alternativas Herança do Dragão Sábio, Do Inferno e de Volta (a utilidade depende do encontro). Use o efeito exato ao vivo: tradução e nomes de facção variam.
+
+Metas testadas pela comunidade: 83% de Velocidade de Combate e 32% de redução de recarga usando um Pergaminho de Velocidade de Combate; com Soberania do Vendaval nível 20 de um Chanter: 88% de Velocidade de Combate e 56% de redução de recarga. São metas de rotação testadas, não mínimos oficiais nem limites rígidos; confirme no boneco de treino, pois latência e tempo de animação podem mudar o resultado.
+
+Panteão
+
+Gartua da Eternidade
+Quadro 1 · Vida 5 · bg_god_wisdom 5 · Destino 5 · Ilusão 5
+
+Gartua Imortal
+Quadro 2 · Vida 5 · bg_god_wisdom 5 · Destino 5 · Ilusão 5
+
+Ludra Abissal (Vinculado)
+Quadro 3 · bg_god_wisdom 5 · Destino 5 · Ilusão 5
+
+Draupnir
+Quadro 4 · Vida 4 · bg_god_wisdom 4 · Ilusão 4
+
+Ilha Aérea de Vakron
+Quadro 5 · Vida 4 · bg_god_wisdom 4 · Ilusão 4
+
+Ansas Divino
+Quadro 6 · Vida 4 · bg_god_wisdom 4 · Ilusão 4
+
+Kasia do Sonho Ilusório
+Quadro 7 · Vida 4 · bg_god_wisdom 4 · Ilusão 4
+
+Krao
+Quadro 8 · bg_god_wisdom 4 · Destino 4 · Ilusão 4
+
+Gruta do Chifre Feroz
+Quadro 9 · bg_god_wisdom 4 · Destino 4 · Ilusão 4
+
+Vigilante Kairah
+Quadro 10 · bg_god_wisdom 4 · Destino 4 · Ilusão 4
+
+K’nash, Arma de Vigilância
+Quadro 11 · bg_god_wisdom 4 · Destino 4 · Ilusão 4
+
+Centurião Demiros
+Quadro 12 · bg_god_wisdom 4 · Destino 4 · Ilusão 4
+
+Bakarma Transcendido (Vinculado)
+Estátua 1 · Morte 12 · Espaço 12 · Liberdade 12
+
+Artefato da Eternidade (Vinculado)
+Estátua 2 · Morte 10 · Liberdade 10
+
+Espelho de Asahr (Vinculado)
+Estátua 3 · Morte 10 · Espaço 10
+
+Guardião da Fortaleza Notun (Vinculado)
+Estátua 4 · Morte 10 · Espaço 10
+
+Aparição de Zikel (Vinculado)
+Colosso · Tempo 45 · Justiça 45 · Destruição 45
+Pontos por divindade
+Destruição
+45
+Tempo
+45
+Justiça
+45
+Ilusão
+51
+Liberdade
+22
+Morte
+42
+Espaço
+32
+Vida
+26
+Destino
+35
+Notas do Panteão
+Colossus: Zikel ou Kromede. Estátuas: priorize efeitos de Morte. Arte: Ilusão + Sabedoria. São recomendações de endgame da comunidade, não as melhores escolhas universais: compare a dica ao vivo com os stats que seu grupo habitual já fornece.
+
+Genus Insight
+Special Insight
+7/9
+Cogni Insight
+6/9
+Fera Insight
+6/9
+Natura Insight
+6/9
+Varian Insight
+7/9
+Slot 1
+Ataque Adicional
++12
+Épico
+Ataque Máx.
++19
+Épico
+Ataque contra Chefe
++18
+Épico
+Slot 3
+Acerto Crítico
++30
+Épico
+Precisão Adicional
++40
+Épico
+Slot 4
+Amplificação de Dano da Retaguarda
++2,8%
+Épico
+Slot 5
+Ataque Adicional
++12
+Épico
+Ataque Máx.
++19
+Épico
+Ataque contra Chefe
++18
+Épico
+Slot 6
+Acerto Crítico
++30
+Épico
+Precisão Adicional
++40
+Épico
+Slot 7
+Tolerância a Dano
++3%
+Épico
+Slot 9
+Acerto Crítico
++30
+Épico
+Precisão Adicional
++40
+Épico
+Notas do Genus Insight
+Ordem de decisão de stats: 1 — seus ataques estão acertando? Adicione Precisão se o chefe ainda mostrar erros ou aparos. 2 — você consegue ficar atrás do chefe? Amplificação de Dano da Retaguarda só funciona quando seu posicionamento é consistente. 3 — aumente o dano confiável: Ataque, Amplificação de Dano de Arma, Golpe Potente (Smite), Acerto Crítico e Ataque contra Chefe / Ataque em JvA.
+
+Ponto de partida: Acerto Crítico até cerca de 2.200, depois Precisão. É uma rota de progressão, não o destino do fim do jogo nem um limite oficial; troque os stats em excesso quando sua build com buffs passar nas duas checagens.
+
+Board de progressão (enquanto erros, críticos inconsistentes e rolagens incompletas ainda limitam a build) — Slots de Acerto Crítico: Acerto Crítico até atingir a meta, depois Precisão, alternativa Ataque contra Chefe 18+ só quando as duas checagens estiverem cumpridas · Slots de Ataque: Ataque Adicional 12+, depois Ataque Máx. 19/20, depois Ataque contra Chefe · Slot de tolerância: Tolerância a Dano ou Tolerância a Dano em JvA, rolagem quase máxima · Slots de Golpe Potente (Smite): Smite 2%+, depois Amplificação de Dano da Retaguarda 2,8%+; mire em 5/5 depois que a board funcionar. Uma rolagem de Ataque Adicional quase máxima fica em torno de 14–15 de 16.
+
+Board min-max de endgame (confira o personagem com buffs de raide ativos) — Slots de Acerto Crítico / Precisão: Ataque contra Chefe 18+, mantendo só o Acerto Crítico / Precisão que sua build com buffs precisa · Slots de Ataque: Ataque Adicional 12+, depois Ataque Máx. 19/20; troque as rolagens baixas antes de buscar perfeição em outro lugar · Slots de Smite: Smite 2%+, depois Amplificação de Dano da Retaguarda 2,8%+ com tempo pelas costas confiável (use a calculadora de dano para rolagens próximas) · Slot de tolerância: Tolerância a Dano em JvA, rolagem quase máxima (sobreviver preservando o tempo de combate vale mais que um parse morto).
+
+Smite ou Amplificação de Dano da Retaguarda? Smite é mais consistente contra chefes que se movem muito ou viram com frequência para longe do tanque; Amplificação de Dano da Retaguarda é mais forte quando você consegue ficar atrás do chefe quase todo o combate. Não trave rolagens fracas cedo demais: monte boas linhas ofensivas antes de gastar muito em rolagens perfeitas de Acerto Crítico ou Precisão. Depois de cumprir as duas checagens, mova as rolagens extras para Ataque contra Chefe, Ataque em JvA ou Ataque fixo.
+
+Essa build te ajudou? Ajude a mantê-la em dia.
+Todo patch pode mudar as melhores skills, equipamentos e rotação, e acompanhar isso leva tempo. Uma doação paga por isso.
+Doar via Pix (LivePix)
+Doar no Ko-fi
+
+ATREIA Lens
+Plataforma companheira de Atreia • Recursos feitos pela comunidade
+Política de Privacidade
+Configurar cookies
+Doar via Pix (LivePix)
+Doar no Ko-fi
+v0.1.0
