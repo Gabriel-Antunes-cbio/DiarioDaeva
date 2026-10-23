@@ -3,7 +3,7 @@
 Comandos:
   /gartua [falta]       Eternal Gartua (Elyos): vazio = morreu agora; ou quanto falta para nascer (3h20)
   /morreu boss [falta]  o mesmo para qualquer boss de campo
-  /timers               mostra os respawns registrados
+  /timers               mostra o Gartua, o Festival Shugo e os outros respawns registrados
   /limpar boss          apaga o registro de um boss
   /velsta               mostra a arte da Velsta
 
@@ -30,6 +30,7 @@ from discord import app_commands  # noqa: E402
 from discord.ext import tasks  # noqa: E402
 
 from bot.arte import VELSTA  # noqa: E402
+from bot.painel import timers_text  # noqa: E402
 from bot.state import BoardError, KillBoard, parse_remaining  # noqa: E402
 from bot.web import make_app  # noqa: E402
 from daeva.schedule import FIELD_BOSSES, FIELD_BY_ID  # noqa: E402
@@ -194,20 +195,10 @@ def register_commands(bot: DaevaBot) -> None:
     async def morreu(inter: discord.Interaction, boss: app_commands.Choice[str], falta: str | None = None):
         await record(inter, boss.value, falta)
 
-    @tree.command(name="timers", description="Mostra os respawns registrados dos bosses de campo")
+    @tree.command(name="timers", description="Mostra o Gartua, o Festival Shugo e os outros bosses de campo")
     async def timers(inter: discord.Interaction):
-        now = now_utc()
-        lines = []
-        for b in FIELD_BOSSES:
-            rec = bot.board.bosses.get(b.id) or {}
-            due = bot.board.respawn_at(b.id)
-            if due is None:
-                lines.append(f"**{b.name}**: sem registro")
-            elif due <= now:
-                lines.append(f"**{b.name}**: pode ter nascido (desde {ts(due)})")
-            else:
-                lines.append(f"**{b.name}**: nasce {ts(due, 'R')} às {ts(due)} · por {rec.get('by', '?')}")
-        await inter.response.send_message("\n".join(lines), allowed_mentions=discord.AllowedMentions.none())
+        await inter.response.send_message(timers_text(bot.board, now_utc(), TZ_NAME),
+                                          allowed_mentions=discord.AllowedMentions.none())
 
     @tree.command(name="velsta", description="Invoca a Velsta")
     async def velsta(inter: discord.Interaction):

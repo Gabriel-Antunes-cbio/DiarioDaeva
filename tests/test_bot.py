@@ -143,3 +143,19 @@ def test_app_store_migrates_old_kill_times(tmp_path):
     path = tmp_path / "d.json"
     path.write_text(json.dumps({"characters": [], "field_kills": {"gartua": "2026-10-19T20:00:00+00:00"}}))
     assert Store(path).respawn_time("gartua") == utc(2026, 10, 20, 8, 0)
+
+
+def test_timers_mostra_gartua_e_shugo(tmp_path):
+    from bot.painel import timers_text
+    board = KillBoard(tmp_path / "mortes.json")
+    now = utc(2026, 10, 23, 21, 40)  # 18:40 em Brasília
+    board.set("gartua", now - timedelta(hours=2), "Kumaglad", "discord", now)
+    board.set("lagta", now - timedelta(hours=1), "Fuwawa", "discord", now)
+    txt = timers_text(board, now, SP)
+    assert "**Eternal Gartua** (Elyos): nasce <t:" in txt and "por Kumaglad" in txt
+    assert "**Immortal Gartua** (Asmodiano): sem registro" in txt
+    shugo = utc(2026, 10, 23, 22, 0)
+    assert f"<t:{int(shugo.timestamp())}:R>" in txt
+    assert "High Commander Lagta" in txt and "Silent Dartan" not in txt
+    aberto = timers_text(board, utc(2026, 10, 23, 22, 1), SP)
+    assert "entrada aberta agora" in aberto
