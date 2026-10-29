@@ -159,3 +159,10 @@ def test_timers_mostra_gartua_e_shugo(tmp_path):
     assert "High Commander Lagta" in txt and "Silent Dartan" not in txt
     aberto = timers_text(board, utc(2026, 10, 23, 22, 1), SP)
     assert "entrada aberta agora" in aberto
+
+
+def test_artes_cabem_numa_mensagem():
+    from bot.arte import RUGE, VELSTA
+    for art in (RUGE, VELSTA):
+        assert len(f"```\n{art}\n```") <= 2000
+    assert len(RUGE.splitlines()) == 22 and len({len(l) for l in RUGE.splitlines()}) == 1

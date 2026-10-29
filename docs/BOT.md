@@ -18,6 +18,7 @@ O bot **não sabe sozinho** que o boss morreu: alguém do grupo precisa marcar. 
 | `/timers` | Mostra todos os respawns registrados |
 | `/limpar boss:<boss>` | Apaga um registro errado |
 | `/velsta` | Mostra a arte da Velsta no canal |
+| `/ruge` | Mostra a arte do /ruge no canal |
 
 O tempo aceita `3h20`, `3h 20m`, `3:20`, `2h`, `45m` ou só os minutos (`90`). Informar quanto falta é o jeito mais preciso, porque usa a contagem do próprio jogo.
 

@@ -6,6 +6,7 @@ Comandos:
   /timers               mostra o Gartua, o Festival Shugo e os outros respawns registrados
   /limpar boss          apaga o registro de um boss
   /velsta               mostra a arte da Velsta
+  /ruge                 mostra a arte do /ruge
 
 Avisa no canal configurado alguns minutos antes de cada respawn e serve os horários
 para o app dos amigos (ver bot/web.py).
@@ -29,7 +30,7 @@ from aiohttp import web  # noqa: E402
 from discord import app_commands  # noqa: E402
 from discord.ext import tasks  # noqa: E402
 
-from bot.arte import VELSTA  # noqa: E402
+from bot.arte import RUGE, VELSTA  # noqa: E402
 from bot.painel import timers_text  # noqa: E402
 from bot.state import BoardError, KillBoard, parse_remaining  # noqa: E402
 from bot.web import make_app  # noqa: E402
@@ -203,6 +204,10 @@ def register_commands(bot: DaevaBot) -> None:
     @tree.command(name="velsta", description="Invoca a Velsta")
     async def velsta(inter: discord.Interaction):
         await inter.response.send_message(f"```\n{VELSTA}\n```")
+
+    @tree.command(name="ruge", description="Solta o rugido")
+    async def ruge(inter: discord.Interaction):
+        await inter.response.send_message(f"```\n{RUGE}\n```")
 
     @tree.command(name="limpar", description="Apaga o registro de morte de um boss de campo")
     @app_commands.choices(boss=BOSS_CHOICES)
