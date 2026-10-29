@@ -205,7 +205,7 @@ def register_commands(bot: DaevaBot) -> None:
     async def velsta(inter: discord.Interaction):
         await inter.response.send_message(f"```\n{VELSTA}\n```")
 
-    @tree.command(name="ruge", description="Solta o rugido")
+    @tree.command(name="ruge", description="rato")
     async def ruge(inter: discord.Interaction):
         await inter.response.send_message(f"```\n{RUGE}\n```")
 
